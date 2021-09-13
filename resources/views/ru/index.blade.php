@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/style.min.css">
     <title>Document</title>
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="header__wrapper">
-                <a href="index.html" class="header__logo">
-                    <img src="../chemonika/img/icons/logo.svg" alt="logo">
+                <a href="{{env('APP_URL')}}" class="header__logo">
+                    <img src="{{env('APP_URL')}}/img/icons/logo.svg" alt="logo">
                 </a>
                 <div class="header__info">
                     <div class="header__info_contact">
@@ -31,9 +31,9 @@
                             <path class="header__info_lang-arrow_path" d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#263640"/>
                         </svg>
                         <ul class="header__info_lang-dropdown">
-                            <li class="header__info_lang-dropdown-li"><a style="text-decoration: none;" href="{{env('APP_URL').'/ukr'}}">UKR</a></li>
-                            <li class="header__info_lang-dropdown-li"><a style="text-decoration: none;" href="{{env('APP_URL').'/ru'}}">RUS</a></li>
-                            <li class="header__info_lang-dropdown-li"><a style="text-decoration: none;" href="{{env('APP_URL').'/en'}}">EN</a></li>
+                            <li onclick="location.href='{{env("APP_URL")."/ukr"}}'" class="header__info_lang-dropdown-li">UKR</li>
+                            <li onclick="location.href='{{env("APP_URL")."/ru"}}'" class="header__info_lang-dropdown-li">RUS</li>
+                            <li onclick="location.href='{{env("APP_URL")."/en"}}'" class="header__info_lang-dropdown-li">EN</li>
                         </ul>
                     </div>
                     <a href="mailto: test@test.com" class="header__info_button">
@@ -52,18 +52,18 @@
         </div>
     </header>
     <div class="burger__menu">
-        <a href="index.blade.php" class="burger__menu_list burger__menu_list-about">О нас</a>
-        <a href="productionRu.html" class="burger__menu_list burger__menu_list-middle burger__menu_list-products">Продукция</a>
+        <a href="{{env('APP_URL')}}" class="burger__menu_list burger__menu_list-about">О нас</a>
+        <a href="{{env('APP_URL')}}/products" class="burger__menu_list burger__menu_list-middle burger__menu_list-products">Продукция</a>
         <a href="#" class="burger__menu_list">Контакты</a>
         <div class="burger__menu_social">
             <a href="#">
-                <img src="img/icons/telegram.svg" alt="telegram">
+                <img src="{{env('APP_URL')}}/img/icons/telegram.svg" alt="telegram">
             </a>
             <a class="form__row_links-skype" href="#">
-                <img src="img/icons/skype.svg" alt="skype">
+                <img src="{{env('APP_URL')}}/img/icons/skype.svg" alt="skype">
             </a>
             <a href="#">
-                <img src="img/icons/facebook.svg" alt="facebook">
+                <img src="{{env('APP_URL')}}/img/icons/facebook.svg" alt="facebook">
             </a>
         </div>
         <div class="burger__menu_languages">
@@ -80,7 +80,7 @@
     </div>
     <div class="firstPage">
         <section class="promo">
-            <img class="promo__img_mobile" src="img/images/promo.png" alt="images">
+            <img class="promo__img_mobile" src="{{env('APP_URL')}}/img/images/promo.png" alt="images">
             <div class="container">
              <div class="row promo__row">
                  <div class="col-lg-6 col-md-6">
@@ -96,7 +96,7 @@
                      </div>
                  </div>
                  <div class="col-lg-6 col-md-6">
-                     <img class="promo__images" src="img/images/promo.png" alt="promo">
+                     <img class="promo__images" src="{{env('APP_URL')}}/img/images/promo.png" alt="promo">
                  </div>
              </div>
             </div>
@@ -123,16 +123,16 @@
                          </div>
                          <div class="about__descr_bottom-images">
                              <div class="about__descr_bottom-images_block">
-                                <img src="img/icons/chumak.svg" alt="img">
-                                <img src="img/icons/roshen1.png" alt="img">
+                                <img src="{{env('APP_URL')}}/img/icons/chumak.svg" alt="img">
+                                <img src="{{env('APP_URL')}}/img/icons/roshen1.png" alt="img">
                              </div>
                              <div class="about__descr_bottom-images_block">
-                                <img src="img/icons/nestle.svg" alt="img">
-                                <img src="img/icons/premia.svg" alt="img">
+                                <img src="{{env('APP_URL')}}/img/icons/nestle.svg" alt="img">
+                                <img src="{{env('APP_URL')}}/img/icons/premia.svg" alt="img">
                              </div>
                              <div class="about__descr_bottom-images_block">
-                                <img src="img/icons/4asha.svg" alt="img">
-                                <img src="img/icons/konti.svg" alt="img">
+                                <img src="{{env('APP_URL')}}/img/icons/4asha.svg" alt="img">
+                                <img src="{{env('APP_URL')}}/img/icons/konti.svg" alt="img">
                              </div>
                             <!-- <div class="about__descr_bottom-images_left">
                                 <div>
@@ -167,26 +167,26 @@
                      <div class="col-lg-4 about__products">
                          <div class="about__products_wrapper">
                              <div class="about__products_wrapper-left">
-                                 <img src="img/icons/chumak.svg" alt="img">
+                                 <img src="{{env('APP_URL')}}/img/icons/chumak.svg" alt="img">
                              </div>
                              <div class="about__products_wrapper-right">
-                                 <img src="img/icons/nestle.svg" alt="img">
+                                 <img src="{{env('APP_URL')}}/img/icons/nestle.svg" alt="img">
                              </div>
                          </div>
                          <div class="about__products_wrapper">
                              <div class="about__products_wrapper-left">
-                                 <img src="img/icons/4asha.svg" alt="img">
+                                 <img src="{{env('APP_URL')}}/img/icons/4asha.svg" alt="img">
                              </div>
                              <div class="about__products_wrapper-right">
-                                 <img src="img/icons/roshen.svg" alt="img">
+                                 <img src="{{env('APP_URL')}}/img/icons/roshen.svg" alt="img">
                              </div>
                          </div>
                          <div class="about__products_wrapper">
                              <div class="about__products_wrapper-left">
-                                 <img src="img/icons/premia.svg" alt="img">
+                                 <img src="{{env('APP_URL')}}/img/icons/premia.svg" alt="img">
                              </div>
                              <div class="about__products_wrapper-right">
-                                 <img src="img/icons/konti.svg" alt="img">
+                                 <img src="{{env('APP_URL')}}/img/icons/konti.svg" alt="img">
                              </div>
                          </div>
                      </div>
@@ -212,7 +212,7 @@
                          </div>
                      </div>
                      <div class="banner__main_img parallax">
-                         <img src="img/images/banner.png" alt="banner">
+                         <img src="{{env('APP_URL')}}/img/images/banner.png" alt="banner">
                      </div>
                  </div>
              </div>
@@ -222,7 +222,7 @@
                  <div class="row">
                      <div class="products__block col-md-4 col-sm-6 col-12">
                          <div class="products__block_header">
-                             <img src="img/images/product1.png" alt="product">
+                             <img src="{{env('APP_URL')}}/img/images/product1.png" alt="product">
                          </div>
                          <div class="products__block_main">
                              <div class="products__block_main-title">Лимонная кислота</div>
@@ -238,7 +238,7 @@
                      </div>
                      <div class="products__block col-md-4 col-sm-6 col-12">
                          <div class="products__block_header">
-                             <img src="img/images/product2.png" alt="product">
+                             <img src="{{env('APP_URL')}}/img/images/product2.png" alt="product">
                          </div>
                          <div class="products__block_main">
                              <div class="products__block_main-title">Цитрат натрия</div>
@@ -254,7 +254,7 @@
                      </div>
                      <div class="products__block col-md-4 col-sm-6 col-12">
                          <div class="products__block_header">
-                             <img src="img/images/product3.png" alt="product">
+                             <img src="{{env('APP_URL')}}/img/images/product3.png" alt="product">
                          </div>
                          <div class="products__block_main">
                              <div class="products__block_main-title">Сорбит</div>
@@ -285,7 +285,7 @@
                      <div class="col-lg-6 form__social">
                          <div class="form__row_wrapper">
                              <div>
-                                 <img src="img/icons/location.svg" alt="location">
+                                 <img src="{{env('APP_URL')}}/img/icons/location.svg" alt="location">
                              </div>
                              <div class="form__row_wrapper-title">
                                  2464 Royal Ln. Mesa, New Jersey 45463
@@ -293,7 +293,7 @@
                          </div>
                          <div class="form__row_wrapper form__row_wrapper-MT">
                              <div>
-                                 <img src="img/icons/phone.svg" alt="phone">
+                                 <img src="{{env('APP_URL')}}/img/icons/phone.svg" alt="phone">
                              </div>
                              <div class="form__row_wrapper-title form__row_wrapper-title-PL">
                                  <a href="callto: (270) 555-0117">(270) 555-0117</a>
@@ -301,13 +301,13 @@
                          </div>
                          <div class="form__row_links">
                              <a href="#">
-                                 <img src="img/icons/telegram.svg" alt="telegram">
+                                 <img src="{{env('APP_URL')}}/img/icons/telegram.svg" alt="telegram">
                              </a>
                              <a class="form__row_links-skype" href="#">
-                                 <img src="img/icons/skype.svg" alt="skype">
+                                 <img src="{{env('APP_URL')}}/img/icons/skype.svg" alt="skype">
                              </a>
                              <a href="#">
-                                 <img src="img/icons/facebook.svg" alt="facebook">
+                                 <img src="{{env('APP_URL')}}/img/icons/facebook.svg" alt="facebook">
                              </a>
                          </div>
                      </div>
@@ -344,7 +344,7 @@
              <div class="container">
                  <div class="row">
                      <div class="col-lg-6 footer__logo">
-                         <img src="img/icons/logo__footer.svg" alt="logo">
+                         <img src="{{env('APP_URL')}}/img/icons/logo__footer.svg" alt="logo">
                      </div>
                      <div class="col-lg-6 footer__top">
                          <div class="footer__top_top">
@@ -470,7 +470,7 @@
                 <div class="row">
                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 secondPage__goods_card">
                        <div class="secondPage__goods_card-img">
-                            <img src="img/images/product1.png" alt="product">
+                            <img src="{{env('APP_URL')}}/img/images/product1.png" alt="product">
                        </div>
                        <div class="secondPage__goods_card-main">
                             <div class="secondPage__goods_card-main_title">
@@ -489,7 +489,7 @@
                    </div>
                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 secondPage__goods_card">
                         <div class="secondPage__goods_card-img">
-                            <img src="img/images/products/2.png" alt="product">
+                            <img src="{{env('APP_URL')}}/img/images/products/2.png" alt="product">
                         </div>
                         <div class="secondPage__goods_card-main">
                             <div class="secondPage__goods_card-main_title">
@@ -508,7 +508,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12 secondPage__goods_card">
                         <div class="secondPage__goods_card-img">
-                             <img src="img/images/products/3.png" alt="product">
+                             <img src="{{env('APP_URL')}}/img/images/products/3.png" alt="product">
                         </div>
                         <div class="secondPage__goods_card-main">
                              <div class="secondPage__goods_card-main_title">
@@ -527,7 +527,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12 secondPage__goods_card">
                         <div class="secondPage__goods_card-img">
-                             <img src="img/images/products/4.png" alt="product">
+                             <img src="{{env('APP_URL')}}/img/images/products/4.png" alt="product">
                         </div>
                         <div class="secondPage__goods_card-main">
                              <div class="secondPage__goods_card-main_title">
@@ -546,7 +546,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12 secondPage__goods_card">
                         <div class="secondPage__goods_card-img">
-                             <img src="img/images/products/5.png" alt="product">
+                             <img src="{{env('APP_URL')}}/img/images/products/5.png" alt="product">
                         </div>
                         <div class="secondPage__goods_card-main">
                              <div class="secondPage__goods_card-main_title">
@@ -565,7 +565,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12 secondPage__goods_card">
                         <div class="secondPage__goods_card-img">
-                             <img src="img/images/products/6.png" alt="product">
+                             <img src="{{env('APP_URL')}}/img/images/products/6.png" alt="product">
                         </div>
                         <div class="secondPage__goods_card-main">
                              <div class="secondPage__goods_card-main_title">
@@ -584,7 +584,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12 secondPage__goods_card">
                         <div class="secondPage__goods_card-img">
-                             <img src="img/images/products/7.png" alt="product">
+                             <img src="{{env('APP_URL')}}/img/images/products/7.png" alt="product">
                         </div>
                         <div class="secondPage__goods_card-main">
                              <div class="secondPage__goods_card-main_title">
@@ -618,7 +618,7 @@
                     <div class="col-lg-6 form__social">
                         <div class="form__row_wrapper">
                             <div>
-                                <img src="img/icons/location.svg" alt="location">
+                                <img src="{{env('APP_URL')}}/img/icons/location.svg" alt="location">
                             </div>
                             <div class="form__row_wrapper-title">
                                 2464 Royal Ln. Mesa, New Jersey 45463
@@ -626,21 +626,21 @@
                         </div>
                         <div class="form__row_wrapper form__row_wrapper-MT">
                             <div>
-                                <img src="img/icons/phone.svg" alt="phone">
+                                <img src="{{env('APP_URL')}}/img/icons/phone.svg" alt="phone">
                             </div>
                             <div class="form__row_wrapper-title form__row_wrapper-title-PL">
-                                <a href="callto: (270) 555-0117">(270) 555-0117</a>
+                                <a href="{{env('APP_URL')}}/callto: (270) 555-0117">(270) 555-0117</a>
                             </div>
                         </div>
                         <div class="form__row_links">
                             <a href="#">
-                                <img src="img/icons/telegram.svg" alt="telegram">
+                                <img src="{{env('APP_URL')}}/img/icons/telegram.svg" alt="telegram">
                             </a>
                             <a class="form__row_links-skype" href="#">
-                                <img src="img/icons/skype.svg" alt="skype">
+                                <img src="{{env('APP_URL')}}/img/icons/skype.svg" alt="skype">
                             </a>
                             <a href="#">
-                                <img src="img/icons/facebook.svg" alt="facebook">
+                                <img src="{{env('APP_URL')}}/img/icons/facebook.svg" alt="facebook">
                             </a>
                         </div>
                     </div>
@@ -677,7 +677,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 footer__logo">
-                        <img src="img/icons/logo__footer.svg" alt="logo">
+                        <img src="{{env('APP_URL')}}/img/icons/logo__footer.svg" alt="logo">
                     </div>
                     <div class="col-lg-6 footer__top">
                         <div class="footer__top_top">
@@ -791,15 +791,15 @@
                         Все известные организации по контролю за пищевыми продуктами относят пищевую добавку Е330 к классу безопасных для здоровья.
                     </div>
                     <div class="col-lg-6 thirdPage__descr_img">
-                        <img src="img/images/products/1.png" alt="product">
+                        <img src="{{env('APP_URL')}}/img/images/products/1.png" alt="product">
                     </div>
                 </div>
             </section>
         </div>
         <section class="thirdPage__use">
             <div class="container">
-                <img class="sot1" src="img/icons/sot1.svg" alt="image">
-                <img class="sot2" src="img/icons/sot2.svg" alt="image">
+                <img class="sot1" src="{{env('APP_URL')}}/img/icons/sot1.svg" alt="image">
+                <img class="sot2" src="{{env('APP_URL')}}/img/icons/sot2.svg" alt="image">
                 <div class="row">
                     <div class="col-lg-4 thirdPage__use_title">
                         Застосування продукту
@@ -902,7 +902,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 footer__logo">
-                        <img src="img/icons/logo__footer.svg" alt="logo">
+                        <img src="{{env('APP_URL')}}/img/icons/logo__footer.svg" alt="logo">
                     </div>
                     <div class="col-lg-6 footer__top">
                         <div class="footer__top_top">

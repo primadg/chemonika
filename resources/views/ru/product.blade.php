@@ -3,38 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="/public/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="/public/css/style.min.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/style.min.css">
 </head>
 <body>
 <header class="header">
     <div class="container">
         <div class="header__wrapper">
-            <a href="index.html" class="header__logo">
-                <img src="/img/icons/logo.svg" alt="logo">
+            <a href="{{env('APP_URL')}}" class="header__logo">
+                <img src="{{env('APP_URL')}}/img/icons/logo.svg" alt="logo">
             </a>
             <div class="header__info">
                 <div class="header__info_contact">
-                    <a class="header__info_contact-link header__active_link link__about" href="#">Про нас</a>
+                    <a class="header__info_contact-link link__about" href="{{env('APP_URL')}}">Про нас</a>
                 </div>
                 <div class="header__info_contact">
-                    <a class="header__info_contact-link link__products" href="#">Продукція</a>
+                    <a class="header__info_contact-link link__products" href="{{env('APP_URL').'/products'}}">Продукция</a>
                 </div>
                 <div class="header__info_contact">
-                    <a class="header__info_contact-link link__contacts" href="#">Контакти</a>
+                    <a class="header__info_contact-link link__contacts" href="#">Контакты</a>
                 </div>
                 <div class="header__info_lang">
-                    <div class="header__info_lang-chosen">UKR</div>
+                    <div class="header__info_lang-chosen">RU</div>
                     <svg class="header__info_lang-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <path class="header__info_lang-arrow_path"
                               d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#263640"/>
                     </svg>
                     <ul class="header__info_lang-dropdown">
-                        <li class="header__info_lang-dropdown-li">UKR</li>
-                        <li class="header__info_lang-dropdown-li">RUS</li>
-                        <li class="header__info_lang-dropdown-li">EN</li>
+                        <li onclick="location.href='{{env("APP_URL")."/ukr"}}'" class="header__info_lang-dropdown-li">UKR</li>
+                        <li onclick="location.href='{{env("APP_URL")."/ru"}}'" class="header__info_lang-dropdown-li">RUS</li>
+                        <li onclick="location.href='{{env("APP_URL")."/en"}}'" class="header__info_lang-dropdown-li">EN</li>
                     </ul>
                 </div>
                 <a href="mailto: test@test.com" class="header__info_button">
@@ -59,13 +59,13 @@
     <a href="#" class="burger__menu_list">Контакти</a>
     <div class="burger__menu_social">
         <a href="#">
-            <img src="img/icons/telegram.svg" alt="telegram">
+            <img src="{{env('APP_URL')}}/img/icons/telegram.svg" alt="telegram">
         </a>
         <a class="form__row_links-skype" href="#">
-            <img src="img/icons/skype.svg" alt="skype">
+            <img src="{{env('APP_URL')}}/img/icons/skype.svg" alt="skype">
         </a>
         <a href="#">
-            <img src="img/icons/facebook.svg" alt="facebook">
+            <img src="{{env('APP_URL')}}/img/icons/facebook.svg" alt="facebook">
         </a>
     </div>
     <div class="burger__menu_languages">
@@ -122,8 +122,8 @@
     </div>
     <section class="thirdPage__use">
         <div class="container">
-            <img class="sot1" src="img/icons/sot1.svg" alt="image">
-            <img class="sot2" src="img/icons/sot2.svg" alt="image">
+            <img class="sot1" src="{{env('APP_URL')}}/img/icons/sot1.svg" alt="image">
+            <img class="sot2" src="{{env('APP_URL')}}/img/icons/sot2.svg" alt="image">
             <div class="row">
                 <div class="col-lg-4 thirdPage__use_title">
                     Застосування продукту
@@ -221,7 +221,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 footer__logo">
-                    <img src="img/icons/logo__footer.svg" alt="logo">
+                    <img src="{{env('APP_URL')}}/img/icons/logo__footer.svg" alt="logo">
                 </div>
                 <div class="col-lg-6 footer__top">
                     <div class="footer__top_top">
@@ -299,7 +299,7 @@
     </footer>
 </div>
 
-<script src="js/jquery-3.5.1.min.js"></script>
-<script src="js/app.js"></script>
+<script src="{{env('APP_URL')}}/js/jquery-3.5.1.min.js"></script>
+<script src="{{env('APP_URL')}}/js/app.js"></script>
 </body>
 </html>

@@ -10,15 +10,15 @@
 <header class="header">
     <div class="container">
         <div class="header__wrapper">
-            <a href="index.html" class="header__logo">
-                <img src="/chemonika/img/icons/logo.svg" alt="logo">
+            <a href="{{env('APP_URL')}}" class="header__logo">
+                <img src="{{env('APP_URL')}}/img/icons/logo.svg" alt="logo">
             </a>
             <div class="header__info">
                 <div class="header__info_contact">
-                    <a class="header__info_contact-link link__about" href="indexEn.html">About us</a>
+                    <a class="header__info_contact-link link__about" href="{{env('APP_URL')}}">About us</a>
                 </div>
                 <div class="header__info_contact">
-                    <a class="header__info_contact-link header__active_link link__products" href="productionEn.html">Product</a>
+                    <a class="header__info_contact-link header__active_link link__products" href="{{env('APP_URL').'/products'}}">Product</a>
                 </div>
                 <div class="header__info_contact">
                     <a class="header__info_contact-link link__contacts" href="#">Contacts</a>
@@ -29,9 +29,9 @@
                         <path class="header__info_lang-arrow_path" d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#263640"/>
                     </svg>
                     <ul class="header__info_lang-dropdown">
-                        <li class="header__info_lang-dropdown-li"><a style="text-decoration: none;" href="{{env('APP_URL').'/ukr'}}">UKR</a></li>
-                        <li class="header__info_lang-dropdown-li"><a style="text-decoration: none;" href="{{env('APP_URL').'/ru'}}">RUS</a></li>
-                        <li class="header__info_lang-dropdown-li"><a style="text-decoration: none;" href="{{env('APP_URL').'/en'}}">EN</a></li>
+                        <li onclick="location.href='{{env("APP_URL")."/ukr"}}'" class="header__info_lang-dropdown-li">UKR</li>
+                        <li onclick="location.href='{{env("APP_URL")."/ru"}}'" class="header__info_lang-dropdown-li">RUS</li>
+                        <li onclick="location.href='{{env("APP_URL")."/en"}}'" class="header__info_lang-dropdown-li">EN</li>
                     </ul>
                 </div>
                 <a href="mailto: test@test.com" class="header__info_button">
@@ -138,7 +138,7 @@
                                     {{ $product->description }}
                                 </div>
                                 <div class="products__block_main-btn secondPage__goods_card-btn">
-                                    <div ><a href="{{route('products.show', $product->id)}}"> Show more</a></div>
+                                    <div onclick="location.href='{{route("products.show", $product->id)}}'">Show more</div>
                                     <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z"

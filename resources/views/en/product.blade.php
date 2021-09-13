@@ -11,36 +11,33 @@
 <header class="header">
     <div class="container">
         <div class="header__wrapper">
-            <a href="index.html" class="header__logo">
-                <img src="/img/icons/logo.svg" alt="logo">
+            <a href="{{env('APP_URL')}}" class="header__logo">
+                <img src="{{env('APP_URL')}}/img/icons/logo.svg" alt="logo">
             </a>
             <div class="header__info">
                 <div class="header__info_contact">
-                    <a class="header__info_contact-link header__active_link link__about" href="#">Про нас</a>
+                    <a class="header__info_contact-link link__about" href="{{env('APP_URL')}}">About us</a>
                 </div>
                 <div class="header__info_contact">
-                    <a class="header__info_contact-link link__products" href="#">Продукція</a>
+                    <a class="header__info_contact-link header__active_link link__products" href="{{env('APP_URL').'/products'}}">Product</a>
                 </div>
                 <div class="header__info_contact">
-                    <a class="header__info_contact-link link__contacts" href="#">Контакти</a>
+                    <a class="header__info_contact-link link__contacts" href="#">Contacts</a>
                 </div>
                 <div class="header__info_lang">
-                    <div class="header__info_lang-chosen">UKR</div>
-                    <svg class="header__info_lang-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path class="header__info_lang-arrow_path"
-                              d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#263640"/>
+                    <div class="header__info_lang-chosen">EN</div>
+                    <svg class="header__info_lang-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="header__info_lang-arrow_path" d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#263640"/>
                     </svg>
                     <ul class="header__info_lang-dropdown">
-                        <li class="header__info_lang-dropdown-li">UKR</li>
-                        <li class="header__info_lang-dropdown-li">RUS</li>
-                        <li class="header__info_lang-dropdown-li">EN</li>
+                        <li onclick="location.href='{{env("APP_URL")."/ukr"}}'" class="header__info_lang-dropdown-li">UKR</li>
+                        <li onclick="location.href='{{env("APP_URL")."/ru"}}'" class="header__info_lang-dropdown-li">RUS</li>
+                        <li onclick="location.href='{{env("APP_URL")."/en"}}'" class="header__info_lang-dropdown-li">EN</li>
                     </ul>
                 </div>
                 <a href="mailto: test@test.com" class="header__info_button">
-                    <span>Написати нам</span>
-                    <svg class="header__info_button-svg" width="12" height="8" viewBox="0 0 12 8" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
+                    <span>Write to us</span>
+                    <svg class="header__info_button-svg" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#ffffff"/>
                     </svg>
                 </a>

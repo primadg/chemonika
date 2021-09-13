@@ -2,20 +2,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/style.min.css">
 </head>
 <body>
 <header class="header">
     <div class="container">
         <div class="header__wrapper">
-            <a href="index.html" class="header__logo">
-                <img src="/img/icons/logo.svg" alt="logo">
+            <a href="{{env('APP_URL')}}" class="header__logo">
+                <img src="{{env('APP_URL')}}/img/icons/logo.svg" alt="logo">
             </a>
             <div class="header__info">
                 <div class="header__info_contact">
-                    <a class="header__info_contact-link link__about" href="indexRu.html">О нас</a>
+                    <a class="header__info_contact-link link__about" href="{{env('APP_URL')}}">О нас</a>
                 </div>
                 <div class="header__info_contact">
                     <a class="header__info_contact-link header__active_link link__products" href="productionRu.html">Продукция</a>
@@ -29,9 +29,9 @@
                         <path class="header__info_lang-arrow_path" d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#263640"/>
                     </svg>
                     <ul class="header__info_lang-dropdown">
-                        <li class="header__info_lang-dropdown-li"><a style="text-decoration: none;" href="{{env('APP_URL').'/ukr'}}">UKR</a></li>
-                        <li class="header__info_lang-dropdown-li"><a style="text-decoration: none;" href="{{env('APP_URL').'/ru'}}">RUS</a></li>
-                        <li class="header__info_lang-dropdown-li"><a style="text-decoration: none;" href="{{env('APP_URL').'/en'}}">EN</a></li>
+                        <li onclick="location.href='{{env("APP_URL")."/ukr"}}'" class="header__info_lang-dropdown-li">UKR</li>
+                        <li onclick="location.href='{{env("APP_URL")."/ru"}}'" class="header__info_lang-dropdown-li">RUS</li>
+                        <li onclick="location.href='{{env("APP_URL")."/en"}}'" class="header__info_lang-dropdown-li">EN</li>
                     </ul>
                 </div>
                 <a href="mailto: test@test.com" class="header__info_button">
@@ -50,18 +50,18 @@
     </div>
 </header>
 <div class="burger__menu">
-    <a href="indexRu.html" class="burger__menu_list burger__menu_list-about">О нас</a>
-    <a href="productionRu.html" class="burger__menu_list burger__menu_list-middle burger__menu_list-products">Продукция</a>
+    <a href="{{env('APP_URL')}}" class="burger__menu_list burger__menu_list-about">О нас</a>
+    <a href="{{env('APP_URL')}}/products" class="burger__menu_list burger__menu_list-middle burger__menu_list-products">Продукция</a>
     <a href="#" class="burger__menu_list">Контакты</a>
     <div class="burger__menu_social">
         <a href="#">
-            <img src="img/icons/telegram.svg" alt="telegram">
+            <img src="{{env('APP_URL')}}/img/icons/telegram.svg" alt="telegram">
         </a>
         <a class="form__row_links-skype" href="#">
-            <img src="img/icons/skype.svg" alt="skype">
+            <img src="{{env('APP_URL')}}/img/icons/skype.svg" alt="skype">
         </a>
         <a href="#">
-            <img src="img/icons/facebook.svg" alt="facebook">
+            <img src="{{env('APP_URL')}}/img/icons/facebook.svg" alt="facebook">
         </a>
     </div>
     <div class="burger__menu_languages">
@@ -138,7 +138,7 @@
                                     {{ $product->description }}
                                 </div>
                                 <div class="products__block_main-btn secondPage__goods_card-btn">
-                                    <div><a href="{{route('products.show', $product->id)}}">Подробней</a></div>
+                                    <div onclick="location.href='{{route("products.show", $product->id)}}'">Подробней</div>
                                     <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z"
@@ -167,7 +167,7 @@
                 <div class="col-lg-6 form__social">
                     <div class="form__row_wrapper">
                         <div>
-                            <img src="img/icons/location.svg" alt="location">
+                            <img src="{{env('APP_URL')}}/img/icons/location.svg" alt="location">
                         </div>
                         <div class="form__row_wrapper-title">
                             2464 Royal Ln. Mesa, New Jersey 45463
@@ -175,7 +175,7 @@
                     </div>
                     <div class="form__row_wrapper form__row_wrapper-MT">
                         <div>
-                            <img src="img/icons/phone.svg" alt="phone">
+                            <img src="{{env('APP_URL')}}/img/icons/phone.svg" alt="phone">
                         </div>
                         <div class="form__row_wrapper-title form__row_wrapper-title-PL">
                             <a href="callto: (270) 555-0117">(270) 555-0117</a>
@@ -183,13 +183,13 @@
                     </div>
                     <div class="form__row_links">
                         <a href="#">
-                            <img src="img/icons/telegram.svg" alt="telegram">
+                            <img src="{{env('APP_URL')}}/img/icons/telegram.svg" alt="telegram">
                         </a>
                         <a class="form__row_links-skype" href="#">
-                            <img src="img/icons/skype.svg" alt="skype">
+                            <img src="{{env('APP_URL')}}/img/icons/skype.svg" alt="skype">
                         </a>
                         <a href="#">
-                            <img src="img/icons/facebook.svg" alt="facebook">
+                            <img src="{{env('APP_URL')}}/img/icons/facebook.svg" alt="facebook">
                         </a>
                     </div>
                 </div>
@@ -226,7 +226,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 footer__logo">
-                    <img src="img/icons/logo__footer.svg" alt="logo">
+                    <img src="{{env('APP_URL')}}/img/icons/logo__footer.svg" alt="logo">
                 </div>
                 <div class="col-lg-6 footer__top">
                     <div class="footer__top_top">
@@ -303,8 +303,8 @@
         </div>
     </footer>
 
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="{{env('APP_URL')}}/js/jquery-3.5.1.min.js"></script>
+    <script src="{{env('APP_URL')}}/js/app.js"></script>
 </div>
 </body>
 </html>
