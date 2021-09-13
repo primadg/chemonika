@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Http\Controllers\admin\ProductController;
 use Closure;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppContoller;
@@ -12,8 +13,8 @@ class LocaleMiddleware
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
+     * @param \Illuminate\Http\Request $request
+     * @param \Closure $next
      * @return mixed
      */
     public static $mainLanguage = 'ru';
@@ -25,13 +26,17 @@ class LocaleMiddleware
     {
         $uri = request()->path();
 
-        $segmentsURI = explode('/',$uri);
 
-        if (!empty($segmentsURI[0]) && in_array($segmentsURI[0], self::$languages)) {
+        $segmentsURI = explode('/', $uri);
+        $segmentsURI = end($segmentsURI);
 
-            if ($segmentsURI[0] != self::$mainLanguage) return $segmentsURI[0];
+
+        if (!empty($segmentsURI) && in_array($segmentsURI, self::$languages)) {
+
+            if ($segmentsURI != self::$mainLanguage) return $segmentsURI;
 
         }
+
         return null;
     }
 
@@ -39,10 +44,15 @@ class LocaleMiddleware
     {
         $locale = self::getLocale();
 
-        if($locale) AppContoller::setLocale($locale);
+        if ($locale) {
+            AppContoller::setLocale($locale);
+            ProductController::setLocale($locale);
+        } else {
+            AppContoller::setLocale(self::$mainLanguage);
+            ProductController::setLocale(self::$mainLanguage);
+        }
 
-        else AppContoller::setLocale(self::$mainLanguage);
 
-        return $next($request); 
+        return $next($request);
     }
 }

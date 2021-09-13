@@ -1,5 +1,7 @@
 <?php
 
+
+use http\Cookie;
 use Illuminate\Support\Facades\Route;
 use App\HTTP\Controllers\AppContoller;
 use App\HTTP\Controllers\Admin\AdminController;
@@ -15,16 +17,21 @@ use App\HTTP\Controllers\Admin\AdminController;
 |
 */
 
-Route::group(['prefix' => App\Http\Middleware\LocaleMiddleware::getLocale()], function() {
+//['prefix' => App\Http\Middleware\LocaleMiddleware::getLocale()]
+Route::group([], function() {
     Route::get('/', [AppContoller::class, 'IndexAction']);
-});
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+    Route::get('/ru', [AppContoller::class, 'SetLangRu']);
+    Route::get('/en', [AppContoller::class, 'SetLangEng']);
+    Route::get('/ukr', [AppContoller::class, 'SetLangUkr']);
+    Route::resource('products', \App\Http\Controllers\admin\ProductController::class)->only(['index', 'show']);
 
-Route::group(['middleware' => ['role:admin']], function () {
-    Route::get("/admin", [AdminController::class, 'homeAction']);
-    Route::resource('products', \App\Http\Controllers\admin\ProductController::class);
+});
+
+
+Route::group(['middleware' => ['role:admin'], ], function () {
+    Route::get("/admin", [AdminController::class,'homeAction' ]);
+    Route::resource('products', \App\Http\Controllers\admin\ProductController::class)->only([
+        'create', 'store', 'update','edit', 'destroy']);
 });
 
 

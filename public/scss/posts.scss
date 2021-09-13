@@ -1,0 +1,280 @@
+*{font-family: 'Ubuntu', sans-serif;}
+
+.header{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 43px rgba(0, 0, 0, 0.1);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    .wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo{
+        display: flex;
+        align-items: center;
+        img{
+            padding-right: 10px;
+        }
+    }
+    &__plus{
+        width: 100px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #FF9900;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 40px;
+        color: #FFFFFF;
+    }
+    &__button{
+        width: 121px;
+        height: 40px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        border: 1px solid #262626;
+        box-sizing: border-box;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 40px;
+        color: #263640;
+        transition: .2s ease-in-out;
+        img{
+            padding-left: 20px;
+            transition: .2s ease-in-out;
+        }
+        &:hover{
+            img{
+                padding-left: 30px;
+                transition: .2s ease-in-out;
+            }
+        }
+    }
+}
+
+.post{
+    padding: 100px 0;
+    .wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__title{
+        font-size: 42px;
+        line-height: 130%;
+        font-weight: 700;
+        color: #263640;
+    }
+    &__add{
+        width: 208px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #219653;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 40px;
+        color: #FFFFFF;
+        span{
+            padding-right: 21px;
+        }
+        img{
+            transition: .4s ease-in-out;
+        }
+        &:hover{
+            img{
+                transform: rotate(90deg);
+                transition: .4s ease-in-out;
+            }
+        }
+    }
+    &__block{
+        background: #FFFFFF;
+        border: 1px solid #E1E8EE;
+        box-sizing: border-box;
+        border-radius: 4px;
+        padding: 8px;
+        display: flex;  
+        margin-top: 16px;
+        &:first-child{
+            margin-top: 0;
+        }
+        &_img{
+            max-width: 168px;
+            width: 168px;
+            min-width: 168px;
+            img{
+                width: 100%;
+            }
+        }
+        &_title{
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 130%;
+            color: #263640;
+            margin-bottom: 11px;
+        }
+        &_info{
+            margin: 0 32px 0 32px;
+        }
+        &_wrapper{
+            display: flex;
+            align-items: center;
+            &-type{
+                width: 228px;
+                font-size: 16px;
+                line-height: 30px;
+                color: #263640;
+            }
+            &-content{
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 30px;
+                color: #263640;
+            }
+            &-offset{
+                margin-top: 10px;
+            }
+        }
+        &_btns{
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+        &_btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 40px;
+            display: flex;
+            align-items: center;
+            text-align: right;
+            color: #263640;
+            background: #E1E8EE;
+            cursor: pointer;
+            height: 40px;
+            transition: .2s ease-in-out;
+            img{
+                padding-left: 21px;
+            }
+            &:hover{
+                background: #b3b7ba;
+                transition: .2s ease-in-out;
+            }
+        }
+        &_edit{
+            width: 121px;
+        }
+        &_close{
+            width: 133px;
+            margin-left: 15px;
+        }
+    }
+    &__container{
+        margin-top: 43px;
+    }
+}
+
+.footer{
+    background: #263640;
+    padding: 45px 0;
+    &__wrapper{
+        display: flex;
+        align-items: flex-start;
+    }
+    &__logo{
+        width: 50%;   
+    }
+    &__info{
+        display: flex;
+        align-items: flex-start;
+        margin-top: 30px;
+        &_social{
+            &-title{
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 1.75px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+            }
+            &-skype{
+                margin: 0 30px;
+            }
+            &-btns{
+                margin-top: 35px;
+            }
+        }
+        &_place{
+            padding-left: 50px;
+            &-descr{
+                font-size: 16px;
+                line-height: 28px;
+                color: #FFFFFF;
+                width: 175px;
+                padding-top: 10px;
+            }
+        }
+    }
+    &__separator{
+        width: 100%;
+        height: 1px;
+        background: rgba(33, 150, 83, .2);
+        margin-top: 70px;
+        margin-bottom: 41px;
+    }
+    &__bottom{
+        display: flex;
+        align-items: center;
+    }
+    &__subtitle{
+        font-size: 14px;
+        line-height: 16px;
+        color: #FFFFFF;
+        &-middle{
+            margin: 0 10px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1200px){
+    .post__block_title{
+        font-size: 21px;
+    }
+}
+@media screen and (max-width: 991px){
+    .post__block_btns{
+        flex-direction: column;
+    }
+    .post__block_title{
+        font-size: 18px;
+    }
+    .post__block_img{
+        max-width: 130px;
+        width: 130px;
+        min-width: 130px;
+    }
+    .post__block_info{
+        margin: 0 20px;
+    }
+    .post__block_btns{
+        justify-content: space-between;
+    }
+    .post__block_btn{
+        width: 133px;
+    }
+    .post__block_close{
+        margin-left: 0;
+    }
+}

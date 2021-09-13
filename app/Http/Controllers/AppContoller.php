@@ -6,12 +6,22 @@ use Illuminate\Http\Request;
 
 class AppContoller extends Controller
 {
-    private static $language;
-    public static function setLocale($locale){
-       self::$language=$locale;
-    }
-    public function IndexAction()
+    private $language;
+
+
+    public function IndexAction(Request $request)
     {
-            return view('index');
+        $value = $request->cookie('lang') ?? "ukr";
+            return view($value.'.index');
+    }
+
+    public function setLangEng(){
+        return redirect()->back()->withCookie(cookie('lang', 'en', 180));
+    }
+    public function setLangRu(){
+        return redirect()->back()->withCookie(cookie('lang', 'ru', 180));
+    }
+    public function setLangUkr(){
+        return redirect()->back()->withCookie(cookie('lang', 'ukr', 180));
     }
 }

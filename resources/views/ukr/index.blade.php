@@ -31,9 +31,9 @@
                         <path class="header__info_lang-arrow_path" d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#263640"/>
                     </svg>
                     <ul class="header__info_lang-dropdown">
-                        <li class="header__info_lang-dropdown-li">UKR</li>
-                        <li class="header__info_lang-dropdown-li">RUS</li>
-                        <li class="header__info_lang-dropdown-li">EN</li>
+                        <li class="header__info_lang-dropdown-li"><a style="text-decoration: none;" href="{{env('APP_URL').'/ukr'}}">UKR</a></li>
+                        <li class="header__info_lang-dropdown-li"><a style="text-decoration: none;" href="{{env('APP_URL').'/ru'}}">RUS</a></li>
+                        <li class="header__info_lang-dropdown-li"><a style="text-decoration: none;" href="{{env('APP_URL').'/en'}}">EN</a></li>
                     </ul>
                 </div>
                 <a href="mailto: test@test.com" class="header__info_button">

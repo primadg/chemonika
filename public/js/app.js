@@ -46,11 +46,11 @@ let removeMenu = () => {
 
 
 // products__block_main-btn
-$('.secondPage__goods_card-btn').on('click', function(){
-  $('.secondPage').fadeOut(100);
-  document.querySelector("header").scrollIntoView();
-  $('.thirdPage').fadeIn(100);
-});
+// $('.secondPage__goods_card-btn').on('click', function(){
+//   $('.secondPage').fadeOut(100);
+//   document.querySelector("header").scrollIntoView();
+//   $('.thirdPage').fadeIn(100);
+// });
 
 $('.thirdPage__info_back').on('click', function(){
   hidePages();
@@ -95,7 +95,7 @@ $(".custom-select").each(function() {
           template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
         });
     template += '</div></div>';
-    
+
     $(this).wrap('<div class="custom-select-wrapper"></div>');
     $(this).hide();
     $(this).after(template);
@@ -126,7 +126,7 @@ $(".custom-select").each(function() {
     $('.custom-select-trigger').parent().removeClass('opened');
     $(this).parent().addClass('opened');
   });
-  
+
 
 
 
@@ -213,11 +213,51 @@ $('.burger__menu_list-about').on('click', function(){
   $('.firstPage').fadeIn(100);
   $('body').removeClass('overflowStop');
   $('.burger__menu').removeClass('burger__menu_active');
-}); 
+});
 
 $('.burger__menu_list-products').on('click', function(){
   hidePages();
   $('.secondPage').fadeIn(100);
   $('body').removeClass('overflowStop');
   $('.burger__menu').removeClass('burger__menu_active');
-}); 
+});
+
+
+
+
+
+// __________________________________ admin
+let tabs = document.querySelectorAll('.card__tabs_tab');
+
+let removeActiveTab = () => tabs.forEach(item => item.classList.remove('card__tabs_tab-active'));
+
+
+tabs.forEach(item => {
+    item.onclick = () => {
+        removeActiveTab();
+        item.classList.add('card__tabs_tab-active');
+    };
+});
+
+
+//height textarrea
+let textarreas = document.querySelectorAll('.card__descr');
+
+textarreas.forEach(item => {
+    item.style.height = item.scrollHeight + 'px';
+});
+
+window.onresize = () => {
+    textarreas.forEach(item => {
+        item.style.height = item.scrollHeight + 'px';
+    });
+}
+
+//add rows
+
+let addRowsBtns = document.querySelector('.card__table_add');
+
+addRowsBtns.onclick = (e) => {
+    let clonedRow = addRowsBtns.parentNode.querySelector('.card__table_main-row:last-child').cloneNode(true);
+    document.querySelector('.card__table_main').appendChild(clonedRow);
+}
