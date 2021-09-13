@@ -261,3 +261,6 @@ addRowsBtns.onclick = (e) => {
     let clonedRow = addRowsBtns.parentNode.querySelector('.card__table_main-row:last-child').cloneNode(true);
     document.querySelector('.card__table_main').appendChild(clonedRow);
 }
+
+
+

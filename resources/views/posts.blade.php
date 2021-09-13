@@ -33,7 +33,7 @@
         <div class="wrapper">
             <div class="post__title">Posts</div>
             <div class="post__add">
-                <span>Add new post</span>
+                <span onclick="location.href='{{route('products_admin.create')}}'">Add new post</span>
                 <img src="img/icons/posts/plus.svg" alt="plus">
             </div>
         </div>

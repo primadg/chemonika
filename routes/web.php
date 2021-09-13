@@ -32,6 +32,7 @@ Route::group(['middleware' => ['role:admin'], ], function () {
     Route::get("/admin", [AdminController::class,'homeAction' ]);
     Route::resource('products', \App\Http\Controllers\admin\ProductController::class)->only([
         'create', 'store', 'update','edit', 'destroy']);
+    Route::resource('products_admin', \App\Http\Controllers\admin\ProductController::class);
 });
 
 

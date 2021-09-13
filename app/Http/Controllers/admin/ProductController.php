@@ -24,8 +24,8 @@ class ProductController extends Controller
     public function index(Request $request)
     {
         $value = $request->cookie('lang') ?? "ukr";
-        return view($value.'.products', [
-            'products' => DB::table('product_'.$value.'s')->simplePaginate(9)
+        return view($value . '.products', [
+            'products' => DB::table('product_' . $value . 's')->simplePaginate(9)
         ]);
     }
 
@@ -36,22 +36,35 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view("admin.products_".self::$language.".create");
+        return view("card");
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
-        $lang = $request->cookie('lang');
-        switch ($lang){
-            case "ru":$new_product = new Product_ru(); break;
-            case "en":$new_product = new Product_en(); break;
-            default: $new_product = new Product_ukr();
+        $lang = $request->lang;
+
+        $is_ukr = false;
+        switch ($lang) {
+            case "ru":
+                $new_product = new Product_ru();
+                $second_product = new Product_en();
+                $main_table = new Product_ukr();
+                break;
+            case "en":
+                $new_product = new Product_en();
+                $second_product = new Product_ru();
+                $main_table = new Product_ukr();
+                break;
+            default:
+                $new_product = new Product_ukr();
+                $is_ukr = true;
+                break;
         }
 
         $path = $request->file('img')->store('img');
@@ -65,8 +78,30 @@ class ProductController extends Controller
         $new_product->Package = $request->package;
         $new_product->Storage = $request->stogare;
         $new_product->img = $path;
-        $new_product->save();
-        return redirect()->back()->with('success','ok');
+
+
+        if ($is_ukr) {
+            $new_product->save();
+            $first = new Product_ru();
+            $second = new Product_en();
+            $first->pos_id = $new_product->id;
+            $first->img=$path;
+            $first->save();
+            $second->pos_id = $new_product->id;
+            $second->img=$path;
+            $second->save();
+        } else {
+            $main_table->img=$path;
+            $main_table->save();
+            $new_product->pos_id = $main_table->id;
+            $new_product->save();
+            $second_product->pos_id = $main_table->id;
+            $second_product->img=$path;
+            $second_product->save();
+
+        }
+
+        return redirect('admin');
     }
 
     /**
@@ -79,15 +114,15 @@ class ProductController extends Controller
     public function show(int $id, Request $request)
     {
         $value = $request->cookie('lang') ?? "ukr";
-        return view($value.'.product', [
-            'product' => DB::table('product_'.$value.'s')->where('id',$id)->first()
+        return view($value . '.product', [
+            'product' => DB::table('product_' . $value . 's')->where('id', $id)->first()
         ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -98,8 +133,8 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -110,7 +145,7 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
