@@ -31,8 +31,9 @@ Route::group([], function() {
 Route::group(['middleware' => ['role:admin'], ], function () {
     Route::get("/admin", [AdminController::class,'homeAction' ]);
     Route::resource('products', \App\Http\Controllers\admin\ProductController::class)->only([
-        'create', 'store', 'update','edit', 'destroy']);
+        'create', 'store', 'update','edit', ]);
     Route::resource('products_admin', \App\Http\Controllers\admin\ProductController::class);
+    Route::get("/delete/{id}", [AdminController::class,'deletePost', ]);
 });
 
 

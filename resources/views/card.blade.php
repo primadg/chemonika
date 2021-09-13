@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/card.min.css">
-    <title>Login</title>
+    <title>Create</title>
 </head>
 <body>
 <header class="header">

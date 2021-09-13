@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/posts.min.css">
-    <title>Post</title>
+    <title>Admin</title>
 </head>
 <body>
 <header class="header">
@@ -56,11 +56,11 @@
                 </div>
                 <div class="post__block_btns">
                     <div class="post__block_btn post__block_edit">
-                        <span><a href="{{route('products.edit',$product->id)}}">Edit</a></span>
+                        <span onclick="location.href='{{route('products_admin.edit',$product->id)}}'">Edit</span>
                         <img src="img/icons/posts/edit.svg" alt="edit">
                     </div>
                     <div class="post__block_btn post__block_close">
-                        <span><a href="{{route('products.destroy', $product->id),$product->id}}">Delete</a></span>
+                        <span onclick="location.href=' {{env('APP_URL').'/delete/'.$product->id}}'">Delete</span>
                         <img src="img/icons/posts/close.svg" alt="close">
                     </div>
                 </div>

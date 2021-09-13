@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/card.min.css">
-    <title>Login</title>
+    <title>Edit</title>
 </head>
 <body>
 <header class="header">
@@ -30,7 +30,9 @@
 </header>
 <section class="card">
 
-    <form class="container">
+    <form id="form_id" class="container" method="post" enctype="multipart/form-data" action="{{route('products_admin.store')}}">
+        @csrf
+        <input type="hidden" value="ukr" name="lang" id="lang_data">
         <a href="#" class="card__wrapper">
             <img src="{{env('APP_URL')}}/img/icons/card/chevron.svg" alt="back">
             <div class="card__back">back to Admin panel</div>
@@ -39,24 +41,24 @@
             <div class="card__title">Языковые версии</div>
             <div class="card__tabs">
                 <div class="card__tabs_tab">Eng</div>
-                <div class="card__tabs_tab card__tabs_tab-active">Руc</div>
-                <div class="card__tabs_tab">Укр</div>
+                <div class="card__tabs_tab ">Руc</div>
+                <div class="card__tabs_tab card__tabs_tab-active">Укр</div>
             </div>
         </div>
         <div class="card__content">
 
             <div class="card__name">
                 <div class="card__content_title">Название</div>
-                <input class="card__content_input" value="Лимонная кислота (антиоксиданты)" type="text">
+                <input required class="card__content_input" name="name" type="text">
             </div>
             <div class="card__groupWrap">
                 <div class="card__group">
                     <div class="card__content_title">Группа</div>
-                    <input class="card__content_input" value="Антиоксиданты" type="text">
+                    <input required class="card__content_input" name="group" type="text">
                 </div>
                 <div class="card__application">
                     <div class="card__content_title">Область применения</div>
-                    <input class="card__content_input" value="Молочная" type="text">
+                    <input required class="card__content_input" name="field_of_usage" value="" type="text">
                 </div>
             </div>
         </div>
@@ -65,11 +67,11 @@
                 <label class="card__upload">
                     <span>Download image</span>
                     <img src="{{env('APP_URL')}}/img/icons/card/upload.svg" alt="upload">
-                    <input type="file" id="myFile" name="filename">
+                    <input  required type="file" name="img" id="myFile" name="filename">
                 </label>
             </div>
             <div class="card__group">
-                <img class="card__upload_img" id="imagehui" src="{{env('APP_URL')}}/img/images/card/card.png" alt="card">
+                <img class="card__upload_img" width="380" height="240" id="imagehui" src="{{env('APP_URL')}}/img/images/card/card.png" alt="card">
                 <div class="card__upload_name">
                     <div class="card__upload_name-name">
                         limon.jpg
@@ -85,15 +87,15 @@
 
         </div>
         <div class="card__content_title">Описание товара</div>
-        <textarea class="card__descr" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>В пищевой промышленности лимонная кислота (Е330)  широко применяется  в производстве безалкогольных напитков, поскольку обладает наиболее мягким и освежающим вкусом по сравнению с другими пищевыми кислотами.В производстве кондитерских изделий применяется как ароматизатор и подкислитель. В производстве хлебобулочных изделий применяется как один из компонентов разрыхлителей теста. В масложировой промышленности лимонная кислота значительно снижает вероятность прогоркания жиров, маргаринов и животного масла. При производстве консервов используется, как консервант.Все известные организации по контролю за пищевыми продуктами относят пищевую добавку Е330 к классу безопасных для здоровья.</textarea>
+        <textarea required class="card__descr" name="description" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
         <div class="card__content_title">Применение продукта</div>
-        <textarea class="card__descr" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>В косметических препаратах применяется как консервант, разбавитель, модификатор pH, соответствующего pH кожи. Оказывает на кожу вяжущее, очищающее и отбеливающее действие. Вводится в состав очищающих кремов, депиляториев, ополаскивателей для волос, красок для волос, кремов от веснушек. Лимонная кислота используется как подкислитель в кормах. Обладает сильным антибактериальным действием, оказывает антистрессовое действие, является катализатором обмена веществ, синергистом антиоксидантов. Отвечает за активизацию ферментов, улучшает усвояемость кормов Все известные организации по контролю за пищевыми продуктами относят пищевую добавку Е330 к классу безопасных для здоровья.</textarea>
+        <textarea required class="card__descr" name="product_usage" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
         <div class="card__content_title">Стандарты</div>
-        <textarea class="card__descr" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>Соответствует стандартам качества: ВР2009, USP32, FCC6, E330.</textarea>
-        <div class="card__content_title">Упаковка</div>
-        <textarea class="card__descr" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>Pellentesque varius faucibus elementum sapien ultrices diam iaculis lacus mi</textarea>
+        <textarea required class="card__descr" name="standart" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+        <div class="card__content_title" >Упаковка</div>
+        <textarea required class="card__descr" name = "package" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
         <div class="card__content_title">Хранение</div>
-        <textarea class="card__descr" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>Enim consectetur eleifend in velit eget dui vulputate eleifend mauris</textarea>
+        <textarea required class="card__descr" name="stogare" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
         <div class="card__table">
             <div class="card__content_title">Таблица показателей</div>
             <div class="card__table_main">
@@ -136,7 +138,7 @@
                     <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg" alt="close">
                 </div>
                 <div class="card__table_main-row">
-                    <input class="card__table_main-simple card__table_main-name" value="Plussunin">
+                    <input  class="card__table_main-simple card__table_main-name" value="Plussunin">
                     <input class="card__table_main-simple card__table_main-amount" value="ID: 22739">
                     <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg" alt="close">
                 </div>
@@ -153,13 +155,10 @@
         </div>
         <div class="card__btns">
             <div class="card__btns_btn card__btns_save">
-                <span>Сохранить</span>
+                <span id="submit_id">Создать</span>
                 <img src="{{env('APP_URL')}}/img/icons/card/check.svg" alt="check">
             </div>
-            <div class="card__btns_btn card__btns_delete">
-                <span>Удалить</span>
-                <img src="{{env('APP_URL')}}/img/icons/card/close.svg" alt="close">
-            </div>
+
         </div>
     </form>
     </div>
