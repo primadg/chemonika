@@ -13,7 +13,15 @@ class AppContoller extends Controller
     public function IndexAction(Request $request)
     {
         $value = $request->cookie('lang') ?? "ukr";
-        $products =  DB::table('product_'.$value.'s')->orderBy('id','desc')->take(3)->get();
+        $products = DB::table('product_' . $value . 's');
+        if ($value == 'ru' || $value == 'en'){
+            $products =  $products->orderBy('pos_id','desc')->take(3)->get();
+            foreach ($products as $item){
+                $item->id=$item->pos_id;
+            }
+        }
+        else
+        $products =  $products->orderBy('id','desc')->take(3)->get();
 
             return view($value.'.index', ['products'=>$products]);
     }

@@ -296,7 +296,7 @@
     </footer>
 </div>
 
-<script src="js/jquery-3.5.1.min.js"></script>
-<script src="js/app.js"></script>
+<script src="{{env('APP_URL')}}/js/jquery-3.5.1.min.js"></script>
+<script src="{{env('APP_URL')}}/js/app.js"></script>
 </body>
 </html>

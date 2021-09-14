@@ -230,7 +230,7 @@
                              <div class="products__block_main-subTitle">({{$product->group}})</div>
                              <div class="products__block_main-descr">{{substr( $product->description,0,120)}}...</div>
                              <div class="products__block_main-btn">
-                                 <div onclick="location.href=' {{route("product.show",$product->id)}}'" >Подробней</div>
+                                 <div onclick="location.href=' {{route("products.show",$product->id)}}'" >Подробней</div>
                                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                      <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"/>
                                  </svg>

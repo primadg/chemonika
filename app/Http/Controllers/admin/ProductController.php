@@ -23,18 +23,26 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
+
+
         $value = $request->cookie('lang') ?? "ukr";
-        if($value=='ru'||$value=='en') {
-            $product = DB::table('product_' . $value . 's')->simplePaginate(9);
-            foreach ($product->items() as $item){
-                $item->id= $item->pos_id;
+        $products = DB::table('product_' . $value . 's');
+        if ($request->get('group'))
+            $products =  $products->where('group',$request->get('group'));
+//        dd($products);
+        if ($request->get('usage'))
+            $products= $products->where('field_of_usage',$request->get('group'));
+         $products= $products->simplePaginate(9);
+
+        if ($value == 'ru' || $value == 'en') {
+            foreach ($products->items() as $item) {
+                $item->id = $item->pos_id;
             }
         }
-        else
-            $product = DB::table('product_' . $value . 's')->simplePaginate(9);
+
 
         return view($value . '.products', [
-            'products' => $product
+            'products' => $products
         ]);
     }
 
@@ -94,18 +102,18 @@ class ProductController extends Controller
             $first = new Product_ru();
             $second = new Product_en();
             $first->pos_id = $new_product->id;
-            $first->img=$path;
+            $first->img = $path;
             $first->save();
             $second->pos_id = $new_product->id;
-            $second->img=$path;
+            $second->img = $path;
             $second->save();
         } else {
-            $main_table->img=$path;
+            $main_table->img = $path;
             $main_table->save();
             $new_product->pos_id = $main_table->id;
             $new_product->save();
             $second_product->pos_id = $main_table->id;
-            $second_product->img=$path;
+            $second_product->img = $path;
             $second_product->save();
 
         }
@@ -124,7 +132,7 @@ class ProductController extends Controller
     {
         $value = $request->cookie('lang') ?? "ukr";
 
-        if($value=='ru'||$value=='en')
+        if ($value == 'ru' || $value == 'en')
             $product = DB::table('product_' . $value . 's')->where('pos_id', $id)->first();
         else
             $product = DB::table('product_' . $value . 's')->where('id', $id)->first();
@@ -143,8 +151,8 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        $product =  DB::table('product_ukrs')->where('id',$id)->first();
-        return view("ukr.card_edit",['product'=>$product]);
+        $product = DB::table('product_ukrs')->where('id', $id)->first();
+        return view("ukr.card_edit", ['product' => $product]);
     }
 
     /**
