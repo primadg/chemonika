@@ -75,7 +75,7 @@
                 <label class="card__upload">
                     <span>Download image</span>
                     <img src="{{env('APP_URL')}}/img/icons/card/upload.svg" alt="upload">
-                    <input type="file" name="img" id="myFile" name="filename">
+                    <input accept=".jpg,.png" type="file" name="img" id="myFile" name="filename">
                 </label>
             </div>
             <div class="card__group">
