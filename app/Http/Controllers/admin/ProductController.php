@@ -123,11 +123,13 @@ class ProductController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param int $id
-     * @return \Illuminate\Http\Response
+     * @param $lang
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
     public function edit($id)
     {
-        //
+        $product =  DB::table('product_ukrs')->where('id',$id)->first();
+        return view("ukr.card_edit",['product'=>$product]);
     }
 
     /**

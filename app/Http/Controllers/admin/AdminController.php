@@ -38,4 +38,17 @@ class AdminController extends Controller
 
         return redirect()->back();
     }
+
+    public function editRu($id)
+    {
+        $product =  DB::table('product_rus')->where('pos_id',$id)->first();
+        return view("ru.card_edit",['product'=>$product, 'main_id'=>$id]);
+    }
+    public function editEn($id)
+    {
+        $product =  DB::table('product_ens')->where('pos_id',$id)->first();
+        return view("en.card_edit",['product'=>$product, 'main_id'=>$id]);
+    }
+
+
 }

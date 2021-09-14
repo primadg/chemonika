@@ -16,7 +16,9 @@
     <div class="container">
         <div class="wrapper">
             <div class="header__logo">
+                <a href="{{env('APP_URL')}}/admin">
                 <img src="{{env('APP_URL')}}/img/icons/posts/logo.svg" alt="logo">
+                </a>
                 <div class="header__plus">
                     ADMIN
                 </div>
@@ -32,7 +34,7 @@
 
     <form id="form_id" class="container" method="post" enctype="multipart/form-data" action="{{route('products_admin.store')}}">
         @csrf
-        <input type="hidden" value="ukr" name="lang" id="lang_data">
+        <input type="hidden" value="ru" name="lang" id="lang_data">
         <a href="#" class="card__wrapper">
             <img src="{{env('APP_URL')}}/img/icons/card/chevron.svg" alt="back">
             <div class="card__back">back to Admin panel</div>
@@ -40,25 +42,26 @@
         <div class="card__language">
             <div class="card__title">Языковые версии</div>
             <div class="card__tabs">
-                <div class="card__tabs_tab">Eng</div>
-                <div class="card__tabs_tab ">Руc</div>
-                <div class="card__tabs_tab card__tabs_tab-active">Укр</div>
+
+                <div class="card__tabs_tab" onclick="location.href='{{env('APP_URL').'/editEn/'.$product->id}}'">Eng</div>
+                <div class="card__tabs_tab card__tabs_tab-active">Руc</div>
+                <div class="card__tabs_tab"  onclick="location.href='{{route("products.edit",$main_id)}}'">Укр</div>
             </div>
         </div>
         <div class="card__content">
 
             <div class="card__name">
                 <div class="card__content_title">Название</div>
-                <input required class="card__content_input" name="name" type="text">
+                <input required class="card__content_input" value="{{$product->name}}" name="name" type="text">
             </div>
             <div class="card__groupWrap">
                 <div class="card__group">
                     <div class="card__content_title">Группа</div>
-                    <input required class="card__content_input" name="group" type="text">
+                    <input required class="card__content_input" value="{{$product->group}}" name="group" type="text">
                 </div>
                 <div class="card__application">
                     <div class="card__content_title">Область применения</div>
-                    <input required class="card__content_input" name="field_of_usage" value="" type="text">
+                    <input required class="card__content_input" value="{{$product->field_of_usage}}" name="field_of_usage"  type="text">
                 </div>
             </div>
         </div>
@@ -71,10 +74,10 @@
                 </label>
             </div>
             <div class="card__group">
-                <img class="card__upload_img" width="380" height="240" id="imagehui" src="{{env('APP_URL')}}/img/images/card/card.png" alt="card">
+                <img class="card__upload_img" width="380" height="240" id="imagehui" src="{{env("STORAGE_URL").($product->img)}}"  alt="card">
                 <div class="card__upload_name">
                     <div class="card__upload_name-name">
-                        limon.jpg
+                        image.jpg
                     </div>
                     <div class="card__upload_name-size">
                         24 kB
@@ -87,15 +90,15 @@
 
         </div>
         <div class="card__content_title">Описание товара</div>
-        <textarea required class="card__descr" name="description" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+        <textarea required class="card__descr" name="description" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{$product->description}}"</textarea>
         <div class="card__content_title">Применение продукта</div>
-        <textarea required class="card__descr" name="product_usage" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+        <textarea required class="card__descr" name="product_usage" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{$product->Product_usage}}</textarea>
         <div class="card__content_title">Стандарты</div>
-        <textarea required class="card__descr" name="standart" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+        <textarea required class="card__descr" name="standart" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{$product->Standart}}</textarea>
         <div class="card__content_title" >Упаковка</div>
-        <textarea required class="card__descr" name = "package" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+        <textarea required class="card__descr" name = "package" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{$product->Package}}</textarea>
         <div class="card__content_title">Хранение</div>
-        <textarea required class="card__descr" name="stogare" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+        <textarea required class="card__descr" name="stogare" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{$product->Storage}}</textarea>
         <div class="card__table">
             <div class="card__content_title">Таблица показателей</div>
             <div class="card__table_main">
@@ -195,6 +198,6 @@
     </div>
 </footer>
 <script src="{{env('APP_URL')}}/js/jquery-3.5.1.min.js"></script>
-<script src="{{env('APP_URL')}}/js/card.js"></script>
+<script src="{{env('APP_URL')}}/js/card2.js"></script>
 </body>
 </html>
