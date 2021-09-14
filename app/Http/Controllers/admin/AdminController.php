@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Product_en;
+use App\Models\Product_ru;
+use App\Models\Product_ukr;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -48,6 +51,42 @@ class AdminController extends Controller
     {
         $product =  DB::table('product_ens')->where('pos_id',$id)->first();
         return view("en.card_edit",['product'=>$product, 'main_id'=>$id]);
+    }
+
+    public function updatePosts(Request $request)
+    {
+        $id = $request->id;
+        $lang = $request->lang;
+
+        $is_ukr = false;
+        switch ($lang) {
+            case "ru":
+                $product = Product_ru::find($id);
+                break;
+            case "en":
+                $product = Product_en::find($id);;
+                break;
+            default:
+                $product = Product_ukr::find($id);;
+                break;
+        }
+
+        if ($request->file('img')) {
+            $path = $request->file('img')->store('img');
+            $product->img = $path;
+        }
+        $product->name = $request->name;
+        $product->group = $request->group;
+        $product->description = $request->description;
+        $product->field_of_usage = $request->field_of_usage;
+        $product->Product_usage = $request->product_usage;
+        $product->Standart = $request->standart;
+        $product->Package = $request->package;
+        $product->Storage = $request->stogare;
+
+        $product->save();
+
+        return redirect()->back();
     }
 
 

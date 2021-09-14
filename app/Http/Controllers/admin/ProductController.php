@@ -24,8 +24,17 @@ class ProductController extends Controller
     public function index(Request $request)
     {
         $value = $request->cookie('lang') ?? "ukr";
+        if($value=='ru'||$value=='en') {
+            $product = DB::table('product_' . $value . 's')->simplePaginate(9);
+            foreach ($product->items() as $item){
+                $item->id= $item->pos_id;
+            }
+        }
+        else
+            $product = DB::table('product_' . $value . 's')->simplePaginate(9);
+
         return view($value . '.products', [
-            'products' => DB::table('product_' . $value . 's')->simplePaginate(9)
+            'products' => $product
         ]);
     }
 
@@ -114,8 +123,14 @@ class ProductController extends Controller
     public function show(int $id, Request $request)
     {
         $value = $request->cookie('lang') ?? "ukr";
+
+        if($value=='ru'||$value=='en')
+            $product = DB::table('product_' . $value . 's')->where('pos_id', $id)->first();
+        else
+            $product = DB::table('product_' . $value . 's')->where('id', $id)->first();
+
         return view($value . '.product', [
-            'product' => DB::table('product_' . $value . 's')->where('id', $id)->first()
+            'product' => $product
         ]);
     }
 

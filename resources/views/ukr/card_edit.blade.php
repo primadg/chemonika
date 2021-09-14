@@ -32,8 +32,9 @@
 </header>
 <section class="card">
 
-    <form id="form_id" class="container" method="POST" enctype="multipart/form-data" action="{{route('products_admin.store')}}">
+    <form id="form_id" class="container" method="POST" enctype="multipart/form-data" action="{{env('APP_URL').'/updatePosts'}}">
         @csrf
+        <input type="hidden" value="{{$product->id}}" name="id" id="lang_data">
         <input type="hidden" value="ukr" name="lang" id="lang_data">
         <a href="#" class="card__wrapper">
             <img src="{{env('APP_URL')}}/img/icons/card/chevron.svg" alt="back">
@@ -70,7 +71,7 @@
                 <label class="card__upload">
                     <span>Download image</span>
                     <img src="{{env('APP_URL')}}/img/icons/card/upload.svg" alt="upload">
-                    <input  required type="file" name="img" id="myFile" name="filename">
+                    <input   type="file" name="img" id="myFile" name="filename">
                 </label>
             </div>
             <div class="card__group">

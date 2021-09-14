@@ -36,6 +36,7 @@ Route::group(['middleware' => ['role:admin'], ], function () {
     Route::get("/delete/{id}", [AdminController::class,'deletePost', ]);
     Route::get("/editRu/{id}", [AdminController::class,'editRu', ]);
     Route::get("/editEn/{id}", [AdminController::class,'editEn', ]);
+    Route::post("/updatePosts/", [AdminController::class,'updatePosts', ]);
 });
 
 
