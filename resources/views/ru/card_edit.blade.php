@@ -159,10 +159,13 @@
         </div>
         <div class="card__btns">
             <div class="card__btns_btn card__btns_save">
-                <span id="submit_id">Создать</span>
+                <span>Сохранить</span>
                 <img src="{{env('APP_URL')}}/img/icons/card/check.svg" alt="check">
             </div>
-
+            <div class="card__btns_btn card__btns_delete">
+                <span>Удалить</span>
+                <img src="{{env('APP_URL')}}/img/icons/card/close.svg" alt="close">
+            </div>
         </div>
     </form>
     </div>

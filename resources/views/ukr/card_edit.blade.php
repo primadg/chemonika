@@ -17,7 +17,7 @@
         <div class="wrapper">
             <div class="header__logo">
                 <a href="{{env('APP_URL')}}/admin">
-                <img src="{{env('APP_URL')}}/img/icons/posts/logo.svg" alt="logo">
+                    <img src="{{env('APP_URL')}}/img/icons/posts/logo.svg" alt="logo">
                 </a>
                 <div class="header__plus">
                     ADMIN
@@ -32,7 +32,8 @@
 </header>
 <section class="card">
 
-    <form id="form_id" class="container" method="POST" enctype="multipart/form-data" action="{{env('APP_URL').'/updatePosts'}}">
+    <form id="form_id" class="container" method="POST" enctype="multipart/form-data"
+          action="{{env('APP_URL').'/updatePosts'}}">
         @csrf
         <input type="hidden" value="{{$product->id}}" name="id" id="lang_data">
         <input type="hidden" value="ukr" name="lang" id="lang_data">
@@ -44,8 +45,10 @@
             <div class="card__title">Языковые версии</div>
             <div class="card__tabs">
 
-                <div class="card__tabs_tab" onclick="location.href='{{env('APP_URL').'/editEn/'.$product->id}}'">Eng</div>
-                <div class="card__tabs_tab"  onclick="location.href='{{env("APP_URL")."/editRu/".$product->id}}'">Руc</div>
+                <div class="card__tabs_tab" onclick="location.href='{{env('APP_URL').'/editEn/'.$product->id}}'">Eng
+                </div>
+                <div class="card__tabs_tab" onclick="location.href='{{env("APP_URL")."/editRu/".$product->id}}'">Руc
+                </div>
                 <div class="card__tabs_tab card__tabs_tab-active">Укр</div>
             </div>
         </div>
@@ -62,7 +65,8 @@
                 </div>
                 <div class="card__application">
                     <div class="card__content_title">Область применения</div>
-                    <input required class="card__content_input" value="{{$product->field_of_usage}}" name="field_of_usage"  type="text">
+                    <input required class="card__content_input" value="{{$product->field_of_usage}}"
+                           name="field_of_usage" type="text">
                 </div>
             </div>
         </div>
@@ -71,11 +75,12 @@
                 <label class="card__upload">
                     <span>Download image</span>
                     <img src="{{env('APP_URL')}}/img/icons/card/upload.svg" alt="upload">
-                    <input   type="file" name="img" id="myFile" name="filename">
+                    <input type="file" name="img" id="myFile" name="filename">
                 </label>
             </div>
             <div class="card__group">
-                <img class="card__upload_img" width="380" height="240" id="imagehui" src="{{env("STORAGE_URL").($product->img)}}"  alt="card">
+                <img class="card__upload_img" width="380" height="240" id="imagehui"
+                     src="{{env("STORAGE_URL").($product->img)}}" alt="card">
                 <div class="card__upload_name">
                     <div class="card__upload_name-name">
                         image.jpg
@@ -91,15 +96,20 @@
 
         </div>
         <div class="card__content_title">Описание товара</div>
-        <textarea required class="card__descr" name="description" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{$product->description}}"</textarea>
+        <textarea required class="card__descr" name="description"
+                  oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{$product->description}}"</textarea>
         <div class="card__content_title">Применение продукта</div>
-        <textarea required class="card__descr" name="product_usage" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{$product->Product_usage}}</textarea>
+        <textarea required class="card__descr" name="product_usage"
+                  oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{$product->Product_usage}}</textarea>
         <div class="card__content_title">Стандарты</div>
-        <textarea required class="card__descr" name="standart" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{$product->Standart}}</textarea>
-        <div class="card__content_title" >Упаковка</div>
-        <textarea required class="card__descr" name = "package" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{$product->Package}}</textarea>
+        <textarea required class="card__descr" name="standart"
+                  oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{$product->Standart}}</textarea>
+        <div class="card__content_title">Упаковка</div>
+        <textarea required class="card__descr" name="package"
+                  oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{$product->Package}}</textarea>
         <div class="card__content_title">Хранение</div>
-        <textarea required class="card__descr" name="stogare" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{$product->Storage}}</textarea>
+        <textarea required class="card__descr" name="stogare"
+                  oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{$product->Storage}}</textarea>
         <div class="card__table">
             <div class="card__content_title">Таблица показателей</div>
             <div class="card__table_main">
@@ -114,42 +124,50 @@
                 <div class="card__table_main-row">
                     <input class="card__table_main-simple card__table_main-name" value="Zoomit">
                     <input class="card__table_main-simple card__table_main-amount" value="ID: 97174">
-                    <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg" alt="close">
+                    <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg"
+                         alt="close">
                 </div>
                 <div class="card__table_main-row">
                     <input class="card__table_main-simple card__table_main-name" value="Opentech">
                     <input class="card__table_main-simple card__table_main-amount" value="ID: 39635">
-                    <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg" alt="close">
+                    <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg"
+                         alt="close">
                 </div>
                 <div class="card__table_main-row">
                     <input class="card__table_main-simple card__table_main-name" value="Ron-tech">
                     <input class="card__table_main-simple card__table_main-amount" value="ID: 70668">
-                    <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg" alt="close">
+                    <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg"
+                         alt="close">
                 </div>
                 <div class="card__table_main-row">
                     <input class="card__table_main-simple card__table_main-name" value="Toughzap">
                     <input class="card__table_main-simple card__table_main-amount" value="ID: 97174">
-                    <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg" alt="close">
+                    <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg"
+                         alt="close">
                 </div>
                 <div class="card__table_main-row">
                     <input class="card__table_main-simple card__table_main-name" value="Betasoloin">
                     <input class="card__table_main-simple card__table_main-amount" value="ID: 43756">
-                    <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg" alt="close">
+                    <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg"
+                         alt="close">
                 </div>
                 <div class="card__table_main-row">
                     <input class="card__table_main-simple card__table_main-name" value="Codehow">
                     <input class="card__table_main-simple card__table_main-amount" value="ID: 43178">
-                    <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg" alt="close">
-                </div>
-                <div class="card__table_main-row">
-                    <input  class="card__table_main-simple card__table_main-name" value="Plussunin">
-                    <input class="card__table_main-simple card__table_main-amount" value="ID: 22739">
-                    <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg" alt="close">
+                    <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg"
+                         alt="close">
                 </div>
                 <div class="card__table_main-row">
                     <input class="card__table_main-simple card__table_main-name" value="Plussunin">
                     <input class="card__table_main-simple card__table_main-amount" value="ID: 22739">
-                    <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg" alt="close">
+                    <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg"
+                         alt="close">
+                </div>
+                <div class="card__table_main-row">
+                    <input class="card__table_main-simple card__table_main-name" value="Plussunin">
+                    <input class="card__table_main-simple card__table_main-amount" value="ID: 22739">
+                    <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg"
+                         alt="close">
                 </div>
             </div>
             <div class="card__table_add">
@@ -159,10 +177,13 @@
         </div>
         <div class="card__btns">
             <div class="card__btns_btn card__btns_save">
-                <span id="submit_id">Создать</span>
+                <span>Сохранить</span>
                 <img src="{{env('APP_URL')}}/img/icons/card/check.svg" alt="check">
             </div>
-
+            <div class="card__btns_btn card__btns_delete">
+                <span>Удалить</span>
+                <img src="{{env('APP_URL')}}/img/icons/card/close.svg" alt="close">
+            </div>
         </div>
     </form>
     </div>
@@ -178,7 +199,8 @@
                     <div class="footer__info_social-title">Наші соціальні мережі</div>
                     <div class="footer__info_social-btns">
                         <a href="#"><img src="{{env('APP_URL')}}/img/icons/posts/tg.svg" alt="tg"></a>
-                        <a href="#"><img class="footer__info_social-skype" src="{{env('APP_URL')}}/img/icons/posts/skype.svg" alt="tg"></a>
+                        <a href="#"><img class="footer__info_social-skype"
+                                         src="{{env('APP_URL')}}/img/icons/posts/skype.svg" alt="tg"></a>
                         <a href="#"><img src="{{env('APP_URL')}}/img/icons/posts/fb.svg" alt="tg"></a>
                     </div>
                 </div>
