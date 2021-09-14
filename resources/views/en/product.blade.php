@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="/public/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="/public/css/style.min.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/style.min.css">
 </head>
 <body>
 <header class="header">
@@ -56,13 +56,13 @@
     <a href="#" class="burger__menu_list">Контакти</a>
     <div class="burger__menu_social">
         <a href="#">
-            <img src="img/icons/telegram.svg" alt="telegram">
+            <img src="{{env('APP_URL')}}/img/icons/telegram.svg" alt="telegram">
         </a>
         <a class="form__row_links-skype" href="#">
-            <img src="img/icons/skype.svg" alt="skype">
+            <img src="{{env('APP_URL')}}/img/icons/skype.svg" alt="skype">
         </a>
         <a href="#">
-            <img src="img/icons/facebook.svg" alt="facebook">
+            <img src="{{env('APP_URL')}}/img/icons/facebook.svg" alt="facebook">
         </a>
     </div>
     <div class="burger__menu_languages">
@@ -85,7 +85,7 @@
                     <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"/>
                 </svg>
                 <div class="thirdPage__info_back-title">
-                    Повернутісь до Продукції
+                    Back to production
                 </div>
             </div>
         </section>
@@ -96,11 +96,11 @@
                 </div>
                 <div class="col-lg-6 thirdPage__info_product-right">
                     <div class="thirdPage__info_product-right_wrapper">
-                        <div class="thirdPage__info_product-right_wrapper_kind">Група</div>
+                        <div class="thirdPage__info_product-right_wrapper_kind">Group</div>
                         <div class="thirdPage__info_product-right_wrapper_value">{{$product->group}}</div>
                     </div>
                     <div class="thirdPage__info_product-right_wrapper">
-                        <div class="thirdPage__info_product-right_wrapper_kind">Галузь застосування</div>
+                        <div class="thirdPage__info_product-right_wrapper_kind">Field of application</div>
                         <div class="thirdPage__info_product-right_wrapper_value">{{$product->field_of_usage}}</div>
                     </div>
                 </div>
@@ -119,11 +119,11 @@
     </div>
     <section class="thirdPage__use">
         <div class="container">
-            <img class="sot1" src="img/icons/sot1.svg" alt="image">
-            <img class="sot2" src="img/icons/sot2.svg" alt="image">
+            <img class="sot1" src="{{env('APP_URL')}}/img/icons/sot1.svg" alt="image">
+            <img class="sot2" src="{{env('APP_URL')}}/img/icons/sot2.svg" alt="image">
             <div class="row">
                 <div class="col-lg-4 thirdPage__use_title">
-                    Застосування продукту
+                    Product application
                 </div>
                 <div class="col-lg-8 thirdPage__use_descr">
                     {{$product->Product_usage}}
@@ -131,15 +131,15 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 thirdPage__use_cathegory-title">
-                    Стандарти
+                    Standards
                     <div class="thirdPage__use_cathegory-title_descr"></div>
                     {{$product->Standart}}
                 </div>
                 <div class="col-lg-4 thirdPage__use_cathegory-title">
-                    Пакування
+                    Package
                     <div class="thirdPage__use_cathegory-title_descr">{{$product->Package}} </div>
                 <div class="col-lg-4 thirdPage__use_cathegory-title">
-                    Зберігання
+                    Keeping
                     <div class="thirdPage__use_cathegory-title_descr">{{$product->Storage}}</div>
             </div>
         </div>
@@ -149,7 +149,7 @@
             <div class="row">
                 <div class="offset-lg-1 col-lg-10">
                     <div class="thirdPage__table_title">
-                        Таблиця показників
+                        Table of indicators
                     </div>
                     <div class="thirdPage__table_table">
                         <div class="thirdPage__table_table-header">
@@ -157,7 +157,7 @@
                                 назва
                             </div>
                             <div class="thirdPage__table_table-header_value">
-                                назва
+                                Title
                             </div>
                         </div>
                         <div class="thirdPage__table_table-row">
@@ -202,14 +202,14 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="thirdPage__notFound_title">
-                        Не знайшли потрібної інформації оя продукте
+                        Didn't find required product information
                     </div>
                     <div class="thirdPage__notFound_descr">
                         Faucibus mattis nunc gravida posuere nunc. Quis at commodo, dui dolor tellus lectus volutpat. Vulputate magnis amet sit id pellentesque sed elementum mattis.
                     </div>
                 </div>
                 <a href="mailto: test@test.com" class="thirdPage__notFound_btn">
-                    Написати нам
+                    call us
                 </a>
             </div>
         </div>
@@ -218,7 +218,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 footer__logo">
-                    <img src="img/icons/logo__footer.svg" alt="logo">
+                    <img src="{{env('APP_URL')}}/img/icons/logo__footer.svg" alt="logo">
                 </div>
                 <div class="col-lg-6 footer__top">
                     <div class="footer__top_top">
