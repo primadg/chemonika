@@ -16,7 +16,8 @@ class CreateTablePsTable extends Migration
         Schema::create('table_ps', function (Blueprint $table) {
             $table->id();
             $table->integer('post_id');
-            $table->
+            $table->string('title');
+            $table->string('value');
             $table->timestamps();
         });
     }
