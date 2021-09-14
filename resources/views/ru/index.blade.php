@@ -17,10 +17,10 @@
                 </a>
                 <div class="header__info">
                     <div class="header__info_contact">
-                        <a class="header__info_contact-link header__active_link link__about" href="index.blade.php">О нас</a>
+                        <a class="header__info_contact-link header__active_link link__about" href="{{env('APP_URL')}}">О нас</a>
                     </div>
                     <div class="header__info_contact">
-                        <a class="header__info_contact-link link__products" href="productionRu.html">Продукция</a>
+                        <a class="header__info_contact-link link__products" href="{{env('APP_URL')}}/products">Продукция</a>
                     </div>
                     <div class="header__info_contact">
                         <a class="header__info_contact-link link__contacts" href="#">Контакты</a>
@@ -220,54 +220,24 @@
          <section class="products">
              <div class="container">
                  <div class="row">
+                     @foreach($products as $product)
                      <div class="products__block col-md-4 col-sm-6 col-12">
                          <div class="products__block_header">
-                             <img src="{{env('APP_URL')}}/img/images/product1.png" alt="product">
+                             <img width="310" height="330" src="{{env("STORAGE_URL").$product->img}}" alt="product">
                          </div>
                          <div class="products__block_main">
-                             <div class="products__block_main-title">Лимонная кислота</div>
-                             <div class="products__block_main-subTitle">(антиоксиданты)</div>
-                             <div class="products__block_main-descr">В пищевой промышленности лимонная кислота (Е330)  широко применяется  в производстве безалкогольных напитков, поскольку обладает...</div>
+                             <div class="products__block_main-title">{{$product->name}}</div>
+                             <div class="products__block_main-subTitle">({{$product->group}})</div>
+                             <div class="products__block_main-descr">{{substr( $product->description,0,120)}}...</div>
                              <div class="products__block_main-btn">
-                                 <div>Дизнатися більше</div>
+                                 <div onclick="location.href=' {{route("product.show",$product->id)}}'" >Подробней</div>
                                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                      <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"/>
                                  </svg>
                              </div>
                          </div>
                      </div>
-                     <div class="products__block col-md-4 col-sm-6 col-12">
-                         <div class="products__block_header">
-                             <img src="{{env('APP_URL')}}/img/images/product2.png" alt="product">
-                         </div>
-                         <div class="products__block_main">
-                             <div class="products__block_main-title">Цитрат натрия</div>
-                             <div class="products__block_main-subTitle">(антиоксиданты)</div>
-                             <div class="products__block_main-descr">Натриевая соль лимонной кислоты, натуральная и безопасная пищевая добавка. По своим свойствам - это регулятор кислотности...</div>
-                             <div class="products__block_main-btn">
-                                 <div>Дизнатися більше</div>
-                                 <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                     <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"/>
-                                 </svg>
-                             </div>
-                         </div>
-                     </div>
-                     <div class="products__block col-md-4 col-sm-6 col-12">
-                         <div class="products__block_header">
-                             <img src="{{env('APP_URL')}}/img/images/product3.png" alt="product">
-                         </div>
-                         <div class="products__block_main">
-                             <div class="products__block_main-title">Сорбит</div>
-                             <div class="products__block_main-subTitle">(подсластитель)</div>
-                             <div class="products__block_main-descr">Является натуральным сахарозаменителем, эмульгатором, комплексообразователем, текстуратором...</div>
-                             <div class="products__block_main-btn">
-                                 <div>Дизнатися більше</div>
-                                 <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                     <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"/>
-                                 </svg>
-                             </div>
-                         </div>
-                     </div>
+                     @endforeach
                  </div>
              </div>
          </section>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AppContoller extends Controller
 {
@@ -12,7 +13,9 @@ class AppContoller extends Controller
     public function IndexAction(Request $request)
     {
         $value = $request->cookie('lang') ?? "ukr";
-            return view($value.'.index');
+        $products =  DB::table('product_'.$value.'s')->orderBy('id','desc')->take(3)->get();
+
+            return view($value.'.index', ['products'=>$products]);
     }
 
     public function setLangEng(){
