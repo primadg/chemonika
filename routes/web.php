@@ -23,7 +23,9 @@ Route::group([], function() {
     Route::get('/ru', [AppContoller::class, 'SetLangRu']);
     Route::get('/en', [AppContoller::class, 'SetLangEng']);
     Route::get('/ukr', [AppContoller::class, 'SetLangUkr']);
+
     Route::resource('products', \App\Http\Controllers\admin\ProductController::class)->only(['index', 'show']);
+    Route::resource('table', \App\Http\Controllers\TableController::class);
 
 });
 
@@ -33,9 +35,11 @@ Route::group(['middleware' => ['role:admin'], ], function () {
     Route::resource('products', \App\Http\Controllers\admin\ProductController::class)->only([
         'create', 'store', 'update','edit', ]);
     Route::resource('products_admin', \App\Http\Controllers\admin\ProductController::class);
-    Route::resource('table', \App\Http\Controllers\TableController::class);
     Route::get("/delete/{id}", [AdminController::class,'deletePost', ]);
     Route::get("/editRu/{id}", [AdminController::class,'editRu', ]);
+    Route::get("/test", function(){
+        return view('test');
+    });
     Route::get("/editEn/{id}", [AdminController::class,'editEn', ]);
     Route::post("/updatePosts/", [AdminController::class,'updatePosts', ]);
 });

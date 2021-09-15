@@ -152,7 +152,8 @@ class ProductController extends Controller
     public function edit($id)
     {
         $product = DB::table('product_ukrs')->where('id', $id)->first();
-        return view("ukr.card_edit", ['product' => $product]);
+        $entries = DB::table('table_ps')->where('post_id', $id)->get();
+        return view("ukr.card_edit", ['product' => $product, 'entries'=>$entries]);
     }
 
     /**

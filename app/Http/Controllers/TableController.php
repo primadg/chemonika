@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Table_p;
 use http\Env\Response;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TableController extends Controller
 {
@@ -16,8 +17,9 @@ class TableController extends Controller
      */
     public function index(Request $request)
     {
-        $table =  json_encode(Table_p::where('post_id',$request)->get());
-        return response()->json(['data' => $table]);
+        $table =  json_encode(Table_p::where('post_id',$request->get('id'))->get());
+//        return response()->json(['data' => $table]);
+        return response($table);
     }
 
     /**
@@ -38,7 +40,13 @@ class TableController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $entry = new Table_p();
+//        dd( $request);
+        $entry->title = $request->post('title');
+        $entry->post_id = $request->post('post_id');
+        $entry->value = $request->post('value');
+        $entry->save();
+        return Response($entry->id,200);
     }
 
     /**
@@ -72,7 +80,12 @@ class TableController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $arr = $request->all();
+        $entry =  Table_p::find($id);
+        $entry->title = $arr["title"];
+        $entry->value = $arr["value"];
+        $entry->save();
+        return Response('ok',200);
     }
 
     /**
@@ -83,6 +96,6 @@ class TableController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('table_ps')->delete($id);
     }
 }

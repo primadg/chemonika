@@ -35,9 +35,45 @@ window.onresize = () => {
 let addRowsBtns = document.querySelector('.card__table_add');
 
 addRowsBtns.onclick = (e) => {
+    let id = createTable();
     let clonedRow = addRowsBtns.parentNode.querySelector('.card__table_main-row:last-child').cloneNode(true);
+    console.log(clonedRow.childNodes);
+    clonedRow.childNodes[5].value = (id);
+    clonedRow.childNodes[3].value = ('Значение');
+    clonedRow.childNodes[1].value = ('Название');
     document.querySelector('.card__table_main').appendChild(clonedRow);
 }
+
+
+//delete row
+// let removeRowsBtns = document.querySelector('.card__table_main-simple_close');
+//
+// removeRowsBtns.onclick = (e) => {
+//     console.log(removeRowsBtns);
+//     removeRowsBtns.parentNode.remove();
+//
+// }
+
+
+$(document).on('change', '.card__table_main-simple', function() {
+    // deleteEntry($(this).parent().children()[2].value);
+    console.log($(this).parent().children());
+    let id = $(this).parent().children()[2].value;
+    let title = $(this).parent().children()[0].value;
+    let value = $(this).parent().children()[1].value;
+    changeTable(id,title, value)
+    // $(this).parent().remove();
+});
+
+
+
+
+$(document).on('click', '.card__table_main-simple_close', function() {
+    deleteEntry($(this).parent().children()[2].value);
+    // console.log($(this).parent().children()[2].value);
+    $(this).parent().remove();
+});
+
 
 
 function readURL(input) {
