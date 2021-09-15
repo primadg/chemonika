@@ -130,6 +130,7 @@ class ProductController extends Controller
      */
     public function show(int $id, Request $request)
     {
+        $entries = DB::table('table_ps')->where('post_id', $id)->get();
         $value = $request->cookie('lang') ?? "ukr";
 
         if ($value == 'ru' || $value == 'en')
@@ -138,7 +139,8 @@ class ProductController extends Controller
             $product = DB::table('product_' . $value . 's')->where('id', $id)->first();
 
         return view($value . '.product', [
-            'product' => $product
+            'product' => $product,
+            'entries'=>$entries
         ]);
     }
 

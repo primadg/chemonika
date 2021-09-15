@@ -160,38 +160,12 @@
                                 Title
                             </div>
                         </div>
+                        @foreach($entries as $entry)
                         <div class="thirdPage__table_table-row">
-                            <div class="thirdPage__table_table-row_title">Zoomit</div>
-                            <div class="thirdPage__table_table-row_id">ID: 97174</div>
+                            <div class="thirdPage__table_table-row_title">{{$entry->title}}</div>
+                            <div class="thirdPage__table_table-row_id">{{$entry->value}}</div>
                         </div>
-                        <div class="thirdPage__table_table-row">
-                            <div>Opentech</div>
-                            <div>ID: 39635</div>
-                        </div>
-                        <div class="thirdPage__table_table-row">
-                            <div>Ron-tech</div>
-                            <div>ID: 70668</div>
-                        </div>
-                        <div class="thirdPage__table_table-row">
-                            <div>Toughzap</div>
-                            <div>ID: 97174</div>
-                        </div>
-                        <div class="thirdPage__table_table-row">
-                            <div>Betasoloin</div>
-                            <div>ID: 43756</div>
-                        </div>
-                        <div class="thirdPage__table_table-row">
-                            <div>Konex</div>
-                            <div>ID: 22739</div>
-                        </div>
-                        <div class="thirdPage__table_table-row">
-                            <div>Codehow</div>
-                            <div>ID: 43178</div>
-                        </div>
-                        <div class="thirdPage__table_table-row">
-                            <div>Plussunin</div>
-                            <div>ID: 22739</div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

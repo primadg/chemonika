@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -111,46 +112,15 @@
                         количество
                     </div>
                 </div>
-                <div class="card__table_main-row">
-                    <input class="card__table_main-simple card__table_main-name" value="Zoomit">
-                    <input class="card__table_main-simple card__table_main-amount" value="ID: 97174">
-                    <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg" alt="close">
-                </div>
-                <div class="card__table_main-row">
-                    <input class="card__table_main-simple card__table_main-name" value="Opentech">
-                    <input class="card__table_main-simple card__table_main-amount" value="ID: 39635">
-                    <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg" alt="close">
-                </div>
-                <div class="card__table_main-row">
-                    <input class="card__table_main-simple card__table_main-name" value="Ron-tech">
-                    <input class="card__table_main-simple card__table_main-amount" value="ID: 70668">
-                    <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg" alt="close">
-                </div>
-                <div class="card__table_main-row">
-                    <input class="card__table_main-simple card__table_main-name" value="Toughzap">
-                    <input class="card__table_main-simple card__table_main-amount" value="ID: 97174">
-                    <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg" alt="close">
-                </div>
-                <div class="card__table_main-row">
-                    <input class="card__table_main-simple card__table_main-name" value="Betasoloin">
-                    <input class="card__table_main-simple card__table_main-amount" value="ID: 43756">
-                    <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg" alt="close">
-                </div>
-                <div class="card__table_main-row">
-                    <input class="card__table_main-simple card__table_main-name" value="Codehow">
-                    <input class="card__table_main-simple card__table_main-amount" value="ID: 43178">
-                    <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg" alt="close">
-                </div>
-                <div class="card__table_main-row">
-                    <input  class="card__table_main-simple card__table_main-name" value="Plussunin">
-                    <input class="card__table_main-simple card__table_main-amount" value="ID: 22739">
-                    <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg" alt="close">
-                </div>
-                <div class="card__table_main-row">
-                    <input class="card__table_main-simple card__table_main-name" value="Plussunin">
-                    <input class="card__table_main-simple card__table_main-amount" value="ID: 22739">
-                    <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg" alt="close">
-                </div>
+                @foreach($entries as $entry)
+                    <div class="card__table_main-row">
+                        <input class="card__table_main-simple card__table_main-name" value="{{$entry->title}}">
+                        <input class="card__table_main-simple card__table_main-amount" value="{{$entry->value}}">
+                        <input  type="hidden" class="card__table_id" value="{{$entry->id}}">
+                        <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg"
+                             alt="close">
+                    </div>
+                @endforeach
             </div>
             <div class="card__table_add">
                 <span>Добавить строку</span>
@@ -163,7 +133,7 @@
                 <img src="{{env('APP_URL')}}/img/icons/card/check.svg" alt="check">
             </div>
             <div class="card__btns_btn card__btns_delete">
-                <span onclick="location.href='{{env("APP_URL")."/delete/".$main_id}}'">Удалить</span>
+                <span onclick="location.href='{{env("APP_URL")."/delete/".$product->id}}'">Удалить</span>
                 <img src="{{env('APP_URL')}}/img/icons/card/close.svg" alt="close">
             </div>
         </div>
@@ -181,7 +151,8 @@
                     <div class="footer__info_social-title">Наші соціальні мережі</div>
                     <div class="footer__info_social-btns">
                         <a href="#"><img src="{{env('APP_URL')}}/img/icons/posts/tg.svg" alt="tg"></a>
-                        <a href="#"><img class="footer__info_social-skype" src="{{env('APP_URL')}}/img/icons/posts/skype.svg" alt="tg"></a>
+                        <a href="#"><img class="footer__info_social-skype"
+                                         src="{{env('APP_URL')}}/img/icons/posts/skype.svg" alt="tg"></a>
                         <a href="#"><img src="{{env('APP_URL')}}/img/icons/posts/fb.svg" alt="tg"></a>
                     </div>
                 </div>
@@ -202,6 +173,62 @@
     </div>
 </footer>
 <script src="{{env('APP_URL')}}/js/jquery-3.5.1.min.js"></script>
+<script>
+    var id_for_element;
+    function createTable() {
+        $.ajax({
+            type: "POST",
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: "{{route('table.store')}}",
+            data: {
+                'title': "Название",
+                'post_id': {{$entries[0]->post_id}},
+                'value':"Значение"
+            },
+            success: function (data) {
+                console.log(data)
+                window.id_for_element = data;
+
+            },
+        });
+        return id_for_element;
+    }
+
+    function deleteEntry(id){
+        $.ajax({
+            type: "DELETE",
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: "{{env('APP_URL').'/table/'}}"+id,
+            success: function (data) {
+                console.log((data));
+            },
+        });
+    }
+
+    function changeTable(id, title, value) {
+        $.ajax({
+            type: "PUT",
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            data: {
+                'title': title,
+                'value': value
+            },
+            url: "{{env('APP_URL').'/table/'}}"+id,
+
+            success: function (data) {
+                console.log((data));
+            },
+        });
+    }
+
+
+</script>
 <script src="{{env('APP_URL')}}/js/card2.js"></script>
 </body>
 </html>

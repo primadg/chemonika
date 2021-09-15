@@ -45,12 +45,14 @@ class AdminController extends Controller
     public function editRu($id)
     {
         $product =  DB::table('product_rus')->where('pos_id',$id)->first();
-        return view("ru.card_edit",['product'=>$product, 'main_id'=>$id]);
+        $entries = DB::table('table_ps')->where('post_id', $id)->get();
+        return view("ru.card_edit",['product'=>$product, 'main_id'=>$id, 'entries'=>$entries]);
     }
     public function editEn($id)
     {
         $product =  DB::table('product_ens')->where('pos_id',$id)->first();
-        return view("en.card_edit",['product'=>$product, 'main_id'=>$id]);
+        $entries = DB::table('table_ps')->where('post_id', $id)->get();
+        return view("en.card_edit",['product'=>$product, 'main_id'=>$id, 'entries'=>$entries]);
     }
 
     public function updatePosts(Request $request)
