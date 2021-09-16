@@ -16,7 +16,7 @@
 <header class="header">
     <div class="container">
         <div class="wrapper">
-            <div class="header__logo">
+            <div onclick="location.href='{{env('APP_URL')}}/admin'" class="header__logo">
                 <img src="{{env('APP_URL')}}/img/icons/posts/logo.svg" alt="logo">
                 <div class="header__plus">
                     ADMIN
