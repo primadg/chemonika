@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,7 +45,7 @@
                     </ul>
                 </div>
                 <a href="mailto: test@test.com" class="header__info_button">
-                    <span>Написати нам</span>
+                    <span>Написать нам</span>
                     <svg class="header__info_button-svg" width="12" height="8" viewBox="0 0 12 8" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#ffffff"/>
@@ -62,8 +62,8 @@
 </header>
 <div class="burger__menu">
     <a href="#" class="burger__menu_list burger__menu_list-about">Про нас</a>
-    <a href="#" class="burger__menu_list burger__menu_list-middle burger__menu_list-products">Продукцiя</a>
-    <a href="#" class="burger__menu_list">Контакти</a>
+    <a href="#" class="burger__menu_list burger__menu_list-middle burger__menu_list-products">Продукция</a>
+    <a href="#" class="burger__menu_list">Контакты</a>
     <div class="burger__menu_social">
         <a href="#">
             <img src="{{env('APP_URL')}}/img/icons/telegram.svg" alt="telegram">
@@ -96,7 +96,7 @@
                     <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"/>
                 </svg>
                 <div class="thirdPage__info_back-title">
-                    Повернутісь до Продукції
+                    Вернутся к продукции
                 </div>
             </div>
         </section>
@@ -107,11 +107,11 @@
                 </div>
                 <div class="col-lg-6 thirdPage__info_product-right">
                     <div class="thirdPage__info_product-right_wrapper">
-                        <div class="thirdPage__info_product-right_wrapper_kind">Група</div>
+                        <div class="thirdPage__info_product-right_wrapper_kind">Группа</div>
                         <div class="thirdPage__info_product-right_wrapper_value">{{$product->group}}</div>
                     </div>
                     <div class="thirdPage__info_product-right_wrapper">
-                        <div class="thirdPage__info_product-right_wrapper_kind">Галузь застосування</div>
+                        <div class="thirdPage__info_product-right_wrapper_kind">Область применения</div>
                         <div class="thirdPage__info_product-right_wrapper_value">{{$product->field_of_usage}}</div>
                     </div>
                 </div>
@@ -134,7 +134,7 @@
             <img class="sot2" src="{{env('APP_URL')}}/img/icons/sot2.svg" alt="image">
             <div class="row">
                 <div class="col-lg-4 thirdPage__use_title">
-                    Застосування продукту
+                    Приминение продукта
                 </div>
                 <div class="col-lg-8 thirdPage__use_descr">
                     {{$product->Product_usage}}
@@ -147,10 +147,10 @@
                     {{$product->Standart}}
                 </div>
                 <div class="col-lg-4 thirdPage__use_cathegory-title">
-                    Пакування
+                    Упаковка
                     <div class="thirdPage__use_cathegory-title_descr">{{$product->Package}} </div>
-                    <div class="col-lg-4 thirdPage__use_cathegory-title">
-                        Зберігання
+                    <div class="col-lg-4 thirdPage__use_catеhegory-title">
+                        Хранение
                         <div class="thirdPage__use_cathegory-title_descr">{{$product->Storage}}</div>
                     </div>
                 </div>
@@ -160,15 +160,15 @@
             <div class="row">
                 <div class="offset-lg-1 col-lg-10">
                     <div class="thirdPage__table_title">
-                        Таблиця показників
+                        Таблица показателей
                     </div>
                     <div class="thirdPage__table_table">
                         <div class="thirdPage__table_table-header">
                             <div class="thirdPage__table_table-header_name">
-                                назва
+                                Название
                             </div>
                             <div class="thirdPage__table_table-header_value">
-                                назва
+                                Название
                             </div>
                         </div> @foreach($entries as $entry)
                             <div class="thirdPage__table_table-row">
@@ -186,7 +186,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="thirdPage__notFound_title">
-                        Не знайшли потрібної інформації оя продукте
+                       Не нашли информацию о продукте ?
                     </div>
                     <div class="thirdPage__notFound_descr">
                         Faucibus mattis nunc gravida posuere nunc. Quis at commodo, dui dolor tellus lectus volutpat.
@@ -194,7 +194,7 @@
                     </div>
                 </div>
                 <a href="mailto: test@test.com" class="thirdPage__notFound_btn">
-                    Написати нам
+                    Напишите нам
                 </a>
             </div>
         </div>
@@ -207,7 +207,7 @@
                 </div>
                 <div class="col-lg-6 footer__top">
                     <div class="footer__top_top">
-                        <div class="footer__top_top-our">Наші соціальні мережі</div>
+                        <div class="footer__top_top-our">НАШИ СОЦ СЕТИ</div>
                         <div class="footer__top_top-right footer__top_top-our">АДРЕСА</div>
                     </div>
                     <div class="footer__top_bottom">
@@ -248,7 +248,7 @@
                     </div>
                     <div class="footer__top_mobile">
                         <div class="footer__top_mobile-title">
-                            НАШІ СОЦІАЛЬНІ МЕРЕЖІ
+                            НАШИ СОЦ СЕТИ
                         </div>
                         <div>
                             <a href="#">
@@ -279,7 +279,7 @@
                     </div>
                     <div class="footer__bottom_mobile">
                         <div class="footer__top_mobile-title">
-                            АДРЕСА
+                            АДРЕСС
                         </div>
                         <div class="footer__bottom_mobile-sub-wrapper">
                             <div class="footer__bottom_mobile-sub">2464 Royal Ln. Mesa,</div>
