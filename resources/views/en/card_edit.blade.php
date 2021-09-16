@@ -24,9 +24,9 @@
                     ADMIN
                 </div>
             </div>
-            <div class="header__button">
+            <div onclick="location.href='{{env("APP_URL")}}/logout'" class="header__button">
                 Exit
-                <img src="{{env('APP_URL')}}/img/icons/posts/arrow.svg" alt="arrow">
+                <img src="img/icons/posts/arrow.svg" alt="arrow">
             </div>
         </div>
     </div>
@@ -194,7 +194,7 @@
 </footer>
 <script src="{{env('APP_URL')}}/js/jquery-3.5.1.min.js"></script>
 <script>
-    var id_for_element;
+
     function createTable() {
         $.ajax({
             type: "POST",
@@ -208,12 +208,10 @@
                 'value':"Значение"
             },
             success: function (data) {
-                console.log(data)
-                window.id_for_element = data;
-
+                setId(data);
             },
         });
-        return id_for_element;
+
     }
 
     function deleteEntry(id){

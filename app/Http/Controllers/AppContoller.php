@@ -22,7 +22,6 @@ class AppContoller extends Controller
         }
         else
         $products =  $products->orderBy('id','desc')->take(3)->get();
-
             return view($value.'.index', ['products'=>$products]);
     }
 

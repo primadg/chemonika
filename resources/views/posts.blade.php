@@ -21,7 +21,7 @@
                     ADMIN
                 </div>
             </div>
-            <div class="header__button">
+            <div onclick="location.href='{{env("APP_URL")}}/logout'" class="header__button">
                 Exit
                 <img src="img/icons/posts/arrow.svg" alt="arrow">
             </div>
