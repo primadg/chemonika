@@ -67,17 +67,17 @@ class AdminController extends Controller
                 $product = Product_ru::find($id);
                 break;
             case "en":
-                $product = Product_en::find($id);;
+                $product = Product_en::find($id);
                 break;
             default:
-                $product = Product_ukr::find($id);;
+                $product = Product_ukr::find($id);
                 break;
         }
 
 
 
 
-        if(!$request->file('img')){
+        if($request->file('img')){
             $path = $request->file('img')->store('public/img');
             $product->img = Storage::url($path);
             $ex = $request->file('img')->extension();
