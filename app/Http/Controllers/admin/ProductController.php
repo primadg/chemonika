@@ -128,18 +128,18 @@ class ProductController extends Controller
             $first = new Product_ru();
             $second = new Product_en();
             $first->pos_id = $new_product->id;
-            $first->img = $path;
+            $first->img = $new_product->img;
             $first->save();
             $second->pos_id = $new_product->id;
-            $second->img = $path;
+            $second->img = $new_product->img;
             $second->save();
         } else {
-            $main_table->img = $path;
+            $main_table->img = $new_product->img;
             $main_table->save();
             $new_product->pos_id = $main_table->id;
             $new_product->save();
             $second_product->pos_id = $main_table->id;
-            $second_product->img = $path;
+            $second_product->img = $new_product->img;
             $second_product->save();
 
         }

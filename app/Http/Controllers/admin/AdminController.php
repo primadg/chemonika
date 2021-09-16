@@ -40,7 +40,7 @@ class AdminController extends Controller
         DB::table('product_ukrs')->delete($id);
 
 
-        return redirect()->back();
+        return redirect('admin');
     }
 
     public function editRu($id)
