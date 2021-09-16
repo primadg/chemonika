@@ -74,15 +74,16 @@ class AdminController extends Controller
                 break;
         }
 
-        $ex = $request->file('img')->extension();
-        if(!($ex=='jpg'||$ex=='png')){
-            return redirect()->back()->with('error','Неверный формат загруженного файла');
-        }
+
 
 
         if(!$request->file('img')){
             $path = $request->file('img')->store('public/img');
             $product->img = Storage::url($path);
+            $ex = $request->file('img')->extension();
+            if(!($ex=='jpg'||$ex=='png')){
+                return redirect()->back()->with('error','Неверный формат загруженного файла');
+            }
         }
 
         try {
