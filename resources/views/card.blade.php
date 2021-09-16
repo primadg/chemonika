@@ -24,7 +24,7 @@
             </div>
             <div onclick="location.href='{{env("APP_URL")}}/logout'" class="header__button">
                 Exit
-                <img src="img/icons/posts/arrow.svg" alt="arrow">
+                <img src="{{env('APP_URL')}}/img/icons/posts/arrow.svg" alt="arrow">
             </div>
         </div>
     </div>
@@ -49,7 +49,7 @@
             @endif
 
             <input type="hidden" value="ukr" name="lang" id="lang_data">
-            <a href="#" class="card__wrapper">
+            <a href="{{env('APP_URL')}}/admin" class="card__wrapper">
                 <img src="{{env('APP_URL')}}/img/icons/card/chevron.svg" alt="back">
                 <div class="card__back">back to Admin panel</div>
             </a>

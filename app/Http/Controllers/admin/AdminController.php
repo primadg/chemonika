@@ -74,9 +74,6 @@ class AdminController extends Controller
                 break;
         }
 
-        if(!$request->file('img')){
-            return redirect()->back()->with('error','Загрузите файл');
-        }
         $ex = $request->file('img')->extension();
         if(!($ex=='jpg'||$ex=='png')){
             return redirect()->back()->with('error','Неверный формат загруженного файла');

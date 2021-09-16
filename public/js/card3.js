@@ -73,3 +73,23 @@ $(document).on('click', '.card__table_main-simple_close', function() {
     $(this).parent().remove();
 });
 
+
+
+function readURL(input) {
+
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+
+            $('#imagehui').attr('src', e.target.result);
+        };
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#myFile").change(function () {
+    readURL(this);
+});
+
