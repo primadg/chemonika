@@ -41,6 +41,7 @@ addRowsBtns.onclick = (e) => {
     clonedRow.childNodes[5].value = (id);
     clonedRow.childNodes[3].value = ('Значение');
     clonedRow.childNodes[1].value = ('Название');
+    $(clonedRow).attr('hidden', false);
     document.querySelector('.card__table_main').appendChild(clonedRow);
 }
 

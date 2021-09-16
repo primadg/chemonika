@@ -53,7 +53,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view("card");
+        $main_id = DB::table('product_ukrs')->orderBy('id','desc')->first()->id;
+        $main_id++;
+        return view("card",['main_id'=>$main_id, 'entries' => []]);
     }
 
     /**

@@ -127,6 +127,13 @@
                         количество
                     </div>
                 </div>
+                <div hidden class="card__table_main-row">
+                    <input class="card__table_main-simple card__table_main-name" value="">
+                    <input class="card__table_main-simple card__table_main-amount" value="">
+                    <input  type="hidden" class="card__table_id" value="">
+                    <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg"
+                         alt="close">
+                </div>
                 @foreach($entries as $entry)
                     <div class="card__table_main-row">
                         <input class="card__table_main-simple card__table_main-name" value="{{$entry->title}}">

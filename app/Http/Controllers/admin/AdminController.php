@@ -74,14 +74,19 @@ class AdminController extends Controller
                 break;
         }
 
-        if ($request->file('img')) {
-            $ex = $request->file('img')->extension();
-            if(!($ex=='jpg'||$ex='png')){
-
-            }
+        if(!$request->file('img')){
+            return redirect()->back()->with('error','Загрузите файл');
+        }
+        $ex = $request->file('img')->extension();
+        if(!($ex=='jpg'||$ex=='png')){
+            return redirect()->back()->with('error','Неверный формат загруженного файла');
+        }
             $path = $request->file('img')->store('public/img');
             $product->img = Storage::url($path);
-        }
+
+        try {
+
+
         $product->name = $request->name;
         $product->group = $request->group;
         $product->description = $request->description;
@@ -94,6 +99,9 @@ class AdminController extends Controller
         $product->save();
 
         return redirect()->back();
+        } catch (\Exception $ex){
+            return redirect()->back()->with('error','Ошибка');
+        }
     }
 
 
