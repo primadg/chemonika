@@ -135,8 +135,9 @@
             <div class="row">
                 <div class="col-lg-4 thirdPage__use_cathegory-title">
                     Стандарти
-                    <div class="thirdPage__use_cathegory-title_descr"></div>
-                    {{$product->Standart}}
+                </div>
+                    <div class="thirdPage__use_cathegory-title_descr"> {{$product->Standart}}</div>
+
                 </div>
                 <div class="col-lg-4 thirdPage__use_cathegory-title">
                     Пакування
