@@ -24,25 +24,35 @@ class ProductController extends Controller
     public function index(Request $request)
     {
 
-
+        $chose_group = '';
+        $chose_usage = '';
         $value = $request->cookie('lang') ?? "ukr";
+        switch ($value){
+            case 'ukr': $chose_group=$chose_usage="Обрати"; break;
+            case 'ru': $chose_group=$chose_usage="Выбрать"; break;
+            case 'en': $chose_group=$chose_usage="Select"; break;
+        }
         $products = DB::table('product_' . $value . 's');
-        if ($request->get('group'))
-            $products =  $products->where('group',$request->get('group'));
-//        dd($products);
-        if ($request->get('usage'))
-            $products= $products->where('field_of_usage',$request->get('group'));
-         $products= $products->simplePaginate(9);
-
+        if ($request->get('group')) {
+            $products = $products->where('group', $request->get('group'));
+            $chose_group = $request->get('group');
+        }
+        if ($request->get('usage')) {
+            $products = $products->where('field_of_usage', $request->get('usage'));
+            $chose_usage = $request->get('usage');
+        }
+            $products = $products->simplePaginate(9);
         if ($value == 'ru' || $value == 'en') {
             foreach ($products->items() as $item) {
                 $item->id = $item->pos_id;
             }
         }
-
+//        dd($chose_group);
 
         return view($value . '.products', [
-            'products' => $products
+            'products' => $products,
+            'usage' => $chose_usage,
+            'group'=>$chose_group
         ]);
     }
 
