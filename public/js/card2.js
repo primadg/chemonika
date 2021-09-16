@@ -93,3 +93,10 @@ function readURL(input) {
 $("#myFile").change(function(){
     readURL(this);
 });
+
+
+let closeBtn = document.querySelector('.warning__close');
+
+closeBtn.onclick = (e) => {
+    e.target.closest('.warning').classList.remove('warning__active');
+};

@@ -32,6 +32,21 @@
 
         <form id="form_id" class="container" method="post" enctype="multipart/form-data" action="{{route('products_admin.store')}}">
             @csrf
+
+            @if(session('error'))
+            <div class="warning warning__active">
+                <div>
+                    <img src="{{env('APP_URL')}}/img/icons/card/close_red.svg" alt="warning">
+                </div>
+                <div class="warning__text">
+                    {{session('error')}}
+                </div>
+                <div>
+                    <img class="warning__close" src="{{env('APP_URL')}}/img/icons/card/close_red.svg" alt="close">
+                </div>
+            </div>
+            @endif
+
             <input type="hidden" value="ukr" name="lang" id="lang_data">
             <a href="#" class="card__wrapper">
                 <img src="{{env('APP_URL')}}/img/icons/card/chevron.svg" alt="back">

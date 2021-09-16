@@ -36,6 +36,20 @@
     <form id="form_id" class="container" method="POST" enctype="multipart/form-data"
           action="{{env('APP_URL').'/updatePosts'}}">
         @csrf
+
+        @if(session('error'))
+            <div class="warning warning__active">
+                <div>
+                    <img src="{{env('APP_URL')}}/img/icons/card/close_red.svg" alt="warning">
+                </div>
+                <div class="warning__text">
+                    {{session('error')}}
+                </div>
+                <div>
+                    <img class="warning__close" src="{{env('APP_URL')}}/img/icons/card/close_red.svg" alt="close">
+                </div>
+            </div>
+        @endif
         <input type="hidden" value="{{$product->id}}" name="id" id="lang_data">
         <input type="hidden" value="ukr" name="lang" id="lang_data">
         <a href="#" class="card__wrapper">
@@ -194,7 +208,7 @@
             url: "{{route('table.store')}}",
             data: {
                 'title': "Название",
-                'post_id': {{$entries[0]->post_id}},
+                'post_id': {{$product->id}},
                 'value':"Значение"
             },
             success: function (data) {

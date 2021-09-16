@@ -8,6 +8,7 @@ use App\Models\Product_ru;
 use App\Models\Product_ukr;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
@@ -74,8 +75,12 @@ class AdminController extends Controller
         }
 
         if ($request->file('img')) {
-            $path = $request->file('img')->store('img');
-            $product->img = $path;
+            $ex = $request->file('img')->extension();
+            if(!($ex=='jpg'||$ex='png')){
+
+            }
+            $path = $request->file('img')->store('public/img');
+            $product->img = Storage::url($path);
         }
         $product->name = $request->name;
         $product->group = $request->group;

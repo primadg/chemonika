@@ -83,8 +83,18 @@ class ProductController extends Controller
                 $is_ukr = true;
                 break;
         }
+        if(!$request->file('img')){
+            return redirect()->back()->with('error','Загрузите файл');
+        }
+        $ex = $request->file('img')->extension();
+        if(!($ex=='jpg'||$ex=='png')){
+            return redirect()->back()->with('error','Неверный формат загруженного файла');
+        }
+        $path = $request->file('img')->store('public/img');
+        $new_product->img = Storage::url($path);
 
-        $path = $request->file('img')->store('img');
+        try {
+
 
         $new_product->name = $request->name;
         $new_product->group = $request->group;
@@ -94,7 +104,6 @@ class ProductController extends Controller
         $new_product->Standart = $request->standart;
         $new_product->Package = $request->package;
         $new_product->Storage = $request->stogare;
-        $new_product->img = $path;
 
 
         if ($is_ukr) {
@@ -119,6 +128,9 @@ class ProductController extends Controller
         }
 
         return redirect('admin');
+        }catch (\Exception $e){
+            return redirect()->back()->with('error','Ошибка');
+        }
     }
 
     /**
