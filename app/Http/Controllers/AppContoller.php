@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
+
 
 class AppContoller extends Controller
 {
@@ -34,4 +36,14 @@ class AppContoller extends Controller
     public function setLangUkr(){
         return redirect()->back()->withCookie(cookie('lang', 'ukr', 180));
     }
+
+
+    public function SendEmail(Request $request){
+        Mail::sent('mail',function($massage)use ($request){
+            $massage->to($request->post('email'),$request->post('name'));
+
+        });
+    }
+
+
 }
