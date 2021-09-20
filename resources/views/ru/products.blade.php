@@ -128,7 +128,7 @@
                     @foreach ($chunk as $product)
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12 secondPage__goods_card">
                             <div class="secondPage__goods_card-img">
-                                <img src="{{env("STORAGE_URL").($product->img)}}" alt="product">
+                                <img src="{{env("APP_URL").($product->img)}}" alt="product">
                             </div>
                             <div class="secondPage__goods_card-main">
                                 <div class="secondPage__goods_card-main_title">

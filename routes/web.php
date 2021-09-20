@@ -2,10 +2,10 @@
 
 
 
-use http\Cookie;
+use Http\Cookie;
 use Illuminate\Support\Facades\Route;
-//use App\HTTP\Controllers\AppContoller;
-//use App\HTTP\Controllers\Admin\AdminController;
+//use App\Http\Controllers\AppContoller;
+//use App\Http\Controllers\Admin\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,11 +20,11 @@ use Illuminate\Support\Facades\Route;
 
 //['prefix' => App\Http\Middleware\LocaleMiddleware::getLocale()]
 Route::group([], function() {
-    Route::get('/', [App\HTTP\Controllers\AppContoller::class, 'IndexAction']);
-    Route::get('/ru', [App\HTTP\Controllers\AppContoller::class, 'SetLangRu']);
-    Route::get('/en', [App\HTTP\Controllers\AppContoller::class, 'SetLangEng']);
-    Route::get('/ukr', [App\HTTP\Controllers\AppContoller::class, 'SetLangUkr']);
-    Route::post('/send',[App\HTTP\Controllers\AppContoller::class, 'SentEmail'] );
+    Route::get('/', [App\Http\Controllers\AppContoller::class, 'IndexAction']);
+    Route::get('/ru', [App\Http\Controllers\AppContoller::class, 'SetLangRu']);
+    Route::get('/en', [App\Http\Controllers\AppContoller::class, 'SetLangEng']);
+    Route::get('/ukr', [App\Http\Controllers\AppContoller::class, 'SetLangUkr']);
+    Route::post('/send',[App\Http\Controllers\AppContoller::class, 'SentEmail'] );
 
     Route::resource('products', \App\Http\Controllers\admin\ProductController::class)->only(['index', 'show']);
     Route::resource('table', \App\Http\Controllers\TableController::class);
@@ -33,17 +33,17 @@ Route::group([], function() {
 
 
 Route::group(['middleware' => ['role:admin'], ], function () {
-    Route::namespace('admin')->get("/admin", [App\HTTP\Controllers\Admin\AdminController::class,'homeAction' ]);
+    Route::namespace('admin')->get("/admin", [App\Http\Controllers\Admin\AdminController::class,'homeAction' ]);
     Route::resource('products', \App\Http\Controllers\admin\ProductController::class)->only([
         'create', 'store', 'update','edit', ]);
     Route::resource('products_admin', \App\Http\Controllers\admin\ProductController::class);
-    Route::get("/delete/{id}", [App\HTTP\Controllers\Admin\AdminController::class,'deletePost', ]);
-    Route::get("/editRu/{id}", [App\HTTP\Controllers\Admin\AdminController::class,'editRu', ]);
+    Route::get("/delete/{id}", [App\Http\Controllers\Admin\AdminController::class,'deletePost', ]);
+    Route::get("/editRu/{id}", [App\Http\Controllers\Admin\AdminController::class,'editRu', ]);
     Route::get("/test", function(){
         return view('test');
     });
-    Route::get("/editEn/{id}", [App\HTTP\Controllers\Admin\AdminController::class,'editEn', ]);
-    Route::post("/updatePosts/", [App\HTTP\Controllers\Admin\AdminController::class,'updatePosts', ]);
+    Route::get("/editEn/{id}", [App\Http\Controllers\Admin\AdminController::class,'editEn', ]);
+    Route::post("/updatePosts/", [App\Http\Controllers\Admin\AdminController::class,'updatePosts', ]);
 });
 
 

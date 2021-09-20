@@ -89,7 +89,7 @@
                 </label>
             </div>
             <div class="card__group">
-                <img class="card__upload_img" width="380" height="240" id="imagehui" src="{{env("STORAGE_URL").($product->img)}}"  alt="card">
+                <img class="card__upload_img" width="380" height="240" id="imagehui" src="{{env("APP_URL").($product->img)}}"  alt="card">
                 <div class="card__upload_name">
                     <div class="card__upload_name-name">
                         image.jpg

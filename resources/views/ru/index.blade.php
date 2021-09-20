@@ -223,7 +223,7 @@
                      @foreach($products as $product)
                      <div class="products__block col-md-4 col-sm-6 col-12">
                          <div class="products__block_header">
-                             <img width="310" height="330" src="{{env("STORAGE_URL").$product->img}}" alt="product">
+                             <img width="310" height="330" src="{{env("APP_URL").$product->img}}" alt="product">
                          </div>
                          <div class="products__block_main">
                              <div class="products__block_main-title">{{$product->name}}</div>

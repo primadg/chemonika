@@ -112,7 +112,7 @@
                     {{$product->description}}
                    </div>
                 <div class="col-lg-6 thirdPage__descr_img">
-                    <img src="{{env("STORAGE_URL").($product->img)}}" alt="product">
+                    <img src="{{env("APP_URL").($product->img)}}" alt="product">
                 </div>
             </div>
         </section>

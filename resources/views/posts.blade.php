@@ -41,7 +41,7 @@
             @foreach($products as $product)
             <div class="post__block">
                 <div class="post__block_img">
-                    <img src="{{env("STORAGE_URL").($product->img)}}" alt="lorem">
+                    <img src="{{env("APP_URL").($product->img)}}" alt="lorem">
                 </div>
                 <div class="post__block_info">
                     <div class="post__block_title">{{ $product->name }} </div>
