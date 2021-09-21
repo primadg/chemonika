@@ -35,7 +35,7 @@ class Admin extends Seeder
             'field_of_usage' => "пиво-безалкогольная, кондитерская, хлебо-булочная, консервная",
             'Product_usage'=> "В косметичних препаратах використовується як консервант, розчинник, модіфікатор pH, відповідного pH кожи. Надає в'яжучий, очищающий та відбілюючий ефект шкірі. Вводиться в склад кремів, депіляторів, ополіскувачів для волос, кремів. Лимона кислота використовується як підкислювач в кормах. Володіє потужним антибактеріальною дією, має анті стресову дію, є каталізатором обміну речовин, синергісти антиоксидантів. Відповідає за активацію ферментів, поліпшує засвоюваність  кормів.",
             'Package' => "мішки 25 кг",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'Storage' => "Зберігати в сухому захищеному від світла місці",
             'Standart' => "Відповідає стандартам якості: ВР2009, USP32, FCC6, E330.",
             'description' => "В харчовій промисловості лимона кислота (Е330) широко використовується в виробництві без-алкогольних напоїв, тому що має найбільш мякий та освіжаючий смак в порівнянні з іншими харчовими кислотами.
@@ -44,7 +44,7 @@ class Admin extends Seeder
         DB::table('product_rus')->insert([
             'name' => "Лимонная кислота",
             'group' => "Антиоксиданты",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'pos_id'=>1,
             'Product_usage'=>"В косметических препаратах  применяется как консервант, разбавитель, модификатор pH, соответствующего pH кожи. Оказывает на кожу вяжущее, очищающее и отбеливающее действие. Вводится в состав очищающих кремов, депиляториев, ополаскивателей для волос, красок для волос, кремов от веснушек.
 Лимонная кислота используется как подкислитель в кормах.  Обладает сильным антибактериальным действием, оказывает антистрессовое действие, является катализатором обмена веществ, синергистом антиоксидантов. Отвечает за активизацию ферментов, улучшает усвояемость кормов",
@@ -58,7 +58,7 @@ class Admin extends Seeder
         DB::table('product_ens')->insert([
             'name' => "Citric acid",
             'group' => "Antioxidants",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'pos_id'=>1,
             'Product_usage'=>" Widely used in cosmetics, since it acts as a preservative, diluent, a pH modifier corresponding to pH level of the skin.
 Has an astringent, cleansing and whitening effect on the skin. It is included in the formula of cleansing creams, depilatories, hair rinses, hair dyes and freckle creams.
@@ -81,7 +81,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'Product_usage'=> "Використовується в якості підсилювача харчових відчуттів при виробництві цитрусових газованих напоїв, при виробництві пива, енергетиків, соків та компотів. В якості регулятора рівня кислотності використовується в виробництві кисломолочних виробів, йогурта, мармелада, пастіли. Також використовується при стерилізації молока, консервів, сухого молока. Додається в емульговані рослинні та животні масла та жири.
                                        Також використовується в виробництві косметики та побутової хімії.",
             'Package' => "мішки 25 кг",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'Storage' => "зберігати в сухому захищеному від світла місці",
             'Standart' => "Відповідає стандартам якості: ВР2009, USP32, FCC6, E331.",
             'description' => "Цитрат натрію - це натрієва сіль лимонної кислоти, натуральна та безпечна харчова добавка. За своїми якостями - це регулятор кислотності, стабілізатор, емульгатов, емульгуюча сіль, синергісти антиоксидантів, фіксатор покраски.",
@@ -89,7 +89,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
         DB::table('product_rus')->insert([
             'name' => "Цитрат натрия",
             'group' => "стабилизатор",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'pos_id'=>2,
             'Product_usage'=>"Применяют в качестве усилителя вкусовых ощущений при производстве цитрусовых газированных напитков, при производстве пива, энергетиков, соков и компотов. В качестве регулятора уровня кислотности применяется в производстве кисломолочных продуктов, йогурта, мармелада, пастилы. Также применяют при стерилизации молока, консервов, сухого молока. Добавляют в неэмульгированные растительные и животные масла и жиры.
                                       Также применяют в фармацевтике, производстве косметики и бытовой химии.",
@@ -103,7 +103,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
         DB::table('product_ens')->insert([
             'name' => "Sodium citrate",
             'group' => "stabilizers",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'pos_id'=>2,
             'Product_usage'=>"It is used as a taste enhancer in the production of carbonated citrus drinks, beer, energy drinks, juices and compotes; as an acidity level regulator throughout the production of fermented milk products, yoghurt, marmalade, pastilles. Also used for milk sterilization, canned food, milk powder. Added to non-emulsified vegetable and animal oils and fats. Applied in pharmaceuticals, cosmetics and household chemicals.",
             'field_of_usage' => "beer, soft drinks, canned goods",
@@ -125,7 +125,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
                                            Широко використовується в фармацевтиці при виробництві сиропів, аскорбинової кислоти, проносних засобів, мазей та іншого. Крім того, використовується в промисловій хімії.
 ",
             'Package' => "мішки 25 кг",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'Storage' => "зберігати в сухому захищеному від світла місці",
             'Standart' => "Відповідає стандарту  FCCIV, Е420.",
             'description' => "Сорбіт харчовий є натуральним цукрозамінником, емульгатором, комплексоутворювачем, стабілізатором кольору, вологоутримуюча та диспергуюча речовиною.",
@@ -133,7 +133,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
         DB::table('product_rus')->insert([
             'name' => "Сорбит (сорбитол)",
             'group' => "подсластитель",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'pos_id'=>3,
             'Product_usage'=>"Применяется в качестве подсластителя и сахарозаменителя в пищевой промышленности, особенно, при производстве диетических продуктов и напитков, жевательных резинок, кондитерских изделий, плодоовощных консервов.
                                           Применяется при производстве косметических средств, таких, как прозрачные гели и шампуни,  как загуститель. Как подсластитель в производстве зубных паст, ополаскиватель для полости рта. Входит в состав лаков для волос, дезодорантов, бальзамов и других косметических средств.
@@ -148,7 +148,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
         DB::table('product_ens')->insert([
             'name' => "Sorbate (Sorbitol)",
             'group' => "sweeteners",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'pos_id'=>3,
             'Product_usage'=>"Used as a sweetener and sugar substitute in food industry, namely in production of dietary foods and drinks, chewing gum, confectionary goods, canned fruits and vegetables.
                                           Used as a thickener in the manufacturing of cosmetic products such as clear gels and shampoos. Also applied in the production of tooth paste and mouthwash as a sweetener. It is included in hair sprays, deodorants, balms and other cosmetics. Widely used in pharmaceuticals, production of syrups, ascorbic acid, laxatives, ointments and household chemicals.",
@@ -166,7 +166,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'field_of_usage' => "м'ясопереробна",
             'Product_usage'=> "Застосовується в якості підсилювача смаку та аромату в харчовій промисловості. Глутамат натрію сам майже без смаку і запаху, при цьому він загострює смакові якості птиці, м'яса, морських продуктів, грибів і певних овочів. Підсилює аромати, ослаблені в процесі переробки або при тривалому зберіганні. Широко застосовується при виробництві харчових концентратів: сухих супів, бульйонів, кубиків; при виробництві снеків; напівфабрикатів, продуктів швидкого приготування; соусів; консервів; в м'ясо- і рибопереробки, при виробництві приправ.",
             'Package' => "мішки 25 кг",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'Storage' => "зберігати в сухому захищеному від світла місці",
             'Standart' => "",
             'description' => "Глутамат натрію це білий кристалічний порошок зі слабозаметний солодко-солоним смаком, добре розчинний в рідини.
@@ -177,7 +177,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
         DB::table('product_rus')->insert([
             'name' => "Глутамат натрия",
             'group' => "усилителей вкуса и аромата",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'pos_id'=>4,
             'Product_usage'=>"Применяется в качестве усилителя вкуса и аромата в пищевой промышленности. Глутамат натрия сам почти без вкуса и запаха, при этом он обостряет вкусовые качества птицы, мяса, морских продуктов, грибов и определенных овощей. Усиливает ароматы, ослабленные в процессе переработки или при длительном хранении.  Широко применяется при производстве пищевых концентратов: сухих супов, бульонов, кубиков; при производстве снеков; полуфабрикатов, продуктов быстрого приготовления; соусов;  консервов; в мясо- и рыбопереработке, при производстве приправ.",
             'field_of_usage' => "мясоперерабатывающая",
@@ -193,7 +193,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
         DB::table('product_ens')->insert([
             'name' => "Monosodium glutamate",
             'group' => "flavorants, taste and aroma enhancers",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'pos_id'=>4,
             'Product_usage'=>"It is widely applied as a flavor and aroma enhancer in the food industry. Although it is essentially flavorless and odorless, Monosodium glutamate increases the palatability of poultry, meat, seafood, mushrooms and certain vegetables. Enhances the aromas weakened by processing or long-term storage. It is widely used in the production of food concentrates: dry soup mixes, broths, bouillon cubes, snacks, intermediate and instant products, sauces, canned food. Used in meat and fish processing and the production of spices.",
             'field_of_usage' => "meat processing",
@@ -217,7 +217,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
                                                    Крім харчової та косметичної промисловості, ксантанова камідь використовується в процесах видобутку нафти та газу.
                                                    Ксантанова камідь є нейтральним, гіпоалергеним продуктом, не заподіющим шкоду.",
             'Package' => "мішки 25 кг",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'Storage' => "зберігати в сухому захищеному від світла місці",
             'Standart' => "",
             'description' => "Ксантанова камідь відноситься до групи стабілізаторів. Виглядає як білий або сірий порошок без запаху, нейтрального смаку. Індекс в європейській кодифікації Е-415.
@@ -228,7 +228,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
         DB::table('product_rus')->insert([
             'name' => "Ксантановая камедь",
             'group' => "загуститель, гелеобразователь и стабилизатор",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'pos_id'=>5,
             'Product_usage'=>"Ксантановая камедь применяется для стабилизации растворов, повышения эластичности и вязкости. Ее добавляют при изготовлении кремов, джемов, желе и всевозможных соусов, молочных продуктов (десертов, йогуртов, сыров), хлебобулочных изделий. В мясоперерабатывающей промышленности камедь используют для удержания влаги в готовом пищевом продукте при изготовлении колбасных изделий, фаршей, мясных консервов. При производстве многоцветного мороженого ее используют для того, чтобы разные цвета продукта не перемешивались.
                                                   Увлажняющие и влагоудерживающие свойства этого вещества используются в косметической промышленности при производстве гелей, кремов, лосьонов, масок, пенок, а также зубных паст и ополаскивателей для ротовой полости.
@@ -245,7 +245,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
         DB::table('product_ens')->insert([
             'name' => "Xanthan gum",
             'group' => "thickeners, gelling agents, stabilizers",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'pos_id'=>5,
             'Product_usage'=>"Xanthan gum is used to stabilize solutions, increase elasticity and viscosity. It is added during the manufacturing of creams, jams, jellies and all kinds of sauces, dairy products (desserts, yoghurts, cheeses), bakery goods. In the meat processing industry gum is used to retain moisture in sausages, minced meat and canned meat. It is also used to prevent colors from mixing in the production of multicolor ice cream.
                                                   The moisturizing and water-retaining properties of this substance serve well in the cosmetic industry. Specifically, in the production of gels, creams, lotions, masks, foams, as well as toothpaste and mouthwash.
@@ -271,7 +271,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
                                                    Сорбінова кислота входить в список сировини для стандартів та ТУ на таку продукцію як - молочні консерви, соки, соуси, майонези, маргарин, різноманітні сири, сухофрукти, оливки, варення та джеми, риба, безалкогольні напої, вина, яйцепродукти, начинки для пельменей, паштети, конфети і шоколад з начинням, хлібобулочні вироби.
                                                    Добавка Е 200 є одним з найбільш вивчених та разповсюджених консервантів в харчовій промисловості по причині безпечності для організму людини. Іншими сферами використання сорбінової кислоти стали табачна промисловість, косметологія (в якості консерванта), і виготовлення упаковочної тари для продуктів харчування.",
             'Package' => "мішки 25 кг",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'Storage' => "зберігати в сухому захищеному від світла місці",
             'Standart' => "",
             'description' => "Сорбінова кислота являє собою дрібні кристали без кольору та запаху, дуже незначно розчинні в воді, речовина не токсична і не є канцерогеном. В харчовій промисловості сорбінова кислота E 200 використовується в якості консерванта, мета якого збільшення терміну зберігання продуктів.",
@@ -279,7 +279,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
         DB::table('product_rus')->insert([
             'name' => "Сорбиновая кислота",
             'group' => "консервант",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'pos_id'=>6,
             'Product_usage'=>"Применяется с целью консервирования и предотвращения плесневения безалкогольных напитков, плодовоягодных соков, хлебопекарных, кондитерских изделий (мармелад, джемы, варенье, кремы), а также зернистой икры, сыров, полукопченых колбас.
                                                   При производстве сгущенного молока применяется для предотвращения его потемнения (препятствует развитию шоколадно-коричневой плесени).
@@ -296,7 +296,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
         DB::table('product_ens')->insert([
             'name' => "Sorbic acid",
             'group' => "preservatives",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'pos_id'=>6,
             'Product_usage'=>"Sorbic acid is used to preserve and prevent molds in soft drinks, fruit juices, bakery products, confectionery items (marmalade, jams, preserves, creams), as well as granular caviar, cheeses, semi-smoked sausages.
                                                   It is used to avoid the darkening during the production of condensed milk (prevents the development of chocolate brown mold).
@@ -320,7 +320,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
                                                        Також використовуєсться в косметчній та фармацевтичній промисловості, використовується в якості підкислювача в кормах.
                                                        Володіє сильною антибактеріальною дією, має антистресову дію, є каталізатором обміну речовин, сінергістом антиоксидантів. Відповідає за активізацію ферментів, поліпшує засвоювання кормів.",
             'Package' => "мішки 25 кг",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'Storage' => "зберігати в сухому захищеному від світла місці",
             'Standart' => "Відповідає вимогам стандартів якості: ВР2009, USP32, FCC6, E202.",
             'description' => "Сорбат калію - це природний безпечний для здоров’я людини консервант, активно пригнічуючий дрожі, цвілеві гриби, аеробні бактерії, ферменти, там самим збільшуючи термін придатності продуктів.",
@@ -328,7 +328,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
         DB::table('product_rus')->insert([
             'name' => "Сорбат калия",
             'group' => "консервант",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'pos_id'=>7,
             'Product_usage'=>"Представляет собой белый порошок или гранулы без запаха с нейтральным вкусом. . Это один из наиболее популярных консервантов во всех отраслях пищевой промышленности вследствие своей безопасности. Хорошо растворим в воде, выдерживает термообработку, способен быстро смешиваться с консистенцией продуктов и не влияет на их вкус.
                                                       Также применяется в  косметической и фармацевтической промышленности, используется как подкислитель в кормах.  Обладает сильным антибактериальным действием, оказывает антистрессовое действие, является катализатором обмена веществ, синергистом антиоксидантов. Отвечает за активизацию ферментов, улучшает усвояемость кормов.",
@@ -341,7 +341,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
         DB::table('product_ens')->insert([
             'name' => "Potassium sorbate",
             'group' => "preservatives",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'pos_id'=>7,
             'Product_usage'=>"Odorless white powder or granules with a neutral taste. It is one of the most popular preservatives in all branches throughout the food industry because of how safe it is. It dissolves well in water, withstands heat treatment, quickly mixes with consistency of the products without altering their taste.
                                                       It is also widely applied in cosmetic and pharmaceutical industry, and used as feed acidifier. It has a strong antibacterial and anti-stress effects, acts as a metabolic catalyst and a synergist of antioxidants.
@@ -361,7 +361,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'Product_usage'=> "Використовується для консервування м'ясних та рибних виробів, маргарина, майонеза, кетчупа, плодово-ягідних продуктів, солодких газованих продуктів.
                                                            Як консервант використовується в косметичній та фармацевтичній промисловості. Використовується в медицині як відхаркуючий засіб, зазвичай в складі комбінованих препаратів.",
             'Package' => "мішки 25 кг",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'Storage' => "зберігати в сухому захищеному від світла місці",
             'Standart' => "",
             'description' => "Має потужну пригнічуючу дію на дріжджі та цвілеві гриби, пригнічує в клітинах активність ферментів, відповідальних за окислювально-відновлювальні реакції, а також ферментів, розщеплюючи жири та крахмал.",
@@ -369,7 +369,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
         DB::table('product_rus')->insert([
             'name' => "Бензоат натрия",
             'group' => "консервант",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'pos_id'=>8,
             'Product_usage'=>"Применяется для консервирования мясных и рыбных изделий, маргарина, майонеза, кетчупа, плодово-ягодных продуктов, сладких газированных напитков.
                                                           Как консервант используется в косметической и фармацевтической промышленности. Применяется в медицине как отхаркивающее средство, обычно в составе комбинированных препаратов.",
@@ -382,7 +382,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
         DB::table('product_ens')->insert([
             'name' => "Sodium benzoate",
             'group' => "preservatives",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'pos_id'=>8,
             'Product_usage'=>"It is used for canning meat and fish products, margarine, mayonnaise, ketchup, fruit and berry products, sweet carbonated drinks.
                                                           Used as a preservative in the cosmetic and pharmaceutical industries. It is used in medicine as an expectorant, usually in combination preparations.",
@@ -400,7 +400,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'field_of_usage' => "мясопереробна, молочна, спортивне харчування",
             'Product_usage'=> "Ізолят соєвого білку в більшому ступені використовують в харчовій промисловості в якості часткової заміни м'ясної сировини. Використовується в виробництві ковбасних виробів, консервів, мясних, рибних та молочних виробів, хлібобулочних, мучних і кондитерських виробів, супів, сухих напоїв, продуктів дієтичного та дитячого харчування, спортивного харчування.",
             'Package' => "мішки 20 кг",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'Storage' => "зберігати в сухому захищеному від світла місці",
             'Standart' => "",
             'description' => "Ізолят соєвого белка - очищений від вуглеводів, рослинної клітчатки і жира соєвий продукт, що містить не менше ніж 90% білку в сухій речовині. Йому властиві низька в’язкість, висока розчинність, хорошею жироемульсуючою здатністю и є одним з найфункціональніших продуктів соєвого белку на ринку.",
@@ -408,7 +408,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
         DB::table('product_rus')->insert([
             'name' => "Изолят соевого белка",
             'group' => "протеин",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'pos_id'=>9,
             'Product_usage'=>"Изолят соевого белка в большей степени применяют в пищевой промышленности в качестве частичной замены мясного сырья. Используется в производстве колбасных изделий, консервов, мясных, рыбных и молочных продуктов, хлебобулочных, мучных и кондитерских изделий, супов, сухих напитков, продуктов диетического и детского питания, спортивного питания.",
             'field_of_usage' => "мясоперерабатывающая, молочная, спортивное питание",
@@ -420,7 +420,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
         DB::table('product_ens')->insert([
             'name' => "Soy Protein Isolate",
             'group' => "proteins",
-            'img'=>'img',
+            'img'=>'/img/images/product1.png',
             'pos_id'=>9,
             'Product_usage'=>"Soy protein isolate mainly used like part meat products substitution. Used in production of sausages, canned foods, meat, fish and milk products, bread products, soups, dry drinks, dietical and baby nutrition, sports nutrition.",
             'field_of_usage' => "meat and milk processing, sports nutrition",

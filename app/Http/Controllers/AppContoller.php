@@ -46,7 +46,7 @@ class AppContoller extends Controller
     public function SendEmail(Request $request)
     {
         if ($this->emailValidate($request->post('email'))||$this->telValidate($request->post('email'))) {
-            Mail::to('dnk.garden@gmail.com')->send(new \App\Mail\Mail($request->post('userName'),
+            Mail::to(env('MAIL_TO_NAME'))->send(new \App\Mail\Mail($request->post('userName'),
                 $request->post('email'), $request->post('text')));
             return Response('ok', 200);
         }
