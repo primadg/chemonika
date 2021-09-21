@@ -286,26 +286,26 @@
                          <div class="form__form_title">
                              Feedback form
                          </div>
-                         <form action="#">
+                         <div>
                              <div class="form__form_label form__form_label-mt">
                                  Your name
                              </div>
-                             <input class="form__form_input" type="text" name="userName">
+                             <input class="form__form_input" type="text" id="nameInput" name="userName">
                              <div class="form__form_label">
                                  Email or phone
                              </div>
-                             <input class="form__form_input" type="text" name="email">
+                             <input class="form__form_input" type="text" id="email" name="email">
                              <div class="form__form_label">
                                  Message text
                              </div>
-                             <textarea class="form__form_textarrea" name="text"></textarea>
-                             <button type="submit" class="header__info_button form__form_btn">
+                             <textarea class="form__form_textarrea" id="textInput" name="text"></textarea>
+                             <button onclick="sendEmail()" class="header__info_button form__form_btn">
                                  <span>Send</span>
                                  <svg class="header__info_button-svg" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                      <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#ffffff"></path>
                                  </svg>
                              </button>
-                         </form>
+                         </div>
 
                      </div>
                  </div>
