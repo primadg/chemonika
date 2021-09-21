@@ -37,23 +37,35 @@ let hidePages = () => {
 let removeMenu = () => {
   $('.header__info_contact-link').removeClass('header__active_link');
 };
-
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+function validateTel(email) {
+    var re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+    return re.test(String(email).toLowerCase());
+}
 
 function sendEmail(){
+    var email = $('#email').val();
+
     $.ajax({
         type: "POST",
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
-        url: location.href+"/send",
+        url: location.href+"send",
         data: {
-            'email': $('#email').val(),
+            'email': email,
             'name': $('#nameInput').val(),
             'text':$('#textInput').val(),
 },
     success: function (data) {
         outputResponse(data);
     },
+        error:function (data){
+            $('#email').val('The data is filled in incorrectly');
+        }
 });
 }
 function outputResponse(data){
