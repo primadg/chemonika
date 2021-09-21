@@ -16,33 +16,38 @@ class AppContoller extends Controller
     {
         $value = $request->cookie('lang') ?? "ukr";
         $products = DB::table('product_' . $value . 's');
-        if ($value == 'ru' || $value == 'en'){
-            $products =  $products->orderBy('pos_id','desc')->take(3)->get();
-            foreach ($products as $item){
-                $item->id=$item->pos_id;
+        if ($value == 'ru' || $value == 'en') {
+            $products = $products->orderBy('pos_id', 'desc')->take(3)->get();
+            foreach ($products as $item) {
+                $item->id = $item->pos_id;
             }
-        }
-        else
-        $products =  $products->orderBy('id','desc')->take(3)->get();
-            return view($value.'.index', ['products'=>$products]);
+        } else
+            $products = $products->orderBy('id', 'desc')->take(3)->get();
+        return view($value . '.index', ['products' => $products]);
     }
 
-    public function setLangEng(){
+    public function setLangEng()
+    {
         return redirect()->back()->withCookie(cookie('lang', 'en', 180));
     }
-    public function setLangRu(){
+
+    public function setLangRu()
+    {
         return redirect()->back()->withCookie(cookie('lang', 'ru', 180));
     }
-    public function setLangUkr(){
+
+    public function setLangUkr()
+    {
         return redirect()->back()->withCookie(cookie('lang', 'ukr', 180));
     }
 
 
-    public function SendEmail(Request $request){
-        Mail::sent('mail',function($massage)use ($request){
-            $massage->to($request->post('email'),$request->post('name'));
+    public function SendEmail(Request $request)
+    {
 
-        });
+        Mail::to('dnk.garden@gmail.com')->send(new \App\Mail\Mail($request->post('userName'),
+            $request->post('email'), $request->post('text')));
+        return redirect()->back();
     }
 
 

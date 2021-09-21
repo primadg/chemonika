@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap-grid.min.css">
@@ -285,7 +286,8 @@
                          <div class="form__form_title">
                              Форма обратной связи
                          </div>
-                         <form action="#">
+                         <form action="/send" method="POST">
+                             @csrf
                              <div class="form__form_label form__form_label-mt">
                                  Ваше имя
                              </div>
@@ -435,145 +437,7 @@
                 </div>
             </div>
         </section>
-        <section class="secondPage__goods">
-            <div class="container">
-                <div class="row">
-                   <div class="col-lg-4 col-md-6 col-sm-6 col-12 secondPage__goods_card">
-                       <div class="secondPage__goods_card-img">
-                            <img src="{{env('APP_URL')}}/img/images/product1.png" alt="product">
-                       </div>
-                       <div class="secondPage__goods_card-main">
-                            <div class="secondPage__goods_card-main_title">
-                                Лимонная кислота (антиоксиданты)
-                            </div>
-                            <div class="secondPage__goods_card-main_subTitle">
-                                В пищевой промышленности лимонная кислота (Е330)  широко применяется  в производстве безалкогольных напитков, поскольку обладает...
-                            </div>
-                            <div class="products__block_main-btn secondPage__goods_card-btn">
-                                <div>Дизнатися більше</div>
-                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"></path>
-                                </svg>
-                            </div>
-                       </div>
-                   </div>
-                   <div class="col-lg-4 col-md-6 col-sm-6 col-12 secondPage__goods_card">
-                        <div class="secondPage__goods_card-img">
-                            <img src="{{env('APP_URL')}}/img/images/products/2.png" alt="product">
-                        </div>
-                        <div class="secondPage__goods_card-main">
-                            <div class="secondPage__goods_card-main_title">
-                                Цитрат натрия (антиоксиданты)
-                            </div>
-                            <div class="secondPage__goods_card-main_subTitle">
-                                В пищевой промышленности лимонная кислота (Е330)  широко применяется  в производстве безалкогольных напитков, поскольку обладает...
-                            </div>
-                            <div class="products__block_main-btn secondPage__goods_card-btn">
-                                <div>Дизнатися більше</div>
-                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"></path>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 secondPage__goods_card">
-                        <div class="secondPage__goods_card-img">
-                             <img src="{{env('APP_URL')}}/img/images/products/3.png" alt="product">
-                        </div>
-                        <div class="secondPage__goods_card-main">
-                             <div class="secondPage__goods_card-main_title">
-                                Сорбит (сорбитол) (подсластитель)
-                             </div>
-                             <div class="secondPage__goods_card-main_subTitle">
-                                 В пищевой промышленности лимонная кислота (Е330)  широко применяется  в производстве безалкогольных напитков, поскольку обладает...
-                             </div>
-                             <div class="products__block_main-btn secondPage__goods_card-btn">
-                                 <div>Дизнатися більше</div>
-                                 <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                     <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"></path>
-                                 </svg>
-                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 secondPage__goods_card">
-                        <div class="secondPage__goods_card-img">
-                             <img src="{{env('APP_URL')}}/img/images/products/4.png" alt="product">
-                        </div>
-                        <div class="secondPage__goods_card-main">
-                             <div class="secondPage__goods_card-main_title">
-                                Глутамат натрия (усилитель вкуса)
-                             </div>
-                             <div class="secondPage__goods_card-main_subTitle">
-                                 В пищевой промышленности лимонная кислота (Е330)  широко применяется  в производстве безалкогольных напитков, поскольку обладает...
-                             </div>
-                             <div class="products__block_main-btn secondPage__goods_card-btn">
-                                 <div>Дизнатися більше</div>
-                                 <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                     <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"></path>
-                                 </svg>
-                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 secondPage__goods_card">
-                        <div class="secondPage__goods_card-img">
-                             <img src="{{env('APP_URL')}}/img/images/products/5.png" alt="product">
-                        </div>
-                        <div class="secondPage__goods_card-main">
-                             <div class="secondPage__goods_card-main_title">
-                                Ксантановая камедь (стабилизатор)
-                             </div>
-                             <div class="secondPage__goods_card-main_subTitle">
-                                 В пищевой промышленности лимонная кислота (Е330)  широко применяется  в производстве безалкогольных напитков, поскольку обладает...
-                             </div>
-                             <div class="products__block_main-btn secondPage__goods_card-btn">
-                                 <div>Дизнатися більше</div>
-                                 <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                     <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"></path>
-                                 </svg>
-                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 secondPage__goods_card">
-                        <div class="secondPage__goods_card-img">
-                             <img src="{{env('APP_URL')}}/img/images/products/6.png" alt="product">
-                        </div>
-                        <div class="secondPage__goods_card-main">
-                             <div class="secondPage__goods_card-main_title">
-                                Сорбиновая кислота (консервант)
-                             </div>
-                             <div class="secondPage__goods_card-main_subTitle">
-                                 В пищевой промышленности лимонная кислота (Е330)  широко применяется  в производстве безалкогольных напитков, поскольку обладает...
-                             </div>
-                             <div class="products__block_main-btn secondPage__goods_card-btn">
-                                 <div>Дизнатися більше</div>
-                                 <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                     <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"></path>
-                                 </svg>
-                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 secondPage__goods_card">
-                        <div class="secondPage__goods_card-img">
-                             <img src="{{env('APP_URL')}}/img/images/products/7.png" alt="product">
-                        </div>
-                        <div class="secondPage__goods_card-main">
-                             <div class="secondPage__goods_card-main_title">
-                                Сорбат калия (консервант)
-                             </div>
-                             <div class="secondPage__goods_card-main_subTitle">
-                                 В пищевой промышленности лимонная кислота (Е330)  широко применяется  в производстве безалкогольных напитков, поскольку обладает...
-                             </div>
-                             <div class="products__block_main-btn secondPage__goods_card-btn">
-                                 <div>Дизнатися більше</div>
-                                 <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                     <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"></path>
-                                 </svg>
-                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
         <section class="form">
             <div class="container">
                 <div class="row">
@@ -618,7 +482,8 @@
                         <div class="form__form_title">
                             Форма зворотнього зв’язку
                         </div>
-                        <form action="#">
+                        <form action="/post" method="POST">
+                            @csrf
                             <div class="form__form_label form__form_label-mt">
                                 Ваше ім’я
                             </div>
@@ -724,133 +589,6 @@
             </div>
         </footer>
     </div>
-    <div class="thirdPage">
-        <div class="container">
-            <section class="thirdPage__info">
-                <div class="thirdPage__info_back">
-                    <svg class="thirdPage__info_back-svg" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"/>
-                    </svg>
-                    <div class="thirdPage__info_back-title">
-                        Повернутісь до Продукції
-                    </div>
-                </div>
-            </section>
-            <section class="thirdPage__info_product">
-                <div class="row">
-                    <div class="col-lg-6 thirdPage__info_product-title">
-                        Лимонная кислота (антиоксиданты)
-                    </div>
-                    <div class="col-lg-6 thirdPage__info_product-right">
-                        <div class="thirdPage__info_product-right_wrapper">
-                            <div class="thirdPage__info_product-right_wrapper_kind">Група</div>
-                            <div class="thirdPage__info_product-right_wrapper_value">Антиоксиданты</div>
-                        </div>
-                        <div class="thirdPage__info_product-right_wrapper">
-                            <div class="thirdPage__info_product-right_wrapper_kind">Галузь застосування</div>
-                            <div class="thirdPage__info_product-right_wrapper_value">Молочная</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="thirdPage__descr">
-                <div class="row">
-                    <div class="col-lg-6 thirdPage__descr_text">
-                        В пищевой промышленности лимонная кислота (Е330)  широко применяется  в производстве безалкогольных напитков, поскольку обладает наиболее мягким и освежающим вкусом по сравнению с другими пищевыми кислотами.
-                        В производстве кондитерских изделий применяется как ароматизатор и подкислитель. В производстве хлебобулочных изделий применяется как один из компонентов разрыхлителей теста. В масложировой промышленности лимонная кислота значительно снижает вероятность прогоркания жиров, маргаринов и животного масла. При производстве консервов используется, как консервант.
-                        Все известные организации по контролю за пищевыми продуктами относят пищевую добавку Е330 к классу безопасных для здоровья.
-                    </div>
-                    <div class="col-lg-6 thirdPage__descr_img">
-                        <img src="{{env('APP_URL')}}/img/images/products/1.png" alt="product">
-                    </div>
-                </div>
-            </section>
-        </div>
-        <section class="thirdPage__use">
-            <div class="container">
-                <img class="sot1" src="{{env('APP_URL')}}/img/icons/sot1.svg" alt="image">
-                <img class="sot2" src="{{env('APP_URL')}}/img/icons/sot2.svg" alt="image">
-                <div class="row">
-                    <div class="col-lg-4 thirdPage__use_title">
-                        Застосування продукту
-                    </div>
-                    <div class="col-lg-8 thirdPage__use_descr">
-                        В косметических препаратах  применяется как консервант, разбавитель, модификатор pH, соответствующего pH кожи. Оказывает на кожу вяжущее, очищающее и отбеливающее действие. Вводится в состав очищающих кремов, депиляториев, ополаскивателей для волос, красок для волос, кремов от веснушек.
-                        Лимонная кислота используется как подкислитель в кормах.  Обладает сильным антибактериальным действием, оказывает антистрессовое действие, является катализатором обмена веществ, синергистом антиоксидантов. Отвечает за активизацию ферментов, улучшает усвояемость кормов
-                        <br>
-                        <br>
-                        Все известные организации по контролю за пищевыми продуктами относят пищевую добавку Е330 к классу безопасных для здоровья.
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 thirdPage__use_cathegory-title">
-                        Стандарти
-                        <div class="thirdPage__use_cathegory-title_descr">Соответствует стандартам качества: ВР2009, USP32, FCC6, E330.</div>
-                    </div>
-                    <div class="col-lg-4 thirdPage__use_cathegory-title">
-                        Пакування
-                        <div class="thirdPage__use_cathegory-title_descr">Pellentesque varius faucibus elementum sapien ultrices diam iaculis lacus mi</div>
-                    </div>
-                    <div class="col-lg-4 thirdPage__use_cathegory-title">
-                        Зберігання
-                        <div class="thirdPage__use_cathegory-title_descr">Enim consectetur eleifend in velit eget dui vulputate eleifend mauris</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="thirdPage__table">
-            <div class="container">
-                <div class="row">
-                    <div class="offset-lg-1 col-lg-10">
-                        <div class="thirdPage__table_title">
-                            Таблиця показників
-                        </div>
-                        <div class="thirdPage__table_table">
-                            <div class="thirdPage__table_table-header">
-                                <div class="thirdPage__table_table-header_name">
-                                    назва
-                                </div>
-                                <div class="thirdPage__table_table-header_value">
-                                    назва
-                                </div>
-                            </div>
-                            <div class="thirdPage__table_table-row">
-                                <div class="thirdPage__table_table-row_title">Zoomit</div>
-                                <div class="thirdPage__table_table-row_id">ID: 97174</div>
-                            </div>
-                            <div class="thirdPage__table_table-row">
-                                <div>Opentech</div>
-                                <div>ID: 39635</div>
-                            </div>
-                            <div class="thirdPage__table_table-row">
-                                <div>Ron-tech</div>
-                                <div>ID: 70668</div>
-                            </div>
-                            <div class="thirdPage__table_table-row">
-                                <div>Toughzap</div>
-                                <div>ID: 97174</div>
-                            </div>
-                            <div class="thirdPage__table_table-row">
-                                <div>Betasoloin</div>
-                                <div>ID: 43756</div>
-                            </div>
-                            <div class="thirdPage__table_table-row">
-                                <div>Konex</div>
-                                <div>ID: 22739</div>
-                            </div>
-                            <div class="thirdPage__table_table-row">
-                                <div>Codehow</div>
-                                <div>ID: 43178</div>
-                            </div>
-                            <div class="thirdPage__table_table-row">
-                                <div>Plussunin</div>
-                                <div>ID: 22739</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <section class="thirdPage__notFound">
             <div class="container">
                 <div class="row">

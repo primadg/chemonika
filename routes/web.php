@@ -24,7 +24,7 @@ Route::group([], function() {
     Route::get('/ru', [\App\Http\Controllers\AppContoller::class, 'SetLangRu']);
     Route::get('/en', [\App\Http\Controllers\AppContoller::class, 'SetLangEng']);
     Route::get('/ukr', [\App\Http\Controllers\AppContoller::class, 'SetLangUkr']);
-    Route::post('/send',[\App\Http\Controllers\AppContoller::class, 'SentEmail'] );
+    Route::post('/send',[\App\Http\Controllers\AppContoller::class, 'SendEmail'] );
 
     Route::resource('products', \App\Http\Controllers\admin\ProductController::class)->only(['index', 'show']);
     Route::resource('table', \App\Http\Controllers\TableController::class);

@@ -13,18 +13,18 @@ $('.header__info_lang-dropdown-li').on('click', function(){
 
 
 
-$('.header__info_contact-link').on('click', function(){
-    $('.header__info_contact-link').removeClass('header__active_link');
-    $(this).addClass('header__active_link');
-    if($(this).hasClass('link__products')){
-        hidePages();
-        $('.secondPage').fadeIn(100);
-    }
-    if($(this).hasClass('link__about')){
-      hidePages();
-      $('.firstPage').fadeIn(100);
-  }
-});
+// $('.header__info_contact-link').on('click', function(){
+//     $('.header__info_contact-link').removeClass('header__active_link');
+//     $(this).addClass('header__active_link');
+//     if($(this).hasClass('link__products')){
+//         hidePages();
+//         $('.secondPage').fadeIn(100);
+//     }
+//     if($(this).hasClass('link__about')){
+//       hidePages();
+//       $('.firstPage').fadeIn(100);
+//   }
+// });
 
 
 
@@ -39,7 +39,26 @@ let removeMenu = () => {
 };
 
 
-
+function sendEmail(){
+    $.ajax({
+        type: "POST",
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url: location.href+"/send",
+        data: {
+            'email': $('#email').val(),
+            'name': $('#nameInput').val(),
+            'text':$('#textInput').val(),
+},
+    success: function (data) {
+        outputResponse(data);
+    },
+});
+}
+function outputResponse(data){
+    console.log(data);
+}
 
 
 
@@ -52,10 +71,10 @@ let removeMenu = () => {
 //   $('.thirdPage').fadeIn(100);
 // });
 
-$('.thirdPage__info_back').on('click', function(){
-  hidePages();
-  $('.secondPage').fadeIn(100);
-});
+// $('.thirdPage__info_back').on('click', function(){
+//   hidePages();
+//   $('.secondPage').fadeIn(100);
+// });
 
 $('.products__block_main-btn').on('click', function(){
   hidePages();
