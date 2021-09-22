@@ -55,12 +55,12 @@
                     </div>
                 </div>
                 <div class="post__block_btns">
-                    <div class="post__block_btn post__block_edit">
-                        <span onclick="location.href='{{route('products_admin.edit',$product->id)}}'">Edit</span>
+                    <div onclick="location.href='{{route('products_admin.edit',$product->id)}}'" class="post__block_btn post__block_edit">
+                        <span >Edit</span>
                         <img src="img/icons/posts/edit.svg" alt="edit">
                     </div>
-                    <div class="post__block_btn post__block_close">
-                        <span onclick="location.href=' {{env('APP_URL').'/delete/'.$product->id}}'">Delete</span>
+                    <div onclick="location.href=' {{env('APP_URL').'/delete/'.$product->id}}'" class="post__block_btn post__block_close">
+                        <span >Delete</span>
                         <img src="img/icons/posts/close.svg" alt="close">
                     </div>
                 </div>
