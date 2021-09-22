@@ -290,7 +290,7 @@
                              <div class="form__form_label form__form_label-mt">
                                  Ваше имя
                              </div>
-                             <input class="form__form_input" id="userName" type="text" name="userName">
+                             <input class="form__form_input" id="nameInput" type="text" name="userName">
                              <div class="form__form_label">
                                  Email или телефон
                              </div>
