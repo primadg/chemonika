@@ -88,15 +88,15 @@ function outputResponse(data){
 //   $('.secondPage').fadeIn(100);
 // });
 
-$('.products__block_main-btn').on('click', function(){
-  hidePages();
-  removeMenu();
-
-  document.querySelector("header").scrollIntoView();
-  $('.thirdPage').fadeIn(100);
-  $('.link__products').addClass('header__active_link');
-
-});
+// $('.products__block_main-btn').on('click', function(){
+//   hidePages();
+//   removeMenu();
+//
+//   document.querySelector("header").scrollIntoView();
+//   $('.thirdPage').fadeIn(100);
+//   $('.link__products').addClass('header__active_link');
+//
+// });
 
 $('.promo__suggestions, .banner__main_choose').on('click', function(){
   hidePages();

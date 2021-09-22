@@ -95,7 +95,7 @@
         <section class="thirdPage__info_product">
             <div class="row">
                 <div class="col-lg-6 thirdPage__info_product-title">
-                   {{$product->name}}
+                    {{$product->name}}
                 </div>
                 <div class="col-lg-6 thirdPage__info_product-right">
                     <div class="thirdPage__info_product-right_wrapper">
@@ -113,7 +113,7 @@
             <div class="row">
                 <div class="col-lg-6 thirdPage__descr_text">
                     {{$product->description}}
-                   </div>
+                </div>
                 <div class="col-lg-6 thirdPage__descr_img">
                     <img src="{{env("APP_URL").($product->img)}}" alt="product">
                 </div>
@@ -130,21 +130,21 @@
                 </div>
                 <div class="col-lg-8 thirdPage__use_descr">
                     {{$product->Product_usage}}
-                    </div>
+                </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 thirdPage__use_cathegory-title">
                     Стандарти
-                </div>
                     <div class="thirdPage__use_cathegory-title_descr"> {{$product->Standart}}</div>
-
                 </div>
                 <div class="col-lg-4 thirdPage__use_cathegory-title">
                     Пакування
                     <div class="thirdPage__use_cathegory-title_descr">{{$product->Package}} </div>
+                </div>
                 <div class="col-lg-4 thirdPage__use_cathegory-title">
                     Зберігання
                     <div class="thirdPage__use_cathegory-title_descr">{{$product->Storage}}</div>
+                </div>
             </div>
         </div>
     </section>

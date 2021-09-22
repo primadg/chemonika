@@ -143,17 +143,18 @@
             <div class="row">
                 <div class="col-lg-4 thirdPage__use_cathegory-title">
                     Стандарти
-                    <div class="thirdPage__use_cathegory-title_descr"></div>
-                    {{$product->Standart}}
+                    <div class="thirdPage__use_cathegory-title_descr">{{$product->Standart}}</div>
                 </div>
                 <div class="col-lg-4 thirdPage__use_cathegory-title">
                     Упаковка
                     <div class="thirdPage__use_cathegory-title_descr">{{$product->Package}} </div>
-                    <div class="col-lg-4 thirdPage__use_catеhegory-title">
-                        Хранение
-                        <div class="thirdPage__use_cathegory-title_descr">{{$product->Storage}}</div>
-                    </div>
                 </div>
+                <div class="col-lg-4 thirdPage__use_cathegory-title">
+                    Хранение
+                    <div class="thirdPage__use_cathegory-title_descr">{{$product->Storage}}</div>
+                </div>
+            </div>
+        </div>
     </section>
     <section class="thirdPage__table">
         <div class="container">
@@ -186,7 +187,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="thirdPage__notFound_title">
-                       Не нашли информацию о продукте ?
+                        Не нашли информацию о продукте ?
                     </div>
                     <div class="thirdPage__notFound_descr">
                         Faucibus mattis nunc gravida posuere nunc. Quis at commodo, dui dolor tellus lectus volutpat.

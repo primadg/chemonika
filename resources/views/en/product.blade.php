@@ -92,7 +92,7 @@
         <section class="thirdPage__info_product">
             <div class="row">
                 <div class="col-lg-6 thirdPage__info_product-title">
-                   {{$product->name}}
+                    {{$product->name}}
                 </div>
                 <div class="col-lg-6 thirdPage__info_product-right">
                     <div class="thirdPage__info_product-right_wrapper">
@@ -110,7 +110,7 @@
             <div class="row">
                 <div class="col-lg-6 thirdPage__descr_text">
                     {{$product->description}}
-                   </div>
+                </div>
                 <div class="col-lg-6 thirdPage__descr_img">
                     <img src="{{env("APP_URL").($product->img)}}" alt="product">
                 </div>
@@ -127,20 +127,21 @@
                 </div>
                 <div class="col-lg-8 thirdPage__use_descr">
                     {{$product->Product_usage}}
-                    </div>
+                </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 thirdPage__use_cathegory-title">
                     Standards
-                    <div class="thirdPage__use_cathegory-title_descr"></div>
-                    {{$product->Standart}}
+                    <div class="thirdPage__use_cathegory-title_descr">{{$product->Standart}}</div>
                 </div>
                 <div class="col-lg-4 thirdPage__use_cathegory-title">
                     Package
                     <div class="thirdPage__use_cathegory-title_descr">{{$product->Package}} </div>
+                </div>
                 <div class="col-lg-4 thirdPage__use_cathegory-title">
                     Keeping
                     <div class="thirdPage__use_cathegory-title_descr">{{$product->Storage}}</div>
+                </div>
             </div>
         </div>
     </section>
@@ -154,17 +155,17 @@
                     <div class="thirdPage__table_table">
                         <div class="thirdPage__table_table-header">
                             <div class="thirdPage__table_table-header_name">
-                                назва
+                                Title
                             </div>
                             <div class="thirdPage__table_table-header_value">
                                 Title
                             </div>
                         </div>
                         @foreach($entries as $entry)
-                        <div class="thirdPage__table_table-row">
-                            <div class="thirdPage__table_table-row_title">{{$entry->title}}</div>
-                            <div class="thirdPage__table_table-row_id">{{$entry->value}}</div>
-                        </div>
+                            <div class="thirdPage__table_table-row">
+                                <div class="thirdPage__table_table-row_title">{{$entry->title}}</div>
+                                <div class="thirdPage__table_table-row_id">{{$entry->value}}</div>
+                            </div>
                         @endforeach
                     </div>
                 </div>
