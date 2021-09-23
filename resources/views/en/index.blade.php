@@ -24,7 +24,7 @@
                         <a class="header__info_contact-link link__products" href="{{env('APP_URL').'/products'}}">Product</a>
                     </div>
                     <div class="header__info_contact">
-                        <a class="header__info_contact-link link__contacts" href="#">Contacts</a>
+                        <a class="header__info_contact-link link__contacts" href="#form">Contacts</a>
                     </div>
                     <div class="header__info_lang">
                         <div class="header__info_lang-chosen">EN</div>
@@ -37,7 +37,7 @@
                             <li onclick="location.href='{{env("APP_URL")."/en"}}'" class="header__info_lang-dropdown-li">EN</li>
                         </ul>
                     </div>
-                    <a href="mailto: test@test.com" class="header__info_button">
+                    <a href="mailto: {{env("MAIL_TO_NAME")}}" class="header__info_button">
                         <span>Write to us</span>
                         <svg class="header__info_button-svg" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#ffffff"/>
@@ -53,7 +53,7 @@
         </div>
     </header>
     <div class="burger__menu">
-        <a href="{{env('APP_URL')}} class="burger__menu_list burger__menu_list-about">About us</a>
+        <a href="{{env('APP_URL')}}" class="burger__menu_list burger__menu_list-about">About us</a>
         <a href="{{env('APP_URL')}}/products" class="burger__menu_list burger__menu_list-middle burger__menu_list-products">Product</a>
         <a href="#" class="burger__menu_list">Contacts</a>
         <div class="burger__menu_social">
@@ -158,7 +158,7 @@
                                 </div>
                             </div> -->
                          </div>
-                         <a href="mailto: test@test.com" class="header__info_button">
+                         <a href="mailto: {{env("MAIL_TO_NAME")}}" class="header__info_button">
                              <span>Write to us</span>
                              <svg class="header__info_button-svg" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#ffffff"/>
@@ -286,7 +286,8 @@
                          <div class="form__form_title">
                              Feedback form
                          </div>
-                         <div>
+                         <div >
+                             <a name="form">
                              <div class="form__form_label form__form_label-mt">
                                  Your name
                              </div>
@@ -436,151 +437,13 @@
                 </div>
             </div>
         </section>
-        <section class="secondPage__goods">
-            <div class="container">
-                <div class="row">
-                   <div class="col-lg-4 col-md-6 col-sm-6 col-12 secondPage__goods_card">
-                       <div class="secondPage__goods_card-img">
-                            <img src="img/images/product1.png" alt="product">
-                       </div>
-                       <div class="secondPage__goods_card-main">
-                            <div class="secondPage__goods_card-main_title">
-                                Лимонная кислота (антиоксиданты)
-                            </div>
-                            <div class="secondPage__goods_card-main_subTitle">
-                                В пищевой промышленности лимонная кислота (Е330)  широко применяется  в производстве безалкогольных напитков, поскольку обладает...
-                            </div>
-                            <div class="products__block_main-btn secondPage__goods_card-btn">
-                                <div>Дизнатися більше</div>
-                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"></path>
-                                </svg>
-                            </div>
-                       </div>
-                   </div>
-                   <div class="col-lg-4 col-md-6 col-sm-6 col-12 secondPage__goods_card">
-                        <div class="secondPage__goods_card-img">
-                            <img src="img/images/products/2.png" alt="product">
-                        </div>
-                        <div class="secondPage__goods_card-main">
-                            <div class="secondPage__goods_card-main_title">
-                                Цитрат натрия (антиоксиданты)
-                            </div>
-                            <div class="secondPage__goods_card-main_subTitle">
-                                В пищевой промышленности лимонная кислота (Е330)  широко применяется  в производстве безалкогольных напитков, поскольку обладает...
-                            </div>
-                            <div class="products__block_main-btn secondPage__goods_card-btn">
-                                <div>Дизнатися більше</div>
-                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"></path>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 secondPage__goods_card">
-                        <div class="secondPage__goods_card-img">
-                             <img src="img/images/products/3.png" alt="product">
-                        </div>
-                        <div class="secondPage__goods_card-main">
-                             <div class="secondPage__goods_card-main_title">
-                                Сорбит (сорбитол) (подсластитель)
-                             </div>
-                             <div class="secondPage__goods_card-main_subTitle">
-                                 В пищевой промышленности лимонная кислота (Е330)  широко применяется  в производстве безалкогольных напитков, поскольку обладает...
-                             </div>
-                             <div class="products__block_main-btn secondPage__goods_card-btn">
-                                 <div>Дизнатися більше</div>
-                                 <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                     <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"></path>
-                                 </svg>
-                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 secondPage__goods_card">
-                        <div class="secondPage__goods_card-img">
-                             <img src="img/images/products/4.png" alt="product">
-                        </div>
-                        <div class="secondPage__goods_card-main">
-                             <div class="secondPage__goods_card-main_title">
-                                Глутамат натрия (усилитель вкуса)
-                             </div>
-                             <div class="secondPage__goods_card-main_subTitle">
-                                 В пищевой промышленности лимонная кислота (Е330)  широко применяется  в производстве безалкогольных напитков, поскольку обладает...
-                             </div>
-                             <div class="products__block_main-btn secondPage__goods_card-btn">
-                                 <div>Дизнатися більше</div>
-                                 <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                     <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"></path>
-                                 </svg>
-                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 secondPage__goods_card">
-                        <div class="secondPage__goods_card-img">
-                             <img src="img/images/products/5.png" alt="product">
-                        </div>
-                        <div class="secondPage__goods_card-main">
-                             <div class="secondPage__goods_card-main_title">
-                                Ксантановая камедь (стабилизатор)
-                             </div>
-                             <div class="secondPage__goods_card-main_subTitle">
-                                 В пищевой промышленности лимонная кислота (Е330)  широко применяется  в производстве безалкогольных напитков, поскольку обладает...
-                             </div>
-                             <div class="products__block_main-btn secondPage__goods_card-btn">
-                                 <div>Дизнатися більше</div>
-                                 <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                     <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"></path>
-                                 </svg>
-                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 secondPage__goods_card">
-                        <div class="secondPage__goods_card-img">
-                             <img src="img/images/products/6.png" alt="product">
-                        </div>
-                        <div class="secondPage__goods_card-main">
-                             <div class="secondPage__goods_card-main_title">
-                                Сорбиновая кислота (консервант)
-                             </div>
-                             <div class="secondPage__goods_card-main_subTitle">
-                                 В пищевой промышленности лимонная кислота (Е330)  широко применяется  в производстве безалкогольных напитков, поскольку обладает...
-                             </div>
-                             <div class="products__block_main-btn secondPage__goods_card-btn">
-                                 <div>Дизнатися більше</div>
-                                 <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                     <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"></path>
-                                 </svg>
-                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 secondPage__goods_card">
-                        <div class="secondPage__goods_card-img">
-                             <img src="img/images/products/7.png" alt="product">
-                        </div>
-                        <div class="secondPage__goods_card-main">
-                             <div class="secondPage__goods_card-main_title">
-                                Сорбат калия (консервант)
-                             </div>
-                             <div class="secondPage__goods_card-main_subTitle">
-                                 В пищевой промышленности лимонная кислота (Е330)  широко применяется  в производстве безалкогольных напитков, поскольку обладает...
-                             </div>
-                             <div class="products__block_main-btn secondPage__goods_card-btn">
-                                 <div>Дизнатися більше</div>
-                                 <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                     <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"></path>
-                                 </svg>
-                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="form">
+
+        <section id="from_y" class="form">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="form__title">
-                            Контакти
+                            Contacts
                         </div>
                     </div>
                     <div class="col-lg-6"></div>
@@ -799,59 +662,7 @@
                 </div>
             </div>
         </section>
-        <section class="thirdPage__table">
-            <div class="container">
-                <div class="row">
-                    <div class="offset-lg-1 col-lg-10">
-                        <div class="thirdPage__table_title">
-                            Таблиця показників
-                        </div>
-                        <div class="thirdPage__table_table">
-                            <div class="thirdPage__table_table-header">
-                                <div class="thirdPage__table_table-header_name">
-                                    назва
-                                </div>
-                                <div class="thirdPage__table_table-header_value">
-                                    назва
-                                </div>
-                            </div>
-                            <div class="thirdPage__table_table-row">
-                                <div class="thirdPage__table_table-row_title">Zoomit</div>
-                                <div class="thirdPage__table_table-row_id">ID: 97174</div>
-                            </div>
-                            <div class="thirdPage__table_table-row">
-                                <div>Opentech</div>
-                                <div>ID: 39635</div>
-                            </div>
-                            <div class="thirdPage__table_table-row">
-                                <div>Ron-tech</div>
-                                <div>ID: 70668</div>
-                            </div>
-                            <div class="thirdPage__table_table-row">
-                                <div>Toughzap</div>
-                                <div>ID: 97174</div>
-                            </div>
-                            <div class="thirdPage__table_table-row">
-                                <div>Betasoloin</div>
-                                <div>ID: 43756</div>
-                            </div>
-                            <div class="thirdPage__table_table-row">
-                                <div>Konex</div>
-                                <div>ID: 22739</div>
-                            </div>
-                            <div class="thirdPage__table_table-row">
-                                <div>Codehow</div>
-                                <div>ID: 43178</div>
-                            </div>
-                            <div class="thirdPage__table_table-row">
-                                <div>Plussunin</div>
-                                <div>ID: 22739</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
         <section class="thirdPage__notFound">
             <div class="container">
                 <div class="row">
@@ -863,7 +674,7 @@
                             Faucibus mattis nunc gravida posuere nunc. Quis at commodo, dui dolor tellus lectus volutpat. Vulputate magnis amet sit id pellentesque sed elementum mattis.
                         </div>
                     </div>
-                    <a href="mailto: test@test.com" class="thirdPage__notFound_btn">
+                    <a href="mailto: {{env("MAIL_TO_NAME")}}" class="thirdPage__notFound_btn">
                         Написати нам
                     </a>
                 </div>

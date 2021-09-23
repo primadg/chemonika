@@ -43,7 +43,7 @@
                         </li>
                     </ul>
                 </div>
-                <a href="mailto: test@test.com" class="header__info_button">
+                <a href="mailto: {{env("MAIL_TO_NAME")}}" class="header__info_button">
                     <span>Написати нам</span>
                     <svg class="header__info_button-svg" width="12" height="8" viewBox="0 0 12 8" fill="none"
                          xmlns="http://www.w3.org/2000/svg">

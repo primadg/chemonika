@@ -27,10 +27,16 @@ class ProductController extends Controller
         $chose_group = '';
         $chose_usage = '';
         $value = $request->cookie('lang') ?? "ukr";
-        switch ($value){
-            case 'ukr': $chose_group=$chose_usage="Обрати"; break;
-            case 'ru': $chose_group=$chose_usage="Выбрать"; break;
-            case 'en': $chose_group=$chose_usage="Select"; break;
+        switch ($value) {
+            case 'ukr':
+                $chose_group = $chose_usage = "Обрати";
+                break;
+            case 'ru':
+                $chose_group = $chose_usage = "Выбрать";
+                break;
+            case 'en':
+                $chose_group = $chose_usage = "Select";
+                break;
         }
         $products = DB::table('product_' . $value . 's');
         if ($request->get('group')) {
@@ -41,7 +47,7 @@ class ProductController extends Controller
             $products = $products->where('field_of_usage', $request->get('usage'));
             $chose_usage = $request->get('usage');
         }
-            $products = $products->simplePaginate(9);
+        $products = $products->simplePaginate(9);
         if ($value == 'ru' || $value == 'en') {
             foreach ($products->items() as $item) {
                 $item->id = $item->pos_id;
@@ -52,7 +58,7 @@ class ProductController extends Controller
         return view($value . '.products', [
             'products' => $products,
             'usage' => $chose_usage,
-            'group'=>$chose_group
+            'group' => $chose_group
         ]);
     }
 
@@ -63,14 +69,13 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $main_id = DB::table('product_ukrs')->orderBy('id','desc')->first();
-        if($main_id) {
+        $main_id = DB::table('product_ukrs')->orderBy('id', 'desc')->first();
+        if ($main_id) {
             $main_id = $main_id->id;
             $main_id++;
-        }
-        else
-            $main_id=1;
-        return view("card",['main_id'=>$main_id, 'entries' => []]);
+        } else
+            $main_id = 1;
+        return view("card", ['main_id' => $main_id, 'entries' => []]);
     }
 
     /**
@@ -100,53 +105,56 @@ class ProductController extends Controller
                 $is_ukr = true;
                 break;
         }
-        if(!$request->file('img')){
-            return redirect()->back()->with('error','Загрузите файл');
+        if (!$request->file('img')) {
+            return redirect()->back()->with('error', 'Загрузите файл');
         }
         $ex = $request->file('img')->extension();
-        if(!($ex=='jpg'||$ex=='png')){
-            return redirect()->back()->with('error','Неверный формат загруженного файла');
+        if (!($ex == 'jpg' || $ex == 'png')) {
+            return redirect()->back()->with('error', 'Неверный формат загруженного файла');
         }
         $path = $request->file('img')->store('public/img');
         $new_product->img = Storage::url($path);
 
         try {
 
+            if(!($request->name&&$request->group&&$request->description&&$request->field_of_usage&&$request->product_usage)){
+                return redirect()->back()->with('error', 'Заполните обязательные поля');
+            }
 
-        $new_product->name = $request->name;
-        $new_product->group = $request->group;
-        $new_product->description = $request->description;
-        $new_product->field_of_usage = $request->field_of_usage;
-        $new_product->Product_usage = $request->product_usage;
-        $new_product->Standart = $request->standart;
-        $new_product->Package = $request->package;
-        $new_product->Storage = $request->stogare;
+            $new_product->name = $request->name;
+            $new_product->group = $request->group;
+            $new_product->description = $request->description;
+            $new_product->field_of_usage = $request->field_of_usage;
+            $new_product->Product_usage = $request->product_usage;
+            $new_product->Standart = $request->standart;
+            $new_product->Package = $request->package;
+            $new_product->Storage = $request->stogare;
 
 
-        if ($is_ukr) {
-            $new_product->save();
-            $first = new Product_ru();
-            $second = new Product_en();
-            $first->pos_id = $new_product->id;
-            $first->img = $new_product->img;
-            $first->save();
-            $second->pos_id = $new_product->id;
-            $second->img = $new_product->img;
-            $second->save();
-        } else {
-            $main_table->img = $new_product->img;
-            $main_table->save();
-            $new_product->pos_id = $main_table->id;
-            $new_product->save();
-            $second_product->pos_id = $main_table->id;
-            $second_product->img = $new_product->img;
-            $second_product->save();
+            if ($is_ukr) {
+                $new_product->save();
+                $first = new Product_ru();
+                $second = new Product_en();
+                $first->pos_id = $new_product->id;
+                $first->img = $new_product->img;
+                $first->save();
+                $second->pos_id = $new_product->id;
+                $second->img = $new_product->img;
+                $second->save();
+            } else {
+                $main_table->img = $new_product->img;
+                $main_table->save();
+                $new_product->pos_id = $main_table->id;
+                $new_product->save();
+                $second_product->pos_id = $main_table->id;
+                $second_product->img = $new_product->img;
+                $second_product->save();
 
-        }
+            }
 
-        return redirect('admin');
-        }catch (\Exception $e){
-            return redirect()->back()->with('error','Ошибка');
+            return redirect('admin');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Ошибка');
         }
     }
 
@@ -169,7 +177,7 @@ class ProductController extends Controller
 
         return view($value . '.product', [
             'product' => $product,
-            'entries'=>$entries
+            'entries' => $entries
         ]);
     }
 
@@ -184,7 +192,7 @@ class ProductController extends Controller
     {
         $product = DB::table('product_ukrs')->where('id', $id)->first();
         $entries = DB::table('table_ps')->where('post_id', $id)->get();
-        return view("ukr.card_edit", ['product' => $product, 'entries'=>$entries]);
+        return view("ukr.card_edit", ['product' => $product, 'entries' => $entries]);
     }
 
     /**
