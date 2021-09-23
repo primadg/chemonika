@@ -156,6 +156,7 @@
             </div>
         </div>
     </section>
+    @if(count($entries))
     <section class="thirdPage__table">
         <div class="container">
             <div class="row">
@@ -182,6 +183,7 @@
             </div>
         </div>
     </section>
+    @endif
     <section class="thirdPage__notFound">
         <div class="container">
             <div class="row">
