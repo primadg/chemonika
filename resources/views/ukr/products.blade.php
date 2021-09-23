@@ -2,6 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="root" content="{{env("APP_URL")}}">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/style.min.css">
@@ -22,7 +24,7 @@
                        href="{{env('APP_URL').'/products'}}">Продукція</a>
                 </div>
                 <div class="header__info_contact">
-                    <a class="header__info_contact-link link__contacts" href="#">Контакти</a>
+                    <a class="header__info_contact-link link__contacts" href="#form">Контакти</a>
                 </div>
                 <div class="header__info_lang">
                     <div class="header__info_lang-chosen">UKR</div>
@@ -212,28 +214,28 @@
                     <div class="form__form_title">
                         Форма зворотнього зв’язку
                     </div>
-                    <form action="#">
+                    <a name="form"></a>
+                    <div>
                         <div class="form__form_label form__form_label-mt">
                             Ваше ім’я
                         </div>
-                        <input class="form__form_input" type="text" name="userName">
+                        <input class="form__form_input" required id="nameInput" type="text" name="userName">
                         <div class="form__form_label">
                             Email або телефон
                         </div>
-                        <input class="form__form_input" type="text" name="email">
+                        <input class="form__form_input" required id="email" type="email" name="email">
                         <div class="form__form_label">
                             Текст повідомлення
                         </div>
-                        <textarea class="form__form_textarrea" name="text"></textarea>
-                        <button type="submit" class="header__info_button form__form_btn">
+                        <textarea class="form__form_textarrea" id="textInput" name="text"></textarea>
+                        <button onclick="sendEmail()" class="header__info_button form__form_btn">
                             <span>Надіслати</span>
                             <svg class="header__info_button-svg" width="12" height="8" viewBox="0 0 12 8" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#ffffff"></path>
                             </svg>
                         </button>
-                    </form>
-
+                    </div>
                 </div>
             </div>
         </div>

@@ -54,7 +54,7 @@ function sendEmail(){
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
-        url: location.href+"send",
+        url: $('meta[name="root"]').attr('content')+"/send",
         data: {
             'email': email,
             'name': $('#nameInput').val(),
@@ -293,5 +293,15 @@ addRowsBtns.onclick = (e) => {
     document.querySelector('.card__table_main').appendChild(clonedRow);
 }
 
-
+function getParams(str){
+    var results = str.split("?");
+    results.shift();
+    results=results.join().split("&");
+    var arr = [];
+    for(let i =0;i<results.length;i++){
+        let temp = results[i].split("=");
+        arr[temp[0]]=temp[1];
+    }
+    return arr;
+}
 

@@ -3,6 +3,7 @@
 <head>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta charset="UTF-8">
+    <meta name="root" content="{{env("APP_URL")}}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
@@ -302,12 +303,12 @@
                         <textarea class="form__form_textarrea" id="textInput" name="text"></textarea>
                         <button onclick="sendEmail()" class="header__info_button form__form_btn">
                             <span>Надіслати</span>
-                            <svg class="header__info_button-svg" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="header__info_button-svg" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#ffffff"></path>
                             </svg>
                         </button>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -393,50 +394,6 @@
         </div>
     </footer>
 </div>
-<div class="secondPage">
-    <section class="secondPage__promo">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h2 class="secondPage__promo_title">
-                        Ми пропонуємоя продукцію одних з найбільших світових виробників
-                    </h2>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="secondPage__filter">
-        <div class="container">
-            <div class="row">
-                <div class="secondPage__filter_title">
-                    Фільтр продукції
-                </div>
-                <div class="secondPage__filter_group-wrapper">
-                    <div class="secondPage__filter_group">
-                        <div class="secondPage__filter_group-title">Група</div>
-                        <div>
-                            <select name="sources" id="sources" class="custom-select sources custom-select_FC" placeholder="Выберете">
-                                <option value="antioxi">Антиоксиданты</option>
-                                <option value="podsla">Подсластители</option>
-                                <option value="stab">Стабилизаторы</option>
-                                <option value="conserv">Консервант</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="secondPage__filter_group">
-                        <div class="secondPage__filter_group-title">Галузь застосування</div>
-                        <div class="rep">
-                            <select name="spread" id="spread" class="custom-select sources1" placeholder="Выберете">
-                                <option value="profile">Пищевая</option>
-                                <option value="word">Химическая</option>
-                                <option value="hashtag">Производство</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section class="form">
         <div class="container">

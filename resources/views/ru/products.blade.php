@@ -1,6 +1,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="root" content="{{env("APP_URL")}}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap-grid.min.css">
@@ -21,7 +23,7 @@
                     <a class="header__info_contact-link header__active_link link__products" href="productionRu.html">Продукция</a>
                 </div>
                 <div class="header__info_contact">
-                    <a class="header__info_contact-link link__contacts" href="#">Контакты</a>
+                    <a class="header__info_contact-link link__contacts" href="#form">Контакты</a>
                 </div>
                 <div class="header__info_lang">
                     <div class="header__info_lang-chosen">RUS</div>
@@ -194,29 +196,30 @@
                     </div>
                 </div>
                 <div class="col-lg-6 form__form">
+                    <a name="form"></a>
                     <div class="form__form_title">
                         Форма обратной связи
                     </div>
-                    <form action="#">
+                    <div>
                         <div class="form__form_label form__form_label-mt">
                             Ваше имя
                         </div>
-                        <input class="form__form_input" type="text" name="userName">
+                        <input class="form__form_input" id="nameInput" type="text" name="userName">
                         <div class="form__form_label">
                             Email или телефон
                         </div>
-                        <input class="form__form_input" type="text" name="email">
+                        <input class="form__form_input" type="text" id="email" name="email">
                         <div class="form__form_label">
                             Текст сообщения
                         </div>
-                        <textarea class="form__form_textarrea" name="text"></textarea>
-                        <button type="submit" class="header__info_button form__form_btn">
+                        <textarea class="form__form_textarrea" id="textInput" name="text"></textarea>
+                        <button onclick="sendEmail()" class="header__info_button form__form_btn">
                             <span>Отправить</span>
                             <svg class="header__info_button-svg" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#ffffff"></path>
                             </svg>
                         </button>
-                    </form>
+                    </div>
 
                 </div>
             </div>
