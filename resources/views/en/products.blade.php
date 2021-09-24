@@ -102,10 +102,11 @@
                         <div>
                             <select name="sources" id="sources" class="custom-select sources custom-select_FC"
                                     placeholder="Select">
-                                <option value="antioxi">Antioxidants</option>
-                                <option value="podsla">Sweeteners</option>
-                                <option value="stab">Stabilizers</option>
-                                <option value="conserv">Preservative</option>
+                                <option data-filter="group" value="Antioxidants">Antioxidants</option>
+                                <option data-filter="group" value="Sweeteners">Sweeteners</option>
+                                <option data-filter="group" value="Stabilizers">Stabilizers</option>
+                                <option data-filter="group" value="Preservative">Preservative</option>
+                                <option data-filter="group" value="Protein">Protein</option>
                             </select>
                         </div>
                     </div>
@@ -113,9 +114,9 @@
                         <div class="secondPage__filter_group-title">Field of application</div>
                         <div class="rep">
                             <select name="spread" id="spread" class="custom-select sources1" placeholder="Select">
-                                <option value="profile">Food</option>
-                                <option value="word">Chemical</option>
-                                <option value="hashtag">Manufacture</option>
+                                <option data-filter="usage" value="Food">Food</option>
+                                <option data-filter="usage" value="Chemical">Chemical</option>
+                                <option data-filter="usage" value="Manufacture">Manufacture</option>
                             </select>
                         </div>
                     </div>

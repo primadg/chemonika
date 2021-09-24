@@ -311,52 +311,22 @@ window.onresize = () => {
 //product filter
 
 $('span.custom-option').on('click', function(){
-
     let dataValue = $(this).attr("data-value");
     let dataFilter = $(this).attr("data-filter");
-
     let params = getParams(location.href);
     params[dataFilter]=dataValue;
-    console.log(params);
+    let request=null;
     if(Object.keys(params).length===2) {
-        location.href = $('meta[name="root"]').attr('content')+`/products?group=${params["group"]}&usage=${params["usage"]}`;
+        request=`?group=${params["group"]}&usage=${params["usage"]}`;
     }
     if(Object.keys(params).length===1) {
         if(params["group"])
-        location.href = $('meta[name="root"]').attr('content')+`/products?group=${params["group"]}`;
+            request=`?group=${params["group"]}`;
         else
-            location.href = $('meta[name="root"]').attr('content')+`/products?usage=${params["usage"]}`;
+            request=`?usage=${params["usage"]}`;
     }
-    //console.log(params['group']);
-    //location.href = $('meta[name="root"]').attr('content')+"";
-    //console.log($('meta[name="root"]').attr('content')+"/products");
+    location.href = $('meta[name="root"]').attr('content')+"/products"+request;
 });
-
-/*var groupFilter=null;
-var fieldOfUsage=null;
-
-$('span.custom-option').on('click', function(){
-    let dataValue = $(this).attr("data-value");
-    let dataFilter = $(this).attr("data-filter");
-
-    if(dataFilter==="group")
-        groupFilter = dataValue;
-    else
-        fieldOfUsage = dataValue;
-
-    if(groupFilter===null||fieldOfUsage===null)
-    {
-        console.log(dataFilter + ": " + dataValue);
-        location.href+=`?${dataFilter}=${dataValue}`;
-        console.log(location.href);
-
-    }
-    else
-    {
-        console.log("group: " + groupFilter + ", "+"usage: " + fieldOfUsage);
-        //location.href+=`?${dataFilter}=${dataValue}`;
-    }
-});*/
 
 //add rows
 

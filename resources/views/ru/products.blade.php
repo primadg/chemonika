@@ -102,10 +102,11 @@
                         <div>
                             <select name="sources" id="sources" class="custom-select sources custom-select_FC"
                                     placeholder="Выберите">
-                                <option value="antioxi">Антиоксиданты</option>
-                                <option value="podsla">Подсластители</option>
-                                <option value="stab">Стабилизаторы</option>
-                                <option value="conserv">Консервант</option>
+                                <option data-filter="group" value="Антиоксиданты">Антиоксиданты</option>
+                                <option data-filter="group" value="Подсластители">Подсластители</option>
+                                <option data-filter="group" value="Стабилизаторы">Стабилизаторы</option>
+                                <option data-filter="group" value="Консервант">Консервант</option>
+                                <option data-filter="group" value="Протеин">Протеин</option>
                             </select>
                         </div>
                     </div>
@@ -113,9 +114,9 @@
                         <div class="secondPage__filter_group-title">Область применения</div>
                         <div class="rep">
                             <select name="spread" id="spread" class="custom-select sources1" placeholder="Выберите">
-                                <option value="profile">Пищевая</option>
-                                <option value="word">Химическая</option>
-                                <option value="hashtag">Производство</option>
+                                <option data-filter="usage" value="Пищевая">Пищевая</option>
+                                <option data-filter="usage" value="Химическая">Химическая</option>
+                                <option data-filter="usage" value="Производство">Производство</option>
                             </select>
                         </div>
                     </div>
