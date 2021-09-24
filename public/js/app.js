@@ -150,7 +150,7 @@ $(".custom-select").each(function() {
         template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
         template += '<div class="custom-options">';
         $(this).find("option").each(function() {
-          template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+          template += '<span class="custom-option ' + $(this).attr("class") + '" data-filter="' + $(this).attr("data-filter") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
         });
     template += '</div></div>';
 
@@ -311,6 +311,56 @@ window.onresize = () => {
     });
 }
 
+//product filter
+
+$('span.custom-option').on('click', function(){
+
+    let dataValue = $(this).attr("data-value");
+    let dataFilter = $(this).attr("data-filter");
+
+    let params = getParams(location.href);
+    params[dataFilter]=dataValue;
+    console.log(params);
+    if(Object.keys(params).length===2) {
+        location.href = $('meta[name="root"]').attr('content')+`/products?group=${params["group"]}&usage=${params["usage"]}`;
+    }
+    if(Object.keys(params).length===1) {
+        if(params["group"])
+        location.href = $('meta[name="root"]').attr('content')+`/products?group=${params["group"]}`;
+        else
+            location.href = $('meta[name="root"]').attr('content')+`/products?usage=${params["usage"]}`;
+    }
+    //console.log(params['group']);
+    //location.href = $('meta[name="root"]').attr('content')+"";
+    //console.log($('meta[name="root"]').attr('content')+"/products");
+});
+
+/*var groupFilter=null;
+var fieldOfUsage=null;
+
+$('span.custom-option').on('click', function(){
+    let dataValue = $(this).attr("data-value");
+    let dataFilter = $(this).attr("data-filter");
+
+    if(dataFilter==="group")
+        groupFilter = dataValue;
+    else
+        fieldOfUsage = dataValue;
+
+    if(groupFilter===null||fieldOfUsage===null)
+    {
+        console.log(dataFilter + ": " + dataValue);
+        location.href+=`?${dataFilter}=${dataValue}`;
+        console.log(location.href);
+
+    }
+    else
+    {
+        console.log("group: " + groupFilter + ", "+"usage: " + fieldOfUsage);
+        //location.href+=`?${dataFilter}=${dataValue}`;
+    }
+});*/
+
 //add rows
 
 let addRowsBtns = document.querySelector('.card__table_add');
@@ -327,6 +377,7 @@ function getParams(str){
     var arr = [];
     for(let i =0;i<results.length;i++){
         let temp = results[i].split("=");
+        if(temp[1]!=undefined)
         arr[temp[0]]=temp[1];
     }
     return arr;
