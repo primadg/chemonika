@@ -117,6 +117,7 @@
                                 <option data-filter="group" value="Підсолоджувачі">Підсолоджувачі</option>
                                 <option data-filter="group" value="Стабілізатори">Стабілізатори</option>
                                 <option data-filter="group" value="Консервант">Консервант</option>
+                                <option data-filter="group" value="Протеїн">Протеїн</option>
                             </select>
                         </div>
                     </div>
