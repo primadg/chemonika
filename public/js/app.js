@@ -99,9 +99,6 @@ function outputResponse(data){
 }
 
 
-document.querySelector('#formSend').onclick = () => {
-  sendEmail();
-};
 
 // products__block_main-btn
 // $('.secondPage__goods_card-btn').on('click', function(){
@@ -363,12 +360,7 @@ $('span.custom-option').on('click', function(){
 
 //add rows
 
-let addRowsBtns = document.querySelector('.card__table_add');
 
-addRowsBtns.onclick = (e) => {
-    let clonedRow = addRowsBtns.parentNode.querySelector('.card__table_main-row:last-child').cloneNode(true);
-    document.querySelector('.card__table_main').appendChild(clonedRow);
-}
 
 function getParams(str){
     var results = str.split("?");
@@ -383,3 +375,16 @@ function getParams(str){
     return arr;
 }
 
+
+
+document.querySelector('#formSend').onclick = () => {
+    sendEmail();
+};
+
+
+let addRowsBtns = document.querySelector('.card__table_add');
+
+addRowsBtns.onclick = (e) => {
+    let clonedRow = addRowsBtns.parentNode.querySelector('.card__table_main-row:last-child').cloneNode(true);
+    document.querySelector('.card__table_main').appendChild(clonedRow);
+}
