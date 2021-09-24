@@ -71,6 +71,7 @@ class AdminController extends Controller
                 break;
             default:
                 $product = Product_ukr::find($id);
+                $is_ukr = true;
                 break;
         }
 
@@ -79,10 +80,20 @@ class AdminController extends Controller
 
         if($request->file('img')){
             $path = $request->file('img')->store('public/img');
-            $product->img = Storage::url($path);
+
             $ex = $request->file('img')->extension();
             if(!($ex=='jpg'||$ex=='png')){
                 return redirect()->back()->with('error','Неверный формат загруженного файла');
+            }
+            $product->img = Storage::url($path);
+            if($is_ukr){
+                $product_en = Product_en::find($this->getSecondaryTableId('product_ens',$id));
+                $product_ru = Product_ru::find($this->getSecondaryTableId('product_rus',$id));
+                $product_ru->img= $product_en->img = Storage::url($path);
+                $product_ru->save();
+                $product_en->save();
+                unset($product_ru);
+                unset($product_en);
             }
         }
 
@@ -104,6 +115,9 @@ class AdminController extends Controller
         } catch (\Exception $ex){
             return redirect()->back()->with('error','Ошибка');
         }
+    }
+    private function getSecondaryTableId($table, $main_id){
+        return DB::table($table)->where('pos_id',$main_id)->first()->id;
     }
 
 
