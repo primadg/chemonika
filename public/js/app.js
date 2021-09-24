@@ -13,6 +13,31 @@ $('.header__info_lang-dropdown-li').on('click', function(){
 
 
 
+function successFormUpdate () {
+  document.querySelectorAll('.default__form').forEach(item => {
+    item.classList.add('default__form-hidden');
+  });
+  document.querySelectorAll('.success__form').forEach(item => {
+    item.classList.remove('default__form-hidden');
+  });
+  document.querySelector('.form__form_mail-uncorrect').classList.remove('form__form_mail-uncorrect_active');
+}
+function rewriteForm () {
+  document.querySelectorAll('.default__form').forEach(item => {
+    item.classList.remove('default__form-hidden');
+  });
+  document.querySelectorAll('.success__form').forEach(item => {
+    item.classList.add('default__form-hidden');
+  });
+}
+
+$('.form__form_resend').on('click', function(){
+  rewriteForm();
+});
+
+
+
+
 // $('.header__info_contact-link').on('click', function(){
 //     $('.header__info_contact-link').removeClass('header__active_link');
 //     $(this).addClass('header__active_link');
@@ -61,10 +86,11 @@ function sendEmail(){
             'text':$('#textInput').val(),
 },
     success: function (data) {
-        outputResponse(data);
+      successFormUpdate();
     },
         error:function (data){
-            $('#email').val('The data is filled in incorrectly');
+            $('.form__form_mail-uncorrect').addClass('form__form_mail-uncorrect_active');
+            // $('#email').val('The data is filled in incorrectly');
         }
 });
 }
@@ -73,8 +99,9 @@ function outputResponse(data){
 }
 
 
-
-
+document.querySelector('#formSend').onclick = () => {
+  sendEmail();
+};
 
 // products__block_main-btn
 // $('.secondPage__goods_card-btn').on('click', function(){
