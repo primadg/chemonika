@@ -113,10 +113,10 @@
                         <div>
                             <select name="sources" id="sources" class="custom-select sources custom-select_FC"
                                     placeholder="{{$group}}">
-                                <option value="antioxi">Антиоксиданти</option>
-                                <option value="podsla">Підсолоджувачі</option>
-                                <option value="stab">Стабілізатори</option>
-                                <option value="conserv">Консервант</option>
+                                <option data-filter="group" value="Антиоксиданти">Антиоксиданти</option>
+                                <option data-filter="group" value="Підсолоджувачі">Підсолоджувачі</option>
+                                <option data-filter="group" value="Стабілізатори">Стабілізатори</option>
+                                <option data-filter="group" value="Консервант">Консервант</option>
                             </select>
                         </div>
                     </div>
@@ -124,9 +124,9 @@
                         <div class="secondPage__filter_group-title">Галузь застосування</div>
                         <div class="rep">
                             <select name="spread" id="spread" class="custom-select sources1" placeholder="{{$usage}}">
-                                <option value="profile">Харчова</option>
-                                <option value="word">Хімічна</option>
-                                <option value="hashtag">Виробництво</option>
+                                <option data-filter="usage" value="Харчова">Харчова</option>
+                                <option data-filter="usage" value="Хімічна">Хімічна</option>
+                                <option data-filter="usage" value="Виробництво">Виробництво</option>
                             </select>
                         </div>
                     </div>
