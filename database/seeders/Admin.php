@@ -37,7 +37,7 @@ class Admin extends Seeder
             'Package' => "Мішки 25 кг",
             'img'=>'img',
             'Storage' => "Зберігати в сухому захищеному від світла місці",
-            'Standart' => "Відповідає стандартам якості: ВР2009, USP32, FCC6, E330.",
+            'Standart' => "Відповідає стандартам якості: ВР2009, USP32, FCC6, E330",
             'description' => "В харчовій промисловості лимона кислота (Е330) широко використовується в виробництві без-алкогольних напоїв, тому що має найбільш мякий та освіжаючий смак в порівнянні з іншими харчовими кислотами.
 При виробництві кондитерських виробів використовується як ароматизатор та підкислювач. При виробництві хлібо-булочних виробів використовується як один з компонентів  розпушувача тіста. В олія-жировій промисловості лимона кислота значно зменшує вірогідність прогоркання жирыв, маргаринів та животного масла. При виробництві консервів, використовується як консервант.",
         ]);
@@ -51,7 +51,7 @@ class Admin extends Seeder
             'field_of_usage' => "пиво-безалкогольная, кондитерская, хлебо-булочная, консервная",
             'Package' => "Мешки 25 кг",
             'Storage' => "Хранить в сухом защищенном от света месте",
-            'Standart' => "Відповідає стандартам якості: ВР2009, USP32, FCC6, E330.",
+            'Standart' => "Відповідає стандартам якості: ВР2009, USP32, FCC6, E330",
             'description' => "В пищевой промышленности лимонная кислота (Е330)  широко применяется  в производстве безалкогольных напитков, поскольку обладает наиболее мягким и освежающим вкусом по сравнению с другими пищевыми кислотами.
 В производстве кондитерских изделий применяется как ароматизатор и подкислитель. В производстве хлебобулочных изделий применяется как один из компонентов разрыхлителей теста. В масложировой промышленности лимонная кислота значительно снижает вероятность прогоркания жиров, маргаринов и животного масла. При производстве консервов используется, как консервант.",
         ]);
@@ -67,7 +67,7 @@ Citric acid is also used as feed acidifier. It has a strong antibacterial and an
             'field_of_usage' => "beer, soft drinks, confectionary items, bakery, canned goods",
             'Package' => "25 kg bags",
             'Storage' => "Store in a dry place protected from direct sunlight",
-            'Standart' => "Compliant with quality standards: ВР2009, USP32, FCC6, E330.",
+            'Standart' => "Compliant with quality standards: ВР2009, USP32, FCC6, E330",
             'description' => "Citric acid (E330) is widely used in the production of soft drinks, since it has the softest and most refreshing taste compared to other food acids in the food industry.
 It is used as flavoring and acidifier in the production of confectionery items and added as one of the components of dough leavening agents in the production of bakery products. Citric acid significantly reduces the likelihood of rancidity of fats, margarines and animal oils in the oil and fats industry. It is also used as a preservative during the production of canned goods.
 ",
@@ -83,7 +83,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'Package' => "Мішки 25 кг",
             'img'=>'img',
             'Storage' => "Зберігати в сухому захищеному від світла місці",
-            'Standart' => "Відповідає стандартам якості: ВР2009, USP32, FCC6, E331.",
+            'Standart' => "Відповідає стандартам якості: ВР2009, USP32, FCC6, E331",
             'description' => "Цитрат натрію - це натрієва сіль лимонної кислоти, натуральна та безпечна харчова добавка. За своїми якостями - це регулятор кислотності, стабілізатор, емульгатов, емульгуюча сіль, синергісти антиоксидантів, фіксатор покраски.",
         ]);
         DB::table('product_rus')->insert([
@@ -96,7 +96,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'field_of_usage' => "пиво-безалкогольная, консервная",
             'Package' => "Мешки 25 кг",
             'Storage' => "Хранить в сухом защищенном от света месте",
-            'Standart' => "Соответствует стандартам качества: ВР2009, USP32, FCC6, E331.",
+            'Standart' => "Соответствует стандартам качества: ВР2009, USP32, FCC6, E331",
             'description' => "Цитрат натрия – это натриевая соль лимонной кислоты, натуральная и безопасная пищевая добавка.
                                       По своим свойствам - это регулятор кислотности, стабилизатор, эмульгатор, эмульгирующая соль, синергист антиоксидантов, фиксатор окраски.",
         ]);
@@ -109,7 +109,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'field_of_usage' => "beer, soft drinks, canned goods",
             'Package' => "25 kg bags",
             'Storage' => "Store in a dry place protected from direct sunlight",
-            'Standart' => "Compliant with quality standards: ВР2009, USP32, FCC6, E331.",
+            'Standart' => "Compliant with quality standards: ВР2009, USP32, FCC6, E331",
             'description' => "Sodium citrate –  is sodium salt of citric acid, a natural and safe food additive.
                                       It is an acidity regulator, stabilizer, emulsifier, emulsifying salt, synergist of antioxidants and color fixer.
 ",
@@ -127,7 +127,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'Package' => "Мішки 25 кг",
             'img'=>'img',
             'Storage' => "Зберігати в сухому захищеному від світла місці",
-            'Standart' => "Відповідає стандарту  FCCIV, Е420.",
+            'Standart' => "Відповідає стандарту  FCCIV, Е420",
             'description' => "Сорбіт харчовий є натуральним цукрозамінником, емульгатором, комплексоутворювачем, стабілізатором кольору, вологоутримуюча та диспергуюча речовиною.",
         ]);
         DB::table('product_rus')->insert([
@@ -142,7 +142,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'field_of_usage' => "кондитерская,  пиво-безалкогольная",
             'Package' => "Мешки 25 кг",
             'Storage' => "Хранить в сухом защищенном от света месте",
-            'Standart' => "Соответствует  стандарту FCCIV, Е420.",
+            'Standart' => "Соответствует  стандарту FCCIV, Е420",
             'description' => "Сорбит пищевой является натуральным сахарозаменителем, эмульгатором, комплексообразователем, текстуратором, стабилизатором цвета, влагоудерживающим и диспергирующим веществом.",
         ]);
         DB::table('product_ens')->insert([
@@ -155,7 +155,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'field_of_usage' => "confectionery items, beer, soft drinks",
             'Package' => "25 kg bags",
             'Storage' => "Store in a dry place protected from direct sunlight",
-            'Standart' => "Compliant with quality standards:  FCCIV, Е420.",
+            'Standart' => "Compliant with quality standards:  FCCIV, Е420",
             'description' => "Food-grade sorbate is a natural sweetener, emulsifier, complexing agent, texturizer, color stabilizer, water-retaining and dispersing substance.",
         ]);
 
@@ -168,11 +168,11 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'Package' => "Мішки 25 кг",
             'img'=>'img',
             'Storage' => "Зберігати в сухому захищеному від світла місці",
-            'Standart' => "",
+            'Standart' => "Відповідає стандарту  FCCIV, Е420",
             'description' => "Глутамат натрію це білий кристалічний порошок зі слабозаметний солодко-солоним смаком, добре розчинний в рідини.
                                               - розчинність 74 г / 100 мл;
                                               - температура плавлення 165 ° C;
-                                              - ефективність: стабільний в діапазоні pH 5 - 6,5; ",
+                                              - ефективність: стабільний в діапазоні pH 5 - 6,5. ",
         ]);
         DB::table('product_rus')->insert([
             'name' => "Глутамат натрия",
@@ -183,11 +183,11 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'field_of_usage' => "мясоперерабатывающая",
             'Package' => "Мешки 25 кг",
             'Storage' => "Хранить в сухом защищенном от света месте",
-            'Standart' => "",
+            'Standart' => "Соответствует  стандарту FCCIV, Е420",
             'description' => "Глутамат натрия это белый кристаллический порошок со слабозаметным сладко-соленым вкусом, хорошо растворим в жидкости.
                                               - растворимость 74 г/100 мл;
                                               - температура плавления 165 °C;
-                                              - эффективность: стабилен в диапазоне  pH 5 - 6,5;
+                                              - эффективность: стабилен в диапазоне  pH 5 - 6,5.
 ",
         ]);
         DB::table('product_ens')->insert([
@@ -199,7 +199,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'field_of_usage' => "meat processing",
             'Package' => "25 kg bags",
             'Storage' => "Store in a dry place protected from direct sunlight",
-            'Standart' => "",
+            'Standart' => "Compliant with quality standards:  FCCIV, Е420",
             'description' => "Monosodium glutamate is a white crystalline powder with slightly distinguishable sweet and salty taste that dissolves well in liquids;
                                               - Solubility 74 g/100 ml;
                                               - Melting temperature 165 °C;
@@ -219,7 +219,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'Package' => "Мішки 25 кг",
             'img'=>'img',
             'Storage' => "Зберігати в сухому захищеному від світла місці",
-            'Standart' => "",
+            'Standart' => "Відповідає стандарту  FCCIV, Е420",
             'description' => "Ксантанова камідь відноситься до групи стабілізаторів. Виглядає як білий або сірий порошок без запаху, нейтрального смаку. Індекс в європейській кодифікації Е-415.
                                                   Ксантанова камідь - це полісахарид, виробляємий мікроорганізмами Xanthomonas Campestris.
                                                   Є гідрофільним коллоідом та використовується для загущення та стабилізації різноманітних розчинів в харчових виробництвах, емульсій, пен та суспензій. В інтервалі pH 2-12 ксантан характеризується високими значеннями вязкості та псевдопластичності. При взаємодії с іншими гідроколлоідами (каррагінан, гуарова комідь, камідь плодів рожкового дерева и конжакової (коньячної) камеді) проявляється сінергізм - ефект загущення вищий, ніж для кожного з загущувачів окремо.
@@ -237,7 +237,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'field_of_usage' => "производство соусов, желе",
             'Package' => "Мешки 25 кг",
             'Storage' => "Хранить в сухом защищенном от света месте",
-            'Standart' => "",
+            'Standart' => "Соответствует  стандарту FCCIV, Е420",
             'description' => "Ксантановая камедь относится к группе стабилизаторов.  По внешнему виду представляет собой белый или серый порошок без запаха, нейтрального вкуса. Индекс в европейской кодификации Е-415..
                                                   Ксантановая камедь - это полисахарид, выделяемый микроорганизмами Xanthomonas Campestris. Является гидрофильным коллоидом и используется для загущения и стабилизации различных растворов в пищевых производствах, эмульсий, пен и суспензий. В диапазоне pH 2 – 12 ксантан характеризуется высокими значениями вязкости и псевдопластичности. При взаимодействии с другими гидроколлоидами (каррагинан, гуаровая камедь, камедь плодов рожкового дерева и конжаковая (коньячная) камедь) проявляет синергизм – эффект загущения выше, чем для каждого из загустителей по отдельности.
                                                   Ксантановая камедь хорошо растворима как в холодной, так и в теплой воде. Раствор устойчив к воздействию температур в диапазоне от -18°С до +120°С.",
@@ -254,7 +254,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'field_of_usage' => "sauces, jelly",
             'Package' => "25 kg bags",
             'Storage' => "Store in a dry place protected from direct sunlight",
-            'Standart' => "",
+            'Standart' => "Compliant with quality standards:  FCCIV, Е420",
             'description' => "Xanthan gum belongs to the stabilizers group. It is an odorless white or grey powder with a neutral taste. European codification index E-415.
                                                   Xanthan gum is a polysaccharide secreted by Xanthomonas Campestris microorganisms.
                                                   It is a hydrophilic colloid and is used to thicken and stabilize various solutions in food production, emulsions, foams and suspensions. Xanthan provides high values ​​of viscosity and pseudoplasticity in the pH range 2 - 12. When interacting with other hydrocolloids (carrageenan, guar gum, carob gum and konjac (cognac) gum) it exhibits synergy - the thickening effect becomes higher than for each of the thickeners separately.
@@ -273,7 +273,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'Package' => "Мішки 25 кг",
             'img'=>'img',
             'Storage' => "Зберігати в сухому захищеному від світла місці",
-            'Standart' => "",
+            'Standart' => "Відповідає стандарту  FCCIV, Е420",
             'description' => "Сорбінова кислота являє собою дрібні кристали без кольору та запаху, дуже незначно розчинні в воді, речовина не токсична і не є канцерогеном. В харчовій промисловості сорбінова кислота E 200 використовується в якості консерванта, мета якого збільшення терміну зберігання продуктів.",
         ]);
         DB::table('product_rus')->insert([
@@ -289,7 +289,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'field_of_usage' => "пиво-безалкогольная, кондитерская, хлебо-булочная, консервная",
             'Package' => "Мешки 25 кг",
             'Storage' => "Хранить в сухом защищенном от света месте",
-            'Standart' => "",
+            'Standart' => "Соответствует  стандарту FCCIV, Е420",
             'description' => "Сорбиновая кислота представляет собой мелкие кристаллы без цвета и запаха, очень незначительно растворимые в воде, вещество нетоксично и не является канцерогеном.
                                                   В пищевой промышленности сорбиновая кислота E 200 применяется в качестве консерванта, с целью увеличить срок хранения продуктов.",
         ]);
@@ -306,7 +306,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'field_of_usage' => "beer, soft drinks, confectionery items, bakery products, canned goods",
             'Package' => "25 kg bags",
             'Storage' => "Store in a dry place protected from direct sunlight",
-            'Standart' => "",
+            'Standart' => "Compliant with quality standards:  FCCIV, Е420",
             'description' => "Sorbic acid comes in small colorless and odorless crystals, slightly soluble in water, the substance is non-toxic and is not a carcinogen.
                                                   Sorbic acid E 200 is used in the food industry as a preservative in order to extend the shelf life of products.",
         ]);
@@ -322,7 +322,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'Package' => "Мішки 25 кг",
             'img'=>'img',
             'Storage' => "Зберігати в сухому захищеному від світла місці",
-            'Standart' => "Відповідає вимогам стандартів якості: ВР2009, USP32, FCC6, E202.",
+            'Standart' => "Відповідає вимогам стандартів якості: ВР2009, USP32, FCC6, E202",
             'description' => "Сорбат калію - це природний безпечний для здоров’я людини консервант, активно пригнічуючий дрожі, цвілеві гриби, аеробні бактерії, ферменти, там самим збільшуючи термін придатності продуктів.",
         ]);
         DB::table('product_rus')->insert([
@@ -335,7 +335,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'field_of_usage' => "пиво-безалкогольная, кондитерская, консервная",
             'Package' => "Мешки 25 кг",
             'Storage' => "Хранить в сухом защищенном от света месте",
-            'Standart' => "Соответствует стандартам качества: ВР2009, USP32, FCC6, E202.",
+            'Standart' => "Соответствует стандартам качества: ВР2009, USP32, FCC6, E202",
             'description' => "Сорбат калия – это природный безопасный для здоровья человека консервант, активно угнетающий дрожжи, плесневые грибы, аэробные бактерии, ферменты, увеличивая тем самым срок годности продуктов.",
         ]);
         DB::table('product_ens')->insert([
@@ -349,7 +349,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'field_of_usage' => "beer, soft drinks, confectionery items, canned goods",
             'Package' => "25 kg bags",
             'Storage' => "Store in a dry place protected from direct sunlight",
-            'Standart' => "Compliant with quality standards: ВР2009, USP32, FCC6, E202.",
+            'Standart' => "Compliant with quality standards: ВР2009, USP32, FCC6, E202",
             'description' => "Potassium sorbate is a natural preservative that is safe for human health. It actively suppresses yeast, molds, aerobic bacteria, enzymes, thereby increasing the shelf life of products.",
         ]);
 
@@ -363,7 +363,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'Package' => "Мішки 25 кг",
             'img'=>'img',
             'Storage' => "Зберігати в сухому захищеному від світла місці",
-            'Standart' => "",
+            'Standart' => "Відповідає вимогам стандартів якості: ВР2009, USP32, FCC6, E202",
             'description' => "Має потужну пригнічуючу дію на дріжджі та цвілеві гриби, пригнічує в клітинах активність ферментів, відповідальних за окислювально-відновлювальні реакції, а також ферментів, розщеплюючи жири та крахмал.",
         ]);
         DB::table('product_rus')->insert([
@@ -376,7 +376,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'field_of_usage' => "консервная",
             'Package' => "Мешки 25 кг",
             'Storage' => "Хранить в сухом защищенном от света месте",
-            'Standart' => "",
+            'Standart' => "Соответствует стандартам качества: ВР2009, USP32, FCC6, E202",
             'description' => "Оказывает сильное угнетающее действие на дрожжи и плесневые грибы, подавляет в клетках активность ферментов, ответственных за окислительно-восстановительные реакции, а также ферментов, расщепляющих жиры и крахмал.",
         ]);
         DB::table('product_ens')->insert([
@@ -389,7 +389,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'field_of_usage' => "canned goods",
             'Package' => "25 kg bags",
             'Storage' => "Store in a dry place protected from direct sunlight",
-            'Standart' => "",
+            'Standart' => "Compliant with quality standards: ВР2009, USP32, FCC6, E202",
             'description' => "Sodium benzoate actively suppresses yeast, molds, aerobic bacteria, enzymes, actively suppress ferments in cells, responsible for redox reactions, as well as enzymes that break down fats and starch.",
         ]);
 
@@ -402,7 +402,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'Package' => "Мішки 20 кг",
             'img'=>'img',
             'Storage' => "Зберігати в сухому захищеному від світла місці",
-            'Standart' => "",
+            'Standart' => "Відповідає вимогам стандартів якості: ВР2009, USP32, FCC6, E202",
             'description' => "Ізолят соєвого белка - очищений від вуглеводів, рослинної клітчатки і жира соєвий продукт, що містить не менше ніж 90% білку в сухій речовині. Йому властиві низька в’язкість, висока розчинність, хорошею жироемульсуючою здатністю и є одним з найфункціональніших продуктів соєвого белку на ринку.",
         ]);
         DB::table('product_rus')->insert([
@@ -414,7 +414,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'field_of_usage' => "мясоперерабатывающая, молочная, спортивное питание",
             'Package' => "Мешки 20 кг",
             'Storage' => "Хранить в сухом защищенном от света месте",
-            'Standart' => "",
+            'Standart' => "Соответствует стандартам качества: ВР2009, USP32, FCC6, E202",
             'description' => "Изолят соевого белка – очищенный от углеводов, растительной клетчатки и жира соевый продукт, содержащий не менее 90% белка в сухом веществе. Он обладает низкой вязкостью, высокой растворимостью, хорошей жироэмульгирующей способностью и является одним из самых функциональных продуктов соевого белка на рынке.",
         ]);
         DB::table('product_ens')->insert([
@@ -426,7 +426,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'field_of_usage' => "meat and milk processing, sports nutrition",
             'Package' => "20 kg bags",
             'Storage' => "Store in a dry place protected from direct sunlight",
-            'Standart' => "",
+            'Standart' => "Compliant with quality standards: ВР2009, USP32, FCC6, E202",
             'description' => "Soy protein isolate - is cleared from  used from carbohydrates and fats, soy product which contain not less than 90% protein. He has low viscosity, high solubility, good fat emulsifying ability and is one of most functional products on market.",
         ]);
     }

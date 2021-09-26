@@ -52,9 +52,9 @@
     </div>
 </header>
 <div class="burger__menu">
-    <a href="indexEn.html" class="burger__menu_list burger__menu_list-about">About us</a>
-    <a href="productionEn.html" class="burger__menu_list burger__menu_list-middle burger__menu_list-products">Product</a>
-    <a href="#" class="burger__menu_list">Contacts</a>
+    <a href="{{env('APP_URL')}}" class="burger__menu_list burger__menu_list-about">About us</a>
+    <a href="{{env('APP_URL').'/products'}}" class="burger__menu_list burger__menu_list-middle burger__menu_list-products">Product</a>
+    <a onclick="hideBurgerMenu()" href="#form" class="burger__menu_list">Contacts</a>
     <div class="burger__menu_social">
         <a href="#">
             <img src="img/icons/telegram.svg" alt="telegram">
@@ -67,13 +67,13 @@
         </a>
     </div>
     <div class="burger__menu_languages">
-        <div class="burger__menu_languages-text">
+        <div onclick="location.href='{{env("APP_URL")."/ukr"}}'" class="burger__menu_languages-text">
             UKR
         </div>
-        <div class="burger__menu_languages-text burger__menu_languages-text_middle">
+        <div onclick="location.href='{{env("APP_URL")."/ru"}}'" class="burger__menu_languages-text burger__menu_languages-text_middle">
             RUS
         </div>
-        <div class="burger__menu_languages-text">
+        <div onclick="location.href='{{env("APP_URL")."/en"}}'" class="burger__menu_languages-text">
             ENG
         </div>
     </div>
@@ -101,7 +101,7 @@
                         <div class="secondPage__filter_group-title">Group</div>
                         <div>
                             <select name="sources" id="sources" class="custom-select sources custom-select_FC"
-                                    placeholder="Select">
+                                    placeholder="{{$group}}">
                                 <option data-filter="group" value="Antioxidants">Antioxidants</option>
                                 <option data-filter="group" value="Sweeteners">Sweeteners</option>
                                 <option data-filter="group" value="Stabilizers">Stabilizers</option>
@@ -113,7 +113,7 @@
                     <div class="secondPage__filter_group">
                         <div class="secondPage__filter_group-title">Field of application</div>
                         <div class="rep">
-                            <select name="spread" id="spread" class="custom-select sources1" placeholder="Select">
+                            <select name="spread" id="spread" class="custom-select sources1" placeholder="{{$usage}}">
                                 <option data-filter="usage" value="Food">Food</option>
                                 <option data-filter="usage" value="Chemical">Chemical</option>
                                 <option data-filter="usage" value="Manufacture">Manufacture</option>
@@ -266,7 +266,7 @@
                     </div>
                     <div class="footer__top_mobile">
                         <div class="footer__top_mobile-title">
-                            НАШІ СОЦІАЛЬНІ МЕРЕЖІ
+                            OUR SOCIAL NETWORKS
                         </div>
                         <div>
                             <a href="#">
@@ -288,7 +288,7 @@
                     </div>
                     <div class="footer__bottom_mobile">
                         <div class="footer__top_mobile-title">
-                            АДРЕСА
+                            ADDRESS
                         </div>
                         <div class="footer__bottom_mobile-sub-wrapper">
                             <div class="footer__bottom_mobile-sub">2464 Royal Ln. Mesa,</div>

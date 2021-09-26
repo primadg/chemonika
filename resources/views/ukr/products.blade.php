@@ -62,10 +62,9 @@
     </div>
 </header>
 <div class="burger__menu">
-    <a href="index.html" class="burger__menu_list burger__menu_list-about">Про нас</a>
-    <a href="production.html"
-       class="burger__menu_list burger__menu_list-middle burger__menu_list-products">Продукцiя</a>
-    <a href="#" class="burger__menu_list">Контакти</a>
+    <a href="{{env('APP_URL')}}" class="burger__menu_list burger__menu_list-about">Про нас</a>
+    <a href="{{env('APP_URL').'/products'}}" class="burger__menu_list burger__menu_list-middle burger__menu_list-products">Продукцiя</a>
+    <a onclick="hideBurgerMenu()" href="#form" class="burger__menu_list">Контакти</a>
     <div class="burger__menu_social">
         <a href="#">
             <img src="img/icons/telegram.svg" alt="telegram">
@@ -78,13 +77,13 @@
         </a>
     </div>
     <div class="burger__menu_languages">
-        <div class="burger__menu_languages-text">
+        <div onclick="location.href='{{env("APP_URL")."/ukr"}}'" class="burger__menu_languages-text">
             UKR
         </div>
-        <div class="burger__menu_languages-text burger__menu_languages-text_middle">
+        <div onclick="location.href='{{env("APP_URL")."/ru"}}'" class="burger__menu_languages-text burger__menu_languages-text_middle">
             RUS
         </div>
-        <div class="burger__menu_languages-text">
+        <div onclick="location.href='{{env("APP_URL")."/en"}}'" class="burger__menu_languages-text">
             ENG
         </div>
     </div>
@@ -95,7 +94,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <h2 class="secondPage__promo_title">
-                        Ми пропонуємоя продукцію одних з найбільших світових виробників
+                        Ми пропонуємо продукцію одних з найбільших світових виробників
                     </h2>
                 </div>
             </div>

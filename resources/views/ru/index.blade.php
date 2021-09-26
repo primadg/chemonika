@@ -55,8 +55,8 @@
     </header>
     <div class="burger__menu">
         <a href="{{env('APP_URL')}}" class="burger__menu_list burger__menu_list-about">О нас</a>
-        <a href="{{env('APP_URL')}}/products" class="burger__menu_list burger__menu_list-middle burger__menu_list-products">Продукция</a>
-        <a href="#" class="burger__menu_list">Контакты</a>
+        <a href="{{env('APP_URL').'/products'}}" class="burger__menu_list burger__menu_list-middle burger__menu_list-products">Продукция</a>
+        <a onclick="hideBurgerMenu()" href="#form" class="burger__menu_list">Контакты</a>
         <div class="burger__menu_social">
             <a href="#">
                 <img src="{{env('APP_URL')}}/img/icons/telegram.svg" alt="telegram">
@@ -69,13 +69,13 @@
             </a>
         </div>
         <div class="burger__menu_languages">
-            <div class="burger__menu_languages-text">
+            <div onclick="location.href='{{env("APP_URL")."/ukr"}}'" class="burger__menu_languages-text">
                 UKR
             </div>
-            <div class="burger__menu_languages-text burger__menu_languages-text_middle">
+            <div onclick="location.href='{{env("APP_URL")."/ru"}}'" class="burger__menu_languages-text burger__menu_languages-text_middle">
                 RUS
             </div>
-            <div class="burger__menu_languages-text">
+            <div onclick="location.href='{{env("APP_URL")."/en"}}'" class="burger__menu_languages-text">
                 ENG
             </div>
         </div>
@@ -91,7 +91,7 @@
                          Поставка химического сырья из Азии, Европы, Америки для различных отраслей промышленности: металлургической, нефтяной, газовой, лакокрасочной, полимерной, строительной, пищевой и других.
                      </div>
                      <div class="promo__suggestions">
-                         <div class="promo__suggestions_hov">Наши предложения </div>
+                         <div onclick="location.href='{{env("APP_URL")."/products"}}'" class="promo__suggestions_hov">Наши предложения </div>
                          <svg class="header__info_button-svg" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                              <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"/>
                          </svg>
@@ -111,11 +111,10 @@
                          <div class="about__descr">
                              <div class="about__descr_text">Фелицата Украина - надежный и доверенный поставщик более 200 видов пищевых и фармацевтических ингредиентов, субстанций и товаров для В2В рынка в Украине и СНГ. </div>
                              <div class="about__descr_text">С 2005 года мы эксклюзивно представляем известных мировых производителей: </div>
-                             <div class="about__descr_text">index</div>
                              <div class="about__descr_text">Фрезениус Каби Австрия ГмбХ - лактулоза, ГЭК. </div>
-                             <div class="about__descr_text">alpavit_logo Альпавит Кайзер шампиньоны Хофмейстера ГмбХ - лактоза фарма и пищевая. </div>
-                             <div class="about__descr_text">index  Акцент Микроселл, Индия - МКЦ, кроскармеллоза, магния стеарат.</div>
-                             <div class="about__descr_text">logo2 ОАО Щучинский МСЗ, Беларусь - КСБ-УФ80, лактоза. </div>
+                             <div class="about__descr_text">Альпавит Кайзер шампиньоны Хофмейстера ГмбХ - лактоза фарма и пищевая. </div>
+                             <div class="about__descr_text">Акцент Микроселл, Индия - МКЦ, кроскармеллоза, магния стеарат.</div>
+                             <div class="about__descr_text">ОАО Щучинский МСЗ, Беларусь - КСБ-УФ80, лактоза. </div>
                          </div>
                          <div class="about__descr_bottom">
                              <div class="about__descr_text">Наши поставщики более 30 производителей пищевых ингредиентов Европы, США, Китая.
@@ -207,7 +206,7 @@
                          </div>
                          <div class="banner__main_separator"></div>
                          <div class="banner__main_choose">
-                             <div class="banner__main_choose-hov">Выбери свой сегмент </div>
+                             <div onclick="location.href='{{env("APP_URL")."/products"}}'" class="banner__main_choose-hov">Выбери свой сегмент </div>
                              <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#ffffff"/>
                              </svg>

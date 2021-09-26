@@ -20,7 +20,7 @@
                     <a class="header__info_contact-link link__about" href="{{env('APP_URL')}}">О нас</a>
                 </div>
                 <div class="header__info_contact">
-                    <a class="header__info_contact-link header__active_link link__products" href="productionRu.html">Продукция</a>
+                    <a class="header__info_contact-link header__active_link link__products" href="{{env('APP_URL').'/products'}}">Продукция</a>
                 </div>
                 <div class="header__info_contact">
                     <a class="header__info_contact-link link__contacts" href="#form">Контакты</a>
@@ -53,8 +53,8 @@
 </header>
 <div class="burger__menu">
     <a href="{{env('APP_URL')}}" class="burger__menu_list burger__menu_list-about">О нас</a>
-    <a href="{{env('APP_URL')}}/products" class="burger__menu_list burger__menu_list-middle burger__menu_list-products">Продукция</a>
-    <a href="#" class="burger__menu_list">Контакты</a>
+    <a href="{{env('APP_URL').'/products'}}" class="burger__menu_list burger__menu_list-middle burger__menu_list-products">Продукция</a>
+    <a onclick="hideBurgerMenu()" href="#form" class="burger__menu_list">Контакты</a>
     <div class="burger__menu_social">
         <a href="#">
             <img src="{{env('APP_URL')}}/img/icons/telegram.svg" alt="telegram">
@@ -67,13 +67,13 @@
         </a>
     </div>
     <div class="burger__menu_languages">
-        <div class="burger__menu_languages-text">
+        <div onclick="location.href='{{env("APP_URL")."/ukr"}}'" class="burger__menu_languages-text">
             UKR
         </div>
-        <div class="burger__menu_languages-text burger__menu_languages-text_middle">
+        <div onclick="location.href='{{env("APP_URL")."/ru"}}'" class="burger__menu_languages-text burger__menu_languages-text_middle">
             RUS
         </div>
-        <div class="burger__menu_languages-text">
+        <div onclick="location.href='{{env("APP_URL")."/en"}}'" class="burger__menu_languages-text">
             ENG
         </div>
     </div>
@@ -101,7 +101,7 @@
                         <div class="secondPage__filter_group-title">Группа</div>
                         <div>
                             <select name="sources" id="sources" class="custom-select sources custom-select_FC"
-                                    placeholder="Выберите">
+                                    placeholder="{{$group}}">
                                 <option data-filter="group" value="Антиоксиданты">Антиоксиданты</option>
                                 <option data-filter="group" value="Подсластители">Подсластители</option>
                                 <option data-filter="group" value="Стабилизаторы">Стабилизаторы</option>
@@ -113,7 +113,7 @@
                     <div class="secondPage__filter_group">
                         <div class="secondPage__filter_group-title">Область применения</div>
                         <div class="rep">
-                            <select name="spread" id="spread" class="custom-select sources1" placeholder="Выберите">
+                            <select name="spread" id="spread" class="custom-select sources1" placeholder="{{$usage}}">
                                 <option data-filter="usage" value="Пищевая">Пищевая</option>
                                 <option data-filter="usage" value="Химическая">Химическая</option>
                                 <option data-filter="usage" value="Производство">Производство</option>

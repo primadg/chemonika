@@ -345,6 +345,11 @@ function getParams(str){
     return arr;
 }
 
+function hideBurgerMenu(){
+    $('body').toggleClass('overflowStop');
+    $('.burger__menu').toggleClass('burger__menu_active');
+}
+
 
 
 document.querySelector('#formSend').onclick = () => {

@@ -54,9 +54,9 @@
     </div>
 </header>
 <div class="burger__menu">
-    <a href="#" class="burger__menu_list burger__menu_list-about">Про нас</a>
-    <a href="#" class="burger__menu_list burger__menu_list-middle burger__menu_list-products">Продукцiя</a>
-    <a href="#" class="burger__menu_list">Контакти</a>
+    <a href="{{env('APP_URL')}}" class="burger__menu_list burger__menu_list-about">Про нас</a>
+    <a href="{{env('APP_URL').'/products'}}" class="burger__menu_list burger__menu_list-middle burger__menu_list-products">Продукцiя</a>
+    <a onclick="hideBurgerMenu()" href="#form" class="burger__menu_list">Контакти</a>
     <div class="burger__menu_social">
         <a href="#">
             <img src="{{env('APP_URL')}}/img/icons/telegram.svg" alt="telegram">
@@ -69,13 +69,13 @@
         </a>
     </div>
     <div class="burger__menu_languages">
-        <div class="burger__menu_languages-text">
+        <div onclick="location.href='{{env("APP_URL")."/ukr"}}'" class="burger__menu_languages-text">
             UKR
         </div>
-        <div class="burger__menu_languages-text burger__menu_languages-text_middle">
+        <div onclick="location.href='{{env("APP_URL")."/ru"}}'" class="burger__menu_languages-text burger__menu_languages-text_middle">
             RUS
         </div>
-        <div class="burger__menu_languages-text">
+        <div onclick="location.href='{{env("APP_URL")."/en"}}'" class="burger__menu_languages-text">
             ENG
         </div>
     </div>
@@ -87,8 +87,8 @@
                 <svg class="thirdPage__info_back-svg" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"/>
                 </svg>
-                <div class="thirdPage__info_back-title">
-                    Повернутісь до Продукції
+                <div onclick="location.href='{{env("APP_URL")."/products"}}'" class="thirdPage__info_back-title">
+                    Повернутися до Продукції
                 </div>
             </div>
         </section>
@@ -159,10 +159,10 @@
                     <div class="thirdPage__table_table">
                         <div class="thirdPage__table_table-header">
                             <div class="thirdPage__table_table-header_name">
-                                назва
+                                Назва
                             </div>
                             <div class="thirdPage__table_table-header_value">
-                                назва
+                                Назва
                             </div>
                         </div>
                         @foreach($entries as $entry)

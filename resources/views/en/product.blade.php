@@ -51,9 +51,9 @@
     </div>
 </header>
 <div class="burger__menu">
-    <a href="#" class="burger__menu_list burger__menu_list-about">Про нас</a>
-    <a href="#" class="burger__menu_list burger__menu_list-middle burger__menu_list-products">Продукцiя</a>
-    <a href="#" class="burger__menu_list">Контакти</a>
+    <a href="{{env('APP_URL')}}" class="burger__menu_list burger__menu_list-about">Про нас</a>
+    <a href="{{env('APP_URL').'/products'}}" class="burger__menu_list burger__menu_list-middle burger__menu_list-products">Продукцiя</a>
+    <a onclick="hideBurgerMenu()" href="#form" class="burger__menu_list">Контакти</a>
     <div class="burger__menu_social">
         <a href="#">
             <img src="{{env('APP_URL')}}/img/icons/telegram.svg" alt="telegram">
@@ -66,13 +66,13 @@
         </a>
     </div>
     <div class="burger__menu_languages">
-        <div class="burger__menu_languages-text">
+        <div onclick="location.href='{{env("APP_URL")."/ukr"}}'" class="burger__menu_languages-text">
             UKR
         </div>
-        <div class="burger__menu_languages-text burger__menu_languages-text_middle">
+        <div onclick="location.href='{{env("APP_URL")."/ru"}}'" class="burger__menu_languages-text burger__menu_languages-text_middle">
             RUS
         </div>
-        <div class="burger__menu_languages-text">
+        <div onclick="location.href='{{env("APP_URL")."/en"}}'" class="burger__menu_languages-text">
             ENG
         </div>
     </div>
@@ -84,7 +84,7 @@
                 <svg class="thirdPage__info_back-svg" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"/>
                 </svg>
-                <div class="thirdPage__info_back-title">
+                <div onclick="location.href='{{env("APP_URL")."/products"}}'" class="thirdPage__info_back-title">
                     Back to production
                 </div>
             </div>
@@ -185,7 +185,7 @@
                     </div>
                 </div>
                 <a href="mailto: {{env("MAIL_TO_NAME")}}" class="thirdPage__notFound_btn">
-                    call us
+                    Call us
                 </a>
             </div>
         </div>
@@ -199,8 +199,8 @@
                 </div>
                 <div class="col-lg-6 footer__top">
                     <div class="footer__top_top">
-                        <div class="footer__top_top-our">Наші соціальні мережі</div>
-                        <div class="footer__top_top-right footer__top_top-our">АДРЕСА</div>
+                        <div class="footer__top_top-our">OUR SOCIAL NETWORKS</div>
+                        <div class="footer__top_top-right footer__top_top-our">ADDRESS</div>
                     </div>
                     <div class="footer__top_bottom">
                         <div class="footer__top_bottom-links">
@@ -231,7 +231,7 @@
                     </div>
                     <div class="footer__top_mobile">
                         <div class="footer__top_mobile-title">
-                            НАШІ СОЦІАЛЬНІ МЕРЕЖІ
+                            OUR SOCIAL NETWORKS
                         </div>
                         <div>
                             <a href="#">
@@ -253,7 +253,7 @@
                     </div>
                     <div class="footer__bottom_mobile">
                         <div class="footer__top_mobile-title">
-                            АДРЕСА
+                            ADDRESS
                         </div>
                         <div class="footer__bottom_mobile-sub-wrapper">
                             <div class="footer__bottom_mobile-sub">2464 Royal Ln. Mesa,</div>

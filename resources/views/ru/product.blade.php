@@ -61,9 +61,9 @@
     </div>
 </header>
 <div class="burger__menu">
-    <a href="#" class="burger__menu_list burger__menu_list-about">Про нас</a>
-    <a href="#" class="burger__menu_list burger__menu_list-middle burger__menu_list-products">Продукция</a>
-    <a href="#" class="burger__menu_list">Контакты</a>
+    <a href="{{env('APP_URL')}}" class="burger__menu_list burger__menu_list-about">О нас</a>
+    <a href="{{env('APP_URL').'/products'}}" class="burger__menu_list burger__menu_list-middle burger__menu_list-products">Продукция</a>
+    <a onclick="hideBurgerMenu()" href="#form" class="burger__menu_list">Контакты</a>
     <div class="burger__menu_social">
         <a href="#">
             <img src="{{env('APP_URL')}}/img/icons/telegram.svg" alt="telegram">
@@ -76,13 +76,13 @@
         </a>
     </div>
     <div class="burger__menu_languages">
-        <div class="burger__menu_languages-text">
+        <div onclick="location.href='{{env("APP_URL")."/ukr"}}'" class="burger__menu_languages-text">
             UKR
         </div>
-        <div class="burger__menu_languages-text burger__menu_languages-text_middle">
+        <div onclick="location.href='{{env("APP_URL")."/ru"}}'" class="burger__menu_languages-text burger__menu_languages-text_middle">
             RUS
         </div>
-        <div class="burger__menu_languages-text">
+        <div onclick="location.href='{{env("APP_URL")."/en"}}'" class="burger__menu_languages-text">
             ENG
         </div>
     </div>
@@ -95,8 +95,8 @@
                      xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"/>
                 </svg>
-                <div class="thirdPage__info_back-title">
-                    Вернутся к продукции
+                <div onclick="location.href='{{env("APP_URL")."/products"}}'" class="thirdPage__info_back-title">
+                    Вернуться к продукции
                 </div>
             </div>
         </section>
@@ -210,7 +210,7 @@
                 </div>
                 <div class="col-lg-6 footer__top">
                     <div class="footer__top_top">
-                        <div class="footer__top_top-our">НАШИ СОЦ СЕТИ</div>
+                        <div class="footer__top_top-our">НАШИ СОЦИАЛЬНЫЕ СЕТИ</div>
                         <div class="footer__top_top-right footer__top_top-our">АДРЕСА</div>
                     </div>
                     <div class="footer__top_bottom">
@@ -251,7 +251,7 @@
                     </div>
                     <div class="footer__top_mobile">
                         <div class="footer__top_mobile-title">
-                            НАШИ СОЦ СЕТИ
+                            НАШИ СОЦИАЛЬНЫЕ СЕТИ
                         </div>
                         <div>
                             <a href="#">
