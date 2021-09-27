@@ -283,32 +283,50 @@
                          </div>
                      </div>
                      <div class="col-lg-6 form__form">
-                         <a name="form"></a>
                          <div class="form__form_title">
-                             Форма обратной связи
+                             Форма зворотнього зв’язку
                          </div>
-                       <div>
-                             <div class="form__form_label form__form_label-mt">
+                         <a name="form"></a>
+                         <div>
+                             <!-- <img src="" alt=""> -->
+                             <img class="form__form_check success__form default__form-hidden" src="img/icons/check.svg" alt="banner">
+                             <div class="form__form_descr success__form default__form-hidden">
+                                 Ваше сообщение успешно отправленно.
+                                 Менджер свяжеться с вами в ближайшее время.
+                             </div>
+                             <div class="form__form_resend success__form default__form-hidden">
+                                 Отправить ёще
+                                 <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                      xmlns="http://www.w3.org/2000/svg">
+                                     <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#ffffff"></path>
+                                 </svg>
+                             </div>
+                             <div class="form__form_label form__form_label-mt default__form">
                                  Ваше имя
                              </div>
-                             <input class="form__form_input" id="nameInput" type="text" name="userName">
-                             <div class="form__form_label">
-                                 Email или телефон
+                             <input class="form__form_input default__form" required id="nameInput" type="text" name="userName">
+                             <div class="form__form_mail">
+                                 <span class="form__form_mail-uncorrect">The data is filled in incorrectly</span>
+                                 <div class="form__form_label default__form">
+                                     Email или телефон
+                                 </div>
+                                 <input class="form__form_input default__form" required id="email" type="email" name="email">
                              </div>
-                             <input class="form__form_input" type="text" id="email" name="email">
-                             <div class="form__form_label">
+                             <div class="form__form_label default__form">
                                  Текст сообщения
                              </div>
-                             <textarea class="form__form_textarrea" id="textInput" name="text"></textarea>
-                             <button onclick="sendEmail()" class="header__info_button form__form_btn">
-                                 <span>Отправить</span>
-                                 <svg class="header__info_button-svg" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <textarea class="form__form_textarrea default__form" id="textInput" name="text"></textarea>
+                             <button id="formSend" class="header__info_button form__form_btn form__form_btn-form default__form">
+                                 <span>Надіслати</span>
+                                 <svg class="header__info_button-svg" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                      xmlns="http://www.w3.org/2000/svg">
                                      <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#ffffff"></path>
                                  </svg>
                              </button>
-                       </div>
-
+                         </div>
                      </div>
+
+
                  </div>
              </div>
          </section>

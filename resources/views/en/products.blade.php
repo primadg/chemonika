@@ -201,27 +201,44 @@
                     <div class="form__form_title">
                         Feedback form
                     </div>
-                    <form action="#">
-                        <div class="form__form_label form__form_label-mt">
+                    <a name="form"></a>
+                    <div>
+                        <!-- <img src="" alt=""> -->
+                        <img class="form__form_check success__form default__form-hidden" src="img/icons/check.svg" alt="banner">
+                        <div class="form__form_descr success__form default__form-hidden">
+                            Your message has been successfully sent.
+                            At the closest hour, our manager will call you.
+                        </div>
+                        <div class="form__form_resend success__form default__form-hidden">
+                            Send more
+                            <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#ffffff"></path>
+                            </svg>
+                        </div>
+                        <div class="form__form_label form__form_label-mt default__form">
                             Your name
                         </div>
-                        <input class="form__form_input" type="text" name="userName">
-                        <div class="form__form_label">
-                            Email or phone
+                        <input class="form__form_input default__form" required id="nameInput" type="text" name="userName">
+                        <div class="form__form_mail">
+                            <span class="form__form_mail-uncorrect">The data is filled in incorrectly</span>
+                            <div class="form__form_label default__form">
+                                Email or phone number
+                            </div>
+                            <input class="form__form_input default__form" required id="email" type="email" name="email">
                         </div>
-                        <input class="form__form_input" type="text" name="email">
-                        <div class="form__form_label">
+                        <div class="form__form_label default__form">
                             Message text
                         </div>
-                        <textarea class="form__form_textarrea" name="text"></textarea>
-                        <button type="submit" class="header__info_button form__form_btn">
+                        <textarea class="form__form_textarrea default__form" id="textInput" name="text"></textarea>
+                        <button id="formSend" class="header__info_button form__form_btn form__form_btn-form default__form">
                             <span>Send</span>
-                            <svg class="header__info_button-svg" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="header__info_button-svg" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#ffffff"></path>
                             </svg>
                         </button>
-                    </form>
-
+                    </div>
                 </div>
             </div>
         </div>
