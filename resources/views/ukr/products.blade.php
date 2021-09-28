@@ -187,7 +187,7 @@
                             <img src="img/icons/location.svg" alt="location">
                         </div>
                         <div class="form__row_wrapper-title">
-                            2464 Royal Ln. Mesa, New Jersey 45463
+                            Украина, Киев, ул. Юрия Ильенко 81а
                         </div>
                     </div>
                     <div class="form__row_wrapper form__row_wrapper-MT">
@@ -195,7 +195,7 @@
                             <img src="img/icons/phone.svg" alt="phone">
                         </div>
                         <div class="form__row_wrapper-title form__row_wrapper-title-PL">
-                            <a href="callto: (270) 555-0117">(270) 555-0117</a>
+                            <a href="callto: (067) 686-9291">+38(067)686-92-91</a>
                         </div>
                     </div>
                     <div class="form__row_links">
@@ -296,10 +296,10 @@
                         </div>
                         <div class="footer__top_top-right footer__top_top-right_MT">
                             <div class="footer__top_bottom-place">
-                                2464 Royal Ln. Mesa,
+                                Украина, Киев,
                             </div>
                             <div class="footer__top_bottom-place">
-                                New Jersey 454a63
+                                ул. Юрия Ильенко 81а
                             </div>
                         </div>
                     </div>
@@ -339,9 +339,9 @@
                             АДРЕСА
                         </div>
                         <div class="footer__bottom_mobile-sub-wrapper">
-                            <div class="footer__bottom_mobile-sub">2464 Royal Ln. Mesa,</div>
+                            <div class="footer__bottom_mobile-sub">Украина, Киев,</div>
                             <div class="footer__bottom_mobile-sub">
-                                New Jersey 454a63
+                                ул. Юрия Ильенко 81а
                             </div>
                         </div>
                     </div>

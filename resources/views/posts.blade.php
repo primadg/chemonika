@@ -88,7 +88,7 @@
                 <div class="footer__info_place">
                     <div class="footer__info_social-title">АДРЕСА</div>
                     <div class="footer__info_place-descr">
-                        2464 Royal Ln. Mesa, New Jersey 454a63
+                        Украина, Киев, ул. Юрия Ильенко 81а
                     </div>
                 </div>
             </div>

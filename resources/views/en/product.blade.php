@@ -222,10 +222,10 @@
                         </div>
                         <div class="footer__top_top-right footer__top_top-right_MT">
                             <div class="footer__top_bottom-place">
-                                2464 Royal Ln. Mesa,
+                                Украина, Киев,
                             </div>
                             <div class="footer__top_bottom-place">
-                                New Jersey 454a63
+                                ул. Юрия Ильенко 81а
                             </div>
                         </div>
                     </div>
@@ -256,9 +256,9 @@
                             ADDRESS
                         </div>
                         <div class="footer__bottom_mobile-sub-wrapper">
-                            <div class="footer__bottom_mobile-sub">2464 Royal Ln. Mesa,</div>
+                            <div class="footer__bottom_mobile-sub">Украина, Киев,</div>
                             <div class="footer__bottom_mobile-sub">
-                                New Jersey 454a63
+                                ул. Юрия Ильенко 81а
                             </div>
                         </div>
                     </div>

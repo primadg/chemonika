@@ -86,7 +86,7 @@
         <div class="container">
             <div class="row promo__row">
                 <div class="col-lg-6 col-md-6">
-                    <h1 class="promo__title">Рішения для інноваційних продуктів</h1>
+                    <h1 class="promo__title">Ваш надійний постачальник харчових інгредієнтів</h1>
                     <div class="promo__descr">
                         Постачання хімічної сировини з Азії,Європи, Америки для різноманітних галузей промисловості: металургійної, нафтової, газової, лакофарбової, полімерної, будівельної, харчової та інших.
                     </div>
@@ -107,20 +107,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 col-md-12">
-                    <h2 class="about__title">Про наше підприемство</h2>
+                    <h2 class="about__title">Інформація про компанію</h2>
                     <div class="about__descr">
-                        <div class="about__descr_text">Феліцата Україна – надійний і довірений постачальник понад 200 видів харчових і фармацевтичних інгредієнтів, субстанцій і товарів для В2В  ринку в Україні та СНД.</div>
-                        <div class="about__descr_text">З 2005 року ми ексклюзивно представляємо відомих світових виробників:</div>
-                        <div class="about__descr_text">Фрезеніус Кабі Австрія Гмбх — лактулоза, гідроксіетилкрохмал.</div>
-                        <div class="about__descr_text">Альпавіт Кайзер Шампіньон Хофмейстер ГмбХ — лактоза фарма і харчова.</div>
-                        <div class="about__descr_text">Акцент Микроселл, Індія — мкц, кроскармелоза, магнія стеарат.</div>
-                        <div class="about__descr_text">ВАТ Щучинський МСЗ, Білорусь — КСБ-УФ80, лактоза.</div>
+                        <div class="about__descr_text">Наша компанія была заснована в 2020 році.</div>
+                        <div class="about__descr_text">Головним напрямком діяльності нашої компанії є поставка харчових інгредієнтів від провідних виробників.</div>
                     </div>
                     <div class="about__descr_bottom">
-                        <div class="about__descr_text">Наші постачальники більше 30 виробників харчових інгредієнтів Європи, США, Китаю.
-                            Ми вибираємо постачальника не за ціною, а по можливості надати якісний товар. Перед постачанням поставлений товар перевіряється в незалежних лабораторіях. Наш агент в Китаї проводить аудит кожної поставки.</div>
-                        <div class="about__descr_text">Товари зберігаються на складі, який ліцензований для зберігання фармацевтичних матеріалів.</div>
-                        <div class="about__descr_text">Ми працюємо з більш 500 покупцями. Наші клієнти – це великі фармацевтичні та харчові виробники, а також невеликі підприємці.</div>
+                        <div class="about__descr_text">Переваги роботи з нашою компанією: </div>
+                        <ul>
+                            <li>Ми постачаємо продукцію напряму від провідних виробників, тому можем запропонувати нашим клієнтам найкращу якість і найкращі умови співробітництва</li>
+                            <li>Відкритість</li>
+                            <li>Оперативність</li>
+                        </ul>
                     </div>
                     <div class="about__descr_bottom-images">
                         <div class="about__descr_bottom-images_block">
@@ -199,7 +197,7 @@
             <div class="col-lg-10 banner__main">
                 <div class="banner__main_block">
                     <div class="banner__main_title">
-                        Ми пропонуємо продукцію одних з найбільших світових виробників
+                        Ми пропонуємо продукцію лише перевірених постачальників зі світовим ім'ям
                     </div>
                     <div class="banner__main_descr">
                         Наша місія – Залишатися високоефективною компанією – лідируючим дистрибьютором якісних хімічних матеріалів. Постійно вдосконалюючи свої професійні навички і вміння, ми розвиваємося разом з партнерами!
@@ -259,7 +257,7 @@
                             <img src="img/icons/location.svg" alt="location">
                         </div>
                         <div class="form__row_wrapper-title">
-                            2464 Royal Ln. Mesa, New Jersey 45463
+                            Украина, Киев, ул. Юрия Ильенко 81а
                         </div>
                     </div>
                     <div class="form__row_wrapper form__row_wrapper-MT">
@@ -267,7 +265,7 @@
                             <img src="img/icons/phone.svg" alt="phone">
                         </div>
                         <div class="form__row_wrapper-title form__row_wrapper-title-PL">
-                            <a href="callto: (270) 555-0117">(270) 555-0117</a>
+                            <a href="callto: (067) 686-9291">+38(067)686-92-91</a>
                         </div>
                     </div>
                     <div class="form__row_links">
@@ -359,10 +357,10 @@
                         </div>
                         <div class="footer__top_top-right footer__top_top-right_MT">
                             <div class="footer__top_bottom-place">
-                                2464 Royal Ln. Mesa,
+                                Украина, Киев,
                             </div>
                             <div class="footer__top_bottom-place">
-                                New Jersey 454a63
+                                ул. Юрия Ильенко 81а
                             </div>
                         </div>
                     </div>
@@ -393,9 +391,9 @@
                             АДРЕСА
                         </div>
                         <div class="footer__bottom_mobile-sub-wrapper">
-                            <div class="footer__bottom_mobile-sub">2464 Royal Ln. Mesa,</div>
+                            <div class="footer__bottom_mobile-sub">Украина, Киев,</div>
                             <div class="footer__bottom_mobile-sub">
-                                New Jersey 454a63
+                                ул. Юрия Ильенко 81а
                             </div>
                         </div>
                     </div>

@@ -86,7 +86,7 @@
             <div class="container">
              <div class="row promo__row">
                  <div class="col-lg-6 col-md-6">
-                     <h1 class="promo__title">Ришения для инновационных продуктов </h1>
+                     <h1 class="promo__title">Ваш надежный поставщик пищевых ингредиентов</h1>
                      <div class="promo__descr">
                          Поставка химического сырья из Азии, Европы, Америки для различных отраслей промышленности: металлургической, нефтяной, газовой, лакокрасочной, полимерной, строительной, пищевой и других.
                      </div>
@@ -107,20 +107,18 @@
              <div class="container">
                  <div class="row">
                      <div class="col-lg-7 col-md-12">
-                         <h2 class="about__title">О нашем предприятие</h2>
+                         <h2 class="about__title">Информация о компании</h2>
                          <div class="about__descr">
-                             <div class="about__descr_text">Фелицата Украина - надежный и доверенный поставщик более 200 видов пищевых и фармацевтических ингредиентов, субстанций и товаров для В2В рынка в Украине и СНГ. </div>
-                             <div class="about__descr_text">С 2005 года мы эксклюзивно представляем известных мировых производителей: </div>
-                             <div class="about__descr_text">Фрезениус Каби Австрия ГмбХ - лактулоза, ГЭК. </div>
-                             <div class="about__descr_text">Альпавит Кайзер шампиньоны Хофмейстера ГмбХ - лактоза фарма и пищевая. </div>
-                             <div class="about__descr_text">Акцент Микроселл, Индия - МКЦ, кроскармеллоза, магния стеарат.</div>
-                             <div class="about__descr_text">ОАО Щучинский МСЗ, Беларусь - КСБ-УФ80, лактоза. </div>
+                             <div class="about__descr_text">Наша компания была основана в 2020 году.</div>
+                             <div class="about__descr_text">Основным видом деятельности нашей компании является поставка пищевых ингредиентов от ведущих производителей.</div>
                          </div>
                          <div class="about__descr_bottom">
-                             <div class="about__descr_text">Наши поставщики более 30 производителей пищевых ингредиентов Европы, США, Китая.
-                                 Мы выбираем поставщика не по цене, а по возможности предоставить качественный товар. Перед поставкой поставленный товар проверяется в независимых лабораториях. Наш агент в Китае проводит аудит каждой поставки. </div>
-                             <div class="about__descr_text">Товары хранятся на складе, который лицензирован для хранения фармацевтических материалов.</div>
-                             <div class="about__descr_text">Мы работаем более 500 покупателями. Наши клиенты - это крупные фармацевтические и пищевые производители, а также небольшие предприниматели.</div>
+                         <div class="about__descr_text">Преимущества работы с нашей компанией: </div>
+                         <ul>
+                             <li>Мы работаем напрямую с ведущими производителями, поэтому можем предложить нашим клиентам лучшее качество и лучшие условия сотрудничества</li>
+                             <li>Открытость</li>
+                             <li>Оперативность</li>
+                         </ul>
                          </div>
                          <div class="about__descr_bottom-images">
                              <div class="about__descr_bottom-images_block">
@@ -199,7 +197,7 @@
                  <div class="col-lg-10 banner__main">
                      <div class="banner__main_block">
                          <div class="banner__main_title">
-                             Мы предлагаем продукцию одним из крупнейших мировых производителей
+                             Мы предлагаем продукцию только проверенных производителей с мировым именем
                          </div>
                          <div class="banner__main_descr">
                              Наша миссия - оставаться высокоэффективной компанией - лидирующим дистрибьютором качественных химических материалов. Постоянно совершенствуя свои профессиональные навыки и умения, мы развиваемся вместе с партнерами!
@@ -259,7 +257,7 @@
                                  <img src="{{env('APP_URL')}}/img/icons/location.svg" alt="location">
                              </div>
                              <div class="form__row_wrapper-title">
-                                 2464 Royal Ln. Mesa, New Jersey 45463
+                                 Украина, Киев, ул. Юрия Ильенко 81а
                              </div>
                          </div>
                          <div class="form__row_wrapper form__row_wrapper-MT">
@@ -267,7 +265,7 @@
                                  <img src="{{env('APP_URL')}}/img/icons/phone.svg" alt="phone">
                              </div>
                              <div class="form__row_wrapper-title form__row_wrapper-title-PL">
-                                 <a href="callto: (270) 555-0117">(270) 555-0117</a>
+                                 <a href="callto: (067) 686-9291">+38(067)686-92-91</a>
                              </div>
                          </div>
                          <div class="form__row_links">
@@ -361,10 +359,10 @@
                              </div>
                              <div class="footer__top_top-right footer__top_top-right_MT">
                                  <div class="footer__top_bottom-place">
-                                     2464 Royal Ln. Mesa,
+                                     Украина, Киев,
                                  </div>
                                  <div class="footer__top_bottom-place">
-                                     New Jersey 454a63
+                                     ул. Юрия Ильенко 81а
                                  </div>
                              </div>
                          </div>
@@ -395,9 +393,9 @@
                                 АДРЕС
                             </div>
                             <div class="footer__bottom_mobile-sub-wrapper">
-                                <div class="footer__bottom_mobile-sub">2464 Royal Ln. Mesa,</div>
+                                <div class="footer__bottom_mobile-sub">Украина, Киев,</div>
                                 <div class="footer__bottom_mobile-sub">
-                                    New Jersey 454a63
+                                    ул. Юрия Ильенко 81а
                                 </div>
                             </div>
                         </div>

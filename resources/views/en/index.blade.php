@@ -86,7 +86,7 @@
             <div class="container">
              <div class="row promo__row">
                  <div class="col-lg-6 col-md-6">
-                     <h1 class="promo__title">Solutions for innovative products</h1>
+                     <h1 class="promo__title">Your reliable supplier of food additives</h1>
                      <div class="promo__descr">
                          Supply of chemical raw materials from Asia, Europe, America for various industries: metallurgy, oil, gas, paint, polymer, construction, food and others.
                      </div>
@@ -107,20 +107,18 @@
              <div class="container">
                  <div class="row">
                      <div class="col-lg-7 col-md-12">
-                         <h2 class="about__title">About our company</h2>
+                         <h2 class="about__title">Information about company</h2>
                          <div class="about__descr">
-                             <div class="about__descr_text">Felicata Ukraine is a reliable and trusted supplier of over 200 types of food and pharmaceutical ingredients, substances and goods for the B2B market in Ukraine and the CIS.</div>
-                             <div class="about__descr_text">Since 2005, we exclusively represent world-famous manufacturers:</div>
-                             <div class="about__descr_text">Fresenius Kabi Austria GmbH - lactulose, hydroxyethyl starch.</div>
-                             <div class="about__descr_text">Alpavit Kaiser Champignon Hofmeister GmbH - lactose pharmaceutical and food.</div>
-                             <div class="about__descr_text">Accent Microcell, India - MCC, croscarmellose, magnesium stearate.</div>
-                             <div class="about__descr_text">OJSC Schuchinsk MSZ, Belarus - KSB-UF80, lactose.</div>
+                             <div class="about__descr_text">Our company was established in 2020.</div>
+                             <div class="about__descr_text">Our main activities is import of food ingredients from top-class producers.</div>
                          </div>
                          <div class="about__descr_bottom">
-                             <div class="about__descr_text">Our suppliers are more than 30 manufacturers of food ingredients in Europe, USA, China.
-                                 We choose a supplier not by price, but if possible to provide quality goods. Before delivery, the delivered goods are tested in independent laboratories. Our agent in China conducts an audit of each delivery. </div>
-                             <div class="about__descr_text">The goods are stored in a warehouse that is licensed for storage of pharmaceutical materials. </div>
-                             <div class="about__descr_text">We work with more than 500 buyers. Our customers are large pharmaceutical and food manufacturers, as well as small entrepreneurs. </div>
+                             <div class="about__descr_text">Advantages of cooperation with us: </div>
+                             <ul>
+                                 <li>We supply directly from top-class producers and could offer to our clients best quality and best cooperation conditions</li>
+                                 <li>Openness</li>
+                                 <li>Promptness</li>
+                             </ul>
                          </div>
                          <div class="about__descr_bottom-images">
                              <div class="about__descr_bottom-images_block">
@@ -199,7 +197,7 @@
                  <div class="col-lg-10 banner__main">
                      <div class="banner__main_block">
                          <div class="banner__main_title">
-                             We offer products from some of the world's largest manufacturers
+                             We offer products from trusted suppliers with world-known name only
                          </div>
                          <div class="banner__main_descr">
                              Our mission is to remain a highly efficient company - a leading distributor of quality chemical materials. Constantly improving our professional skills and abilities, we develop together with our partners!
@@ -259,7 +257,7 @@
                                  <img src="img/icons/location.svg" alt="location">
                              </div>
                              <div class="form__row_wrapper-title">
-                                 2464 Royal Ln. Mesa, New Jersey 45463
+                                 Украина, Киев, ул. Юрия Ильенко 81а
                              </div>
                          </div>
                          <div class="form__row_wrapper form__row_wrapper-MT">
@@ -267,7 +265,7 @@
                                  <img src="img/icons/phone.svg" alt="phone">
                              </div>
                              <div class="form__row_wrapper-title form__row_wrapper-title-PL">
-                                 <a href="callto: (270) 555-0117">(270) 555-0117</a>
+                                 <a href="callto: (067) 686-9291">+38(067)686-92-91</a>
                              </div>
                          </div>
                          <div class="form__row_links">
@@ -359,10 +357,10 @@
                              </div>
                              <div class="footer__top_top-right footer__top_top-right_MT">
                                  <div class="footer__top_bottom-place">
-                                     2464 Royal Ln. Mesa,
+                                     Украина, Киев,
                                  </div>
                                  <div class="footer__top_bottom-place">
-                                     New Jersey 454a63
+                                     ул. Юрия Ильенко 81а
                                  </div>
                              </div>
                          </div>
@@ -393,9 +391,9 @@
                                 ADDRESS
                             </div>
                             <div class="footer__bottom_mobile-sub-wrapper">
-                                <div class="footer__bottom_mobile-sub">2464 Royal Ln. Mesa,</div>
+                                <div class="footer__bottom_mobile-sub">Украина, Киев,</div>
                                 <div class="footer__bottom_mobile-sub">
-                                    New Jersey 454a63
+                                    ул. Юрия Ильенко 81а
                                 </div>
                             </div>
                         </div>
