@@ -64,16 +64,16 @@
             <div class="card__content">
 
                 <div class="card__name">
-                    <div class="card__content_title">Название</div>
+                    <div class="card__content_title">Название </div>
                     <input required class="card__content_input" name="name" type="text">
                 </div>
                 <div class="card__groupWrap">
                     <div class="card__group">
-                        <div class="card__content_title">Группа</div>
+                        <div class="card__content_title">Группа </div>
                         <input required class="card__content_input" name="group" type="text">
                     </div>
                     <div class="card__application">
-                        <div class="card__content_title">Область применения</div>
+                        <div class="card__content_title">Область применения </div>
                         <input required class="card__content_input" name="field_of_usage" value="" type="text">
                     </div>
                 </div>
@@ -240,6 +240,12 @@
             },
         });
     }
+
+
+
+
+
+
 
 
 </script>
