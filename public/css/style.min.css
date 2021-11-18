@@ -2272,11 +2272,13 @@
     cursor: pointer;
     margin-top: 24px;
 }
-.form__form_resend svg{ 
+.form__form_resend svg{
     min-width: 20px;
     transform: rotate(-90deg);
 }
 .default__form-hidden{
     display: none;
 }
+
+
 /*# sourceMappingURL=style.min.css.map */

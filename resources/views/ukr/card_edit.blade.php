@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/card.min.css">
     <title>Edit</title>
+
 </head>
 <body>
 <header class="header">
@@ -270,5 +271,6 @@
 
 </script>
 <script src="{{env('APP_URL')}}/js/card2.js"></script>
+<script src="{{env('APP_URL')}}/js/counter.js"></script>
 </body>
 </html>

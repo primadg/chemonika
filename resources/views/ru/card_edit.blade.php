@@ -268,5 +268,6 @@
 
 </script>
 <script src="{{env('APP_URL')}}/js/card2.js"></script>
+<script src="{{env('APP_URL')}}/js/counter.js"></script>
 </body>
 </html>

@@ -93,3 +93,16 @@ $("#myFile").change(function () {
     readURL(this);
 });
 
+
+
+$('input').on('keyup keypress paste', function (event) {
+    set_counter($(this), event)
+});
+$('textarea').on('keyup keypress paste', function (event) {
+    set_counter($(this), event)
+});
+
+
+
+
+

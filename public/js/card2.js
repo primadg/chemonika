@@ -101,35 +101,4 @@ if (closeBtn)
 
 
 
-$('input').on('keyup keypress paste', function (event) {
-    set_counter($(this), event)
-});
-$('textarea').on('keyup keypress paste', function (event) {
-    set_counter($(this), event)
-});
 
-
-$( document ).ready(function() {
-    // set_counter.log( "ready!" );
-    let arr = ($("div>span[data-count]"));
-    for(let i=0; i < arr.length;i++){
-        if($(arr[i]).parent().siblings("input").val())
-            set_counter($(arr[i]).parent().siblings("input"))
-        if($(arr[i]).parent().siblings("textarea").val())
-            set_counter($(arr[i]).parent().siblings("textarea"))
-    }
-});
-
-
-
-function set_counter(input, event=null) {
-    let counter = input.siblings('div').find("span");
-    if (counter) {
-        let max_char = parseInt(counter.attr("data-count"))+1;
-        if (input.val().length >= max_char) {
-            event.preventDefault();
-        } else {
-            counter.text("(" + (input.val().length) + "/"+(max_char-1)+")")
-        }
-    }
-}
