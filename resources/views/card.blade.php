@@ -108,7 +108,7 @@
             <div class="card__content_title">Описание товара <span data-count="1000"></span></div>
             <textarea required class="card__descr" name="description"
                       oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
-
+        </div>
             <div>
                 <div class="card__content_title">Применение продукта <span data-count="1000"></span></div>
                 <textarea required class="card__descr" name="product_usage"
@@ -158,7 +158,7 @@
                     @endforeach
                 </div>
                 <div class="card__table_add">
-                    <span>Добавить строку</span>
+                    <span id="add_f_str">Добавить строку</span>
                     <img src="{{env('APP_URL')}}/img/icons/card/chev_black.svg" alt="chev">
                 </div>
             </div>

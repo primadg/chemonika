@@ -11,7 +11,7 @@ new_counter()
 function new_counter(){
     let arr = ($("div>span[data-count]"));
     for(let i=0; i < arr.length;i++){
-        console.log("e");
+
         if($(arr[i]).parent().siblings("input"))
             set_counter($(arr[i]).parent().siblings("input"))
         if($(arr[i]).parent().siblings("textarea"))
@@ -36,6 +36,8 @@ function new_counter(){
 
 function set_counter(input, event=null) {
     let counter = input.siblings('div').find("span");
+    if(counter.length>1) return;
+    // console.log(counter.length)
     if (counter) {
         let max_char = parseInt(counter.attr("data-count"))+1;
         let count = input.val();

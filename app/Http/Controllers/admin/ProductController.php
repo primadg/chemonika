@@ -115,11 +115,21 @@ class ProductController extends Controller
         $path = $request->file('img')->store('public/img');
         $new_product->img = Storage::url($path);
 
+
+        $draft = !$this->check_required_fields([$request->name, $request->group, $request->description]);
         try {
 
-            if(!($request->name&&$request->group&&$request->description&&$request->field_of_usage&&$request->product_usage)){
-                return redirect()->back()->with('error', 'Заполните обязательные поля');
-            }
+//            if (!($request->name && $request->group && $request->description && $request->field_of_usage && $request->product_usage)) {
+////                $new_product->draft = true;
+////                if($is_ukr){
+////                    $first_product = new Product_en();
+////                    $second_product = new Product_ru();
+////                    $first_product->draft = true;
+////                    $second_product->draft = true;
+////                }
+////                return redirect()->back()->with('error', 'Заполните обязательные поля');
+//                $draft =
+//            }
 
             $new_product->name = $request->name;
             $new_product->group = $request->group;
@@ -132,22 +142,28 @@ class ProductController extends Controller
 
 
             if ($is_ukr) {
+                $new_product->draft = $draft;
                 $new_product->save();
                 $first = new Product_ru();
                 $second = new Product_en();
                 $first->pos_id = $new_product->id;
                 $first->img = $new_product->img;
+                $first->draft = $draft;
                 $first->save();
                 $second->pos_id = $new_product->id;
                 $second->img = $new_product->img;
+                $second->draft = $draft;
                 $second->save();
             } else {
                 $main_table->img = $new_product->img;
+                $main_table->draft = $draft;
                 $main_table->save();
                 $new_product->pos_id = $main_table->id;
+                $new_product->draft = $draft;
                 $new_product->save();
                 $second_product->pos_id = $main_table->id;
                 $second_product->img = $new_product->img;
+                $second_product->draft = $draft;;
                 $second_product->save();
 
             }
@@ -216,5 +232,15 @@ class ProductController extends Controller
     public function destroy($id)
     {
 
+    }
+
+    private function check_required_fields(array $params): bool
+    {
+        foreach ($params as $value) {
+            if ($value == null) {
+                return false;
+            }
+        }
+        return true;
     }
 }
