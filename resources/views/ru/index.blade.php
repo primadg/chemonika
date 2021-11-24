@@ -227,7 +227,7 @@
                          <div class="products__block_main">
                              <div class="products__block_main-title">{{$product->name}}</div>
                              <div class="products__block_main-subTitle">({{$product->group}})</div>
-                             <div class="products__block_main-descr">{{substr( $product->description,0,120)}}...</div>
+                             <div style="text-align:justify" class="products__block_main-descr">{{substr( $product->description,0,120)}}...</div>
                              <div class="products__block_main-btn">
                                  <div onclick="location.href=' {{route("products.show",$product->id)}}'" >Подробней</div>
                                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -65,12 +65,12 @@
         <div class="card__content">
 
             <div class="card__name">
-                <div class="card__content_title">Название <span data-count="120"></span></div>
+                <div class="card__content_title">Название* <span data-count="120"></span></div>
                 <input required class="card__content_input" name="name" type="text">
             </div>
             <div class="card__groupWrap">
                 <div class="card__group">
-                    <div class="card__content_title">Группа <span data-count="120"></span></div>
+                    <div class="card__content_title">Группа* <span data-count="120"></span></div>
                     <input required class="card__content_input" name="group" type="text">
                 </div>
                 <div class="card__application">
@@ -105,27 +105,27 @@
 
         </div>
         <div>
-            <div class="card__content_title">Описание товара <span data-count="1000"></span></div>
+            <div class="card__content_title">Описание товара* <span data-count="2080"></span></div>
             <textarea required class="card__descr" name="description"
                       oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
         </div>
             <div>
-                <div class="card__content_title">Применение продукта <span data-count="1000"></span></div>
+                <div class="card__content_title">Применение продукта <span data-count="2080"></span></div>
                 <textarea required class="card__descr" name="product_usage"
                           oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
             </div>
             <div>
-                <div class="card__content_title">Стандарты <span data-count="1000"></span></div>
+                <div class="card__content_title">Стандарты <span data-count="500"></span></div>
                 <textarea required class="card__descr" name="standart"
                           oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
             </div>
             <div>
-                <div class="card__content_title">Упаковка <span data-count="1000"></span></div>
+                <div class="card__content_title">Упаковка <span data-count="500"></span></div>
                 <textarea required class="card__descr" name="package"
                           oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
             </div>
             <div>
-                <div class="card__content_title">Хранение <span data-count="1000"></span></div>
+                <div class="card__content_title">Хранение <span data-count="500"></span></div>
                 <textarea required class="card__descr" name="stogare"
                           oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
             </div>

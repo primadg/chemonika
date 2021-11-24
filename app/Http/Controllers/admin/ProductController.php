@@ -116,24 +116,22 @@ class ProductController extends Controller
         $new_product->img = Storage::url($path);
 
 
-        $draft = !$this->check_required_fields([$request->name, $request->group, $request->description]);
+        if ($this->check_required_fields([$request->name, $request->group, $request->description])) {
+            return redirect()->back()->with('error', 'Заполните обязательные поля (со звездочкой)');
+        }
+
+
+        $draft = $this->check_required_fields([$request->field_of_usage, $request->product_usage,
+            $request->standart, $request->package, $request->stogare]);
+
         try {
 
-//            if (!($request->name && $request->group && $request->description && $request->field_of_usage && $request->product_usage)) {
-////                $new_product->draft = true;
-////                if($is_ukr){
-////                    $first_product = new Product_en();
-////                    $second_product = new Product_ru();
-////                    $first_product->draft = true;
-////                    $second_product->draft = true;
-////                }
-////                return redirect()->back()->with('error', 'Заполните обязательные поля');
-//                $draft =
-//            }
 
+            // обязательные поля
             $new_product->name = $request->name;
             $new_product->group = $request->group;
             $new_product->description = $request->description;
+            // необязательные поля
             $new_product->field_of_usage = $request->field_of_usage;
             $new_product->Product_usage = $request->product_usage;
             $new_product->Standart = $request->standart;
@@ -170,7 +168,7 @@ class ProductController extends Controller
 
             return redirect('admin');
         } catch (\Exception $e) {
-            return redirect()->back()->with('error', 'Ошибка');
+            return redirect()->back()->with('error', $e->getMessage());
         }
     }
 
@@ -237,10 +235,10 @@ class ProductController extends Controller
     private function check_required_fields(array $params): bool
     {
         foreach ($params as $value) {
-            if ($value == null) {
-                return false;
+            if (!$value) {
+                return true;
             }
         }
-        return true;
+        return false;
     }
 }
