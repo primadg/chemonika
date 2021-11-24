@@ -257,7 +257,7 @@
                                  <img src="img/icons/location.svg" alt="location">
                              </div>
                              <div class="form__row_wrapper-title">
-                                 Украина, Киев, ул. Юрия Ильенко 81а
+                                 81a Yuri Ilyenko Str, Kyiv, Ukraine
                              </div>
                          </div>
                          <div class="form__row_wrapper form__row_wrapper-MT">
@@ -266,6 +266,9 @@
                              </div>
                              <div class="form__row_wrapper-title form__row_wrapper-title-PL">
                                  <a href="callto: (067) 686-9291">+38(067)686-92-91</a>
+                             </div>
+                             <div class="form__row_wrapper-title form__row_wrapper-title-PL">
+                                 <a href="callto: (050) 332-66-44">38(050)332-66-44</a>
                              </div>
                          </div>
                          <div class="form__row_links">
@@ -357,10 +360,10 @@
                              </div>
                              <div class="footer__top_top-right footer__top_top-right_MT">
                                  <div class="footer__top_bottom-place">
-                                     Украина, Киев,
+                                     81a Yuri Ilyenko Str,
                                  </div>
                                  <div class="footer__top_bottom-place">
-                                     ул. Юрия Ильенко 81а
+                                     Kyiv, Ukraine
                                  </div>
                              </div>
                          </div>
@@ -391,9 +394,9 @@
                                 ADDRESS
                             </div>
                             <div class="footer__bottom_mobile-sub-wrapper">
-                                <div class="footer__bottom_mobile-sub">Украина, Киев,</div>
+                                <div class="footer__bottom_mobile-sub"> 81a Yuri Ilyenko Str,</div>
                                 <div class="footer__bottom_mobile-sub">
-                                    ул. Юрия Ильенко 81а
+                                    Kyiv, Ukraine
                                 </div>
                             </div>
                         </div>

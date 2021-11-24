@@ -274,10 +274,10 @@
                         </div>
                         <div class="footer__top_top-right footer__top_top-right_MT">
                             <div class="footer__top_bottom-place">
-                                Украина, Киев,
+                                81a Yuri Ilyenko Str,
                             </div>
                             <div class="footer__top_bottom-place">
-                                ул. Юрия Ильенко 81а
+                                Kyiv, Ukraine
                             </div>
                         </div>
                     </div>
@@ -308,9 +308,9 @@
                             ADDRESS
                         </div>
                         <div class="footer__bottom_mobile-sub-wrapper">
-                            <div class="footer__bottom_mobile-sub">Украина, Киев,</div>
+                            <div class="footer__bottom_mobile-sub">81a Yuri Ilyenko Str,</div>
                             <div class="footer__bottom_mobile-sub">
-                                ул. Юрия Ильенко 81а
+                                Kyiv, Ukraine
                             </div>
                         </div>
                     </div>
