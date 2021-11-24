@@ -108,9 +108,15 @@ class AdminController extends Controller
             }
         }
 
+        if ($this->check_required_fields([$request->name, $request->group, $request->description])) {
+            return redirect()->back()->with('error', 'Заполните обязательные поля (со звездочкой)');
+        }
+
+
+        $draft = $this->check_required_fields([$request->field_of_usage, $request->product_usage,
+            $request->standart, $request->package, $request->stogare]);
+
         try {
-
-
             $product->name = $request->name;
             $product->group = $request->group;
             $product->description = $request->description;
@@ -119,12 +125,12 @@ class AdminController extends Controller
             $product->Standart = $request->standart;
             $product->Package = $request->package;
             $product->Storage = $request->stogare;
-
+            $product->draft = $draft;
             $product->save();
 
             return redirect()->back();
         } catch (\Exception $ex) {
-            return redirect()->back()->with('error', 'Ошибка');
+            return redirect()->back()->with('error', $ex->getMessage());
         }
     }
 
@@ -132,6 +138,20 @@ class AdminController extends Controller
     {
         return DB::table($table)->where('pos_id', $main_id)->first()->id;
     }
+
+    private function check_required_fields(array $params): bool
+    {
+        foreach ($params as $value) {
+            if (!$value) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+
+
 
 
 }
