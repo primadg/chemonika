@@ -257,6 +257,7 @@
                             <div style="text-align:justify"
                                  class="products__block_main-descr">{{substr( $product->description,0,120)}}...
                             </div>
+                            @if (!$product->draft)
                             <div class="products__block_main-btn">
                                 <div onclick="location.href=' {{route("products.show",$product->id)}}'">Дізнатися
                                     більше
@@ -266,6 +267,7 @@
                                     <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"/>
                                 </svg>
                             </div>
+                            @endif
                         </div>
                     </div>
                 @endforeach

@@ -134,7 +134,8 @@
                     <div class="about__descr_bottom">
                         <div class="about__descr_text">Advantages of cooperation with us:</div>
                         <ul>
-                            <li>We supply directly from top-class producers and can offer to our  customers the best quality
+                            <li>We supply directly from top-class producers and can offer to our customers the best
+                                quality
                                 and best cooperation conditions
                             </li>
                             <li>Openness</li>
@@ -256,13 +257,16 @@
                             <div style="text-align:justify"
                                  class="products__block_main-descr">{{substr($product->description,0,120)}}...
                             </div>
-                            <div class="products__block_main-btn">
-                                <div onclick="location.href=' {{route("products.show",$product->id)}}'">Show more</div>
-                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"/>
-                                </svg>
-                            </div>
+                            @if (!$product->draft)
+                                <div class="products__block_main-btn">
+                                    <div onclick="location.href=' {{route("products.show",$product->id)}}'">Show more
+                                    </div>
+                                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"/>
+                                    </svg>
+                                </div>
+                            @endif
                         </div>
                     </div>
                 @endforeach

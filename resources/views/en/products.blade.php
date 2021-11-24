@@ -140,6 +140,7 @@
                                 <div class="secondPage__goods_card-main_subTitle">
                                     {{ $product->description }}
                                 </div>
+                                @if (!$product->draft)
                                 <div class="products__block_main-btn secondPage__goods_card-btn">
                                     <div onclick="location.href='{{route("products.show", $product->id)}}'">Show more</div>
                                     <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
@@ -148,6 +149,7 @@
                                               fill="#219653"></path>
                                     </svg>
                                 </div>
+                                @endif
                             </div>
                         </div>
                     @endforeach
