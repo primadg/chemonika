@@ -69,12 +69,12 @@
         <div class="card__content">
 
             <div class="card__name">
-                <div class="card__content_title">Название <span data-count="120"></span></div>
+                <div class="card__content_title">Название* <span data-count="120"></span></div>
                 <input required class="card__content_input" value="{{$product->name}}" name="name" type="text">
             </div>
             <div class="card__groupWrap">
                 <div class="card__group">
-                    <div class="card__content_title">Группа <span data-count="120"></span></div>
+                    <div class="card__content_title">Группа* <span data-count="120"></span></div>
                     <input required class="card__content_input" value="{{$product->group}}" name="group" type="text">
                 </div>
                 <div class="card__application">
@@ -110,7 +110,7 @@
 
         </div>
         <div>
-            <div class="card__content_title">Описание товара<span data-count="2080"></span></div>
+            <div class="card__content_title">Описание товара*<span data-count="2080"></span></div>
             <textarea required class="card__descr" name="description"
                       oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{$product->description}}"</textarea>
         </div>
