@@ -112,27 +112,27 @@
 
         </div>
         <div>
-            <div class="card__content_title">Описание товара<span data-count="1000"></span></div>
+            <div class="card__content_title">Описание товара<span data-count="2080"></span></div>
             <textarea required class="card__descr" name="description"
                       oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{$product->description}}"</textarea>
         </div>
         <div>
-            <div class="card__content_title">Применение продукта<span data-count="1000"></span></div>
+            <div class="card__content_title">Применение продукта<span data-count="2080"></span></div>
             <textarea required class="card__descr" name="product_usage"
                       oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{$product->Product_usage}}</textarea>
         </div>
         <div>
-            <div class="card__content_title">Стандарты<span data-count="1000"></span></div>
+            <div class="card__content_title">Стандарты<span data-count="500"></span></div>
             <textarea required class="card__descr" name="standart"
                       oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{$product->Standart}}</textarea>
         </div>
         <div>
-            <div class="card__content_title">Упаковка <span data-count="1000"></span></div>
+            <div class="card__content_title">Упаковка <span data-count="500"></span></div>
             <textarea required class="card__descr" name="package"
                       oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{$product->Package}}</textarea>
         </div>
         <div>
-            <div class="card__content_title">Хранение <span data-count="1000"></span></div>
+            <div class="card__content_title">Хранение <span data-count="500"></span></div>
             <textarea required class="card__descr" name="stogare"
                       oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{$product->Storage}}</textarea>
         </div>
