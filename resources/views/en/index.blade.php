@@ -120,97 +120,63 @@
             </div>
         </div>
     </section>
-    <section class="about">
+    <section class="сompany">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-7 col-md-12">
-                    <h2 class="about__title">Information about company</h2>
-                    <div class="about__descr">
-                        <div class="about__descr_text">Our company was established in 2020.</div>
-                        <div class="about__descr_text">Our main activitу is import of food ingredients from top-class
-                            producers.
-                        </div>
+            <div class="сompany__title">
+                Information about company
+            </div>
+            <div class="сompany__wrapper">
+                <div class="сompany__left">
+                    <div class="сompany__text">Our company was established in 2020. Our main activitу is import of food
+                        ingredients from top-class producers.
                     </div>
-                    <div class="about__descr_bottom">
-                        <div class="about__descr_text">Advantages of cooperation with us:</div>
-                        <ul>
-                            <li>We supply directly from top-class producers and can offer to our customers the best
-                                quality
-                                and best cooperation conditions
-                            </li>
-                            <li>Openness</li>
-                            <li>Promptness</li>
-                        </ul>
+
+                    <div class="сompany__text">
+
+                        Advantages of cooperation with us :
+                        <li>
+                            We supply directly from top-class producers and can offer to our customers the best quality
+                            and the best cooperation conditions
+                        </li>
+                        <li>
+                            Openness
+                        </li>
+                        <li>
+                            Promptness
+                        </li>
                     </div>
-                    <div class="about__descr_bottom-images">
-                        <div class="about__descr_bottom-images_block">
-                            <img src="img/icons/chumak.svg" alt="img">
-                            <img src="img/icons/roshen1.png" alt="img">
-                        </div>
-                        <div class="about__descr_bottom-images_block">
-                            <img src="img/icons/nestle.svg" alt="img">
-                            <img src="img/icons/premia.svg" alt="img">
-                        </div>
-                        <div class="about__descr_bottom-images_block">
-                            <img src="img/icons/4asha.svg" alt="img">
-                            <img src="img/icons/konti.svg" alt="img">
-                        </div>
-                        <!-- <div class="about__descr_bottom-images_left">
-                            <div>
-                                <img src="img/icons/chumak.svg" alt="img">
-                            </div>
-                            <div>
-                                <img src="img/icons/nestle.svg" alt="img">
-                            </div>
-                            <div>
-                                <img src="img/icons/4asha.svg" alt="img">
-                            </div>
-                        </div>
-                        <div class="about__descr_bottom-images_right">
-                            <div>
-                                <img src="img/icons/roshen1.png" alt="img">
-                            </div>
-                            <div>
-                                <img src="img/icons/premia.svg" alt="img">
-                            </div>
-                            <div>
-                                <img src="img/icons/konti.svg" alt="img">
-                            </div>
-                        </div> -->
-                    </div>
-                    <a href="mailto: {{env("MAIL_TO_NAME")}}" class="header__info_button">
+                    <a href="#about__form" class="сompany__btn scrollTo">
                         <span>Write to us</span>
-                        <svg class="header__info_button-svg" width="12" height="8" viewBox="0 0 12 8" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#ffffff"/>
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 0L0.589996 1.41L5.17 6L0.589996 10.59L2 12L8 6L2 0Z" fill="white"/>
                         </svg>
                     </a>
                 </div>
-                <div class="col-lg-4 about__products">
-                    <div class="about__products_wrapper">
-                        <div class="about__products_wrapper-left">
-                            <img src="img/icons/chumak.svg" alt="img">
-                        </div>
-                        <div class="about__products_wrapper-right">
-                            <img src="img/icons/nestle.svg" alt="img">
-                        </div>
-                    </div>
-                    <div class="about__products_wrapper">
-                        <div class="about__products_wrapper-left">
-                            <img src="img/icons/4asha.svg" alt="img">
-                        </div>
-                        <div class="about__products_wrapper-right">
-                            <img src="img/icons/roshen.svg" alt="img">
-                        </div>
-                    </div>
-                    <div class="about__products_wrapper">
-                        <div class="about__products_wrapper-left">
-                            <img src="img/icons/premia.svg" alt="img">
-                        </div>
-                        <div class="about__products_wrapper-right">
-                            <img src="img/icons/konti.svg" alt="img">
-                        </div>
-                    </div>
+                <div class="сompany__right">
+                    <img class="сompany__right_img" src="{{env("APP_URL")}}/img/img.png" alt="img">
+                    <div class="сompany__right_square"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="clients">
+        <div class="container">
+            <div class="clients__title">Our clients</div>
+            <div class="clients__wrapper">
+                <div class="clients__block">
+                    <img src="{{env("APP_URL")}}/img/photo/image.png" alt="image">
+                </div>
+                <div class="clients__block">
+                    <img src="{{env("APP_URL")}}/img/photo/image1.png" alt="image">
+                </div>
+                <div class="clients__block">
+                    <img src="{{env("APP_URL")}}/img/photo/image2.png" alt="image">
+                </div>
+                <div class="clients__block">
+                    <img src="{{env("APP_URL")}}/img/photo/image3.png" alt="image">
+                </div>
+                <div class="clients__block">
+                    <img src="{{env("APP_URL")}}/img/photo/image4.png" alt="image">
                 </div>
             </div>
         </div>

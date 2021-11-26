@@ -120,97 +120,63 @@
             </div>
         </div>
     </section>
-    <section class="about">
+    <section class="сompany">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-7 col-md-12">
-                    <h2 class="about__title">Інформація про компанію</h2>
-                    <div class="about__descr">
-                        <div class="about__descr_text">Наша компанія була заснована в 2020 році.</div>
-                        <div class="about__descr_text">Головним напрямком діяльності нашої компанії є поставка харчових
-                            інгредієнтів від провідних виробників.
-                        </div>
+            <div class="сompany__title">
+                Информація про компанію
+            </div>
+            <div class="сompany__wrapper">
+                <div class="сompany__left">
+                    <div class="сompany__text">Наша компанія була заснована в 2020 році. Головним напрямком діяльності
+                        нашої компанії є поставка харчових інгредієнтів від провідних виробників.
                     </div>
-                    <div class="about__descr_bottom">
-                        <div class="about__descr_text">Переваги роботи з нашою компанією:</div>
-                        <ul>
-                            <li>Ми постачаємо продукцію напряму від провідних виробників, тому можемо запропонувати
-                                нашим
-                                клієнтам найкращу якість і найкращі умови співробітництва
-                            </li>
-                            <li>Відкритість</li>
-                            <li>Оперативність</li>
-                        </ul>
+
+                    <div class="сompany__text">
+
+                        Переваги роботи з нашою компанією :
+                        <li>
+                            Ми постачаємо продукцію напряму від провідних виробників, тому можемо запропонувати нашим
+                            клієнтам найкращу якість і найкращі умови співробітництва
+                        </li>
+                        <li>
+                            Відкритість
+                        </li>
+                        <li>
+                            Оперативність
+                        </li>
                     </div>
-                    <div class="about__descr_bottom-images">
-                        <div class="about__descr_bottom-images_block">
-                            <img src="img/icons/chumak.svg" alt="img">
-                            <img src="img/icons/roshen1.png" alt="img">
-                        </div>
-                        <div class="about__descr_bottom-images_block">
-                            <img src="img/icons/nestle.svg" alt="img">
-                            <img src="img/icons/premia.svg" alt="img">
-                        </div>
-                        <div class="about__descr_bottom-images_block">
-                            <img src="img/icons/4asha.svg" alt="img">
-                            <img src="img/icons/konti.svg" alt="img">
-                        </div>
-                        <!-- <div class="about__descr_bottom-images_left">
-                            <div>
-                                <img src="img/icons/chumak.svg" alt="img">
-                            </div>
-                            <div>
-                                <img src="img/icons/nestle.svg" alt="img">
-                            </div>
-                            <div>
-                                <img src="img/icons/4asha.svg" alt="img">
-                            </div>
-                        </div>
-                        <div class="about__descr_bottom-images_right">
-                            <div>
-                                <img src="img/icons/roshen1.png" alt="img">
-                            </div>
-                            <div>
-                                <img src="img/icons/premia.svg" alt="img">
-                            </div>
-                            <div>
-                                <img src="img/icons/konti.svg" alt="img">
-                            </div>
-                        </div> -->
-                    </div>
-                    <a href="mailto: {{env("MAIL_TO_NAME")}}" class="header__info_button">
+                    <a href="#about__form" class="сompany__btn scrollTo">
                         <span>Написати нам</span>
-                        <svg class="header__info_button-svg" width="12" height="8" viewBox="0 0 12 8" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#ffffff"/>
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 0L0.589996 1.41L5.17 6L0.589996 10.59L2 12L8 6L2 0Z" fill="white"/>
                         </svg>
                     </a>
                 </div>
-                <div class="col-lg-4 about__products">
-                    <div class="about__products_wrapper">
-                        <div class="about__products_wrapper-left">
-                            <img src="img/icons/chumak.svg" alt="img">
-                        </div>
-                        <div class="about__products_wrapper-right">
-                            <img src="img/icons/nestle.svg" alt="img">
-                        </div>
-                    </div>
-                    <div class="about__products_wrapper">
-                        <div class="about__products_wrapper-left">
-                            <img src="img/icons/4asha.svg" alt="img">
-                        </div>
-                        <div class="about__products_wrapper-right">
-                            <img src="img/icons/roshen.svg" alt="img">
-                        </div>
-                    </div>
-                    <div class="about__products_wrapper">
-                        <div class="about__products_wrapper-left">
-                            <img src="img/icons/premia.svg" alt="img">
-                        </div>
-                        <div class="about__products_wrapper-right">
-                            <img src="img/icons/konti.svg" alt="img">
-                        </div>
-                    </div>
+                <div class="сompany__right">
+                    <img class="сompany__right_img" src="{{env("APP_URL")}}/img/img.png" alt="img">
+                    <div class="сompany__right_square"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="clients">
+        <div class="container">
+            <div class="clients__title">Наші кліенти</div>
+            <div class="clients__wrapper">
+                <div class="clients__block">
+                    <img src="{{env("APP_URL")}}/img/photo/image.png" alt="image">
+                </div>
+                <div class="clients__block">
+                    <img src="{{env("APP_URL")}}/img/photo/image1.png" alt="image">
+                </div>
+                <div class="clients__block">
+                    <img src="{{env("APP_URL")}}/img/photo/image2.png" alt="image">
+                </div>
+                <div class="clients__block">
+                    <img src="{{env("APP_URL")}}/img/photo/image3.png" alt="image">
+                </div>
+                <div class="clients__block">
+                    <img src="{{env("APP_URL")}}/img/photo/image4.png" alt="image">
                 </div>
             </div>
         </div>
@@ -284,15 +250,15 @@
                                  class="products__block_main-descr">{{substr( $product->description,0,120)}}...
                             </div>
                             @if (!$product->draft)
-                            <div class="products__block_main-btn">
-                                <div onclick="location.href=' {{route("products.show",$product->id)}}'">Дізнатися
-                                    більше
+                                <div class="products__block_main-btn">
+                                    <div onclick="location.href=' {{route("products.show",$product->id)}}'">Дізнатися
+                                        більше
+                                    </div>
+                                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"/>
+                                    </svg>
                                 </div>
-                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#219653"/>
-                                </svg>
-                            </div>
                             @endif
                         </div>
                     </div>
