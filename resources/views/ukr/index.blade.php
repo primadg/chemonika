@@ -243,6 +243,32 @@
             </div>
         </div>
     </section>
+
+    <section style="padding-top: 160px" class="store">
+        <div class="container">
+            <div class="store__title">Наші склади</div>
+            <div class="store__wrapper">
+                <div class="store__block">
+                    <div class="store__block_square">
+                        <img src="{{env("APP_URL")}}/img/images/1_storage.png" alt="Kyiv">
+                    </div>
+                    <div class="store__block_title">Київська область<br>с. Гурівщина</div>
+                </div>
+                <div class="store__block">
+                    <div class="store__block_square">
+                        <img src="{{env("APP_URL")}}/img/images/2_storage.png" alt="Charkiv">
+                    </div>
+                    <div class="store__block_title">м. Харків</div>
+                </div>
+                <div class="store__block">
+                    <div class="store__block_square">
+                        <img src="{{env("APP_URL")}}/img/images/3_storage.png" alt="Odessa">
+                    </div>
+                    <div class="store__block_title">м. Одеса</div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="products">
         <div class="container">
             <div class="row">
