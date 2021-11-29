@@ -429,5 +429,47 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'Standart' => "Compliant with quality standards: ВР2009, USP32, FCC6, E202",
             'description' => "Soy protein isolate - is cleared from  used from carbohydrates and fats, soy product which contain not less than 90% protein. He has low viscosity, high solubility, good fat emulsifying ability and is one of most functional products on market.",
         ]);
+
+
+
+/// Пшеничная клейковина
+
+
+        DB::table('product_ukrs')->insert([
+            'name' => "Пшенична клейковина (Глютен)",
+            'group' => "протеїни",
+            'field_of_usage' => "борошномельна, хлібопекарська, кондитерська, макаронна, м”ясна, виробництво напівфабрикатів (пельмені, равіолі, вареники)",
+            'Product_usage'=> "Борошномельне виробництво: для покращення якості борошна. Хлібопекарське виробництво: підвищує газоутримуючу здатність, покращує формостійкість, підвищує вихід та термін зберігання готових виробів. Кондитерське виробництво: використовується для виробництва затяжного печива та галет при використанні борошна з низьким вмістом клейковини, також для листкового, бісквітного, пісочного та заварного тіста. Виробництво макаронних виробів: підвищує пружність, усуває липкість зварених виробів. Виробництво напівфабрикатів: знижує розварювання виробів, підвищує еластичність тіста, знижує злипання виробів. Мясне виробництво: використовується у приготуванні фаршів, забезпечує однородну структуру фаршу та ковбасних виробів, підвищує вміст білку та покращує структуру й смакові якості виробів. ",
+            'Package' => "Мішки 25 кг",
+            'img'=>'/img/images/product1.png',
+            'Storage' => "зберігати в сухому захищеному від світла місці.",
+            'Standart' => "Відповідає вимогам стандартів якості: ВР2009, USP32, FCC6, E202",
+            'description' => "Пшенична клейковина- нерозчинний у воді білок рослинного походження, у процесі гідратації набрякає та утворює волокна. Функціональні властивості глютену полягають у високій (180-200%) абсорбційній здатності, утворенню стабільної пружньо-еластичної структури та термостійкості при 85°С.",
+        ]);
+        DB::table('product_rus')->insert([
+            'name' => "Пшеничная клейковина (Глютен)",
+            'group' => "Протеин",
+            'img'=>'/img/images/product1.png',
+            'pos_id'=>10,
+            'Product_usage'=>"Мукомольное производство: для улучшения качества муки. Хлебопекарное производство: увеличивает газоудерживающую способность, улучшает формоустойчивость,повышает выход и срок хранения готовых изделий. Кондитерское производство: используется для производства затяжного печенья и галет при использовании муки с пониженым содержанием клейковины, также для слоеного, бисквитного, песочного и заварного теста. Производство макаронных изделий: повышает упругость, устраняет липкость сваренных изделий. Производство полуфабрикатов: снижает развариваемость изделий, увеличивает эластичность теста, снижает слипаемость изделий. Мясное производство: используется в приготовлении фаршей, обеспечивает однородную структуру фарша и колбасных изделий, повышает содержание белка улучшает структуру и вкусовые качества изделий.",
+            'field_of_usage' => "мукомольная, хлебопекарная, кондитерская, макаронная, мясная, производство полуфабрикатов (пельмени, равиоли, вареники)",
+            'Package' => "Мешки 25 кг",
+            'Storage' => "Хранить в сухом защищенном от света месте",
+            'Standart' => "Соответствует стандартам качества: ВР2009, USP32, FCC6, E202",
+            'description' => "Пшеничная клейковина – водонерастворимый белок растительного происхождения, в процессе гидратации набухает и образует волокна. Функциональные свойства глютена заключаются в высокой (180 - 200% ) абсорбционной способности, образовании стабильной упруго - эластичной структуры и термоустойчивости при 85°С.",
+        ]);
+        DB::table('product_ens')->insert([
+            'name' => "Wheat gluten",
+            'group' => "Protein",
+            'img'=>'/img/images/product1.png',
+            'pos_id'=>10,
+            'Product_usage'=>"Production of flour: to improve quality of flour. Production of bread: increases gas retaining power, improves shape stability, yield and shelf life of the produce. Confectionery: used for production of short dough cookies and plain biscuits if using flour with low gluten content, also for production of puff pastry, biscuit, shortcrust and choux pastry dough. Production of pasta: improves resilience, removes adhesiveness of ready pasta. Manufacturing of semi-ready products: prevents overcooking, improves dough elasticity, reduces adhesiveness of cooked products. Meat  industry: used in production of forcemeat, ensures homogeneous structure of forcemeat  and sausage products, improves protein content, structure and taste of the products.",
+            'field_of_usage' => " Production of flour, bread, confectionary, pasta, meat,   semi-ready products (pelmeni, ravioli, dumplings).",
+            'Package' => "25 kg bags",
+            'Storage' => "Store in a dry place protected from direct sunlight",
+            'Standart' => "Compliant with quality standards: ВР2009, USP32, FCC6, E202",
+            'description' => "Wheat gluten is a plant protein which is nonsoluble in water. In the process of hydratation it creates fibers. Functional properties of gluten include high absorbing properties (180-200%), creation of stable viscoelastic structure and thermal stability at 85deg C.",
+        ]);
     }
+
 }
