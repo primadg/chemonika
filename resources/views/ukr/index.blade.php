@@ -278,14 +278,7 @@
             </div>
             <div class="row form__row">
                 <div class="col-lg-6 form__social">
-                    <div class="form__row_wrapper">
-                        <div>
-                            <img src="img/icons/location.svg" alt="location">
-                        </div>
-                        <div class="form__row_wrapper-title">
-                            Україна, м. Київ, вул. Юрія Ильєнка 81а
-                        </div>
-                    </div>
+
                     <div class="form__row_wrapper form__row_wrapper-MT">
                         <div>
                             <img src="img/icons/phone.svg" alt="phone">
@@ -296,6 +289,38 @@
                         </div>
                         <div class="form__row_wrapper-title form__row_wrapper-title-PL">
                             <a href="callto: (050) 332-66-44"> +38(050)332-66-44</a>
+                        </div>
+                    </div>
+                    <div class="form__row_wrapper form__row_wrapper-MT">
+                        <div>
+                            <img style="opacity: 0" src="img/icons/phone.svg" alt="phone">
+                        </div>
+
+                        <div class="form__row_wrapper-title form__row_wrapper-title-PL">
+                            <a href="callto: (067) 686-9291">+38(067)686-92-91</a>
+                        </div>
+                        <div class="form__row_wrapper-title form__row_wrapper-title-PL">
+                            <a href="callto: (050) 332-66-44"> +38(050)332-66-44</a>
+                        </div>
+                    </div>
+                    <div class="form__row_wrapper form__row_wrapper-MT">
+                        <div>
+                            <img style="opacity: 0" src="img/icons/phone.svg" alt="phone">
+                        </div>
+
+                        <div class="form__row_wrapper-title form__row_wrapper-title-PL">
+                            <a href="callto: (067) 686-9291">+38(067)686-92-91</a>
+                        </div>
+                        <div class="form__row_wrapper-title form__row_wrapper-title-PL">
+                            <a href="callto: (050) 332-66-44"> +38(050)332-66-44</a>
+                        </div>
+                    </div>
+                    <div style="margin-top: 45px" class="form__row_wrapper">
+                        <div>
+                            <img src="img/icons/location.svg" alt="location">
+                        </div>
+                        <div class="form__row_wrapper-title">
+                            Україна, м. Київ, вул. Юрія Ильєнка 81а
                         </div>
                     </div>
                     <div class="form__row_links">
