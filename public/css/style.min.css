@@ -2575,4 +2575,8 @@
 }
 
 .products__block_header img{object-fit: cover}
+
+.header__logo img{max-width: 154px}
+
+.footer__logo img{max-width: 154px}
 /*# sourceMappingURL=style.min.css.map */
