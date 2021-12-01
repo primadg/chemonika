@@ -194,11 +194,12 @@
             </div>
         </div>
     </section>
+
     <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 footer__logo">
-                    <img src="{{env('APP_URL')}}/img/icons/logo__footer.svg" alt="logo">
+                    <img src="{{env("APP_URL")}}/img/icons/logo__footer.svg" alt="logo">
                 </div>
                 <div class="col-lg-6 footer__top">
                     <div class="footer__top_top">
@@ -225,10 +226,10 @@
                         </div>
                         <div class="footer__top_top-right footer__top_top-right_MT">
                             <div class="footer__top_bottom-place">
-                                Украина, Киев,
+                                Україна, м. Київ,
                             </div>
                             <div class="footer__top_bottom-place">
-                                ул. Юрия Ильенко 81а
+                                вул. Юрія Ильєнка 81а
                             </div>
                         </div>
                     </div>
@@ -259,9 +260,9 @@
                             АДРЕСА
                         </div>
                         <div class="footer__bottom_mobile-sub-wrapper">
-                            <div class="footer__bottom_mobile-sub">Украина, Киев,</div>
+                            <div class="footer__bottom_mobile-sub">Україна, м. Київ,</div>
                             <div class="footer__bottom_mobile-sub">
-                                ул. Юрия Ильенко 81а
+                                вул. Юрія Ильєнка 81а
                             </div>
                         </div>
                     </div>

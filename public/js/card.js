@@ -80,6 +80,7 @@ $("#myFile").change(function(){
 
 let closeBtn = document.querySelector('.warning__close');
 
+if(closeBtn)
 closeBtn.onclick = (e) => {
     e.target.closest('.warning').classList.remove('warning__active');
 };

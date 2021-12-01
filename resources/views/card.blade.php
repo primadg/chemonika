@@ -31,10 +31,11 @@
 </header>
 <section class="card">
 
-        <form id="form_id" class="container" method="post" enctype="multipart/form-data" action="{{route('products_admin.store')}}">
-            @csrf
+    <form id="form_id" class="container" method="post" enctype="multipart/form-data"
+          action="{{route('products_admin.store')}}">
+        @csrf
 
-            @if(session('error'))
+        @if(session('error'))
             <div class="warning warning__active">
                 <div>
                     <img src="{{env('APP_URL')}}/img/icons/card/close_red.svg" alt="warning">
@@ -46,72 +47,88 @@
                     <img class="warning__close" src="{{env('APP_URL')}}/img/icons/card/close_red.svg" alt="close">
                 </div>
             </div>
-            @endif
+        @endif
 
-            <input type="hidden" value="ukr" name="lang" id="lang_data">
-            <a href="{{env('APP_URL')}}/admin" class="card__wrapper">
-                <img src="{{env('APP_URL')}}/img/icons/card/chevron.svg" alt="back">
-                <div class="card__back">back to Admin panel</div>
-            </a>
-            <div class="card__language">
-                <div class="card__title">Языковые версии</div>
-                <div class="card__tabs">
-                    <div class="card__tabs_tab">Eng</div>
-                    <div class="card__tabs_tab ">Руc</div>
-                    <div class="card__tabs_tab card__tabs_tab-active">Укр</div>
-                </div>
+        <input type="hidden" value="ukr" name="lang" id="lang_data">
+        <a href="{{env('APP_URL')}}/admin" class="card__wrapper">
+            <img src="{{env('APP_URL')}}/img/icons/card/chevron.svg" alt="back">
+            <div class="card__back">back to Admin panel</div>
+        </a>
+        <div class="card__language">
+            <div class="card__title">Языковые версии</div>
+            <div class="card__tabs">
+                <div class="card__tabs_tab">Eng</div>
+                <div class="card__tabs_tab ">Руc</div>
+                <div class="card__tabs_tab card__tabs_tab-active">Укр</div>
             </div>
-            <div class="card__content">
+        </div>
+        <div class="card__content">
 
-                <div class="card__name">
-                    <div class="card__content_title">Название</div>
-                    <input required class="card__content_input" name="name" type="text">
-                </div>
-                <div class="card__groupWrap">
-                    <div class="card__group">
-                        <div class="card__content_title">Группа</div>
-                        <input required class="card__content_input" name="group" type="text">
-                    </div>
-                    <div class="card__application">
-                        <div class="card__content_title">Область применения</div>
-                        <input required class="card__content_input" name="field_of_usage" value="" type="text">
-                    </div>
-                </div>
+            <div class="card__name">
+                <div class="card__content_title">Название* <span data-count="120"></span></div>
+                <input required class="card__content_input" name="name" type="text">
             </div>
-            <div class="card__groupWrap card__download">
+            <div class="card__groupWrap">
                 <div class="card__group">
-                    <label class="card__upload">
-                        <span>Download image</span>
-                        <img src="{{env('APP_URL')}}/img/icons/card/upload.svg" alt="upload">
-                        <input accept="image/*" required type="file" name="img" id="myFile" name="filename">
-                    </label>
+                    <div class="card__content_title">Группа* <span data-count="120"></span></div>
+                    <input required class="card__content_input" name="group" type="text">
                 </div>
-                <div class="card__group">
-                    <img class="card__upload_img" width="380" height="240" id="imagehui" src="{{env('APP_URL')}}/img/images/card/card.png" alt="card">
-                    <div class="card__upload_name">
-                        <div class="card__upload_name-name">
-                            limon.jpg
-                        </div>
-                        <div class="card__upload_name-size">
-                            24 kB
-                        </div>
-                        <div class="card__upload_name-close">
-                            <img src="{{env('APP_URL')}}/img/icons/card/close.svg" alt="close.svg">
-                        </div>
+                <div class="card__application">
+                    <div class="card__content_title">Область применения <span data-count="120"></span></div>
+                    <input required class="card__content_input" name="field_of_usage" value="" type="text">
+                </div>
+            </div>
+        </div>
+        <div class="card__groupWrap card__download">
+            <div class="card__group">
+                <label class="card__upload">
+                    <span>Download image</span>
+                    <img src="{{env('APP_URL')}}/img/icons/card/upload.svg" alt="upload">
+                    <input accept="image/*" required type="file" name="img" id="myFile" name="filename">
+                </label>
+            </div>
+            <div class="card__group">
+                <img class="card__upload_img" width="380" height="240" id="imagehui"
+                     src="{{env('APP_URL')}}/img/images/card/card.png" alt="card">
+                <div class="card__upload_name">
+                    <div class="card__upload_name-name">
+                        limon.jpg
+                    </div>
+                    <div class="card__upload_name-size">
+                        24 kB
+                    </div>
+                    <div class="card__upload_name-close">
+                        <img src="{{env('APP_URL')}}/img/icons/card/close.svg" alt="close.svg">
                     </div>
                 </div>
-
             </div>
-            <div class="card__content_title">Описание товара</div>
-            <textarea required class="card__descr" name="description" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
-            <div class="card__content_title">Применение продукта</div>
-            <textarea required class="card__descr" name="product_usage" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
-            <div class="card__content_title">Стандарты</div>
-            <textarea required class="card__descr" name="standart" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
-            <div class="card__content_title" >Упаковка</div>
-            <textarea required class="card__descr" name = "package" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
-            <div class="card__content_title">Хранение</div>
-            <textarea required class="card__descr" name="stogare" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+
+        </div>
+        <div>
+            <div class="card__content_title">Описание товара* <span data-count="2080"></span></div>
+            <textarea required class="card__descr" name="description"
+                      oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+        </div>
+            <div>
+                <div class="card__content_title">Применение продукта <span data-count="2080"></span></div>
+                <textarea required class="card__descr" name="product_usage"
+                          oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+            </div>
+            <div>
+                <div class="card__content_title">Стандарты <span data-count="500"></span></div>
+                <textarea required class="card__descr" name="standart"
+                          oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+            </div>
+            <div>
+                <div class="card__content_title">Упаковка <span data-count="500"></span></div>
+                <textarea required class="card__descr" name="package"
+                          oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+            </div>
+            <div>
+                <div class="card__content_title">Хранение <span data-count="500"></span></div>
+                <textarea required class="card__descr" name="stogare"
+                          oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+            </div>
             <div class="card__table">
                 <div class="card__content_title">Таблица показателей</div>
                 <div class="card__table_main">
@@ -126,7 +143,7 @@
                     <div hidden class="card__table_main-row">
                         <input class="card__table_main-simple card__table_main-name" value="">
                         <input class="card__table_main-simple card__table_main-amount" value="">
-                        <input  type="hidden" class="card__table_id" value="">
+                        <input type="hidden" class="card__table_id" value="">
                         <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg"
                              alt="close">
                     </div>
@@ -134,24 +151,24 @@
                         <div class="card__table_main-row">
                             <input class="card__table_main-simple card__table_main-name" value="{{$entry->title}}">
                             <input class="card__table_main-simple card__table_main-amount" value="{{$entry->value}}">
-                            <input  type="hidden" class="card__table_id" value="{{$entry->id}}">
+                            <input type="hidden" class="card__table_id" value="{{$entry->id}}">
                             <img class="card__table_main-simple_close" src="{{env('APP_URL')}}/img/icons/card/close.svg"
                                  alt="close">
                         </div>
                     @endforeach
                 </div>
                 <div class="card__table_add">
-                    <span>Добавить строку</span>
+                    <span id="add_f_str">Добавить строку</span>
                     <img src="{{env('APP_URL')}}/img/icons/card/chev_black.svg" alt="chev">
                 </div>
             </div>
             <div class="card__btns">
                 <div class="card__btns_btn card__btns_save">
-                    <span id = submit_id >Создать</span>
+                    <span id=submit_id>Создать</span>
                     <img src="{{env('APP_URL')}}/img/icons/card/check.svg" alt="check">
                 </div>
             </div>
-        </form>
+    </form>
     </div>
 </section>
 <footer class="footer">
@@ -188,7 +205,8 @@
 </footer>
 <script src="{{env('APP_URL')}}/js/jquery-3.5.1.min.js"></script>
 <script>
-    var id_for_element ;
+    var id_for_element;
+
     function createTable() {
         $.ajax({
             type: "POST",
@@ -199,7 +217,7 @@
             data: {
                 'title': "Название",
                 'post_id': {{$main_id}},
-                'value':"Значение"
+                'value': "Значение"
             },
             success: function (data) {
                 console.log(data)
@@ -210,13 +228,13 @@
     }
 
 
-    function deleteEntry(id){
+    function deleteEntry(id) {
         $.ajax({
             type: "DELETE",
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
-            url: "{{env('APP_URL').'/table/'}}"+id,
+            url: "{{env('APP_URL').'/table/'}}" + id,
             success: function (data) {
                 console.log((data));
             },
@@ -233,7 +251,7 @@
                 'title': title,
                 'value': value
             },
-            url: "{{env('APP_URL').'/table/'}}"+id,
+            url: "{{env('APP_URL').'/table/'}}" + id,
 
             success: function (data) {
                 console.log((data));
@@ -244,5 +262,6 @@
 
 </script>
 <script src="{{env('APP_URL')}}/js/card3.js"></script>
+<script src="{{env('APP_URL')}}/js/counter.js"></script>
 </body>
 </html>

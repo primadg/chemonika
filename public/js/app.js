@@ -359,7 +359,24 @@ document.querySelector('#formSend').onclick = () => {
 
 let addRowsBtns = document.querySelector('.card__table_add');
 
+
+if(addRowsBtns)
 addRowsBtns.onclick = (e) => {
     let clonedRow = addRowsBtns.parentNode.querySelector('.card__table_main-row:last-child').cloneNode(true);
     document.querySelector('.card__table_main').appendChild(clonedRow);
+}
+
+
+
+const anchors = document.querySelectorAll('.scrollTo');
+
+for (let anchor of anchors) {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const blockID = anchor.getAttribute('href').substr(1);
+        document.getElementById(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
 }
