@@ -2579,4 +2579,13 @@
 .header__logo img{max-width: 154px}
 
 .footer__logo img{max-width: 154px}
+
+.secondPage__goods_card-img img{object-fit: cover}
+
+
+nav{margin-top: 50px;color: #219653;}
+nav a{color: #219653;text-decoration:none;}
+
+nav a:active{color: #219653;text-decoration:none;}
+nav a:hover{color: #219653;text-decoration:none;}
 /*# sourceMappingURL=style.min.css.map */
