@@ -275,7 +275,47 @@
             </div>
             <div class="row form__row">
                 <div class="col-lg-6 form__social">
-                    <div class="form__row_wrapper">
+                    <div class="form__row_wrapper form__row_wrapper-MT">
+                        <div>
+                            <img src="{{env('APP_URL')}}/img/icons/phone.svg" alt="phone">
+                        </div>
+
+                        <div class="form__row_wrapper-title form__row_wrapper-title-PL">
+                            <a href="callto: (067) 686-9291">+38(067)686-92-91</a>
+                        </div>
+                    </div>
+                    <div class="form__row_wrapper form__row_wrapper-MT">
+                        <div>
+                            <img style="opacity: 0" src="{{env('APP_URL')}}/img/icons/phone.svg" alt="phone">
+                        </div>
+
+
+                        <div class="form__row_wrapper-title form__row_wrapper-title-PL">
+                            <a href="callto: (050) 332-66-44"> +38(050)332-66-44</a>
+                        </div>
+                    </div>
+
+                    <div class="form__row_wrapper form__row_wrapper-MT">
+                        <div>
+                            <img src="{{env('APP_URL')}}/img/icons/mail.svg" alt="mail">
+                        </div>
+
+
+                        <div class="form__row_wrapper-title form__row_wrapper-title-PL">
+                            <a href="mailto: akabanov@chemonika.com.ua"> akabanov@chemonika.com.ua</a>
+                        </div>
+                    </div>
+                    <div class="form__row_wrapper form__row_wrapper-MT">
+                        <div>
+                            <img style="opacity: 0" src="{{env('APP_URL')}}/img/icons/mail.svg" alt="mail">
+                        </div>
+
+
+                        <div class="form__row_wrapper-title form__row_wrapper-title-PL">
+                            <a href="mailto: akabanov@chemonika.com.ua">a.petrishcheva@chemonika.com.ua</a>
+                        </div>
+                    </div>
+                    <div style="margin-top: 45px" class="form__row_wrapper">
                         <div>
                             <img src="{{env('APP_URL')}}/img/icons/location.svg" alt="location">
                         </div>
@@ -283,17 +323,17 @@
                             Украина, Киев, ул. Юрия Ильенко 81а
                         </div>
                     </div>
-                    <div class="form__row_wrapper form__row_wrapper-MT">
-                        <div>
-                            <img src="{{env('APP_URL')}}/img/icons/phone.svg" alt="phone">
-                        </div>
-                        <div class="form__row_wrapper-title form__row_wrapper-title-PL">
-                            <a href="callto: (067) 686-9291">+38(067)686-92-91</a>
-                        </div>
-                        <div class="form__row_wrapper-title form__row_wrapper-title-PL">
-                            <a href="callto: (050) 332-66-44">+38(050)332-66-44</a>
-                        </div>
-                    </div>
+{{--                    <div class="form__row_wrapper form__row_wrapper-MT">--}}
+{{--                        <div>--}}
+{{--                            <img src="{{env('APP_URL')}}/img/icons/phone.svg" alt="phone">--}}
+{{--                        </div>--}}
+{{--                        <div class="form__row_wrapper-title form__row_wrapper-title-PL">--}}
+{{--                            <a href="callto: (067) 686-9291">+38(067)686-92-91</a>--}}
+{{--                        </div>--}}
+{{--                        <div class="form__row_wrapper-title form__row_wrapper-title-PL">--}}
+{{--                            <a href="callto: (050) 332-66-44">+38(050)332-66-44</a>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                     <div class="form__row_links">
                         <a href="#">
                             <img src="{{env('APP_URL')}}/img/icons/telegram.svg" alt="telegram">
