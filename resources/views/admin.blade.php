@@ -2,7 +2,7 @@
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/style.min.css">
-    <title>admin panel</title>
+    <title>Панель Адміністратора</title>
 
 </head>
 <body style="margin-left: 100px">

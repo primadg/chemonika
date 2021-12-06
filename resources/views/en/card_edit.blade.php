@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div onclick="location.href='{{env("APP_URL")}}/logout'" class="header__button">
-                Exit
+                Вихід
                 <img src="{{env('APP_URL')}}/img/icons/posts/arrow.svg" alt="arrow">
             </div>
         </div>
@@ -53,10 +53,10 @@
         <input type="hidden" value="en" name="lang" id="lang_data">
         <a href="{{env('APP_URL')}}/admin" class="card__wrapper">
             <img src="{{env('APP_URL')}}/img/icons/card/chevron.svg" alt="back">
-            <div class="card__back">back to Admin panel</div>
+            <div class="card__back">Повернутися до панели адміністратора</div>
         </a>
         <div class="card__language">
-            <div class="card__title">Языковые версии</div>
+            <div class="card__title">Оберіть мову</div>
             <div class="card__tabs">
 
                 <div class="card__tabs_tab card__tabs_tab-active">Eng</div>
@@ -67,16 +67,16 @@
         <div class="card__content">
 
             <div class="card__name">
-                <div class="card__content_title">Название* <span data-count="120"></span></div>
+                <div class="card__content_title">Назва* <span data-count="120"></span></div>
                 <input required class="card__content_input" value="{{$product->name}}" name="name" type="text">
             </div>
             <div class="card__groupWrap">
                 <div class="card__group">
-                    <div class="card__content_title">Группа* <span data-count="120"></span></div>
+                    <div class="card__content_title">Група* <span data-count="120"></span></div>
                     <input required class="card__content_input" value="{{$product->group}}" name="group" type="text">
                 </div>
                 <div class="card__application">
-                    <div class="card__content_title">Область применения <span data-count="120"></span></div>
+                    <div class="card__content_title">Галузь застосування <span data-count="120"></span></div>
                     <input required class="card__content_input" value="{{$product->field_of_usage}}"
                            name="field_of_usage" type="text">
                 </div>
@@ -85,7 +85,7 @@
         <div class="card__groupWrap card__download">
             <div class="card__group">
                 <label class="card__upload">
-                    <span>Download image</span>
+                    <span>Завантажити зображення</span>
                     <img src="{{env('APP_URL')}}/img/icons/card/upload.svg" alt="upload">
                     <input accept=".jpg,.png" type="file" name="img" id="myFile" name="filename">
                 </label>
@@ -108,17 +108,17 @@
 
         </div>
         <div>
-            <div class="card__content_title">Описание товара*<span data-count="2080"></span></div>
+            <div class="card__content_title">Опис товару* <span data-count="2080"></span></div>
             <textarea required class="card__descr" name="description"
                       oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{$product->description}}"</textarea>
         </div>
         <div>
-            <div class="card__content_title">Применение продукта<span data-count="2080"></span></div>
+            <div class="card__content_title">Застосування продукту <span data-count="2080"></span></div>
             <textarea required class="card__descr" name="product_usage"
                       oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{$product->Product_usage}}</textarea>
         </div>
         <div>
-            <div class="card__content_title">Стандарты<span data-count="500"></span></div>
+            <div class="card__content_title">Стандарти<span data-count="500"></span></div>
             <textarea required class="card__descr" name="standart"
                       oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{$product->Standart}}</textarea>
         </div>
@@ -128,19 +128,19 @@
                       oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{$product->Package}}</textarea>
         </div>
         <div>
-            <div class="card__content_title">Хранение <span data-count="500"></span></div>
+            <div class="card__content_title">Зберігання <span data-count="500"></span></div>
             <textarea required class="card__descr" name="stogare"
                       oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{$product->Storage}}</textarea>
         </div>
         <div class="card__table">
-            <div class="card__content_title">Таблица показателей</div>
+            <div class="card__content_title">Таблиця показників</div>
             <div class="card__table_main">
                 <div class="card__table_main-row">
                     <div class="card__table_main-heading card__table_main-name">
-                        Название
+                        Назва
                     </div>
                     <div class="card__table_main-heading card__table_main-amount">
-                        количество
+                        кількість
                     </div>
                 </div>
                 <div hidden class="card__table_main-row">
@@ -161,17 +161,17 @@
                 @endforeach
             </div>
             <div class="card__table_add">
-                <span>Добавить строку</span>
+                <span>Додати рядок</span>
                 <img src="{{env('APP_URL')}}/img/icons/card/chev_black.svg" alt="chev">
             </div>
         </div>
         <div class="card__btns">
             <div class="card__btns_btn card__btns_save">
-                <span id=submit_id>Сохранить</span>
+                <span id=submit_id>Зберегти</span>
                 <img src="{{env('APP_URL')}}/img/icons/card/check.svg" alt="check">
             </div>
             <div class="card__btns_btn card__btns_delete">
-                <span onclick="location.href='{{env("APP_URL")."/delete/".$product->id}}'">Удалить</span>
+                <span onclick="location.href='{{env("APP_URL")."/delete/".$product->id}}'">Видалити</span>
                 <img src="{{env('APP_URL')}}/img/icons/card/close.svg" alt="close">
             </div>
         </div>

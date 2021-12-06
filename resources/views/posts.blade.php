@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/posts.min.css">
-    <title>Admin</title>
+    <title>Панель Адміністратора</title>
 </head>
 <body>
 <header class="header">
@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div onclick="location.href='{{env("APP_URL")}}/logout'" class="header__button">
-                Exit
+                Вихід
                 <img src="img/icons/posts/arrow.svg" alt="arrow">
             </div>
         </div>
@@ -31,9 +31,9 @@
 <section class="post">
     <div class="container">
         <div class="wrapper">
-            <div class="post__title">Posts</div>
+            <div class="post__title">Публікації</div>
             <div class="post__add">
-                <span onclick="location.href='{{route('products_admin.create')}}'">Add new post</span>
+                <span onclick="location.href='{{route('products_admin.create')}}'">Додати</span>
                 <img src="img/icons/posts/plus.svg" alt="plus">
             </div>
         </div>
@@ -55,12 +55,12 @@
                     </div>
                 </div>
                 <div class="post__block_btns">
-                    <div onclick="location.href='{{route('products_admin.edit',$product->id)}}'" class="post__block_btn post__block_edit">
-                        <span >Edit</span>
+                    <div onclick="location.href='{{route('products_admin.edit',$product->id)}}'" style="width: 157px" class="post__block_btn post__block_edit">
+                        <span >Редагувати</span>
                         <img src="img/icons/posts/edit.svg" alt="edit">
                     </div>
                     <div onclick="location.href=' {{env('APP_URL').'/delete/'.$product->id}}'" class="post__block_btn post__block_close">
-                        <span >Delete</span>
+                        <span >Видалити</span>
                         <img src="img/icons/posts/close.svg" alt="close">
                     </div>
                 </div>
