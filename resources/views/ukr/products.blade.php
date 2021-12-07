@@ -149,7 +149,7 @@
                                     {{ $product->name }}
                                 </div>
                                 <div class="secondPage__goods_card-main_subTitle">
-                                    {{ $product->description }}
+                                    {{substr( $product->description,0,250)}}...
                                 </div>
                                 @if (!$product->draft)
                                 <div class="products__block_main-btn secondPage__goods_card-btn">
