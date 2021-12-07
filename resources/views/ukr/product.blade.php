@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
 <header class="header">
@@ -184,11 +185,8 @@
                     <div class="thirdPage__notFound_title">
                         Не знайшли потрібної інформації оя продукте
                     </div>
-                    <div class="thirdPage__notFound_descr">
-                        Faucibus mattis nunc gravida posuere nunc. Quis at commodo, dui dolor tellus lectus volutpat. Vulputate magnis amet sit id pellentesque sed elementum mattis.
-                    </div>
                 </div>
-                <a href="mailto: {{env("MAIL_TO_NAME")}}" class="thirdPage__notFound_btn">
+                <a href="mailto: {{env("MAIL_TO_NAME")}}" class="wow animate__animated animate__headShake thirdPage__notFound_btn">
                     Написати нам
                 </a>
             </div>
@@ -278,6 +276,7 @@
 </div>
 
 <script src="{{env('APP_URL')}}/js/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="{{env('APP_URL')}}/js/app.js"></script>
 </body>
 </html>

@@ -352,9 +352,12 @@ function hideBurgerMenu(){
 
 
 
-document.querySelector('#formSend').onclick = () => {
+if(document.querySelector('#formSend')){
+  document.querySelector('#formSend').onclick = () => {
     sendEmail();
-};
+  };
+}
+
 
 
 let addRowsBtns = document.querySelector('.card__table_add');
@@ -379,4 +382,9 @@ for (let anchor of anchors) {
             block: 'start'
         });
     });
+}
+
+
+if(document.querySelector('.thirdPage__notFound_btn')){
+  new WOW().init();
 }

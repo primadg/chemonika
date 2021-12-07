@@ -288,7 +288,7 @@
     -ms-flex-align: center;
     align-items: center;
     margin-top: 50px;
-    width: 138px
+    width: 153px
 }
 
 .promo__suggestions div {
@@ -878,7 +878,8 @@
     font-size: 16px;
     line-height: 28px;
     color: #929A9F;
-    margin-top: 24px
+    margin-top: 24px;
+    text-align: justify;
 }
 
 .secondPage__goods_card-btn {
@@ -1080,7 +1081,10 @@
 
 .thirdPage__notFound {
     background: #219653;
-    padding: 114px 0 138px 0
+    padding: 50px 0 50px 0
+}
+.thirdPage__notFound_btn{
+    animation-delay: 1s;
 }
 
 .thirdPage__notFound .row {
@@ -1202,6 +1206,7 @@
     right: 0;
     min-width: 100%;
     margin: 15px 0;
+    margin-top: 6px;
     border: 1px solid #b5b5b5;
     border-radius: 4px;
     -webkit-box-sizing: border-box;
@@ -1229,7 +1234,7 @@
 
 .custom-options:before {
     position: absolute;
-    display: block;
+    display: none;
     content: '';
     bottom: 100%;
     right: 25px;
@@ -1253,7 +1258,6 @@
     position: relative;
     display: block;
     padding: 0 22px;
-    border-bottom: 1px solid #b5b5b5;
     font-size: 18px;
     font-weight: 600;
     color: #b5b5b5;
@@ -1272,10 +1276,6 @@
     border-radius: 0 0 4px 4px
 }
 
-.custom-option:hover,
-.custom-option.selection {
-    background: #f9f9f9
-}
 
 .custom-select_FC {
     margin-right: 38px
@@ -1354,6 +1354,7 @@
     right: 0;
     min-width: 100%;
     margin: 15px 0;
+    margin-top: 6px;
     border: 1px solid #b5b5b5;
     border-radius: 4px;
     -webkit-box-sizing: border-box;
@@ -1381,7 +1382,7 @@
 
 .custom-options:before {
     position: absolute;
-    display: block;
+    display: none;
     content: '';
     bottom: 100%;
     right: 25px;
@@ -1405,12 +1406,16 @@
     position: relative;
     display: block;
     padding: 0 22px;
-    border-bottom: 1px solid #b5b5b5;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 400;
     color: #b5b5b5;
-    line-height: 47px;
+    line-height: 1;
+    height: 40px;
+    display: flex;
+    align-items: center;
     cursor: pointer;
+    font-size: 16px;
+    color: #263640;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out
 }
@@ -1426,7 +1431,8 @@
 
 .custom-option:hover,
 .custom-option.selection {
-    background: #f9f9f9
+    background: #F7F8FA;
+    color: #219653;
 }
 
 @media screen and (min-width: 1400px) {
@@ -2574,7 +2580,7 @@
     }
 }
 
-.products__block_header img{object-fit: cover}
+.products__block_header img{width: 100%;object-fit: cover}
 
 .header__logo img{max-width: 154px}
 
