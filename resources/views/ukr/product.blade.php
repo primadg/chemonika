@@ -134,7 +134,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 thirdPage__use_cathegory-title">
-                    Стандарти
+                    Стандарти якості
                     <div class="thirdPage__use_cathegory-title_descr"> {{$product->Standart}}</div>
                 </div>
                 <div class="col-lg-4 thirdPage__use_cathegory-title">
@@ -182,7 +182,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="thirdPage__notFound_title">
-                        Не знайшли потрібної інформації оя продукте
+                        Не знайшли потрібної інформації про продукт?
                     </div>
                     <div class="thirdPage__notFound_descr">
                         Faucibus mattis nunc gravida posuere nunc. Quis at commodo, dui dolor tellus lectus volutpat. Vulputate magnis amet sit id pellentesque sed elementum mattis.
