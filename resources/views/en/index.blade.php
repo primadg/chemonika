@@ -246,7 +246,7 @@
                             <div class="products__block_main-title">{{$product->name}}</div>
                             <div class="products__block_main-subTitle">({{$product->group}})</div>
                             <div style="text-align:justify"
-                                 class="products__block_main-descr">{{substr($product->description,0,120)}}...
+                                 class="products__block_main-descr">{{mb_substr($product->description,0,120)}}...
                             </div>
                             @if (!$product->draft)
                                 <div class="products__block_main-btn">
