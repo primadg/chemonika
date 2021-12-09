@@ -105,7 +105,7 @@
                                 <option data-filter="group" value="Antioxidants">Antioxidants</option>
                                 <option data-filter="group" value="Sweeteners">Sweeteners</option>
                                 <option data-filter="group" value="Stabilizers">Stabilizers</option>
-                                <option data-filter="group" value="Preservative">Preservative</option>
+                                <option data-filter="group" value="Preservative">Preservatives</option>
                                 <option data-filter="group" value="Protein">Protein</option>
                             </select>
                         </div>

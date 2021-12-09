@@ -131,7 +131,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 thirdPage__use_cathegory-title">
-                    Standards
+                    Standards quality
                     <div class="thirdPage__use_cathegory-title_descr">{{$product->Standart}}</div>
                 </div>
                 <div class="col-lg-4 thirdPage__use_cathegory-title">

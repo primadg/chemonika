@@ -127,22 +127,24 @@
             </div>
             <div class="сompany__wrapper">
                 <div class="сompany__left">
-                    <div class="сompany__text">Our company was established in 2020. Our main activitу is import of food
-                        ingredients from top-class producers.
+                    <div class="сompany__text">The company was founded in 2020. The main focus of our activity is the
+                        supply of food ingredients from leading manufacturers.
                     </div>
 
                     <div class="сompany__text">
 
-                        Advantages of cooperation with us :
+                        Our advantages :
                         <li>
-                            We supply directly from top-class producers and can offer to our customers the best quality
-                            and the best cooperation conditions
+                            We supply products directly from leading manufacturers
+                        </li>
+                        <li>
+                            High quality and the best conditions for cooperation
                         </li>
                         <li>
                             Openness
                         </li>
                         <li>
-                            Promptness
+                            Efficiency
                         </li>
                     </div>
                     <a href="#about__form" class="сompany__btn scrollTo">
@@ -186,12 +188,12 @@
             <div class="col-lg-10 banner__main">
                 <div class="banner__main_block">
                     <div class="banner__main_title">
-                        We offer products from trusted suppliers with world-known name only
+                        We offer products from trusted suppliers with world-known name
                     </div>
                     <div class="banner__main_descr">
-                        Our mission is to remain a highly efficient company - a leading distributor of quality chemical
-                        materials. Constantly improving our professional skills and abilities, we develop together with
-                        our partners!
+                        Our mission is to remain a highly efficient company, a leading distributor of quality chemical
+                        materials. We are developing together with partners, constantly improving our professional
+                        skills and abilities!
                     </div>
                     <div class="banner__main_separator"></div>
                     <div class="banner__main_choose">
@@ -217,7 +219,7 @@
                     <div class="store__block_square">
                         <img src="{{env("APP_URL")}}/img/images/1_storage.png" alt="Kyiv">
                     </div>
-                    <div class="store__block_title">Hurivshchyna vil,<br>Kyiv region</div>
+                    <div class="store__block_title">Hurivshchyna villlage,<br>Kyiv region</div>
                 </div>
                 <div class="store__block">
                     <div class="store__block_square">

@@ -59,17 +59,12 @@ class Admin extends Seeder
             'group' => "Antioxidants",
             'img' => '/img/images/product1.png',
             'pos_id' => 1,
-            'Product_usage' => " Widely used in cosmetics, since it acts as a preservative, diluent, a pH modifier corresponding to pH level of the skin.
-Has an astringent, cleansing and whitening effect on the skin. It is included in the formula of cleansing creams, depilatories, hair rinses, hair dyes and freckle creams.
-Citric acid is also used as feed acidifier. It has a strong antibacterial and anti-stress effects, acts as a metabolic catalyst and a synergist of antioxidants.
-",
-            'field_of_usage' => "beer, soft drinks, confectionary items, bakery, canned goods",
+            'Product_usage' => "Widely used in cosmetics, since it acts as a preservative, diluent, a pH modifier corresponding to pH level of the skin. Has an astringent, cleansing and whitening effect on the skin. It is included in the formula of cleansing creams, depilatories, hair rinses, hair dyes and freckle creams. Citric acid is also used as a feed acidifier. It has strong antibacterial and anti-stress effects, acts as a metabolic catalyst and a synergist of antioxidants.",
+            'field_of_usage' => "beer, soft drinks, confectionery items, bakery, canned goods",
             'Package' => "25 kg bags",
             'Storage' => "Store in a dry place protected from direct sunlight",
             'Standart' => "Compliant with quality standards: ВР2009, USP32, FCC6, E330",
-            'description' => "Citric acid (E330) is widely used in the production of soft drinks, since it has the softest and most refreshing taste compared to other food acids in the food industry.
-It is used as flavoring and acidifier in the production of confectionery items and added as one of the components of dough leavening agents in the production of bakery products. Citric acid significantly reduces the likelihood of rancidity of fats, margarines and animal oils in the oil and fats industry. It is also used as a preservative during the production of canned goods.
-",
+            'description' => "Citric acid (E330) is widely used in the production of soft drinks, since it has the softest and most refreshing taste compared to other food acids in the food industry. It is used as flavoring and acidifier in the production of confectionery items, and added as one of the components of dough leavening agents in the production of bakery products. Citric acid significantly reduces the likelihood of rancidity of fats, margarine and animal oils in the oil and fats industry. It is also used as a preservative during the production of canned goods.",
         ]);
 
 
@@ -103,12 +98,12 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'group' => "Stabilizers",
             'img' => '/img/images/p/p2.png',
             'pos_id' => 2,
-            'Product_usage' => "It is used as a taste enhancer in the production of carbonated citrus drinks, beer, energy drinks, juices and compotes; as an acidity level regulator throughout the production of fermented milk products, yoghurt, marmalade, pastilles. Also used for milk sterilization, canned food, milk powder. Added to non-emulsified vegetable and animal oils and fats. Applied in pharmaceuticals, cosmetics and household chemicals.",
+            'Product_usage' => "It is used as a taste enhancer in the production of carbonated citrus drinks, beer, energy drinks, juices and compotes; as an acidity level regulator throughout the production of fermented milk products, yogurt, marmalade, pastilles. Also used for milk sterilization, canned food, and milk powder. Added to non-emulsified vegetable and animal oils and fats. Applied in pharmaceuticals, cosmetics and household chemicals.",
             'field_of_usage' => "beer, soft drinks, canned goods",
             'Package' => "25 kg bags",
             'Storage' => "Store in a dry place protected from direct sunlight",
             'Standart' => "Compliant with quality standards: ВР2009, USP32, FCC6, E331",
-            'description' => "Sodium citrate –  is sodium salt of citric acid, a natural and safe food additive.
+            'description' => "Sodium citrate –  is the sodium salt of citric acid, a natural and safe food additive.
                                       It is an acidity regulator, stabilizer, emulsifier, emulsifying salt, synergist of antioxidants and color fixer.
 ",
         ]);
@@ -145,8 +140,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'group' => "Sweeteners",
             'img' => '/img/images/p/p3.png',
             'pos_id' => 3,
-            'Product_usage' => "Used as a sweetener and sugar substitute in food industry, namely in production of dietary foods and drinks, chewing gum, confectionary goods, canned fruits and vegetables.
-                                          Used as a thickener in the manufacturing of cosmetic products such as clear gels and shampoos. Also applied in the production of tooth paste and mouthwash as a sweetener. It is included in hair sprays, deodorants, balms and other cosmetics. Widely used in pharmaceuticals, production of syrups, ascorbic acid, laxatives, ointments and household chemicals.",
+            'Product_usage' => "Used as a sweetener and sugar substitute in the food industry, namely in production of dietary foods and drinks, chewing gum, confectionary goods, canned fruits and vegetables. Used as a thickener in the manufacturing of cosmetic products such as clear gels and shampoos. Also applied in the production of toothpaste and mouthwash as a sweetener. It is included in hair sprays, deodorants, balms and other cosmetics. Widely used in pharmaceuticals, production of syrups, ascorbic acid, laxatives, ointments and household chemicals.",
             'field_of_usage' => "confectionery items, beer, soft drinks",
             'Package' => "25 kg bags",
             'Storage' => "Store in a dry place protected from direct sunlight",
@@ -231,15 +225,12 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'group' => "Stabilizers",
             'img' => '/img/images/p/p5.png',
             'pos_id' => 5,
-            'Product_usage' => "Xanthan gum is used to stabilize solutions, increase elasticity and viscosity. It is added during the manufacturing of creams, jams, jellies and all kinds of sauces, dairy products (desserts, yoghurts, cheeses), bakery goods. In the meat processing industry gum is used to retain moisture in sausages, minced meat and canned meat. It is also used to prevent colors from mixing in the production of multicolor ice cream.
-                                                  The moisturizing and water-retaining properties of this substance serve well in the cosmetic industry. Specifically, in the production of gels, creams, lotions, masks, foams, as well as toothpaste and mouthwash.
-                                                  Aside from the food and cosmetics industries, Xanthan gum is commonly used in oil and gas production processesю
-                                                  Xanthan gum is a harmless neutral hypoallergenic product.",
+            'Product_usage' => "Xanthan gum is used to stabilize solutions, increase elasticity and viscosity. It is added during the manufacturing of creams, jams, jellies and all kinds of sauces, dairy products (desserts, yogurts, cheeses) and bakery goods. In the meat processing industry, gum is used to retain moisture in sausages, minced meat and canned meat. It is also used to prevent colors from mixing in the production of multicolor ice cream. The moisturizing and water-retaining properties of this substance serve well in the cosmetic industry. Specifically, in the production of gels, creams, lotions, masks, foams, as well as toothpaste and mouthwash. Aside from the food and cosmetics industries, Xanthan gum is commonly used in oil and gas production processes Xanthan gum is a harmless neutral hypoallergenic product.",
             'field_of_usage' => "sauces, jelly",
             'Package' => "25 kg bags",
             'Storage' => "Store in a dry place protected from direct sunlight",
             'Standart' => "Compliant with quality standards:  FCCIV, Е420",
-            'description' => "Xanthan gum belongs to the stabilizers group. It is an odorless white or grey powder with a neutral taste. European codification index E-415.
+            'description' => "Xanthan gum belongs to the stabilizers group. It is an odorless white or gray powder with a neutral taste. European codification index E-415.
                                                   Xanthan gum is a polysaccharide secreted by Xanthomonas Campestris microorganisms.
                                                   It is a hydrophilic colloid and is used to thicken and stabilize various solutions in food production, emulsions, foams and suspensions. Xanthan provides high values ​​of viscosity and pseudoplasticity in the pH range 2 - 12. When interacting with other hydrocolloids (carrageenan, guar gum, carob gum and konjac (cognac) gum) it exhibits synergy - the thickening effect becomes higher than for each of the thickeners separately.
                                                   Xanthan gum is well soluble in both cold and warm water. The solution is resistant to temperatures ranging from -18°C to 120°C.",
@@ -322,9 +313,7 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'group' => "Preservative",
             'img' => '/img/images/product1.png',
             'pos_id' => 7,
-            'Product_usage' => "Odorless white powder or granules with a neutral taste. It is one of the most popular preservatives in all branches throughout the food industry because of how safe it is. It dissolves well in water, withstands heat treatment, quickly mixes with consistency of the products without altering their taste.
-                                                      It is also widely applied in cosmetic and pharmaceutical industry, and used as feed acidifier. It has a strong antibacterial and anti-stress effects, acts as a metabolic catalyst and a synergist of antioxidants.
-                                                      Responsible for the activation of enzymes, improves feed’s digestibility.",
+            'Product_usage' => "Odorless white powder or granules with a neutral taste. It is one of the most popular preservatives in all branches throughout the food industry because of how safe it is. It dissolves well in water, withstands heat treatment, quickly mixes with the consistency of the products without altering their taste. Furthermore, it is also widely applied in the cosmetic and pharmaceutical industry, and used as feed acidifier. It has strong antibacterial and anti-stress effects, acts as a metabolic catalyst and a synergist of antioxidants. Responsible for the activation of enzymes, improves feed’s digestibility.",
             'field_of_usage' => "beer, soft drinks, confectionery items, canned goods",
             'Package' => "25 kg bags",
             'Storage' => "Store in a dry place protected from direct sunlight",
@@ -362,13 +351,13 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'group' => "Preservative",
             'img' => '/img/images/p/p8.png',
             'pos_id' => 8,
-            'Product_usage' => "It is used for canning meat and fish products, margarine, mayonnaise, ketchup, fruit and berry products, sweet carbonated drinks.
+            'Product_usage' => "It is used for canning meat and fish products, margarine, mayonnaise, ketchup, fruit and berry products and sweet carbonated drinks.
                                                           Used as a preservative in the cosmetic and pharmaceutical industries. It is used in medicine as an expectorant, usually in combination preparations.",
             'field_of_usage' => "canned goods",
             'Package' => "25 kg bags",
             'Storage' => "Store in a dry place protected from direct sunlight",
             'Standart' => "Compliant with quality standards: ВР2009, USP32, FCC6, E202",
-            'description' => "Sodium benzoate actively suppresses yeast, molds, aerobic bacteria, enzymes, actively suppress ferments in cells, responsible for redox reactions, as well as enzymes that break down fats and starch.",
+            'description' => "Sodium benzoate actively suppresses yeast, molds, aerobic bacteria, enzymes, actively suppresses ferments in cells, responsible for redox reactions, as well as enzymes that break down fats and starch.",
         ]);
 
 
@@ -400,12 +389,12 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'group' => "Protein",
             'img' => '/img/images/p/p9.png',
             'pos_id' => 9,
-            'Product_usage' => "Soy protein isolate mainly used like part meat products substitution. Used in production of sausages, canned foods, meat, fish and milk products, bread products, soups, dry drinks, dietical and baby nutrition, sports nutrition.",
+            'Product_usage' => "Soy protein isolate is mainly used like part meat products substitution. Used in production of sausages, canned foods, meat, fish and milk products, bread products, soups, dry drinks, dietical and baby nutrition, sports nutrition.",
             'field_of_usage' => "meat and milk processing, sports nutrition",
             'Package' => "20 kg bags",
             'Storage' => "Store in a dry place protected from direct sunlight",
             'Standart' => "Compliant with quality standards: ВР2009, USP32, FCC6, E202",
-            'description' => "Soy protein isolate - is cleared from  used from carbohydrates and fats, soy product which contain not less than 90% protein. He has low viscosity, high solubility, good fat emulsifying ability and is one of most functional products on market.",
+            'description' => "Soy protein isolate - is cleared from carbohydrates and fats, soy products which contain not less than 90% protein. He has low viscosity, high solubility, good fat emulsifying ability and is one of most functional products on the market.",
         ]);
 
 
@@ -439,12 +428,12 @@ It is used as flavoring and acidifier in the production of confectionery items a
             'group' => "Protein",
             'img' => '/img/images/p/p9.png',
             'pos_id' => 10,
-            'Product_usage' => "Production of flour: to improve quality of flour. Production of bread: increases gas retaining power, improves shape stability, yield and shelf life of the produce. Confectionery: used for production of short dough cookies and plain biscuits if using flour with low gluten content, also for production of puff pastry, biscuit, shortcrust and choux pastry dough. Production of pasta: improves resilience, removes adhesiveness of ready pasta. Manufacturing of semi-ready products: prevents overcooking, improves dough elasticity, reduces adhesiveness of cooked products. Meat  industry: used in production of forcemeat, ensures homogeneous structure of forcemeat  and sausage products, improves protein content, structure and taste of the products.",
-            'field_of_usage' => " Production of flour, bread, confectionary, pasta, meat,   semi-ready products (pelmeni, ravioli, dumplings).",
+            'Product_usage' => "Production of flour: to improve the quality of flour. Production of bread: increases gas retaining power, improves shape stability, yield and shelf life of the produce. Confectionery: used for production of short dough cookies and plain biscuits if using flour with low gluten content, also for production of puff pastry, biscuit, shortcrust and choux pastry dough. Production of pasta: improves resilience, removes adhesiveness of ready pasta. Manufacturing of semi-ready products: prevents overcooking, improves dough elasticity, reduces adhesiveness of cooked products. Meat industry: used in production of forcemeat, ensures homogeneous structure of forcemeat and sausage products, improves protein content, structure and taste of the products.",
+            'field_of_usage' => " Production of flour, bread, confectionary, pasta, meat,   semi-ready products (meat dumplings, ravioli, dumplings).",
             'Package' => "25 kg bags",
             'Storage' => "Store in a dry place protected from direct sunlight",
             'Standart' => "Compliant with quality standards: ВР2009, USP32, FCC6, E202",
-            'description' => "Wheat gluten is a plant protein which is nonsoluble in water. In the process of hydratation it creates fibers. Functional properties of gluten include high absorbing properties (180-200%), creation of stable viscoelastic structure and thermal stability at 85deg C.",
+            'description' => "Wheat gluten is a plant protein which is insoluble in water. In the process of hydration, it creates fibers. Functional properties of gluten include high absorbing properties (180-200%), creation of stable viscoelastic structure and thermal stability at 85deg C.",
         ]);
     }
 
