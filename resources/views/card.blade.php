@@ -105,7 +105,7 @@
 
         </div>
         <div>
-            <div class="card__content_title">Опис товару* <span data-count="2080"></span></div>
+            <div class="card__content_title">Опис товару <span data-count="2080"></span></div>
             <textarea required class="card__descr" name="description"
                       oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
         </div>

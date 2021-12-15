@@ -113,8 +113,7 @@ class AdminController extends Controller
         }
 
 
-        $draft = $this->check_required_fields([$request->field_of_usage, $request->product_usage,
-            $request->standart, $request->package, $request->stogare]);
+        $draft = $this->check_required_fields([$request->name, $request->group, $request->description]);
 
         try {
             $product->name = $request->name;

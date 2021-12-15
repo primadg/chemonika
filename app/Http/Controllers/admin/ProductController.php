@@ -130,7 +130,7 @@ class ProductController extends Controller
         $new_product->img = Storage::url($path);
 
 
-        if ($this->check_required_fields([$request->name, $request->group, $request->description])) {
+        if ($this->check_required_fields([$request->name, $request->group, ])) {
             return redirect()->back()->with('error', 'Заполните обязательные поля (со звездочкой)');
         }
 
@@ -144,8 +144,9 @@ class ProductController extends Controller
             // обязательные поля
             $new_product->name = $request->name;
             $new_product->group = $request->group;
-            $new_product->description = $request->description;
+
             // необязательные поля
+            $new_product->description = $request->description;
             $new_product->field_of_usage = $request->field_of_usage;
             $new_product->Product_usage = $request->product_usage;
             $new_product->Standart = $request->standart;
