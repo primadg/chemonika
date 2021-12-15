@@ -217,7 +217,7 @@
             <div class="store__wrapper">
                 <div class="store__block">
                     <div class="store__block_square">
-                        <img src="{{env("APP_URL")}}/img/images/1_storage.png" alt="Kyiv">
+                        <img src="{{env("APP_URL")}}/img/images/1_storage.png" alt="Charkiv">
                     </div>
                     <div class="store__block_title">Hurivshchyna villlage,<br>Kyiv region</div>
                 </div>
