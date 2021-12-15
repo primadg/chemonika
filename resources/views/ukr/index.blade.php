@@ -1,4 +1,4 @@
-`<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -495,4 +495,3 @@
 <script src="js/app.js"></script>
 </body>
 </html>
-`
