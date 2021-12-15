@@ -154,7 +154,7 @@
                                     {{ $product->name }}
                                 </div>
                                 <div class="secondPage__goods_card-main_subTitle">
-                                    {{mb_substr( $product->description,0,250)}}...
+                                    {{mb_substr( $product->description,0,120)}}...
                                 </div>
                                 @if (!$product->draft)
                                     <div class="products__block_main-btn secondPage__goods_card-btn">
