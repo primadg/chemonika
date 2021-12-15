@@ -105,7 +105,7 @@
                                 <option data-filter="group" value="Antioxidants">Antioxidants</option>
                                 <option data-filter="group" value="Sweeteners">Sweeteners</option>
                                 <option data-filter="group" value="Stabilizers">Stabilizers</option>
-                                <option data-filter="group" value="Preservative">Preservative</option>
+                                <option data-filter="group" value="Preservative">Preservatives</option>
                                 <option data-filter="group" value="Protein">Protein</option>
                             </select>
                         </div>
@@ -138,7 +138,7 @@
                                     {{ $product->name }}
                                 </div>
                                 <div class="secondPage__goods_card-main_subTitle">
-                                    {{ $product->description }}
+                                    {{mb_substr( $product->description,0,250)}}...
                                 </div>
                                 @if (!$product->draft)
                                 <div class="products__block_main-btn secondPage__goods_card-btn">

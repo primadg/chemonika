@@ -94,7 +94,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <h2 class="secondPage__promo_title">
-                        Ми пропонуємо продукцію одних з найбільших світових виробників
+                        Ми пропонуємо продукцію найбільших світових виробників
                     </h2>
                 </div>
             </div>
@@ -115,8 +115,8 @@
                                 <option data-filter="group" value="Антиоксиданти">Антиоксиданти</option>
                                 <option data-filter="group" value="Підсолоджувачі">Підсолоджувачі</option>
                                 <option data-filter="group" value="Стабілізатори">Стабілізатори</option>
-                                <option data-filter="group" value="Консервант">Консервант</option>
-                                <option data-filter="group" value="Протеїн">Протеїн</option>
+                                <option data-filter="group" value="Консервант">Консерванти</option>
+                                <option data-filter="group" value="Протеїн">Протеїни</option>
                             </select>
                         </div>
                     </div>
@@ -149,7 +149,7 @@
                                     {{ $product->name }}
                                 </div>
                                 <div class="secondPage__goods_card-main_subTitle">
-                                    {{ $product->description }}
+                                    {{mb_substr( $product->description,0,250)}}...
                                 </div>
                                 @if (!$product->draft)
                                 <div class="products__block_main-btn secondPage__goods_card-btn">

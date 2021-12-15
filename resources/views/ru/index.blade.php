@@ -127,25 +127,28 @@
             </div>
             <div class="сompany__wrapper">
                 <div class="сompany__left">
-                    <div class="сompany__text">Наша компания была основана в 2020 году. Основным видом деятельности
-                        нашей компании является поставка пищевых ингредиентов от ведущих производителей.
+                    <div class="сompany__text">Компания была основана в 2020 году. Главным направлением нашей
+                        деятельности является поставка пищевых ингредиентов от ведущих производителей.
                     </div>
 
                     <div class="сompany__text">
 
-                        Преимущества работы с нашей компанией :
+                        Наши преимущества
                         <li>
-                        Мы работаем напрямую с ведущими производителями, поэтому можем предложить нашим клиентам лучшее качество и лучшие условия сотрудничества
+                            Поставляем продукцию напрямую от ведущих производителей
                         </li>
                         <li>
-                        Открытость
+                            Высокое качество и лучшие условия для сотрудничества
                         </li>
                         <li>
-                        Оперативность
+                            Открытость
+                        </li>
+                        <li>
+                            Оперативность
                         </li>
                     </div>
                     <a href="#about__form" class="сompany__btn scrollTo">
-                        <span>Написати нам</span>
+                        <span>Написать нам</span>
                         <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2 0L0.589996 1.41L5.17 6L0.589996 10.59L2 12L8 6L2 0Z" fill="white"/>
                         </svg>
@@ -188,9 +191,9 @@
                         Мы предлагаем продукцию только проверенных производителей с мировым именем
                     </div>
                     <div class="banner__main_descr">
-                        Наша миссия - оставаться высокоэффективной компанией - лидирующим дистрибьютором качественных
-                        химических материалов. Постоянно совершенствуя свои профессиональные навыки и умения, мы
-                        развиваемся вместе с партнерами!
+                        “Наша миссия – оставаться высокоэффективной компанией, ведущим дистрибьютором качественных
+                        химических материалов. Мы развиваемся вместе с партнерами, постоянно усовершенствуя свои
+                        профессиональные навыки и умения!
                     </div>
                     <div class="banner__main_separator"></div>
                     <div class="banner__main_choose">
@@ -245,7 +248,7 @@
                             <div class="products__block_main-title">{{$product->name}}</div>
                             <div class="products__block_main-subTitle">({{$product->group}})</div>
                             <div style="text-align:justify"
-                                 class="products__block_main-descr">{{substr( $product->description,0,120)}}...
+                                 class="products__block_main-descr">{{mb_substr( $product->description,0,120)}}...
                             </div>
                             @if (!$product->draft)
                                 <div class="products__block_main-btn">
@@ -323,17 +326,17 @@
                             Украина, Киев, ул. Юрия Ильенко 81а
                         </div>
                     </div>
-{{--                    <div class="form__row_wrapper form__row_wrapper-MT">--}}
-{{--                        <div>--}}
-{{--                            <img src="{{env('APP_URL')}}/img/icons/phone.svg" alt="phone">--}}
-{{--                        </div>--}}
-{{--                        <div class="form__row_wrapper-title form__row_wrapper-title-PL">--}}
-{{--                            <a href="callto: (067) 686-9291">+38(067)686-92-91</a>--}}
-{{--                        </div>--}}
-{{--                        <div class="form__row_wrapper-title form__row_wrapper-title-PL">--}}
-{{--                            <a href="callto: (050) 332-66-44">+38(050)332-66-44</a>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
+                    {{--                    <div class="form__row_wrapper form__row_wrapper-MT">--}}
+                    {{--                        <div>--}}
+                    {{--                            <img src="{{env('APP_URL')}}/img/icons/phone.svg" alt="phone">--}}
+                    {{--                        </div>--}}
+                    {{--                        <div class="form__row_wrapper-title form__row_wrapper-title-PL">--}}
+                    {{--                            <a href="callto: (067) 686-9291">+38(067)686-92-91</a>--}}
+                    {{--                        </div>--}}
+                    {{--                        <div class="form__row_wrapper-title form__row_wrapper-title-PL">--}}
+                    {{--                            <a href="callto: (050) 332-66-44">+38(050)332-66-44</a>--}}
+                    {{--                        </div>--}}
+                    {{--                    </div>--}}
                     <div class="form__row_links">
                         <a href="#">
                             <img src="{{env('APP_URL')}}/img/icons/telegram.svg" alt="telegram">
@@ -348,7 +351,7 @@
                 </div>
                 <div class="col-lg-6 form__form">
                     <div class="form__form_title">
-                        Форма зворотнього зв’язку
+                        Форма обратной связи
                     </div>
                     <a name="form"></a>
                     <div>
@@ -384,7 +387,7 @@
                         <textarea class="form__form_textarrea default__form" id="textInput" name="text"></textarea>
                         <button id="formSend"
                                 class="header__info_button form__form_btn form__form_btn-form default__form">
-                            <span>Надіслати</span>
+                            <span>Отправить</span>
                             <svg class="header__info_button-svg" width="12" height="8" viewBox="0 0 12 8" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#ffffff"></path>

@@ -132,7 +132,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 thirdPage__use_cathegory-title">
-                    Standards
+                    Standards quality
                     <div class="thirdPage__use_cathegory-title_descr">{{$product->Standart}}</div>
                 </div>
                 <div class="col-lg-4 thirdPage__use_cathegory-title">
@@ -146,34 +146,34 @@
             </div>
         </div>
     </section>
-    <section class="thirdPage__table">
-        <div class="container">
-            <div class="row">
-                <div class="offset-lg-1 col-lg-10">
-                    <div class="thirdPage__table_title">
-                        Table of indicators
-                    </div>
-                    <div class="thirdPage__table_table">
-                        <div class="thirdPage__table_table-header">
-                            <div class="thirdPage__table_table-header_name">
-                                Title
-                            </div>
-                            <div class="thirdPage__table_table-header_value">
-                                Title
-                            </div>
+    @if(count($entries))
+        <section class="thirdPage__table">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-lg-1 col-lg-10">
+                        <div class="thirdPage__table_title">
+                            Indicator table
                         </div>
-                        @foreach($entries as $entry)
-                            <div class="thirdPage__table_table-row">
-                                <div class="thirdPage__table_table-row_title">{{$entry->title}}</div>
-                                <div class="thirdPage__table_table-row_id">{{$entry->value}}</div>
-                            </div>
-                        @endforeach
+                        <div class="thirdPage__table_table">
+                            <div class="thirdPage__table_table-header">
+                                <div class="thirdPage__table_table-header_name">
+                                    Title
+                                </div>
+                                <div class="thirdPage__table_table-header_value">
+                                    number
+                                </div>
+                            </div> @foreach($entries as $entry)
+                                <div class="thirdPage__table_table-row">
+                                    <div class="thirdPage__table_table-row_title">{{$entry->title}}</div>
+                                    <div class="thirdPage__table_table-row_id">{{$entry->value}}</div>
+                                </div>
+                            @endforeach
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    @if(count($entries))
+        </section>
+    @endif
     <section class="thirdPage__notFound">
         <div class="container">
             <div class="row">
@@ -188,7 +188,7 @@
             </div>
         </div>
     </section>
-    @endif
+
     <footer class="footer">
         <div class="container">
             <div class="row">

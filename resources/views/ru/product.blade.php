@@ -135,7 +135,7 @@
             <img class="sot2" src="{{env('APP_URL')}}/img/icons/sot2.svg" alt="image">
             <div class="row">
                 <div class="col-lg-4 thirdPage__use_title">
-                    Приминение продукта
+                    Применение продукта
                 </div>
                 <div class="col-lg-8 thirdPage__use_descr">
                     {{$product->Product_usage}}
@@ -143,7 +143,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 thirdPage__use_cathegory-title">
-                    Стандарти
+                    Стандарты качества
                     <div class="thirdPage__use_cathegory-title_descr">{{$product->Standart}}</div>
                 </div>
                 <div class="col-lg-4 thirdPage__use_cathegory-title">
@@ -190,7 +190,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="thirdPage__notFound_title">
-                        Не нашли информацию о продукте ?
+                        Не нашли нужной информации о продукте?
                     </div>
                 </div>
                 <a href="mailto: {{env("MAIL_TO_NAME")}}" class="wow animate__animated animate__headShake thirdPage__notFound_btn">
@@ -208,7 +208,7 @@
                 <div class="col-lg-6 footer__top">
                     <div class="footer__top_top">
                         <div class="footer__top_top-our">НАШИ СОЦИАЛЬНЫЕ СЕТИ</div>
-                        <div class="footer__top_top-right footer__top_top-our">АДРЕСА</div>
+                        <div class="footer__top_top-right footer__top_top-our">АДРЕС</div>
                     </div>
                     <div class="footer__top_bottom">
                         <div class="footer__top_bottom-links">

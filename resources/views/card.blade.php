@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/card.min.css">
-    <title>Create</title>
+    <title>Створити</title>
 </head>
 <body>
 <header class="header">
@@ -65,16 +65,16 @@
         <div class="card__content">
 
             <div class="card__name">
-                <div class="card__content_title">Название* <span data-count="120"></span></div>
+                <div class="card__content_title">Назва* <span data-count="120"></span></div>
                 <input required class="card__content_input" name="name" type="text">
             </div>
             <div class="card__groupWrap">
                 <div class="card__group">
-                    <div class="card__content_title">Группа* <span data-count="120"></span></div>
+                    <div class="card__content_title">Група* <span data-count="120"></span></div>
                     <input required class="card__content_input" name="group" type="text">
                 </div>
                 <div class="card__application">
-                    <div class="card__content_title">Область применения <span data-count="120"></span></div>
+                    <div class="card__content_title">Галузь застосування <span data-count="120"></span></div>
                     <input required class="card__content_input" name="field_of_usage" value="" type="text">
                 </div>
             </div>
@@ -82,7 +82,7 @@
         <div class="card__groupWrap card__download">
             <div class="card__group">
                 <label class="card__upload">
-                    <span>Download image</span>
+                    <span>Завантажити зображення</span>
                     <img src="{{env('APP_URL')}}/img/icons/card/upload.svg" alt="upload">
                     <input accept="image/*" required type="file" name="img" id="myFile" name="filename">
                 </label>
@@ -105,17 +105,17 @@
 
         </div>
         <div>
-            <div class="card__content_title">Описание товара* <span data-count="2080"></span></div>
+            <div class="card__content_title">Опис товару* <span data-count="2080"></span></div>
             <textarea required class="card__descr" name="description"
                       oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
         </div>
             <div>
-                <div class="card__content_title">Применение продукта <span data-count="2080"></span></div>
+                <div class="card__content_title">Застосування продукту <span data-count="2080"></span></div>
                 <textarea required class="card__descr" name="product_usage"
                           oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
             </div>
             <div>
-                <div class="card__content_title">Стандарты <span data-count="500"></span></div>
+                <div class="card__content_title">Стандарти <span data-count="500"></span></div>
                 <textarea required class="card__descr" name="standart"
                           oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
             </div>
@@ -125,19 +125,19 @@
                           oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
             </div>
             <div>
-                <div class="card__content_title">Хранение <span data-count="500"></span></div>
+                <div class="card__content_title">Зберігання <span data-count="500"></span></div>
                 <textarea required class="card__descr" name="stogare"
                           oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
             </div>
             <div class="card__table">
-                <div class="card__content_title">Таблица показателей</div>
+                <div class="card__content_title">Таблиця показників</div>
                 <div class="card__table_main">
                     <div class="card__table_main-row">
                         <div class="card__table_main-heading card__table_main-name">
-                            Название
+                            Назва
                         </div>
                         <div class="card__table_main-heading card__table_main-amount">
-                            количество
+                            кількість
                         </div>
                     </div>
                     <div hidden class="card__table_main-row">
@@ -158,13 +158,13 @@
                     @endforeach
                 </div>
                 <div class="card__table_add">
-                    <span id="add_f_str">Добавить строку</span>
+                    <span id="add_f_str">Додати рядок</span>
                     <img src="{{env('APP_URL')}}/img/icons/card/chev_black.svg" alt="chev">
                 </div>
             </div>
             <div class="card__btns">
                 <div class="card__btns_btn card__btns_save">
-                    <span id=submit_id>Создать</span>
+                    <span id=submit_id>Створити</span>
                     <img src="{{env('APP_URL')}}/img/icons/card/check.svg" alt="check">
                 </div>
             </div>
