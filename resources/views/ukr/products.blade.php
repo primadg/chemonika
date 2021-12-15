@@ -125,8 +125,8 @@
                         <div class="rep">
                             <select name="spread" id="spread" class="custom-select sources1" placeholder="{{$usage}}">
                                 <option data-filter="usage" value="Харчова">Харчова</option>
-                                <option data-filter="usage" value="Хімічна">Хімічна</option>
-                                <option data-filter="usage" value="Виробництво">Виробництво</option>
+                                <option data-filter="usage" value="Косметична">Косметична</option>
+                                <option data-filter="usage" value="Інші">Інші</option>
                             </select>
                         </div>
                     </div>

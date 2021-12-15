@@ -26,16 +26,24 @@ class ProductController extends Controller
 
         $chose_group = '';
         $chose_usage = '';
+        $f = "";
+        $s = "";
         $value = $request->cookie('lang') ?? "ukr";
         switch ($value) {
             case 'ukr':
                 $chose_group = $chose_usage = "Обрати";
+                $f = "Харчова";
+                $s = "Косметична";
                 break;
             case 'ru':
                 $chose_group = $chose_usage = "Выбрать";
+                $f = "Пищевая";
+                $s = "Косметическая";
                 break;
             case 'en':
                 $chose_group = $chose_usage = "Select";
+                $f = "Food";
+                $s = "Cosmetic";
                 break;
         }
         $products = DB::table('product_' . $value . 's');
@@ -44,7 +52,13 @@ class ProductController extends Controller
             $chose_group = $request->get('group');
         }
         if ($request->get('usage')) {
-            $products = $products->where('field_of_usage', $request->get('usage'));
+            $usg = $request->get('usage');
+            if($usg=="Other"||$usg=="Інші"||$usg=="Другие") {
+                $products = $products->where('field_of_usage', "!=",$f )->where('field_of_usage', "!=",$s);
+            }else {
+                $products = $products->where('field_of_usage', $request->get('usage'));
+
+            }
             $chose_usage = $request->get('usage');
         }
         $products = $products->simplePaginate(9);
