@@ -139,8 +139,12 @@
     <section class="secondPage__goods">
         <div class="container">
             @foreach ($products->chunk(3) as $chunk)
+
                 <div class="row">
                     @foreach ($chunk as $product)
+                        @if (!$product->name)
+                            @continue
+                        @endif
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12 secondPage__goods_card">
                             <div class="secondPage__goods_card-img">
                                 <img src="{{env("APP_URL").($product->img)}}" alt="product">
