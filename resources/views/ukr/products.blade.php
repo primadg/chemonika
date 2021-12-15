@@ -157,7 +157,7 @@
                                 </div>
                                 @if (!$product->draft)
                                 <div class="products__block_main-btn secondPage__goods_card-btn">
-                                    <div onclick="location.href='{{route("products.show", $product->id)}}'">Дизнатися
+                                    <div onclick="location.href='{{route("products.show", $product->id)}}'">Дізнатися
                                         більше
                                     </div>
                                     <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
