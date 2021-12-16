@@ -16,10 +16,35 @@ class AdminController extends Controller
     function homeAction(Request $request)
     {
 
-        return view("posts", [
+        return view("admin.index");
+    }
+
+    function groupsAction(Request $request)
+    {
+
+        return view("admin.group");
+    }
+
+    function usagesAction(Request $request)
+    {
+
+        return view("admin.usage");
+    }
+
+    function partnersAction(Request $request)
+    {
+
+        return view("admin.partners");
+    }
+
+    function postAction(Request $request)
+    {
+
+        return view("admin.posts", [
             'products' => DB::table('product_ukrs')->simplePaginate(10)
         ]);
     }
+
 
     function deletePost($id)
     {
@@ -147,10 +172,6 @@ class AdminController extends Controller
         }
         return false;
     }
-
-
-
-
 
 
 }
