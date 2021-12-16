@@ -30,18 +30,61 @@
     </div>
 </header>
 
-<style>
-    .demo{
-        width: 200px;
-        border: solid 2px #0A7739;
-        margin: 100px 50px;
-    }
-</style>
+<!-- <style>
 
-<div class="demo"><a href="{{env('APP_URL')}}/posts"> Публикации -> /posts</a></div>
-<div class="demo"><a href="{{env('APP_URL')}}/groups"> Группа -> /groups</a></div>
-<div class="demo"><a href="{{env('APP_URL')}}/usages"> Область использования -> /usages</a></div>
-<div class="demo"><a href="{{env('APP_URL')}}/partners"> Партнеры -> /partners</a></div>
+</style> -->
+
+<section class="startAdmin">
+    <div class="container">
+        <div class="startAdmin__wrapper">
+            <a href="{{env('APP_URL')}}/posts" class="startAdmin__block">
+                <div class="startAdmin__block_title">Продукція</div>
+                <div class="startAdmin__block_footer">
+                    <div class="startAdmin__block_footer-text">23 продукта</div>
+                    <!-- Встроить через тег <img src="" alt=""> -->
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="#219653"/>
+                    </svg>                        
+                </div>
+            </a>    
+            <a href="{{env('APP_URL')}}/groups" class="startAdmin__block">
+                <div class="startAdmin__block_title">Групи продукції</div>
+                <div class="startAdmin__block_footer">
+                    <div class="startAdmin__block_footer-text">23 продукта</div>
+                    <!-- Встроить через тег <img src="" alt=""> -->
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="#219653"/>
+                    </svg>                        
+                </div>
+            </a>
+            <a href="{{env('APP_URL')}}/usages" class="startAdmin__block">
+                <div class="startAdmin__block_title">Область використання</div>
+                <div class="startAdmin__block_footer">
+                    <div class="startAdmin__block_footer-text">23 продукта</div>
+                    <!-- Встроить через тег <img src="" alt=""> -->
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="#219653"/>
+                    </svg>                        
+                </div>
+            </a>
+            <a href="{{env('APP_URL')}}/partners" class="startAdmin__block">
+                <div class="startAdmin__block_title">Партнери</div>
+                <div class="startAdmin__block_footer">
+                    <div class="startAdmin__block_footer-text">23 продукта</div>
+                    <!-- Встроить через тег <img src="" alt=""> -->
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="#219653"/>
+                    </svg>                        
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- <div class="demo"><a href="{{env('APP_URL')}}/posts"> Публикации -> /posts</a></div> -->
+    <!-- <div class="demo"><a href="{{env('APP_URL')}}/groups"> Группа -> /groups</a></div> -->
+    <!-- <div class="demo"><a href="{{env('APP_URL')}}/usages"> Область использования -> /usages</a></div> -->
+    <!-- <div class="demo"><a href="{{env('APP_URL')}}/partners"> Партнеры -> /partners</a></div> -->
+</section>
+
 
 
 <footer class="footer">
