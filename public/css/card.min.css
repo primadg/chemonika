@@ -360,11 +360,11 @@
 }
 
 .card__table_main-row .card__table_main-simple {
-    background: #F7F8FA
+    background: #F7F8FA;
 }
 
 .card__table_main-row:nth-child(even) .card__table_main-simple {
-    background: #fff
+    background: #fff;
 }
 
 .card__table_main-heading {
@@ -673,6 +673,7 @@
     min-height: calc(100vh - 410px);
     padding-top: 100px;
     padding-bottom: 70px;
+    overflow: hidden;
 }
 .groupsAdmin__title{
     font-weight: bold;
@@ -725,6 +726,7 @@
 }
 .groupsAdmin__table_row{
     background: #F7F8FA;
+    transition: background .2s ease-in-out;
 }
 .groupsAdmin__table_row-title{
     border: 0px solid transparent;
@@ -732,8 +734,23 @@
     outline-width: 0px;
     background: transparent;
 }
+.groupsAdmin__table_row-title input{
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background: transparent;
+    width: 90%;
+    transition: border .2s ease-in-out;
+}
+.groupsAdmin__table_row-title input,
+.groupsAdmin__table_row-title input:focus,
+.groupsAdmin__table_row-title input:active{
+    outline-width: 0px;
+    outline-color: transparent;
+}
+
 .groupsAdmin__table_row:nth-child(even){
     background: #fff;
+    transition: background .2s ease-in-out;
 }
 .groupsAdmin__table_row-action{
     display: flex;
@@ -743,17 +760,14 @@
     display: flex;
     align-items: center;
 }
-.groupsAdmin__table_row-action div:last-child{
+/* .groupsAdmin__table_row-action div:last-child{
     margin-left: 60px;
-}
-.groupsAdmin__table_row-action div span{
-    padding-right: 19px;
+} */
+.groupsAdmin__table_row-edit{
+    margin-right: 60px;
 }
 .groupsAdmin__table_row-title{
     width: calc(100% - 308px);
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
 }
 .groupsAdmin__table_row-edit, .groupsAdmin__table_row-delete{
     cursor: pointer;
@@ -763,7 +777,10 @@
     width: 105px;
 }
 .groupsAdmin__table_row-editBtn{
-    width: 105px;
+    width: 129px;
+}
+.groupsAdmin__table_row-safe{
+    width: 129px;
 }
 .groupsAdmin__table_row-editable .groupsAdmin__table_row-safe{
     display: block;
@@ -771,6 +788,111 @@
 .groupsAdmin__table_row-editable .groupsAdmin__table_row-editBtn{
     display: none;
 }
+.groupsAdmin__table_row-title .inputEditable{
+    border: 2px solid #219653;
+    border-radius: 5px;
+    transition: border .2s ease-in-out;
+}
+.groupsAdmin__table_row-editable input{
+    border: 2px solid #219653;
+    border-radius: 5px;
+    transition: border .2s ease-in-out;
+}
+.inputIncorrect{
+    border-color: red!important;
+    transition: .2s ease-in-out;
+}
+.groupsAdmin__table_row-editBtn svg{
+    min-width: 18px;
+}
+.groupsAdmin__table_row-editBtn span{
+    padding-right: 19px;
+}
+.groupsAdmin__table_row-safe svg{
+    min-width: 18px;
+}
+.groupsAdmin__table_row-safe span{
+    padding-right: 34px;
+    color: #219653;
+}
+.groupsAdmin__table_row-delete span{
+    padding-right: 19px;
+}
+.deletedRow{
+    height: 0px;
+    transition: .2s ease-in-out;
+}
+.addedAdmin__row{
+    height: 40px;
+    padding: 0 85px 0 33px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.addedAdmin__row_input{
+    width: calc(100% - 308px);
+}
+.addedAdmin__row_input input{
+    width: 90%;
+    height: 35px;
+    background: #FFFFFF;
+    border: 1px solid #E1E8EE;
+    box-sizing: border-box;
+    border-radius: 2px;
+    outline-width: 0px;
+    outline-color: transparent;
+}
+.addedAdmin__row_input input:active,
+.addedAdmin__row_input input:focus{
+    outline-width: 0px;
+    outline-color: transparent;
+}
+
+.addedAdmin__row_input input::-webkit-input-placeholder { 
+    color: rgba(38, 54, 64, 0.25);
+}
+.addedAdmin__row_input input::-moz-placeholder { 
+    color: rgba(38, 54, 64, 0.25);
+}
+.addedAdmin__row_input input:-ms-input-placeholder { 
+    color: rgba(38, 54, 64, 0.25);
+}
+.addedAdmin__row_input input:-moz-placeholder {
+    color: rgba(38, 54, 64, 0.25);
+}
+.addedAdmin__row_action{
+    cursor: pointer;
+}
+.addedAdmin__row_action span{
+    font-size: 16px;
+    line-height: 40px;
+    color: #219653;
+}
+
+.groupsAdmin__table_row-added input{
+    border: 1px solid #E1E8EE;
+    box-sizing: border-box;
+    border-radius: 2px;
+    outline-width: 0px;
+    outline-color: transparent;
+}
+.groupsAdmin__table_row-added .groupsAdmin__table_row-edit,
+.groupsAdmin__table_row-added .groupsAdmin__table_row-delete,
+.groupsAdmin__table_row .addedAdmin__row_action{
+    display: none;
+}
+.groupsAdmin__table_row-added .addedAdmin__row_action{
+    display: flex;
+}
+.groupsAdmin__table_row-added{
+    justify-content: space-between;
+    padding-right: 88px;
+}
+.groupsAdmin__table_row-added .addedAdmin__row_action span{
+    padding-right: 19px;
+}
+
 @media screen and (max-width: 1200px){
     .startAdmin__block:last-child{
         margin-top: 0;
