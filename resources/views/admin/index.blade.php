@@ -44,9 +44,9 @@
                     <!-- Встроить через тег <img src="" alt=""> -->
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="#219653"/>
-                    </svg>                        
+                    </svg>
                 </div>
-            </a>    
+            </a>
             <a href="{{env('APP_URL')}}/groups" class="startAdmin__block">
                 <div class="startAdmin__block_title">Групи продукції</div>
                 <div class="startAdmin__block_footer">
@@ -54,7 +54,7 @@
                     <!-- Встроить через тег <img src="" alt=""> -->
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="#219653"/>
-                    </svg>                        
+                    </svg>
                 </div>
             </a>
             <a href="{{env('APP_URL')}}/usages" class="startAdmin__block">
@@ -64,9 +64,22 @@
                     <!-- Встроить через тег <img src="" alt=""> -->
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="#219653"/>
-                    </svg>                        
+                    </svg>
                 </div>
             </a>
+
+            <a href="{{env('APP_URL')}}/contact" class="startAdmin__block">
+                <div class="startAdmin__block_title">Контакты</div>
+                <div class="startAdmin__block_footer">
+                    <div class="startAdmin__block_footer-text">контакты</div>
+                    <!-- Встроить через тег <img src="" alt=""> -->
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="#219653"/>
+                    </svg>
+                </div>
+            </a>
+
+
             <a href="{{env('APP_URL')}}/partners" class="startAdmin__block">
                 <div class="startAdmin__block_title">Партнери</div>
                 <div class="startAdmin__block_footer">
@@ -74,7 +87,7 @@
                     <!-- Встроить через тег <img src="" alt=""> -->
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="#219653"/>
-                    </svg>                        
+                    </svg>
                 </div>
             </a>
             <a href="{{env('APP_URL')}}/contacts" class="startAdmin__block">
