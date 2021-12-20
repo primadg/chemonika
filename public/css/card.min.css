@@ -637,7 +637,10 @@
     text-decoration: none;
     outline-color: transparent;
 }
-.startAdmin__block:last-child{
+.startAdmin__block:nth-child(4){
+    margin-top: 10px;
+}
+.startAdmin__block:nth-child(5){
     margin-top: 10px;
 }
 .startAdmin__block svg{
@@ -950,7 +953,167 @@
     z-index: 3;
     transition: opacity .2s ease-in-out;
 }
-
+.startAdmin__block-invisible{
+    visibility: hidden;
+}
+/* Contacts admin */
+.contactsAdmin__header_wrapper{
+    display: flex;
+    align-items: center;
+}
+.contactsAdmin__lang{
+    width: 95px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #263640;
+    border: 1px solid rgba(38, 38, 38, 0.6);
+    cursor: pointer;
+    margin-right: 16px;
+    transition: .2s ease-in-out background, .2s ease-in-out color, .2s ease-in-out border-color;
+}
+.contactsAdmin__lang_active{
+    background: #219653;
+    color: #fff;
+    border-color: #219653;
+    transition: .2s ease-in-out background, .2s ease-in-out color, .2s ease-in-out border-color;
+}
+.contactsAdmin__lang:last-child{
+    margin-right: 0;
+}
+.contactsAdmin__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contactsAdmin__row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 51px;
+}
+.contactsAdmin__mainBlock{
+    width: calc(50% - 16px);
+}
+.contactsAdmin__mainBlock:nth-child(3), .contactsAdmin__mainBlock:nth-child(4){
+    margin-top: 72px;
+}
+.contactsAdmin__mainBlock_title{
+    display: flex;
+    align-items: center;
+}
+.contactsAdmin__mainBlock_title span{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #27AE60;
+    padding-left: 16px;
+}
+.contactsAdmin__label{
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 28px;
+    color: #929A9F;
+}
+.contactsAdmin__input{
+    padding: 0 16px;
+    background: #FFFFFF;
+    border: 1px solid #E1E8EE;
+    box-sizing: border-box;
+    border-radius: 2px;
+    height: 40px;
+    outline-width: 0px;
+    outline-color: transparent;
+    margin-top: 4px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #263640;
+    width: 100%;
+}
+.contactsAdmin__input:focus,
+.contactsAdmin__input:active{
+    outline-width: 0px;
+    outline-color: transparent; 
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: rgba(38, 54, 64, 0.6);
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: rgba(38, 54, 64, 0.6);
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: rgba(38, 54, 64, 0.6);
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: rgba(38, 54, 64, 0.6);
+}
+.contactsAdmin__mainBlock_textarrea{
+    height: 179px;
+    width: 100%;
+    padding: 6px 16px;
+    resize: none;
+    margin-top: 16px;
+}
+.contactsAdmin__mainBlock_social{
+    display: flex;
+    align-items: center;
+    margin-top: 23px;
+}
+.contactsAdmin__mainBlock_social-fc{
+    margin-top: 16px;
+}
+.contactsAdmin__mainBlock_social input{
+    margin-left: 22px;
+}
+.contactsAdmin__mainBlock_social-imageWrapper{
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contactsAdmin__btn{
+    width: 279px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    margin-top: 51px;
+    border: 1px solid #219653;
+    transition: background .2s ease-in-out;
+}
+.contactsAdmin__btn span{
+    padding-right: 20px;
+    font-size: 16px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    color: #219653;
+    transition: color .2s ease-in-out;
+}
+.contactsAdmin__btn:hover{
+    background: #219653;
+    transition: background .2s ease-in-out;
+}
+.contactsAdmin__btn:hover span{
+    color: #fff;
+    transition: color .2s ease-in-out;
+}
+.contactsAdmin__btn svg path{
+    fill: #219653;
+    transition: .2s ease-in-out;
+}
+.contactsAdmin__btn:hover svg path{
+    fill: #fff;
+    transition: .2s ease-in-out;
+}
 @media screen and (max-width: 1200px){
     .startAdmin__block:last-child{
         margin-top: 0;
