@@ -760,9 +760,6 @@
     display: flex;
     align-items: center;
 }
-/* .groupsAdmin__table_row-action div:last-child{
-    margin-left: 60px;
-} */
 .groupsAdmin__table_row-edit{
     margin-right: 60px;
 }
@@ -892,6 +889,67 @@
 .groupsAdmin__table_row-added .addedAdmin__row_action span{
     padding-right: 19px;
 }
+.addPartnerBtn{
+    width: 252px;
+    height: 40px;
+    margin-left: auto;
+    margin-top: 8px;
+}
+.partnersAdmin__wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 6px;
+}
+.partnersAdmin__wrapper_block{
+    width: 265px;
+    height: 255px;
+    border: 1px solid rgba(189, 189, 189, 0.25);
+    box-sizing: border-box;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 29px;
+    transition: border .2s ease-in-out;
+}
+
+
+.partnersAdmin__wrapper_block img{
+    width: 75%;
+    max-height: 95%;
+    object-fit: cover;
+}
+.partnersAdmin__wrapper_block .partnersAdmin__wrapper_block-close{
+    opacity: 0;
+    z-index: -3;
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+    transition: opacity .2s ease-in-out;
+}
+.partnersAdmin__wrapper_block-specific{
+    visibility: hidden;
+}
+
+.partnersAdmin__wrapper_block:hover .partnersAdmin__wrapper_block-close{ 
+    opacity: 1;
+    z-index: 3;
+    transition: opacity .2s ease-in-out;
+}
+.partnersAdmin__wrapper_block-active{
+    border: 1px solid #219653;
+    transition: border .2s ease-in-out;
+}
+.partnersAdmin__wrapper_block-active .partnersAdmin__wrapper_block-close{
+    opacity: 1;
+    z-index: 3;
+    transition: opacity .2s ease-in-out;
+}
 
 @media screen and (max-width: 1200px){
     .startAdmin__block:last-child{
@@ -935,4 +993,32 @@
 .input__error {
     border-color: #EB5757 !important;
 }
+.addPartnerBtn{
+    position: relative;
+}
+.addPartnerBtn_file{
+    cursor: pointer;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 38px;
+}
 
+
+.gridly, .gridly > :not(.dragging) {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; 
+}
+.gridly .dragging {
+    z-index: 800; 
+}
+.gridly {
+    position: relative;
+}
+
+.dragging{
+    border: 1px solid #219653;
+}
