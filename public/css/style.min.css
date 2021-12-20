@@ -2368,7 +2368,8 @@
 
 .store__block_square img {
     position: absolute;
-    top: 28px;
+    width: 197px;
+    top: 31px;
     right: 28px;
     -webkit-transition: .3s ease;
     transition: .3s ease
@@ -2582,6 +2583,9 @@
 @media screen and (max-width: 991px) {
     .clients__block {
         width: 15%
+    }
+    .store__block:hover img{
+        top: 31px;
     }
 }
 
