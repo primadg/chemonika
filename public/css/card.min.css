@@ -686,6 +686,7 @@
 }
 .groupsAdmin__header{
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 .groupsAdmin__add{
@@ -728,7 +729,7 @@
     color: #263640;
 }
 .groupsAdmin__table_row{
-    background: #F7F8FA;
+    background: #fff;
     transition: background .2s ease-in-out;
 }
 .groupsAdmin__table_row-title{
@@ -752,7 +753,7 @@
 }
 
 .groupsAdmin__table_row:nth-child(even){
-    background: #fff;
+    background: #F7F8FA;
     transition: background .2s ease-in-out;
 }
 .groupsAdmin__table_row-action{
@@ -901,7 +902,7 @@
 .partnersAdmin__wrapper{
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-top: 6px;
 }
 .partnersAdmin__wrapper_block{
@@ -915,9 +916,12 @@
     justify-content: center;
     position: relative;
     margin-top: 29px;
+    margin-right: 16px;
     transition: border .2s ease-in-out;
 }
-
+.partnersAdmin__wrapper_block:nth-child(4n+4){
+    margin-right: 0;
+}
 
 .partnersAdmin__wrapper_block img{
     width: 75%;
@@ -1114,6 +1118,28 @@
     fill: #fff;
     transition: .2s ease-in-out;
 }
+.partnersAdmin__wrapper_block-defaultClone{
+    display: none;
+    z-index: -3;
+}
+.groupsAdmin__table_row-clonned{
+    position: absolute;
+    z-index: -3;
+    opacity: 0;
+    visibility: hidden;
+}
+.card__btns_toggler{
+    margin-right: 20px;
+}
+.card__btns_toggler .card__btns_toggler-show{
+    display: none;
+}
+.card__btns_toggler.card__btns_toggler-active .card__btns_toggler-show{
+    display: flex;
+}
+.card__btns_toggler.card__btns_toggler-active .card__btns_toggler-hide{
+    display: none;
+}
 @media screen and (max-width: 1200px){
     .startAdmin__block:last-child{
         margin-top: 0;
@@ -1123,6 +1149,10 @@
     }
     .startAdmin__block{
         width: calc(50% - 10px);
+    }
+    .partnersAdmin__wrapper_block{
+        width: 220px;
+        height: 206px;
     }
 }
 
@@ -1137,6 +1167,18 @@
     .startAdmin__block_footer-text{
         font-size: 16px;
     }
+    /* .partnersAdmin__wrapper_block{
+        width: 100%;
+    } */
+    .partnersAdmin__wrapper_block:nth-child(4n+4){
+        margin-right: 16px;
+    }
+    .partnersAdmin__wrapper_block:nth-child(3n+3){
+        margin-right: 0;
+    }
+    .partnersAdmin__wrapper_block{
+        width: 219px;
+    }
 }
 @media screen and (max-width: 768px){
     .startAdmin__block{
@@ -1148,6 +1190,111 @@
     }
     .startAdmin__block:last-child{
         margin-bottom: 0;
+    }
+    .footer__wrapper{
+        flex-direction: column;
+    }
+    .startAdmin__block-invisible{
+        display: none;
+    }
+    .groupsAdmin__header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .groupsAdmin__add{
+        margin-top: 12px;
+    }
+    .groupsAdmin__table_row{
+        padding: 0 19px;
+    }
+    .groupsAdmin{
+        padding-top: 70px;
+    }
+    .contactsAdmin__header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .contactsAdmin__header_wrapper{
+        margin-top: 12px;
+    }
+    .contactsAdmin__mainBlock{
+        width: 100%;
+    }
+    .contactsAdmin__row{
+        margin-top: 0;
+    }
+    .contactsAdmin__mainBlock{
+        margin-top: 33px;
+    }
+    .contactsAdmin__mainBlock:nth-child(3), .contactsAdmin__mainBlock:nth-child(4){
+        margin-top: 33px;
+    }
+    .addPartnerBtn{
+        margin-left: 0;
+    }
+    .partnersAdmin__wrapper_block{
+        width: 159px;
+        height: 156px;
+    }
+    .card__download{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 576px){
+    .startAdmin{
+        padding-top: 59px;
+    }
+    .header{
+        height: 126px;
+    }
+    .header .wrapper{
+        flex-direction: column;
+    }
+    .groupsAdmin__table_row-title{
+        min-width: 200px;
+    }
+    .groupsAdmin__content{
+        overflow: auto;
+    }
+    .partnersAdmin__wrapper_block{
+        width: 100%;
+        height: 200px;
+    }
+    .partnersAdmin__wrapper_block img{
+        object-fit: contain;
+    }
+    .partnersAdmin__wrapper_block:nth-child(3n+3){
+        margin-right: 0px;
+    }
+    .partnersAdmin__wrapper_block{
+        margin-right: 0px;
+    }
+    .card__btns{
+        flex-direction: column;
+    }
+    .card__btns_toggler{
+        margin-right: 0;
+    }
+    .card__btns_btn{
+        margin: 0;
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 400px){
+    .footer__info{
+        flex-direction: column;
+    }
+    .footer__info_place{
+        padding-left: 0;
+    }   
+    .footer__info_place-descr{
+        width: 100%;
+    }
+    .footer__info_place{
+        margin-top: 37px;
+    }
+    .footer__separator{
+        margin-top: 55px;
     }
 }
 
@@ -1167,6 +1314,7 @@
     left: 0;
     top: 0;
     height: 38px;
+    z-index: -1;
 }
 
 

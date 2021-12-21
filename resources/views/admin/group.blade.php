@@ -32,6 +32,39 @@
 </header>
 <section class="groupsAdmin">
     <div class="container">
+        <div class="groupsAdmin__table_row groupsAdmin__table_row-clonned">
+            <div class="groupsAdmin__table_row-title">
+                <input readonly value="Група №1" />
+            </div>
+            <div class="groupsAdmin__table_row-action">
+                <div class="groupsAdmin__table_row-edit">
+                    <span class="groupsAdmin__table_row-editBtn">
+                        <span>Редагувати</span>
+                        <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.25 0.0232109C15.6755 0.0232109 15.113 0.245961 14.6795 0.679461L7.25 8.08571L7.08575 8.24996L7.03925 8.48471L6.52325 11.1097L6.28925 12.2107L7.391 11.9767L10.016 11.4607L10.25 11.4142L10.4142 11.25L17.8205 3.82046C18.1309 3.50926 18.3422 3.11312 18.4278 2.68199C18.5134 2.25086 18.4695 1.80403 18.3015 1.39784C18.1336 0.99165 17.8491 0.644277 17.484 0.399514C17.1189 0.15475 16.6895 0.0235529 16.25 0.0224609V0.0232109ZM16.25 1.47671C16.4255 1.47671 16.5987 1.56671 16.766 1.73396C17.0997 2.06846 17.0997 2.43146 16.766 2.76521L9.5 10.032L8.21075 10.29L8.46875 9.00071L15.7347 1.73471C15.9012 1.56821 16.0745 1.47746 16.25 1.47746V1.47671ZM0.5 2.99996V18H15.5V8.10896L14 9.60896V16.5H2V4.49996H8.891L10.391 2.99996H0.5Z" fill="#263640"/>
+                        </svg>  
+                    </span>
+                    <span class="groupsAdmin__table_row-safe">
+                        <span>Зберегти</span>
+                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 11.17L1.83 7L0.410004 8.41L6 14L18 2L16.59 0.589996L6 11.17Z" fill="#219653"/>
+                        </svg>                                  
+                    </span>
+                </div>
+                <div class="groupsAdmin__table_row-delete">
+                    <span>Видалити</span>
+                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.5 1.41L13.09 0L7.5 5.59L1.91 0L0.5 1.41L6.09 7L0.5 12.59L1.91 14L7.5 8.41L13.09 14L14.5 12.59L8.91 7L14.5 1.41Z" fill="#263640"/>
+                    </svg>                            
+                </div>
+                <div class="addedAdmin__row_action">
+                    <span>Додати</span>
+                    <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 11.17L1.83 7L0.410004 8.41L6 14L18 2L16.59 0.589996L6 11.17Z" fill="#219653"/>
+                    </svg> 
+                </div>
+            </div>
+        </div>
         <div class="groupsAdmin__header">
             <div class="groupsAdmin__title">Групи продуктів</div>
             <div class="groupsAdmin__add">
@@ -272,9 +305,10 @@
     
     addGroup.onclick = (e) => {
         const activityClass = 'groupsAdmin__table_row-added';
-        let table = e.target.closest('.groupsAdmin').querySelector('.groupsAdmin__content');
+        let table = e.target.closest('.groupsAdmin');
         let row = table.querySelector('.groupsAdmin__table_row');
         let clonned = row.cloneNode(true);
+        clonned.classList.remove('groupsAdmin__table_row-clonned');
         clonned.classList.add(activityClass);
         let input = clonned.querySelector('input');
         input.value = '';
@@ -293,7 +327,7 @@
                 }, 2000)
             }
         });
-        table.appendChild(clonned);
+        table.querySelector('.groupsAdmin__table').appendChild(clonned);
     }
 </script>
 </body>

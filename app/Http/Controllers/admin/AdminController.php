@@ -81,10 +81,6 @@ class AdminController extends Controller
         return view("ru.card_edit", ['product' => $product, 'main_id' => $id, 'entries' => $entries]);
     }
 
-    public function contacts()
-    {
-        return view("admin.contacts");
-    }
 
     public function editEn($id)
     {

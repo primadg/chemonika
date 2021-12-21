@@ -32,35 +32,39 @@
 
 
 <section class="groupsAdmin">
+    <div class="partnersAdmin__wrapper_block brick partnersAdmin__wrapper_block-defaultClone">
+        <img src="{{env("APP_URL")}}/img/partners/image.png" alt="partner">
+        <img class="partnersAdmin__wrapper_block-close" src="{{env("APP_URL")}}/img/partners/close.svg" alt="close">
+    </div>
     <div class="container">
         <div class="groupsAdmin__header">
             <div class="groupsAdmin__title">Партнери</div>
         </div>
         <div class="groupsAdmin__add addPartnerBtn">
-            <input class="addPartnerBtn_file" type="file" name="myImage" accept="image/png, image/gif, image/jpeg" />
+            <!-- <input class="addPartnerBtn_file" type="file" name="myImage" accept="image/png, image/gif, image/jpeg" /> -->
             <div class="groupsAdmin__add_text">Додати партнера</div>
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.78323 0.712379L6.35891 0.712378L6.35891 6.35913L0.712158 6.35913V7.78345L6.35891 7.78345L6.35891 13.4302L7.78323 13.4302L7.78323 7.78345L13.43 7.78345V6.35913L7.78323 6.35913L7.78323 0.712379Z" fill="#219653"/>
             </svg>                    
         </div>
-        <div class="partnersAdmin__wrapper gridly">
-            <div class="partnersAdmin__wrapper_block brick">
+        <div class="partnersAdmin__wrapper containerDrag">
+            <div class="partnersAdmin__wrapper_block item" draggable=true>
                 <img src="{{env("APP_URL")}}/img/partners/image.png" alt="partner">
                 <img class="partnersAdmin__wrapper_block-close" src="{{env("APP_URL")}}/img/partners/close.svg" alt="close">
             </div>
-            <div class="partnersAdmin__wrapper_block brick">
+            <div class="partnersAdmin__wrapper_block item" draggable=true>
                 <img src="{{env("APP_URL")}}/img/partners/image1.png" alt="partner">
                 <img class="partnersAdmin__wrapper_block-close" src="{{env("APP_URL")}}/img/partners/close.svg" alt="close">
             </div>
-            <div class="partnersAdmin__wrapper_block brick">
+            <div class="partnersAdmin__wrapper_block item" draggable=true>
                 <img src="{{env("APP_URL")}}/img/partners/image2.png" alt="partner">
                 <img class="partnersAdmin__wrapper_block-close" src="{{env("APP_URL")}}/img/partners/close.svg" alt="close">
             </div>
-            <div class="partnersAdmin__wrapper_block brick">
+            <div class="partnersAdmin__wrapper_block item" draggable=true>
                 <img src="{{env("APP_URL")}}/img/partners/image3.png" alt="partner">
                 <img class="partnersAdmin__wrapper_block-close" src="{{env("APP_URL")}}/img/partners/close.svg" alt="close">
             </div>
-            <div class="partnersAdmin__wrapper_block brick">
+            <div class="partnersAdmin__wrapper_block item" draggable=true>
                 <img src="{{env("APP_URL")}}/img/partners/image4.png" alt="partner">
                 <img class="partnersAdmin__wrapper_block-close" src="{{env("APP_URL")}}/img/partners/close.svg" alt="close">
             </div>
@@ -103,12 +107,7 @@
 </footer>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
-    let partnerBlockClose = document.querySelectorAll('.partnersAdmin__wrapper_block-close');
-    partnerBlockClose.forEach(item => {
-        item.onclick = (e) => {
-            e.target.closest('.partnersAdmin__wrapper_block').remove();
-        }
-    });
+
 </script>
 <script src="{{env('APP_URL')}}/js/dragDrop.js"></script>
 </body>
