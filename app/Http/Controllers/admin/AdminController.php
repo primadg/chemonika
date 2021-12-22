@@ -16,10 +16,41 @@ class AdminController extends Controller
     function homeAction(Request $request)
     {
 
-        return view("posts", [
+        return view("admin.index");
+    }
+
+    function groupsAction(Request $request)
+    {
+
+        return view("admin.group");
+    }
+
+    function usagesAction(Request $request)
+    {
+
+        return view("admin.usage");
+    }
+
+    function partnersAction(Request $request)
+    {
+
+        return view("admin.partners");
+    }
+
+    function contactAction(Request $request)
+    {
+
+        return view("admin.contact");
+    }
+
+    function postAction(Request $request)
+    {
+
+        return view("admin.posts", [
             'products' => DB::table('product_ukrs')->simplePaginate(10)
         ]);
     }
+
 
     function deletePost($id)
     {
@@ -49,6 +80,7 @@ class AdminController extends Controller
         $entries = DB::table('table_ps')->where('post_id', $id)->get();
         return view("ru.card_edit", ['product' => $product, 'main_id' => $id, 'entries' => $entries]);
     }
+
 
     public function editEn($id)
     {
@@ -147,10 +179,6 @@ class AdminController extends Controller
         }
         return false;
     }
-
-
-
-
 
 
 }
