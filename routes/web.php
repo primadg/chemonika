@@ -43,6 +43,7 @@ Route::group(['middleware' => ['role:admin'], ], function () {
         'create', 'store', 'update','edit', ]);
     Route::resource('products_admin', \App\Http\Controllers\admin\ProductController::class);
     Route::get("/delete/{id}", [\App\Http\Controllers\admin\AdminController::class,'deletePost', ]);
+    Route::post("/visible/{id}", [\App\Http\Controllers\admin\AdminController::class,'visiblePost',]);
     Route::get("/editRu/{id}", [\App\Http\Controllers\admin\AdminController::class,'editRu', ]);
     Route::get("/test", function(){
         return view('test');

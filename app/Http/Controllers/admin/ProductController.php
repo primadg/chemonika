@@ -46,7 +46,7 @@ class ProductController extends Controller
                 $s = "Cosmetic";
                 break;
         }
-        $products = DB::table('product_' . $value . 's');
+        $products = DB::table('product_' . $value . 's')->where("visible","!=",0)->where("draft","!=",1);
         if ($request->get('group')) {
             $products = $products->where('group', $request->get('group'));
             $chose_group = $request->get('group');

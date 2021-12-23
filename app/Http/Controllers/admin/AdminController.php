@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Storage;
 class AdminController extends Controller
 {
 
+    public function visiblePost(Request $request, $id){
+        $this->changeVisible($id);
+        return response('ok',200);
+    }
+
     function homeAction(Request $request)
     {
 
@@ -175,6 +180,19 @@ class AdminController extends Controller
             }
         }
         return false;
+    }
+
+    private function changeVisible($id){
+        $product = Product_ukr::find($id);
+        $value = !$product->visible;
+        $product->visible = $value;
+        $product->save();
+        $product = Product_ru::find($id);
+        $product->visible = $value;
+        $product->save();
+        $product = Product_en::find($id);
+        $product->visible = $value;
+        $product->save();
     }
 
 
