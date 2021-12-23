@@ -435,6 +435,30 @@ class Admin extends Seeder
             'Standart' => "Compliant with quality standards: ВР2009, USP32, FCC6, E202",
             'description' => "Wheat gluten is a plant protein which is insoluble in water. In the process of hydration, it creates fibers. Functional properties of gluten include high absorbing properties (180-200%), creation of stable viscoelastic structure and thermal stability at 85deg C.",
         ]);
+        DB::table('contact_table_en')->insert([
+            "id"=>1,
+            "tel1"=>"+38 (067) 686 92 91",
+            "tel2"=>"+38 (050) 332 66 44",
+            "email1"=>"akabanov@chemonika.com.ua",
+            "email2"=>"a.petrishcheva@chemonika.com.ua",
+            "adrs" => "81a Yuri Ilyenko Str, Kyiv, Ukraine"
+        ]);
+        DB::table('contact_table_ukr')->insert([
+            "id"=>1,
+            "tel1"=>"+38 (067) 686 92 91",
+            "tel2"=>"+38 (050) 332 66 44",
+            "email1"=>"akabanov@chemonika.com.ua",
+            "email2"=>"a.petrishcheva@chemonika.com.ua",
+            "adrs" => "Україна, м. Київ, вул. Юрія Ильєнка 81а"
+        ]);
+        DB::table('contact_table_ru')->insert([
+            "id"=>1,
+            "tel1"=>"+38 (067) 686 92 91",
+            "tel2"=>"+38 (050) 332 66 44",
+            "email1"=>"akabanov@chemonika.com.ua",
+            "email2"=>"a.petrishcheva@chemonika.com.ua",
+            "adrs" => "Украина, Киев, ул. Юрия Ильенко 81а"
+        ]);
     }
 
 }

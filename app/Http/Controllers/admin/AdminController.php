@@ -25,6 +25,7 @@ class AdminController extends Controller
         return view("admin.group");
     }
 
+
     function usagesAction(Request $request)
     {
 
@@ -37,11 +38,7 @@ class AdminController extends Controller
         return view("admin.partners");
     }
 
-    function contactAction(Request $request)
-    {
 
-        return view("admin.contact");
-    }
 
     function postAction(Request $request)
     {
@@ -179,6 +176,8 @@ class AdminController extends Controller
         }
         return false;
     }
+
+
 
 
 }
