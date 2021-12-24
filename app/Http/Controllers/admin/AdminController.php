@@ -24,22 +24,6 @@ class AdminController extends Controller
         return view("admin.index");
     }
 
-    function groupsAction(Request $request)
-    {
-
-        return view("admin.group");
-    }
-
-
-    function usagesAction(Request $request)
-    {
-
-        return view("admin.usage");
-    }
-
-
-
-
 
     function postAction(Request $request)
     {
