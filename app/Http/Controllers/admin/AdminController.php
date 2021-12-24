@@ -37,11 +37,7 @@ class AdminController extends Controller
         return view("admin.usage");
     }
 
-    function partnersAction(Request $request)
-    {
 
-        return view("admin.partners");
-    }
 
 
 

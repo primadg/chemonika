@@ -60,13 +60,13 @@
                     </div>
                 </div>
                 <div class="form__row_links">
-                    <a href="#">
+                    <a href="{{$contact->link_tg}}">
                         <img src="img/icons/telegram.svg" alt="telegram">
                     </a>
-                    <a class="form__row_links-skype" href="#">
+                    <a class="form__row_links-skype" href="{{$contact->link_skype}}">
                         <img src="img/icons/skype.svg" alt="skype">
                     </a>
-                    <a href="#">
+                    <a href="{{$contact->link_facebook}}">
                         <img src="img/icons/facebook.svg" alt="facebook">
                     </a>
                 </div>

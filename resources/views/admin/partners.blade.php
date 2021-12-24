@@ -41,11 +41,11 @@
             <div class="groupsAdmin__title">Партнери</div>
         </div>
         <div class="groupsAdmin__add addPartnerBtn">
-            <!-- <input class="addPartnerBtn_file" type="file" name="myImage" accept="image/png, image/gif, image/jpeg" /> -->
+    <input class="addPartnerBtn_file" type="file" name="myImage" accept="image/png, image/gif, image/jpeg" />
             <div class="groupsAdmin__add_text">Додати партнера</div>
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.78323 0.712379L6.35891 0.712378L6.35891 6.35913L0.712158 6.35913V7.78345L6.35891 7.78345L6.35891 13.4302L7.78323 13.4302L7.78323 7.78345L13.43 7.78345V6.35913L7.78323 6.35913L7.78323 0.712379Z" fill="#219653"/>
-            </svg>                    
+            </svg>
         </div>
         <div class="partnersAdmin__wrapper containerDrag">
             <div class="partnersAdmin__wrapper_block item" draggable=true>
@@ -71,7 +71,7 @@
             <!-- <div class="partnersAdmin__wrapper_block partnersAdmin__wrapper_block-specific"></div> -->
         </div>
     </div>
-</section>  
+</section>
 
 <footer class="footer">
     <div class="container">

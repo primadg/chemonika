@@ -38,12 +38,14 @@ Route::group(['middleware' => ['role:admin'], ], function () {
     Route::namespace('admin')->get("/contact", [App\Http\Controllers\admin\ContactController::class,'getContacts' ]);
     Route::namespace('admin')->get("/groups", [App\Http\Controllers\admin\AdminController::class,'groupsAction' ]);
     Route::namespace('admin')->get("/usages", [App\Http\Controllers\admin\AdminController::class,'usagesAction' ]);
-    Route::namespace('admin')->get("/partners", [App\Http\Controllers\admin\AdminController::class,'partnersAction' ]);
+    Route::namespace('admin')->get("/partners", [App\Http\Controllers\admin\PartnerController::class,'getPartnersAdminAction' ]);
     Route::resource('products', \App\Http\Controllers\admin\ProductController::class)->only([
         'create', 'store', 'update','edit', ]);
     Route::resource('products_admin', \App\Http\Controllers\admin\ProductController::class);
     Route::get("/delete/{id}", [\App\Http\Controllers\admin\AdminController::class,'deletePost', ]);
+    Route::get("/delete_partner/{id}", [\App\Http\Controllers\admin\PartnerController::class,'deletePartnerAction', ]);
     Route::post("/visible/{id}", [\App\Http\Controllers\admin\AdminController::class,'visiblePost',]);
+    Route::post("/save_contact/", [\App\Http\Controllers\admin\ContactController::class,'editContacts',]);
     Route::get("/editRu/{id}", [\App\Http\Controllers\admin\AdminController::class,'editRu', ]);
     Route::get("/test", function(){
         return view('test');
