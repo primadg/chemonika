@@ -49,23 +49,23 @@
         </div>
         <div class="partnersAdmin__wrapper containerDrag">
             <div class="partnersAdmin__wrapper_block item" draggable=true>
-                <img src="{{env("APP_URL")}}/img/partners/image.png" alt="partner">
+                <img data-id="1" src="{{env("APP_URL")}}/img/partners/image.png" alt="partner">
                 <img class="partnersAdmin__wrapper_block-close" src="{{env("APP_URL")}}/img/partners/close.svg" alt="close">
             </div>
             <div class="partnersAdmin__wrapper_block item" draggable=true>
-                <img src="{{env("APP_URL")}}/img/partners/image1.png" alt="partner">
+                <img data-id="2" src="{{env("APP_URL")}}/img/partners/image1.png" alt="partner">
                 <img class="partnersAdmin__wrapper_block-close" src="{{env("APP_URL")}}/img/partners/close.svg" alt="close">
             </div>
             <div class="partnersAdmin__wrapper_block item" draggable=true>
-                <img src="{{env("APP_URL")}}/img/partners/image2.png" alt="partner">
+                <img data-id="3" src="{{env("APP_URL")}}/img/partners/image2.png" alt="partner">
                 <img class="partnersAdmin__wrapper_block-close" src="{{env("APP_URL")}}/img/partners/close.svg" alt="close">
             </div>
             <div class="partnersAdmin__wrapper_block item" draggable=true>
-                <img src="{{env("APP_URL")}}/img/partners/image3.png" alt="partner">
+                <img data-id="4" src="{{env("APP_URL")}}/img/partners/image3.png" alt="partner">
                 <img class="partnersAdmin__wrapper_block-close" src="{{env("APP_URL")}}/img/partners/close.svg" alt="close">
             </div>
             <div class="partnersAdmin__wrapper_block item" draggable=true>
-                <img src="{{env("APP_URL")}}/img/partners/image4.png" alt="partner">
+                <img data-id="5" src="{{env("APP_URL")}}/img/partners/image4.png" alt="partner">
                 <img class="partnersAdmin__wrapper_block-close" src="{{env("APP_URL")}}/img/partners/close.svg" alt="close">
             </div>
             <!-- <div class="partnersAdmin__wrapper_block partnersAdmin__wrapper_block-specific"></div> -->
