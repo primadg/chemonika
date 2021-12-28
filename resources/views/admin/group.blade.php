@@ -41,7 +41,7 @@
             <div class="groupsAdmin__table_row-title">
                 <input readonly value="Група №1" />
             </div>
-
+            <div class="groupsAdmin__table_row-amount">0</div>
             <div class="groupsAdmin__table_row-action">
                 <div class="groupsAdmin__table_row-edit">
                     <span class="groupsAdmin__table_row-editBtn">
@@ -83,6 +83,7 @@
         <div class="groupsAdmin__table">
             <div class="groupsAdmin__table_row groupsAdmin__table_header">
                 <div class="groupsAdmin__table_row-title">Назва</div>
+                <div class="groupsAdmin__table_row-amount">Кількість продуктів</div>
                 <div class="groupsAdmin__table_row-action">Дія</div>
             </div>
             <div class="groupsAdmin__content">
@@ -91,6 +92,7 @@
                     <div class="groupsAdmin__table_row-title">
                         <input data-id="{{$filter->id}}" readonly value="{{$filter->name}}" />
                     </div>
+                    <div class="groupsAdmin__table_row-amount">0</div>
                     <div class="groupsAdmin__table_row-action">
                         <div class="groupsAdmin__table_row-edit">
                             <span class="groupsAdmin__table_row-editBtn">
