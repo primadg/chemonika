@@ -67,12 +67,16 @@ class ProductController extends Controller
                 $item->id = $item->pos_id;
             }
         }
-//        dd($chose_group);
+
+        $groups = DB::table("groups_f")->where("lang",$value)->get();
+        $usages = DB::table("field_of_usages")->where("lang",$value)->get();
 
         return view($value . '.products', [
             'products' => $products,
             'usage' => $chose_usage,
-            'group' => $chose_group
+            'group' => $chose_group,
+             "usages"=>$usages,
+            "groups" => $groups,
         ]);
     }
 
