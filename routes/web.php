@@ -36,8 +36,8 @@ Route::group(['middleware' => ['role:admin'], ], function () {
     Route::namespace('admin')->get("/admin", [App\Http\Controllers\admin\AdminController::class,'homeAction' ]);
     Route::namespace('admin')->get("/posts", [App\Http\Controllers\admin\AdminController::class,'postAction' ]);
     Route::namespace('admin')->get("/contact", [App\Http\Controllers\admin\ContactController::class,'getContacts' ]);
-    Route::namespace('admin')->get("/groups", [App\Http\Controllers\admin\AdminController::class,'groupsAction' ]);
-    Route::namespace('admin')->get("/usages", [App\Http\Controllers\admin\AdminController::class,'usagesAction' ]);
+    Route::namespace('admin')->get("/groups", [App\Http\Controllers\filters\GroupController ::class,'getFiltersAdminAction' ]);
+    Route::namespace('admin')->get("/usages", [App\Http\Controllers\filters\FieldOfUsageController::class,'getFiltersAdminAction' ]);
     Route::namespace('admin')->get("/partners", [App\Http\Controllers\admin\PartnerController::class,'getPartnersAdminAction' ]);
     Route::resource('products', \App\Http\Controllers\admin\ProductController::class)->only([
         'create', 'store', 'update','edit', ]);

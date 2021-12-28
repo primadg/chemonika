@@ -48,7 +48,7 @@ class ProductController extends Controller
         }
         $products = DB::table('product_' . $value . 's')->where("visible","!=",0)->where("draft","!=",1);
         if ($request->get('group')) {
-            $products = $products->where('group', $request->get('group'));
+            $products = $products->where('group', "like", $request->get('group'));
             $chose_group = $request->get('group');
         }
         if ($request->get('usage')) {
@@ -56,7 +56,7 @@ class ProductController extends Controller
             if($usg=="Other"||$usg=="Інші"||$usg=="Другие") {
                 $products = $products->where('field_of_usage', "!=",$f )->where('field_of_usage', "!=",$s);
             }else {
-                $products = $products->where('field_of_usage', $request->get('usage'));
+                $products = $products->where('field_of_usage',"like", $request->get('usage'));
 
             }
             $chose_usage = $request->get('usage');

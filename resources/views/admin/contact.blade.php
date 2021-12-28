@@ -34,7 +34,6 @@
         <div class="contactsAdmin__header">
             <div class="groupsAdmin__title">Контакти</div>
             <div class="contactsAdmin__header_wrapper">
-{{--                todo cделать переключение языков (анимацию)--}}
                 <div onclick="location.href='{{env("APP_URL")."/en"}}'"  class="contactsAdmin__lang @if($lang=="en") contactsAdmin__lang_active  @endif" >Eng</div>
                 <div onclick="location.href='{{env("APP_URL")."/ru"}}'"  class="contactsAdmin__lang @if($lang=="ru") contactsAdmin__lang_active  @endif">Руc</div>
                 <div onclick="location.href='{{env("APP_URL")."/ukr"}}'"  class="contactsAdmin__lang @if($lang=="ukr") contactsAdmin__lang_active  @endif">Укр</div>

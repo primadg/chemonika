@@ -16,6 +16,7 @@ class CreateTableFieldOfUsages extends Migration
         Schema::create('field_of_usages', function (Blueprint $table) {
             $table->id();
             $table->string("name");
+            $table->string("lang");
         });
     }
 
@@ -26,6 +27,6 @@ class CreateTableFieldOfUsages extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_field_of_usages');
+        Schema::dropIfExists('field_of_usages');
     }
 }
