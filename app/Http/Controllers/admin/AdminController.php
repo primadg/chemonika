@@ -20,8 +20,15 @@ class AdminController extends Controller
 
     function homeAction(Request $request)
     {
-
-        return view("admin.index");
+        $posts = count(DB::table("product_ukrs")->get());
+        $groups = count(DB::table("groups_f")->get());
+        $usages = count(DB::table("field_of_usages")->get());
+        return view("admin.index",
+        [
+            "posts" => $posts,
+            "groups" => $groups,
+            "usages" => $usages,
+        ]);
     }
 
 
