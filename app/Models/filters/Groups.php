@@ -9,6 +9,7 @@ class Groups extends Model
 {
     use HasFactory;
     protected $table = "groups_f";
+    public $timestamps = false;
     public function setUpdatedAt($value)
     {
         return NULL;

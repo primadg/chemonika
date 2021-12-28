@@ -38,6 +38,15 @@ Route::group(['middleware' => ['role:admin'], ], function () {
     Route::namespace('admin')->get("/contact", [App\Http\Controllers\admin\ContactController::class,'getContacts' ]);
     Route::namespace('admin')->get("/groups", [App\Http\Controllers\filters\GroupController ::class,'getFiltersAdminAction' ]);
     Route::namespace('admin')->get("/usages", [App\Http\Controllers\filters\FieldOfUsageController::class,'getFiltersAdminAction' ]);
+
+    Route::post("/edit_groups_f", [App\Http\Controllers\filters\GroupController::class,'editFilterAction' ]);
+    Route::post("/delete_groups_f", [App\Http\Controllers\filters\GroupController::class,'deleteFilterAction' ]);
+    Route::post("/create_groups_f", [App\Http\Controllers\filters\GroupController::class,'addFilterAction' ]);
+    Route::post("/edit_field_of_usage", [App\Http\Controllers\filters\FieldOfUsageController::class,'editFilterAction' ]);
+    Route::post("/delete_field_of_usage", [App\Http\Controllers\filters\FieldOfUsageController::class,'deleteFilterAction' ]);
+    Route::post("/create_field_of_usage", [App\Http\Controllers\filters\FieldOfUsageController::class,'addFilterAction' ]);
+
+
     Route::namespace('admin')->get("/partners", [App\Http\Controllers\admin\PartnerController::class,'getPartnersAdminAction' ]);
     Route::resource('products', \App\Http\Controllers\admin\ProductController::class)->only([
         'create', 'store', 'update','edit', ]);
@@ -46,6 +55,15 @@ Route::group(['middleware' => ['role:admin'], ], function () {
     Route::get("/delete_partner/{id}", [\App\Http\Controllers\admin\PartnerController::class,'deletePartnerAction', ]);
     Route::post("/visible/{id}", [\App\Http\Controllers\admin\AdminController::class,'visiblePost',]);
     Route::post("/save_contact/", [\App\Http\Controllers\admin\ContactController::class,'editContacts',]);
+
+    Route::post("/edit_groups_f", [\App\Http\Controllers\filters\GroupController::class,'editFilterAction' ]);
+    Route::post("/delete_groups_f", [\App\Http\Controllers\filters\GroupController::class,'deleteFilterAction' ]);
+    Route::post("/create_groups_f", [\App\Http\Controllers\filters\GroupController::class,'addFilterAction' ]);
+
+    Route::post("/edit_field_of_usage", [\App\Http\Controllers\filters\FieldOfUsageController::class,'editFilterAction' ]);
+    Route::post("/delete_field_of_usage", [\App\Http\Controllers\filters\FieldOfUsageController::class,'deleteFilterAction' ]);
+    Route::post("/create_field_of_usage", [\App\Http\Controllers\filters\FieldOfUsageController::class,'addFilterAction' ]);
+
     Route::get("/editRu/{id}", [\App\Http\Controllers\admin\AdminController::class,'editRu', ]);
     Route::get("/test", function(){
         return view('test');

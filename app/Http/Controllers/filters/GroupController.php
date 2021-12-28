@@ -18,7 +18,6 @@ class GroupController extends Controller implements FiltersInterface
         }
         return view("admin.group", ["filters" => $filters, "lang" => "$lang"]);
     }
-
     function addFilterAction(Request $request)
     {
         $post = $request->post();
@@ -26,12 +25,21 @@ class GroupController extends Controller implements FiltersInterface
         $filter->name = $post["name"];
         $filter->lang = $post["lang"];
         $filter->save();
-
+        return response($filter->id,200);
     }
-
-    function deleteFilterAction(Request $request, $id)
+    function deleteFilterAction(Request $request)
     {
-        DB::table('groups_f')->where("id", $id)->first()->delete();
+        $post = $request->post();
+        $filter = Groups::find($post["id"]);
+        $filter->delete();
+        return response("deleted",200);
+    }
+    function editFilterAction(Request $request){
+        $post = $request->post();
+        $filter = Groups::find($post["id"]);
+        $filter->name = $post["name"];
+        $filter->save();
+        return response("edited",200);
     }
 
 

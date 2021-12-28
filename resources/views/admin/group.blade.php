@@ -89,7 +89,7 @@
                 @foreach($filters as $filter)
                 <div class="groupsAdmin__table_row">
                     <div class="groupsAdmin__table_row-title">
-                        <input readonly value="{{$filter->name}}" />
+                        <input data-id="{{$filter->id}}" readonly value="{{$filter->name}}" />
                     </div>
                     <div class="groupsAdmin__table_row-action">
                         <div class="groupsAdmin__table_row-edit">
@@ -157,6 +157,7 @@
         </div>
     </div>
 </footer>
+<script src="{{env('APP_URL')}}/js/jquery-3.5.1.min.js"></script>
 <script>
     let edit = document.querySelectorAll('.groupsAdmin__table_row-editBtn');
     let save = document.querySelectorAll('.groupsAdmin__table_row-safe');
@@ -180,6 +181,7 @@
         let input = row.querySelector('input');
         if(checkValueLength(input)){
             row.classList.remove('groupsAdmin__table_row-editable');
+            editFilterRequest($(input).attr("data-id"),input.value)
             input.setAttribute('readonly', '');
         }else{
             input.classList.add('inputIncorrect', 'animate__animated', 'animate__pulse');
@@ -191,6 +193,8 @@
 
     function deleteRowFunct(e) {
         let row = e.target.closest('.groupsAdmin__table_row');
+        let input = row.querySelector('input')
+        deleteFilterRequest($(input).attr("data-id"))
         row.classList.add('animate__animated', 'animate__fadeOut');
         setTimeout(()=>{
             row.classList.add('deletedRow');
@@ -224,6 +228,7 @@
         input.removeAttribute('readonly');
         clonned.querySelector('.addedAdmin__row_action').addEventListener('click', (e)=>{
             if(checkValueLength(input)){
+                createFilterRequest(input.value)
                 input.setAttribute('readonly', '');
                 clonned.classList.remove(activityClass);
                 clonned.querySelector('.groupsAdmin__table_row-editBtn').onclick = editRow;
@@ -238,6 +243,56 @@
         });
         table.querySelector('.groupsAdmin__table').appendChild(clonned);
     }
+
+
+    function createFilterRequest(name){
+        $.ajax({
+            type: "POST",
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: "{{env('APP_URL').'/create_groups_f'}}",
+            data: {
+                'name': name,
+                'lang':"{{$lang}}",
+            },
+            success: function (data) {
+               console.log(data);
+            },
+        });
+    }
+    function editFilterRequest(id,name){
+        $.ajax({
+            type: "POST",
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: "{{env('APP_URL').'/edit_groups_f'}}",
+            data: {
+                "id":id,
+                'name': name,
+            },
+            success: function (data) {
+                console.log(data);
+            },
+        });
+    }
+    function deleteFilterRequest(id){
+        $.ajax({
+            type: "POST",
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: "{{env('APP_URL').'/delete_groups_f'}}",
+            data: {
+                "id":id,
+            },
+            success: function (data) {
+                console.log(data);
+            },
+        });
+    }
+
 </script>
 </body>
 </html>

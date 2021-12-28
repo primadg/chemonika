@@ -8,6 +8,7 @@ interface FiltersInterface
 {
     function getFiltersAdminAction(Request $request);
     function addFilterAction(Request $request);
-    function deleteFilterAction(Request $request,$id);
+    function deleteFilterAction(Request $request);
+    function editFilterAction(Request $request);
 
 }
