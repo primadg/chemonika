@@ -164,7 +164,7 @@
         </div>
     </section>
     <?use Illuminate\Support\Facades\DB;?>
-    @include("en/contacts", ["contact"=>DB::table('contact_table_ru')->first()])
+    @include("en/contacts", ["contact"=>DB::table('contact_table_en')->first()])
     <footer class="footer">
         <div class="container">
             <div class="row">

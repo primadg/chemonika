@@ -92,7 +92,7 @@
                     <div class="groupsAdmin__table_row-title">
                         <input data-id="{{$filter->id}}" readonly value="{{$filter->name}}" />
                     </div>
-                    <div class="groupsAdmin__table_row-amount">0</div>
+                    <div class="groupsAdmin__table_row-amount">{{$filter->count}}</div>
                     <div class="groupsAdmin__table_row-action">
                         <div class="groupsAdmin__table_row-edit">
                             <span class="groupsAdmin__table_row-editBtn">
@@ -259,7 +259,7 @@
                 'lang':"{{$lang}}",
             },
             success: function (data) {
-               console.log(data);
+               location.href = location.href;
             },
         });
     }

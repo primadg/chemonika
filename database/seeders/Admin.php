@@ -487,8 +487,116 @@ class Admin extends Seeder
         ]);
         DB::table('position_p')->insert([
             "id" => 1,
-            "array"=>'["1","2","3","4","5"]'
+            "array" => '["1","2","3","4","5"]'
         ]);
+
+        DB::table('groups_f')->insert([
+            "id" => 1,
+            "name" => 'Антиоксиданти',
+            "lang" => "ukr"
+        ]);
+        DB::table('groups_f')->insert([
+            "id" => 2,
+            "name" => 'Підсолоджувачі',
+            "lang" => "ukr"
+        ]);
+        DB::table('groups_f')->insert([
+            "id" => 3,
+            "name" => 'Стабілізатори',
+            "lang" => "ukr"
+        ]);
+        DB::table('groups_f')->insert([
+            "id" => 4,
+            "name" => 'Консервант',
+            "lang" => "ukr"
+        ]);
+        DB::table('groups_f')->insert([
+            "id" => 5,
+            "name" => 'Протеїн',
+            "lang" => "ukr"
+        ]);
+        DB::table('groups_f')->insert([
+            "id" => 6,
+            "name" => 'Антиоксиданты',
+            "lang" => "ru"
+        ]);
+        DB::table('groups_f')->insert([
+            "id" => 7,
+            "name" => 'Подсластители',
+            "lang" => "ru"
+        ]);
+        DB::table('groups_f')->insert([
+            "id" => 8,
+            "name" => 'Стабилизаторы',
+            "lang" => "ru"
+        ]);
+        DB::table('groups_f')->insert([
+            "id" => 9,
+            "name" => 'Консервант',
+            "lang" => "ru"
+        ]);
+        DB::table('groups_f')->insert([
+            "id" => 10,
+            "name" => 'Протеин',
+            "lang" => "ru"
+        ]);
+        DB::table('groups_f')->insert([
+            "id" => 11,
+            "name" => 'Antioxidants',
+            "lang" => "en"
+        ]);
+        DB::table('groups_f')->insert([
+            "id" => 12,
+            "name" => 'Sweeteners',
+            "lang" => "en"
+        ]);
+        DB::table('groups_f')->insert([
+            "id" => 13,
+            "name" => 'Stabilizers',
+            "lang" => "en"
+        ]);
+        DB::table('groups_f')->insert([
+            "id" => 14,
+            "name" => 'Preservatives',
+            "lang" => "en"
+        ]);
+        DB::table('groups_f')->insert([
+            "id" => 15,
+            "name" => 'Protein',
+            "lang" => "en"
+        ]);
+
+        DB::table('field_of_usages')->insert([
+            "id" => 1,
+            "name" => 'Food',
+            "lang" => "en"
+        ]);
+        DB::table('field_of_usages')->insert([
+            "id" => 2,
+            "name" => 'Пищевая',
+            "lang" => "ru"
+        ]);
+        DB::table('field_of_usages')->insert([
+            "id" => 3,
+            "name" => 'Харчова',
+            "lang" => "ukr"
+        ]);
+        DB::table('field_of_usages')->insert([
+            "id" => 4,
+            "name" => 'Косметична',
+            "lang" => "ukr"
+        ]);
+        DB::table('field_of_usages')->insert([
+            "id" => 5,
+            "name" => 'Косметическая',
+            "lang" => "ru"
+        ]);
+        DB::table('field_of_usages')->insert([
+            "id" => 6,
+            "name" => 'Cosmetic',
+            "lang" => "en"
+        ]);
+
     }
 
 }
