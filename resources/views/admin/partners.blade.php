@@ -106,7 +106,7 @@ $( ".addPartnerBtn" ).on( "click", function() {
 $("#addPartnerBtn_file").change(function(){
         const formData = new FormData();
         formData.append('img', $("#addPartnerBtn_file")[0].files[0]);
-
+        console.log("https://meet.google.com/fdd-qntf-yca")
        $.ajax({
             type: "POST",
            contentType: false,
@@ -118,7 +118,8 @@ $("#addPartnerBtn_file").change(function(){
             url: '{{env("APP_URL")}}/store_partner_img',
             data: formData,
             success: function(data){
-                location.href=location.href;
+                // location.href=location.href;
+                console.log(data)
             }
         });
 
