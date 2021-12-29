@@ -48,26 +48,13 @@
             </svg>
         </div>
         <div class="partnersAdmin__wrapper containerDrag">
+
+            @foreach($partners as $partner)
             <div class="partnersAdmin__wrapper_block item" draggable=true>
-                <img data-id="1" src="{{env("APP_URL")}}/img/partners/image.png" alt="partner">
+                <img class="etot" data-id="{{$partner["id"]}}" src="{{env("APP_URL")}}/{{$partner["url"]}}" alt="partner">
                 <img class="partnersAdmin__wrapper_block-close" src="{{env("APP_URL")}}/img/partners/close.svg" alt="close">
             </div>
-            <div class="partnersAdmin__wrapper_block item" draggable=true>
-                <img data-id="2" src="{{env("APP_URL")}}/img/partners/image1.png" alt="partner">
-                <img class="partnersAdmin__wrapper_block-close" src="{{env("APP_URL")}}/img/partners/close.svg" alt="close">
-            </div>
-            <div class="partnersAdmin__wrapper_block item" draggable=true>
-                <img data-id="3" src="{{env("APP_URL")}}/img/partners/image2.png" alt="partner">
-                <img class="partnersAdmin__wrapper_block-close" src="{{env("APP_URL")}}/img/partners/close.svg" alt="close">
-            </div>
-            <div class="partnersAdmin__wrapper_block item" draggable=true>
-                <img data-id="4" src="{{env("APP_URL")}}/img/partners/image3.png" alt="partner">
-                <img class="partnersAdmin__wrapper_block-close" src="{{env("APP_URL")}}/img/partners/close.svg" alt="close">
-            </div>
-            <div class="partnersAdmin__wrapper_block item" draggable=true>
-                <img data-id="5" src="{{env("APP_URL")}}/img/partners/image4.png" alt="partner">
-                <img class="partnersAdmin__wrapper_block-close" src="{{env("APP_URL")}}/img/partners/close.svg" alt="close">
-            </div>
+            @endforeach
             <!-- <div class="partnersAdmin__wrapper_block partnersAdmin__wrapper_block-specific"></div> -->
         </div>
     </div>
@@ -117,31 +104,57 @@ $( ".addPartnerBtn" ).on( "click", function() {
 });
 
 $("#addPartnerBtn_file").change(function(){
-    if (window.FormData === undefined) {
-        alert('В вашем браузере FormData не поддерживается')
-    } else {
-        var formData = new FormData();
-        formData.append('file', $("#addPartnerBtn_file")[0].files[0]);
+        const formData = new FormData();
+        formData.append('img', $("#addPartnerBtn_file")[0].files[0]);
 
-        /*$.ajax({
+       $.ajax({
             type: "POST",
-            url: '/upload.php',
-            cache: false,
-            contentType: false,
+           contentType: false,
+           cache: false,
+           headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
             processData: false,
+            url: '{{env("APP_URL")}}/store_partner_img',
             data: formData,
-            dataType : 'json',
-            success: function(msg){
-                if (msg.error == '') {
-                    $("#js-file").hide();
-                    $('#result').html(msg.success);
-                } else {
-                    $('#result').html(msg.error);
-                }
+            success: function(data){
+                location.href=location.href;
             }
-        });*/
-    }
+        });
+
 });
+
+
+function deletePartnersRequest(id){
+    $.ajax({
+        type: "POST",
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url: "{{env('APP_URL').'/delete_partner'}}",
+        data: {
+          "id":id
+        },
+        success: function (data) {
+            console.log(data);
+        },
+    });
+}
+function swapPartnersRequest(pos_array){
+    $.ajax({
+        type: "POST",
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url: "{{env('APP_URL').'/swap_partners'}}",
+        data: {
+          "pos_array": JSON.stringify(pos_array),
+        },
+        success: function (data) {
+            console.log(data);
+        },
+    });
+}
 </script>
 </body>
 </html>

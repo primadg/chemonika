@@ -125,6 +125,7 @@
             <div class="сompany__title">
                 Інформація про компанію
             </div>
+            {{dd($partners)}}
             <div class="сompany__wrapper">
                 <div class="сompany__left">
                     <div class="сompany__text">Компанія була заснована у 2020 році. Головним напрямком нашої діяльності

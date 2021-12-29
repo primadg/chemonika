@@ -64,6 +64,10 @@ Route::group(['middleware' => ['role:admin'], ], function () {
     Route::post("/delete_field_of_usage", [\App\Http\Controllers\filters\FieldOfUsageController::class,'deleteFilterAction' ]);
     Route::post("/create_field_of_usage", [\App\Http\Controllers\filters\FieldOfUsageController::class,'addFilterAction' ]);
 
+    Route::post("/store_partner_img", [\App\Http\Controllers\admin\PartnerController::class,'storePartnerAction' ]);
+    Route::post("/swap_partners", [\App\Http\Controllers\admin\PartnerController::class,'swapPartnerAction' ]);
+    Route::post("/delete_partner", [\App\Http\Controllers\admin\PartnerController::class,'deletePartnerAction' ]);
+
     Route::get("/editRu/{id}", [\App\Http\Controllers\admin\AdminController::class,'editRu', ]);
     Route::get("/test", function(){
         return view('test');

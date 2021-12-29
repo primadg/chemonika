@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Partner;
 use http\Env\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -32,7 +33,20 @@ class AppContoller extends Controller
                 ->where("draft","!=",1)
                 ->where("name","!=",null)
                 ->take(3)->get();
-        return view($value . '.index', ['products' => $products]);
+        return view($value . '.index', ['products' => $products, "partners"=>$this->getPartnerArray()]);
+
+
+    }
+
+    private function getPartnerArray(): ?array
+    {
+        $pos_arr = DB::table("position_p")->where("id",1)->first();
+        $pos_arr = json_decode($pos_arr->array);
+        $result = null;
+        foreach ($pos_arr as $value){
+            $result[] = Partner::find($value);
+        }
+        return $result;
     }
 
     public function setLangEng()
