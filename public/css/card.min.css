@@ -707,6 +707,7 @@
 }
 .groupsAdmin__table{
     margin-top: 30px;
+    overflow: auto;
 }
 .groupsAdmin__table_row.groupsAdmin__table_header{
     background: #E1E8EE;
@@ -768,7 +769,8 @@
     margin-right: 60px;
 }
 .groupsAdmin__table_row-title{
-    width: calc(100% - 308px);
+    width: calc(100% - 530px);
+    min-width: 200px;
 }
 .groupsAdmin__table_row-edit, .groupsAdmin__table_row-delete{
     cursor: pointer;
@@ -1140,6 +1142,23 @@
 .card__btns_toggler.card__btns_toggler-active .card__btns_toggler-hide{
     display: none;
 }
+.groupsAdmin .contactsAdmin__header_wrapper{
+    padding: 0 0 40px 0;
+}
+.groupsAdmin__table_row-amount{
+    min-width: 232px;
+    width: 232px;
+}
+.groupsAdmin__table_header .groupsAdmin__table_row-amount{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #263640;
+}
+.groupsAdmin__table_row-added .groupsAdmin__table_row-amount{
+    display: none;
+}
+
 @media screen and (max-width: 1200px){
     .startAdmin__block:last-child{
         margin-top: 0;
