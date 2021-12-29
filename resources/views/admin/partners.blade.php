@@ -118,8 +118,7 @@ $("#addPartnerBtn_file").change(function(){
             url: '{{env("APP_URL")}}/store_partner_img',
             data: formData,
             success: function(data){
-                // location.href=location.href;
-                console.log(data)
+                location.href=location.href;
             }
         });
 
