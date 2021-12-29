@@ -39,7 +39,7 @@ class Admin extends Seeder
             'Storage' => "Зберігати в сухому, захищеному від світла місці",
             'Standart' => "Відповідає стандартам якості: ВР2009, USP32, FCC6, E330",
             'description' => "В харчовій промисловості лимонна кислота (Е330) широко використовується в виробництві безалкогольних напоїв, тому що має найбільш м'який та освіжаючий смак, в порівнянні з іншими харчовими кислотами. При виробництві кондитерських виробів використовується як ароматизатор та підкислювач. При виробництві хлібобулочних виробів використовується як один з компонентів розпушувача тіста. В олійно-жировій промисловості лимона кислота значно зменшує вірогідність прогорання жирів, маргаринів та тваринного масла.При виробництві консервів, використовується як консервант.
-"        ]);
+"]);
         DB::table('product_rus')->insert([
             'name' => "Лимонная кислота",
             'group' => "Антиоксиданты",
@@ -410,7 +410,7 @@ class Admin extends Seeder
             'img' => '/img/images/p/p9.png',
             'Storage' => "Зберігати в сухому, захищеному від світла місці.",
             'Standart' => "Відповідає вимогам стандартів якості: ВР2009, USP32, FCC6, E202",
-            'description' => "Пшенична клейковина - нерозчинний у воді білок рослинного походження, у процесі гідратації набрякає та утворює волокна. Функціональні властивості глютену полягають у високій (180-200%) абсорбційній здатності, утворенню стабільної пружно-еластичної структури та термостійкості при 85°C."        ]);
+            'description' => "Пшенична клейковина - нерозчинний у воді білок рослинного походження, у процесі гідратації набрякає та утворює волокна. Функціональні властивості глютену полягають у високій (180-200%) абсорбційній здатності, утворенню стабільної пружно-еластичної структури та термостійкості при 85°C."]);
         DB::table('product_rus')->insert([
             'name' => "Пшеничная клейковина (Глютен)",
             'group' => "Протеин",
@@ -436,28 +436,58 @@ class Admin extends Seeder
             'description' => "Wheat gluten is a plant protein which is insoluble in water. In the process of hydration, it creates fibers. Functional properties of gluten include high absorbing properties (180-200%), creation of stable viscoelastic structure and thermal stability at 85deg C.",
         ]);
         DB::table('contact_table_en')->insert([
-            "id"=>1,
-            "tel1"=>"+38 (067) 686 92 91",
-            "tel2"=>"+38 (050) 332 66 44",
-            "email1"=>"akabanov@chemonika.com.ua",
-            "email2"=>"a.petrishcheva@chemonika.com.ua",
+            "id" => 1,
+            "tel1" => "+38 (067) 686 92 91",
+            "tel2" => "+38 (050) 332 66 44",
+            "email1" => "akabanov@chemonika.com.ua",
+            "email2" => "a.petrishcheva@chemonika.com.ua",
             "adrs" => "81a Yuri Ilyenko Str, Kyiv, Ukraine"
         ]);
         DB::table('contact_table_ukr')->insert([
-            "id"=>1,
-            "tel1"=>"+38 (067) 686 92 91",
-            "tel2"=>"+38 (050) 332 66 44",
-            "email1"=>"akabanov@chemonika.com.ua",
-            "email2"=>"a.petrishcheva@chemonika.com.ua",
+            "id" => 1,
+            "tel1" => "+38 (067) 686 92 91",
+            "tel2" => "+38 (050) 332 66 44",
+            "email1" => "akabanov@chemonika.com.ua",
+            "email2" => "a.petrishcheva@chemonika.com.ua",
             "adrs" => "Україна, м. Київ, вул. Юрія Ильєнка 81а"
         ]);
         DB::table('contact_table_ru')->insert([
-            "id"=>1,
-            "tel1"=>"+38 (067) 686 92 91",
-            "tel2"=>"+38 (050) 332 66 44",
-            "email1"=>"akabanov@chemonika.com.ua",
-            "email2"=>"a.petrishcheva@chemonika.com.ua",
+            "id" => 1,
+            "tel1" => "+38 (067) 686 92 91",
+            "tel2" => "+38 (050) 332 66 44",
+            "email1" => "akabanov@chemonika.com.ua",
+            "email2" => "a.petrishcheva@chemonika.com.ua",
             "adrs" => "Украина, Киев, ул. Юрия Ильенко 81а"
+        ]);
+
+        DB::table('partners')->insert([
+            "id" => 1,
+            "url" => "/img/photo/image.png",
+            "pos_id" => 0,
+        ]);
+        DB::table('partners')->insert([
+            "id" => 2,
+            "url" => "/img/photo/image1.png",
+            "pos_id" => 0,
+        ]);
+        DB::table('partners')->insert([
+            "id" => 3,
+            "url" => "/img/photo/image2.png",
+            "pos_id" => 0,
+        ]);
+        DB::table('partners')->insert([
+            "id" => 4,
+            "url" => "/img/photo/image3.png",
+            "pos_id" => 0,
+        ]);
+        DB::table('partners')->insert([
+            "id" => 5,
+            "url" => "/img/photo/image4.png",
+            "pos_id" => 0,
+        ]);
+        DB::table('position_p')->insert([
+            "id" => 1,
+            "array"=>'["1","2","3","4","5"]'
         ]);
     }
 

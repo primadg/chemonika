@@ -165,21 +165,11 @@
         <div class="container">
             <div class="clients__title">Our clients</div>
             <div class="clients__wrapper">
-                <div class="clients__block">
-                    <img src="{{env("APP_URL")}}/img/photo/image.png" alt="image">
-                </div>
-                <div class="clients__block">
-                    <img src="{{env("APP_URL")}}/img/photo/image1.png" alt="image">
-                </div>
-                <div class="clients__block">
-                    <img src="{{env("APP_URL")}}/img/photo/image2.png" alt="image">
-                </div>
-                <div class="clients__block">
-                    <img src="{{env("APP_URL")}}/img/photo/image3.png" alt="image">
-                </div>
-                <div class="clients__block">
-                    <img src="{{env("APP_URL")}}/img/photo/image4.png" alt="image">
-                </div>
+                @foreach($partners as $partner)
+                    <div class="clients__block">
+                        <img src="{{env("APP_URL")}}/{{$partner->url}}" alt="image">
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>

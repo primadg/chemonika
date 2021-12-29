@@ -13,7 +13,7 @@ class PartnerController extends Controller
 {
     function getPartnersAdminAction(Request $request)
     {
-        return view("admin.partners",["partners"=>Partner::all()]);
+        return view("admin.partners",["partners"=>$this->getPartnerArray()]);
     }
 
     function storePartnerAction(Request $request){
@@ -44,6 +44,16 @@ class PartnerController extends Controller
         $position->array = $post["pos_array"];
         $position->save();
         return response("swapped",200);
+    }
+    private function getPartnerArray(): ?array
+    {
+        $pos_arr = DB::table("position_p")->where("id",1)->first();
+        $pos_arr = json_decode($pos_arr->array);
+        $result = null;
+        foreach ($pos_arr as $value){
+            $result[] = Partner::find($value);
+        }
+        return $result;
     }
 
 }
