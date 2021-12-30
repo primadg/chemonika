@@ -259,7 +259,7 @@
                 'lang':"{{$lang}}",
             },
             success: function (data) {
-                console.log(data);
+                location.href = location.href;
             },
         });
     }
@@ -290,7 +290,8 @@
                 "id":id,
             },
             success: function (data) {
-                location.href = location.href;
+                // location.href = location.href;
+                console.log(data);
             },
         });
     }
