@@ -62,9 +62,9 @@
                         <span>Електронна пошта</span>
                     </div>
                     <div class="contactsAdmin__label">Пошта №1</div>
-                    <input name="email1" class="contactsAdmin__input" placeholder="Пошта №1" value="akabanov@chemonika.com.ua">
+                    <input name="email1" class="contactsAdmin__input" placeholder="Пошта №1" value="{{$contact->email1}}">
                     <div class="contactsAdmin__label">Пошта №2</div>
-                    <input name="email2" class="contactsAdmin__input" placeholder="Пошта №2" value="a.petrishcheva@chemonika.com.ua">
+                    <input name="email2" class="contactsAdmin__input" placeholder="Пошта №2" value="{{$contact->email2}}">
                 </div>
                 <div class="contactsAdmin__mainBlock">
                     <div class="contactsAdmin__mainBlock_title">
