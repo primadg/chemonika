@@ -14,7 +14,7 @@ class GroupController extends Controller implements FiltersInterface
         $lang = $request->cookie('lang') ?? "ukr";
         $filters = DB::table("groups_f")->where("lang", $lang)->get();
         foreach ($filters as $key => $filter) {
-            $filters[$key]->count = count(DB::table('product_' . $lang . 's')->where("group", "like", $filter->name)->get());
+            $filters[$key]->count = count(DB::table('product_' . $lang . 's')->where("group", "like", "%$filter->name%")->get());
         }
         return view("admin.group", ["filters" => $filters, "lang" => "$lang"]);
     }

@@ -16,7 +16,7 @@ class FieldOfUsageController extends Controller implements FiltersInterface
         $lang = $request->cookie('lang') ?? "ukr";
         $filters = DB::table("field_of_usages")->where("lang", $lang)->get();
         foreach ($filters as $key => $filter) {
-            $filters[$key]->count = count(DB::table('product_' . $lang . 's')->where("field_of_usage", "like", $filter->name)->get());
+            $filters[$key]->count = count(DB::table('product_' . $lang . 's')->where("field_of_usage", "like", "%$filter->name%")->get());
         }
         return view("admin.usage",["filters"=>$filters,"lang"=>$lang]);
     }
