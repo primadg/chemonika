@@ -113,7 +113,7 @@
                             <select name="sources" id="sources" class="custom-select sources custom-select_FC"
                                     placeholder="{{$group}}">
                                 @foreach($groups as $group_)
-                                <option data-filter="group" value="Антиоксиданти">{{$group_->name}}</option>
+                                <option data-filter="group" value="{{$group_->name}}">{{$group_->name}}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -123,9 +123,9 @@
                         <div class="rep">
                             <select name="spread" id="spread" class="custom-select sources1" placeholder="{{$usage}}">
                                 @foreach($usages as $usage_)
-                                <option data-filter="usage" value="Харчова">{{$usage_->name}}</option>
+                                <option data-filter="usage" value="{{$usage_->name}}">{{$usage_->name}}</option>
                                 @endforeach
-                                    <option data-filter="Інше" value="Інше">Other</option>
+                                    <option data-filter="usage" value="Інші">Інші</option>
                             </select>
                         </div>
                     </div>

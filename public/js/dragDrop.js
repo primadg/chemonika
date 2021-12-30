@@ -1,5 +1,5 @@
 let idPartners = [];
-$('img[alt="partner"]').each(function(){
+$('img[data-id]').each(function(){
     const data = $(this).attr("data-id");
     if(Number(data))
         idPartners.push(data);
@@ -16,7 +16,7 @@ function showIdPartners() {
 }
 
 function deleteIdPartners(target) {
-    const id = $(target).parent().find("img[alt='partner']").attr("data-id");
+    const id = $(target).parent().find("img[data-id]").attr("data-id");
 
     const index = idPartners.indexOf(id);
     if (index !== -1) {
