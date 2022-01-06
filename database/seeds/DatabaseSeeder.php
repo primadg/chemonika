@@ -1,8 +1,10 @@
 <?php
-
-namespace Database\Seeders;
+//namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+
+use Database\Seeders\Admin;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,3 +18,4 @@ class DatabaseSeeder extends Seeder
         $this->call(Admin::class);
     }
 }
+

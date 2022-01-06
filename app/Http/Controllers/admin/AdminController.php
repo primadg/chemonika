@@ -25,12 +25,12 @@ class AdminController extends Controller
         $usages = count(DB::table("field_of_usages")->get());
         $partners = count(DB::table("partners")->get());
         return view("admin.index",
-        [
-            "posts" => $posts,
-            "groups" => $groups,
-            "usages" => $usages,
-            "partners"=>$partners
-        ]);
+            [
+                "posts" => $posts,
+                "groups" => $groups,
+                "usages" => $usages,
+                "partners"=>$partners
+            ]);
     }
 
 
