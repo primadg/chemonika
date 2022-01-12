@@ -114,11 +114,9 @@
                         <div>
                             <select name="sources" id="sources" class="custom-select sources custom-select_FC"
                                     placeholder="{{$group}}">
-                                <option data-filter="group" value="Антиоксиданты">Антиоксиданты</option>
-                                <option data-filter="group" value="Подсластители">Подсластители</option>
-                                <option data-filter="group" value="Стабилизаторы">Стабилизаторы</option>
-                                <option data-filter="group" value="Консервант">Консерванты</option>
-                                <option data-filter="group" value="Протеин">Протеины</option>
+                                @foreach($groups as $group_)
+                                    <option data-filter="group" value="{{$group_->name}}">{{$group_->name}}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
@@ -126,8 +124,9 @@
                         <div class="secondPage__filter_group-title">Область применения</div>
                         <div class="rep">
                             <select name="spread" id="spread" class="custom-select sources1" placeholder="{{$usage}}">
-                                <option data-filter="usage" value="Пищевая">Пищевая</option>
-                                <option data-filter="usage" value="Косметическая">Косметическая</option>
+                                @foreach($usages as $usage_)
+                                    <option data-filter="usage" value="{{$usage_->name}}">{{$usage_->name}}</option>
+                                @endforeach
                                 <option data-filter="usage" value="Другие">Другие</option>
                             </select>
                         </div>
@@ -176,129 +175,8 @@
                 {{ $products->links() }}
         </div>
     </section>
-    <section class="form">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="form__title">
-                        Контакты
-                    </div>
-                </div>
-                <div class="col-lg-6"></div>
-            </div>
-            <div class="row form__row">
-                <div class="col-lg-6 form__social">
-                    <div class="form__row_wrapper form__row_wrapper-MT">
-                        <div>
-                            <img src="{{env('APP_URL')}}/img/icons/phone.svg" alt="phone">
-                        </div>
-
-                        <div class="form__row_wrapper-title form__row_wrapper-title-PL">
-                            <a href="callto: (067) 686-9291">+38(067)686-92-91</a>
-                        </div>
-                    </div>
-                    <div class="form__row_wrapper form__row_wrapper-MT">
-                        <div>
-                            <img style="opacity: 0" src="{{env('APP_URL')}}/img/icons/phone.svg" alt="phone">
-                        </div>
-
-
-                        <div class="form__row_wrapper-title form__row_wrapper-title-PL">
-                            <a href="callto: (050) 332-66-44"> +38(050)332-66-44</a>
-                        </div>
-                    </div>
-
-                    <div class="form__row_wrapper form__row_wrapper-MT">
-                        <div>
-                            <img src="{{env('APP_URL')}}/img/icons/mail.svg" alt="mail">
-                        </div>
-
-
-                        <div class="form__row_wrapper-title form__row_wrapper-title-PL">
-                            <a href="mailto: akabanov@chemonika.com.ua"> akabanov@chemonika.com.ua</a>
-                        </div>
-                    </div>
-                    <div class="form__row_wrapper form__row_wrapper-MT">
-                        <div>
-                            <img style="opacity: 0" src="{{env('APP_URL')}}/img/icons/mail.svg" alt="mail">
-                        </div>
-
-
-                        <div class="form__row_wrapper-title form__row_wrapper-title-PL">
-                            <a href="mailto: akabanov@chemonika.com.ua">a.petrishcheva@chemonika.com.ua</a>
-                        </div>
-                    </div>
-                    <div style="margin-top: 45px" class="form__row_wrapper">
-                        <div>
-                            <img src="{{env('APP_URL')}}/img/icons/location.svg" alt="location">
-                        </div>
-                        <div class="form__row_wrapper-title">
-                            Украина, Киев, ул. Юрия Ильенко 81а
-                        </div>
-                    </div>
-                    <div class="form__row_links">
-                        <a href="#">
-                            <img src="{{env('APP_URL')}}/img/icons/telegram.svg" alt="telegram">
-                        </a>
-                        <a class="form__row_links-skype" href="#">
-                            <img src="{{env('APP_URL')}}/img/icons/skype.svg" alt="skype">
-                        </a>
-                        <a href="#">
-                            <img src="{{env('APP_URL')}}/img/icons/facebook.svg" alt="facebook">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-6 form__form">
-                    <div class="form__form_title">
-                        Форма обратной связи
-                    </div>
-                    <a name="form"></a>
-                    <div>
-                        <!-- <img src="" alt=""> -->
-                        <img class="form__form_check success__form default__form-hidden" src="img/icons/check.svg"
-                             alt="banner">
-                        <div class="form__form_descr success__form default__form-hidden">
-                            Ваше сообщение успешно отправленно.
-                            Менджер свяжеться с вами в ближайшее время.
-                        </div>
-                        <div class="form__form_resend success__form default__form-hidden">
-                            Отправить ёще
-                            <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#ffffff"></path>
-                            </svg>
-                        </div>
-                        <div class="form__form_label form__form_label-mt default__form">
-                            Ваше имя
-                        </div>
-                        <input class="form__form_input default__form" required id="nameInput" type="text"
-                               name="userName">
-                        <div class="form__form_mail">
-                            <span class="form__form_mail-uncorrect">The data is filled in incorrectly</span>
-                            <div class="form__form_label default__form">
-                                Email или телефон
-                            </div>
-                            <input class="form__form_input default__form" required id="email" type="email" name="email">
-                        </div>
-                        <div class="form__form_label default__form">
-                            Текст сообщения
-                        </div>
-                        <textarea class="form__form_textarrea default__form" id="textInput" name="text"></textarea>
-                        <button id="formSend"
-                                class="header__info_button form__form_btn form__form_btn-form default__form">
-                            <span>Надіслати</span>
-                            <svg class="header__info_button-svg" width="12" height="8" viewBox="0 0 12 8" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z" fill="#ffffff"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </section>
+    <?use Illuminate\Support\Facades\DB;?>
+    @include("ru/contacts", ["contact"=>DB::table('contact_table_ru')->first()])
     <footer class="footer">
         <div class="container">
             <div class="row">

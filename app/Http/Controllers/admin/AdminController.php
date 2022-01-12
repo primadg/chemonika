@@ -13,13 +13,35 @@ use Illuminate\Support\Facades\Storage;
 class AdminController extends Controller
 {
 
+    public function visiblePost(Request $request, $id){
+        $this->changeVisible($id);
+        return response('ok',200);
+    }
+
     function homeAction(Request $request)
     {
+        $posts = count(DB::table("product_ukrs")->get());
+        $groups = count(DB::table("groups_f")->get());
+        $usages = count(DB::table("field_of_usages")->get());
+        $partners = count(DB::table("partners")->get());
+        return view("admin.index",
+            [
+                "posts" => $posts,
+                "groups" => $groups,
+                "usages" => $usages,
+                "partners"=>$partners
+            ]);
+    }
 
-        return view("posts", [
+
+    function postAction(Request $request)
+    {
+
+        return view("admin.posts", [
             'products' => DB::table('product_ukrs')->simplePaginate(10)
         ]);
     }
+
 
     function deletePost($id)
     {
@@ -49,6 +71,7 @@ class AdminController extends Controller
         $entries = DB::table('table_ps')->where('post_id', $id)->get();
         return view("ru.card_edit", ['product' => $product, 'main_id' => $id, 'entries' => $entries]);
     }
+
 
     public function editEn($id)
     {
@@ -148,7 +171,18 @@ class AdminController extends Controller
         return false;
     }
 
-
+    private function changeVisible($id){
+        $product = Product_ukr::find($id);
+        $value = !$product->visible;
+        $product->visible = $value;
+        $product->save();
+        $product = Product_ru::find($id);
+        $product->visible = $value;
+        $product->save();
+        $product = Product_en::find($id);
+        $product->visible = $value;
+        $product->save();
+    }
 
 
 

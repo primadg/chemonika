@@ -14,8 +14,8 @@ class TablePsModify extends Migration
     public function up()
     {
         Schema::table('table_ps', function (Blueprint $table) {
-            $table->string("title", )->nullable()->change();
-            $table->string("value", )->nullable()->change();
+            $table->string("title" )->nullable()->change();
+            $table->string("value" )->nullable()->change();
         });
     }
 

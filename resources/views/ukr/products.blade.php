@@ -112,11 +112,9 @@
                         <div>
                             <select name="sources" id="sources" class="custom-select sources custom-select_FC"
                                     placeholder="{{$group}}">
-                                <option data-filter="group" value="Антиоксиданти">Антиоксиданти</option>
-                                <option data-filter="group" value="Підсолоджувачі">Підсолоджувачі</option>
-                                <option data-filter="group" value="Стабілізатори">Стабілізатори</option>
-                                <option data-filter="group" value="Консервант">Консерванти</option>
-                                <option data-filter="group" value="Протеїн">Протеїни</option>
+                                @foreach($groups as $group_)
+                                <option data-filter="group" value="{{$group_->name}}">{{$group_->name}}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
@@ -124,9 +122,10 @@
                         <div class="secondPage__filter_group-title">Галузь застосування</div>
                         <div class="rep">
                             <select name="spread" id="spread" class="custom-select sources1" placeholder="{{$usage}}">
-                                <option data-filter="usage" value="Харчова">Харчова</option>
-                                <option data-filter="usage" value="Косметична">Косметична</option>
-                                <option data-filter="usage" value="Інші">Інші</option>
+                                @foreach($usages as $usage_)
+                                <option data-filter="usage" value="{{$usage_->name}}">{{$usage_->name}}</option>
+                                @endforeach
+                                    <option data-filter="usage" value="Інші">Інші</option>
                             </select>
                         </div>
                     </div>

@@ -310,22 +310,18 @@ window.onresize = () => {
 
 //product filter
 
-$('span.custom-option').on('click', function(){
+$('span.custom-option').on('click', function () {
     let dataValue = $(this).attr("data-value");
     let dataFilter = $(this).attr("data-filter");
     let params = getParams(location.href);
-    params[dataFilter]=dataValue;
-    let request=null;
-    if(Object.keys(params).length===2) {
-        request=`?group=${params["group"]}&usage=${params["usage"]}`;
-    }
-    if(Object.keys(params).length===1) {
-        if(params["group"])
-            request=`?group=${params["group"]}`;
-        else
-            request=`?usage=${params["usage"]}`;
-    }
-    location.href = $('meta[name="root"]').attr('content')+"/products"+request;
+    params[dataFilter] = dataValue;
+    let request = "?";
+    Object.entries(params).forEach(([key, value]) => {
+        if (key === "group" || key === "usage")
+            request += `${key}=${value}&`;
+    });
+    request = request.slice(0, -1);
+    location.href = $('meta[name="root"]').attr('content') + "/products" + request;
 });
 
 //add rows
