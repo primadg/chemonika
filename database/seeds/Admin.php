@@ -290,7 +290,7 @@ class Admin extends Seeder
             'field_of_usage' => "Харчова, пиво-безалкогольна, кондитерська, консервна",
             'Product_usage' => "Являє собою білий порошок або гранули без запаху з нейтральним смаком. Один з найбільш популярних консервантів во всіх галузях харчової промисловості внаслідок своєї безпечності. Добре розчиняється в воді, витримує термообробку, здатний швидко змішуватися з консистенцією продуктів і не впливає на їх смак. Також використовується в косметичній та фармацевтичній промисловості, використовується як підкислювач в кормах. Володіє сильною антибактеріальною дією, має антистресову дію, є каталізатором обміну речовин, синергісти антиоксидантів. Відповідає за активацію ферментів, поліпшує засвоєння кормів.",
             'Package' => "Мішки по 25 кг",
-            'img' => '/img/images/product1.png',
+            'img' => '/img/images/p/12.jpg',
             'Storage' => "Зберігати в сухому, захищеному від світла місці",
             'Standart' => "Відповідає вимогам стандартів якості: ВР2009, USP32, FCC6, E202",
             'description' => "Сорбат калію - це природний безпечний для здоров’я людини консервант, який активно пригнічує дріжджі, цвілеві гриби, аеробні бактерії, ферменти, там самим збільшуючи термін придатності продуктів.",
@@ -298,7 +298,7 @@ class Admin extends Seeder
         DB::table('product_rus')->insert([
             'name' => "Сорбат калия",
             'group' => "Консервант",
-            'img' => '/img/images/product1.png',
+            'img' => '/img/images/p/12.jpg',
             'pos_id' => 7,
             'Product_usage' => "Представляет собой белый порошок или гранулы без запаха с нейтральным вкусом. Это один из наиболее популярных консервантов во всех отраслях пищевой промышленности вследствие своей безопасности. Хорошо растворим в воде, выдерживает термообработку, способен быстро смешиваться с консистенцией продуктов и не влияет на их вкус.
                                                       Также применяется в  косметической и фармацевтической промышленности, используется как подкислитель в кормах.  Обладает сильным антибактериальным действием, оказывает антистрессовое действие, является катализатором обмена веществ, синергистом антиоксидантов. Отвечает за активизацию ферментов, улучшает усвояемость кормов.",
@@ -311,7 +311,7 @@ class Admin extends Seeder
         DB::table('product_ens')->insert([
             'name' => "Potassium sorbate",
             'group' => "Preservative",
-            'img' => '/img/images/product1.png',
+            'img' => '/img/images/p/12.jpg',
             'pos_id' => 7,
             'Product_usage' => "Odorless white powder or granules with a neutral taste. It is one of the most popular preservatives in all branches throughout the food industry because of how safe it is. It dissolves well in water, withstands heat treatment, quickly mixes with the consistency of the products without altering their taste. Furthermore, it is also widely applied in the cosmetic and pharmaceutical industry, and used as feed acidifier. It has strong antibacterial and anti-stress effects, acts as a metabolic catalyst and a synergist of antioxidants. Responsible for the activation of enzymes, improves feed’s digestibility.",
             'field_of_usage' => "Food, beer, soft drinks, confectionery items, canned goods",
@@ -407,14 +407,14 @@ class Admin extends Seeder
             'field_of_usage' => "Харчова, борошномельна, хлібопекарська, кондитерська, макаронна, м’ясна, виробництво напівфабрикатів (пельмені, равіолі, вареники)",
             'Product_usage' => "Борошномельне виробництво: для покращення якості борошна. Хлібопекарське виробництво: підвищує здатність до утримання газу, покращує формостійкість, підвищує вихід та термін зберігання готових виробів. Кондитерське виробництво: використовується для виробництва затяжного печива та галет при використанні борошна з низьким вмістом клейковини, також для листкового, бісквітного, пісочного та заварного тіста. Виробництво макаронних виробів: підвищує пружність, усуває липкість готових виробів. Виробництво напівфабрикатів: знижує розварювання виробів, підвищує еластичність тіста, знижує злипання виробів. М'ясне виробництво: використовується у приготуванні фаршів, забезпечує однорідну структуру фаршу та ковбасних виробів, підвищує вміст білку та покращує структуру й смакові якості виробів.",
             'Package' => "Мішки по 25 кг",
-            'img' => '/img/images/p/p9.png',
+            'img' => '/img/images/p/9.png',
             'Storage' => "Зберігати в сухому, захищеному від світла місці.",
             'Standart' => "Відповідає вимогам стандартів якості: ВР2009, USP32, FCC6, E202",
             'description' => "Пшенична клейковина - нерозчинний у воді білок рослинного походження, у процесі гідратації набрякає та утворює волокна. Функціональні властивості глютену полягають у високій (180-200%) абсорбційній здатності, утворенню стабільної пружно-еластичної структури та термостійкості при 85°C."]);
         DB::table('product_rus')->insert([
             'name' => "Пшеничная клейковина (Глютен)",
             'group' => "Протеин",
-            'img' => '/img/images/p/p9.png',
+            'img' => '/img/images/p/9.png',
             'pos_id' => 10,
             'Product_usage' => "Мукомольное производство: для улучшения качества муки. Хлебопекарное производство: увеличивает газоудерживающую способность, улучшает формоустойчивость,повышает выход и срок хранения готовых изделий. Кондитерское производство: используется для производства затяжного печенья и галет при использовании муки с пониженым содержанием клейковины, также для слоеного, бисквитного, песочного и заварного теста. Производство макаронных изделий: повышает упругость, устраняет липкость сваренных изделий. Производство полуфабрикатов: снижает развариваемость изделий, увеличивает эластичность теста, снижает слипаемость изделий. Мясное производство: используется в приготовлении фаршей, обеспечивает однородную структуру фарша и колбасных изделий, повышает содержание белка улучшает структуру и вкусовые качества изделий.",
             'field_of_usage' => "Пищевая",
@@ -426,7 +426,7 @@ class Admin extends Seeder
         DB::table('product_ens')->insert([
             'name' => "Wheat gluten",
             'group' => "Protein",
-            'img' => '/img/images/p/p9.png',
+            'img' => '/img/images/p/9.png',
             'pos_id' => 10,
             'Product_usage' => "Production of flour: to improve the quality of flour. Production of bread: increases gas retaining power, improves shape stability, yield and shelf life of the produce. Confectionery: used for production of short dough cookies and plain biscuits if using flour with low gluten content, also for production of puff pastry, biscuit, shortcrust and choux pastry dough. Production of pasta: improves resilience, removes adhesiveness of ready pasta. Manufacturing of semi-ready products: prevents overcooking, improves dough elasticity, reduces adhesiveness of cooked products. Meat industry: used in production of forcemeat, ensures homogeneous structure of forcemeat and sausage products, improves protein content, structure and taste of the products.",
             'field_of_usage' => "Food , bread, confectionary, pasta, meat,  semi-ready products (meat dumplings, ravioli, dumplings).",
