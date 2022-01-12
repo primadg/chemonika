@@ -407,14 +407,14 @@ class Admin extends Seeder
             'field_of_usage' => "Харчова, борошномельна, хлібопекарська, кондитерська, макаронна, м’ясна, виробництво напівфабрикатів (пельмені, равіолі, вареники)",
             'Product_usage' => "Борошномельне виробництво: для покращення якості борошна. Хлібопекарське виробництво: підвищує здатність до утримання газу, покращує формостійкість, підвищує вихід та термін зберігання готових виробів. Кондитерське виробництво: використовується для виробництва затяжного печива та галет при використанні борошна з низьким вмістом клейковини, також для листкового, бісквітного, пісочного та заварного тіста. Виробництво макаронних виробів: підвищує пружність, усуває липкість готових виробів. Виробництво напівфабрикатів: знижує розварювання виробів, підвищує еластичність тіста, знижує злипання виробів. М'ясне виробництво: використовується у приготуванні фаршів, забезпечує однорідну структуру фаршу та ковбасних виробів, підвищує вміст білку та покращує структуру й смакові якості виробів.",
             'Package' => "Мішки по 25 кг",
-            'img' => '/img/images/p/9.png',
+            'img' => '/img/images/p/9.jpg',
             'Storage' => "Зберігати в сухому, захищеному від світла місці.",
             'Standart' => "Відповідає вимогам стандартів якості: ВР2009, USP32, FCC6, E202",
             'description' => "Пшенична клейковина - нерозчинний у воді білок рослинного походження, у процесі гідратації набрякає та утворює волокна. Функціональні властивості глютену полягають у високій (180-200%) абсорбційній здатності, утворенню стабільної пружно-еластичної структури та термостійкості при 85°C."]);
         DB::table('product_rus')->insert([
             'name' => "Пшеничная клейковина (Глютен)",
             'group' => "Протеин",
-            'img' => '/img/images/p/9.png',
+            'img' => '/img/images/p/9.jpg',
             'pos_id' => 10,
             'Product_usage' => "Мукомольное производство: для улучшения качества муки. Хлебопекарное производство: увеличивает газоудерживающую способность, улучшает формоустойчивость,повышает выход и срок хранения готовых изделий. Кондитерское производство: используется для производства затяжного печенья и галет при использовании муки с пониженым содержанием клейковины, также для слоеного, бисквитного, песочного и заварного теста. Производство макаронных изделий: повышает упругость, устраняет липкость сваренных изделий. Производство полуфабрикатов: снижает развариваемость изделий, увеличивает эластичность теста, снижает слипаемость изделий. Мясное производство: используется в приготовлении фаршей, обеспечивает однородную структуру фарша и колбасных изделий, повышает содержание белка улучшает структуру и вкусовые качества изделий.",
             'field_of_usage' => "Пищевая",
@@ -426,7 +426,7 @@ class Admin extends Seeder
         DB::table('product_ens')->insert([
             'name' => "Wheat gluten",
             'group' => "Protein",
-            'img' => '/img/images/p/9.png',
+            'img' => '/img/images/p/9.jpg',
             'pos_id' => 10,
             'Product_usage' => "Production of flour: to improve the quality of flour. Production of bread: increases gas retaining power, improves shape stability, yield and shelf life of the produce. Confectionery: used for production of short dough cookies and plain biscuits if using flour with low gluten content, also for production of puff pastry, biscuit, shortcrust and choux pastry dough. Production of pasta: improves resilience, removes adhesiveness of ready pasta. Manufacturing of semi-ready products: prevents overcooking, improves dough elasticity, reduces adhesiveness of cooked products. Meat industry: used in production of forcemeat, ensures homogeneous structure of forcemeat and sausage products, improves protein content, structure and taste of the products.",
             'field_of_usage' => "Food , bread, confectionary, pasta, meat,  semi-ready products (meat dumplings, ravioli, dumplings).",
