@@ -151,7 +151,7 @@ class Admin extends Seeder
 
         DB::table('product_ukrs')->insert([
             'name' => "Глутамат натрію",
-            'group' => "Підсолоджувачі",
+            'group' => "Посилювач смаку",
             'field_of_usage' => "Харчова, м'ясопереробна",
             'Product_usage' => "Застосовується як підсилювач смаку та аромату в харчовій промисловості. Глутамат натрію сам майже без смаку і запаху, при цьому він загострює смакові якості птиці, м'яса, морських продуктів, грибів і певних овочів. Підсилює аромати, ослаблені в процесі перероблення або при тривалому зберіганні. Широко застосовується при виробництві харчових концентратів: сухих супів, бульйонів, кубиків; при виробництві снеків; напівфабрикатів, продуктів швидкого приготування; соусів; консервів; в м'ясо- і рибопереробки, при виробництві приправ.",
             'Package' => "Мішки по 25 кг",
@@ -165,7 +165,7 @@ class Admin extends Seeder
         ]);
         DB::table('product_rus')->insert([
             'name' => "Глутамат натрия",
-            'group' => "Подсластители",
+            'group' => "Усилитель вкуса",
             'img' => '/img/images/p/p4.png',
             'pos_id' => 4,
             'Product_usage' => "Применяется в качестве усилителя вкуса и аромата в пищевой промышленности. Глутамат натрия сам почти без вкуса и запаха, при этом он обостряет вкусовые качества птицы, мяса, морских продуктов, грибов и определенных овощей. Усиливает ароматы, ослабленные в процессе переработки или при длительном хранении.  Широко применяется при производстве пищевых концентратов: сухих супов, бульонов, кубиков; при производстве снеков; полуфабрикатов, продуктов быстрого приготовления; соусов;  консервов; в мясо- и рыбопереработке, при производстве приправ.",
@@ -181,7 +181,7 @@ class Admin extends Seeder
         ]);
         DB::table('product_ens')->insert([
             'name' => "Monosodium glutamate",
-            'group' => "Sweeteners",
+            'group' => "Flavor enhancer",
             'img' => '/img/images/p/p4.png',
             'pos_id' => 4,
             'Product_usage' => "It is widely applied as a flavor and aroma enhancer in the food industry. Although it is essentially flavorless and odorless, Monosodium glutamate increases the palatability of poultry, meat, seafood, mushrooms and certain vegetables. Enhances the aromas weakened by processing or long-term storage. It is widely used in the production of food concentrates: dry soup mixes, broths, bouillon cubes, snacks, intermediate and instant products, sauces, canned food. Used in meat and fish processing and the production of spices.",
