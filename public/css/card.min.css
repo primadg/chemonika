@@ -1076,7 +1076,7 @@
     margin-top: 16px;
 }
 .contactsAdmin__mainBlock_social input{
-    margin-left: 22px;
+    margin-left: 0px;
 }
 .contactsAdmin__mainBlock_social-imageWrapper{
     width: 25px;
@@ -1158,7 +1158,66 @@
 .groupsAdmin__table_row-added .groupsAdmin__table_row-amount{
     display: none;
 }
-
+.contactsAdmin__relative{
+    position: relative;
+}
+.contactsAdmin__relative input{
+    padding-right: 70px;
+}
+.contactsAdmin__relative_actions{
+    display: flex;
+    align-items: center;
+    opacity: 0.7;
+    position: absolute;
+    top: 15px;
+    right: 16px;
+}
+.contactsAdmin__relative_actions img:first-child{
+    margin-right: 13px;
+}
+.contactsAdmin__relative_actions img{
+    cursor: pointer;
+}
+.contactsAdmin__relative_social{
+    margin-left: 22px;
+    width: 100%;
+}
+.border__green{
+    border-color: green;
+    transition: .2s ease-in-out;
+}
+.contactsAdmin__addContact_invisible{
+    display: none;
+}
+.contactsAdmin__addBtn{
+    padding: 0 17px 0 12px;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 40px;
+    color: #219653;
+    background: #fff;
+    border: 2px solid #219653;
+    display: inline-flex;
+    margin-top: 28px;
+    transition: background .2s ease-in-out, color .2s ease-in-out;
+}
+.contactsAdmin__addBtn div{
+    padding-right: 21px;
+}
+.contactsAdmin__addBtn:hover{
+    background: #219653;
+    color: #fff;
+    transition: background .2s ease-in-out, color .2s ease-in-out;
+}
+.contactsAdmin__addBtn svg path{
+    fill: #219653;
+    transition: .2s ease-in-out;
+}
+.contactsAdmin__addBtn:hover svg path{
+    fill: #fff;
+    transition: .2s ease-in-out;
+}
 @media screen and (max-width: 1200px){
     .startAdmin__block:last-child{
         margin-top: 0;
