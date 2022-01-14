@@ -223,7 +223,7 @@
         <div class="footer__bottom">
             <div class="footer__subtitle">2021</div>
             <div class="footer__subtitle footer__subtitle-middle">|</div>
-            <div class="footer__subtitle">All rights protected</div>
+            <div class="footer__subtitle">Всі права захищені. </div>
         </div>
     </div>
 </footer>

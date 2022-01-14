@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div onclick="location.href='{{env("APP_URL")}}/logout'" class="header__button">
-                Exit
+                Вихід
                 <img src="{{env('APP_URL')}}/img/icons/posts/arrow.svg" alt="arrow">
             </div>
         </div>
