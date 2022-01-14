@@ -59,27 +59,31 @@
                             </div>
                         </div>
                     </div>
-                    <div class="contactsAdmin__label">Телефон №1</div>
+
+                    @foreach($tels as $key=> $tel)
+                    <div class="contactsAdmin__label">Телефон №{{$key+1}}</div>
                     <div class="contactsAdmin__relative">
-                        <input name="tel1" class="contactsAdmin__input" readonly placeholder="Телефон №1" value="{{$contact->tel1}}">
+                        <input name="tel" class="contactsAdmin__input contactsAdmin__input_tel" readonly placeholder="Телефон №1" value="{{$tel}}">
                         <div class="contactsAdmin__relative_actions">
                             <img class="contactsAdmin__relative_action-edit" src="{{env('APP_URL')}}/img/icons/posts/edit.svg" alt="arrow">
                             <img class="contactsAdmin__relative_action-delete" src="{{env('APP_URL')}}/img/icons/posts/close.svg" alt="arrow">
                         </div>
                     </div>
-                    <div class="contactsAdmin__label">Телефон №2</div>
-                    <div class="contactsAdmin__relative">
-                        <input name="tel2" class="contactsAdmin__input" readonly placeholder="Телефон №2" value="{{$contact->tel2}}">
-                        <div class="contactsAdmin__relative_actions">
-                            <img class="contactsAdmin__relative_action-edit" src="{{env('APP_URL')}}/img/icons/posts/edit.svg" alt="arrow">
-                            <img class="contactsAdmin__relative_action-delete" src="{{env('APP_URL')}}/img/icons/posts/close.svg" alt="arrow">
-                        </div>
-                    </div>
+                    @endforeach
+{{--                    <div class="contactsAdmin__label">Телефон №2</div>--}}
+{{--                    <div class="contactsAdmin__relative">--}}
+{{--                        <input name="tel2" class="contactsAdmin__input contactsAdmin__input_tel" readonly placeholder="Телефон №2" value="{{$contact->tel2}}">--}}
+{{--                        <div class="contactsAdmin__relative_actions">--}}
+{{--                            <img class="contactsAdmin__relative_action-edit" src="{{env('APP_URL')}}/img/icons/posts/edit.svg" alt="arrow">--}}
+{{--                            <img class="contactsAdmin__relative_action-delete" src="{{env('APP_URL')}}/img/icons/posts/close.svg" alt="arrow">--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+                    <input name="telData" type="hidden" id="telAll">
                     <div class="contactsAdmin__addBtn">
                         <div>Добавить телефон</div>
                         <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7.28323 0.712379L5.85891 0.712378L5.85891 6.35913L0.212158 6.35913V7.78345L5.85891 7.78345L5.85891 13.4302L7.28323 13.4302L7.28323 7.78345L12.93 7.78345V6.35913L7.28323 6.35913L7.28323 0.712379Z" fill="#219653"/>
-                        </svg>                            
+                        </svg>
                     </div>
                 </div>
                 <div class="contactsAdmin__mainBlock">
@@ -99,27 +103,30 @@
                             </div>
                         </div>
                     </div>
-                    <div class="contactsAdmin__label">Пошта №1</div>
+                    @foreach($emails as $key => $email)
+                    <div class="contactsAdmin__label">Пошта №{{$key}}</div>
                     <div class="contactsAdmin__relative">
-                        <input name="email1" class="contactsAdmin__input" readonly placeholder="Пошта №1" value="{{$contact->email1}}">
+                        <input name="email1" class="contactsAdmin__input contactsAdmin__input_email" readonly placeholder="Пошта №1" value="{{$email}}">
                         <div class="contactsAdmin__relative_actions">
                             <img class="contactsAdmin__relative_action-edit" src="{{env('APP_URL')}}/img/icons/posts/edit.svg" alt="arrow">
                             <img class="contactsAdmin__relative_action-delete" src="{{env('APP_URL')}}/img/icons/posts/close.svg" alt="arrow">
                         </div>
                     </div>
-                    <div class="contactsAdmin__label">Пошта №2</div>
-                    <div class="contactsAdmin__relative">
-                        <input name="email2" class="contactsAdmin__input" readonly placeholder="Пошта №2" value="{{$contact->email2}}">
-                        <div class="contactsAdmin__relative_actions">
-                            <img class="contactsAdmin__relative_action-edit" src="{{env('APP_URL')}}/img/icons/posts/edit.svg" alt="arrow">
-                            <img class="contactsAdmin__relative_action-delete" src="{{env('APP_URL')}}/img/icons/posts/close.svg" alt="arrow">
-                        </div>
-                    </div>
+                    @endforeach
+{{--                    <div class="contactsAdmin__label">Пошта №2</div>--}}
+{{--                    <div class="contactsAdmin__relative">--}}
+{{--                        <input name="email2" class="contactsAdmin__input contactsAdmin__input_email" readonly placeholder="Пошта №2" value="{{$contact->email2}}">--}}
+{{--                        <div class="contactsAdmin__relative_actions">--}}
+{{--                            <img class="contactsAdmin__relative_action-edit" src="{{env('APP_URL')}}/img/icons/posts/edit.svg" alt="arrow">--}}
+{{--                            <img class="contactsAdmin__relative_action-delete" src="{{env('APP_URL')}}/img/icons/posts/close.svg" alt="arrow">--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+                    <input name="emailData" type="hidden" id="emailAll">
                     <div class="contactsAdmin__addBtn">
                         <div>Добавить email</div>
                         <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7.28323 0.712379L5.85891 0.712378L5.85891 6.35913L0.212158 6.35913V7.78345L5.85891 7.78345L5.85891 13.4302L7.28323 13.4302L7.28323 7.78345L12.93 7.78345V6.35913L7.28323 6.35913L7.28323 0.712379Z" fill="#219653"/>
-                        </svg>                            
+                        </svg>
                     </div>
                 </div>
                 <div class="contactsAdmin__mainBlock">
@@ -250,7 +257,7 @@
     //             let input = e.target.closest('.contactsAdmin__relative').querySelector('input');
     //             input.value = '';
     //         }
-    //     } 
+    //     }
     // });
 
 
@@ -265,7 +272,7 @@
             }else if(e.target.classList.contains('contactsAdmin__relative_action-delete')){
                 let input = e.target.closest('.contactsAdmin__relative').querySelector('input');
                 input.value = '';
-            } 
+            }
         }
     });
 
@@ -289,14 +296,17 @@
         item.onclick = (e) => {
             let parentBlock = e.target.closest('.contactsAdmin__mainBlock');
             let clonnedNode = parentBlock.querySelector('.contactsAdmin__addContact_invisible').cloneNode(true);
-            //Подсчет элементов до 
+            //Подсчет элементов до
             let amountElements = parentBlock.querySelectorAll('.contactsAdmin__relative').length;
             if(item.querySelector('div').textContent == "Добавить телефон"){
                 clonnedNode.querySelector('.contactsAdmin__label').innerText = `Телефон №${amountElements}`;
                 clonnedNode.querySelector('input').setAttribute('placeholder', `Телефон №${amountElements}`);
+                clonnedNode.querySelector('input').classList.add('contactsAdmin__input_tel');
+
             }else{
                 clonnedNode.querySelector('.contactsAdmin__label').innerText = `Пошта №${amountElements}`;
                 clonnedNode.querySelector('input').setAttribute('placeholder', `Пошта №${amountElements}`);
+                clonnedNode.querySelector('input').classList.add('contactsAdmin__input_email');
             }
             clonnedNode.classList.remove('contactsAdmin__addContact_invisible');
             parentBlock.insertBefore(clonnedNode, item);
@@ -304,6 +314,34 @@
 
     });
 
+</script>
+<script>
+    dataCollection();
+    function dataCollection(){
+        const tel = document.querySelectorAll(".contactsAdmin__input_tel");
+        let telArr={};
+        tel.forEach((el,i) => {
+            if(el.value!=="") telArr[i]=el.value;
+        });
+        document.querySelector("#telAll").value=JSON.stringify(telArr);
+
+        const email = document.querySelectorAll(".contactsAdmin__input_email");
+        let emailArr={};
+        email.forEach((el,i) => {
+            if(el.value!=="") emailArr[i]=el.value;
+        });
+        document.querySelector("#emailAll").value=JSON.stringify(emailArr);
+    }
+
+
+    function handle(event) {
+        if (event.target.tagName === 'INPUT') {
+            dataCollection();
+        }
+    }
+
+    document.querySelector('form').addEventListener('change', handle);
+    document.querySelector('form').addEventListener('input', handle);
 </script>
 </body>
 </html>

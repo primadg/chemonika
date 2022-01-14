@@ -14,7 +14,12 @@ class ContactController extends Controller
     function getContacts(Request $request){
         $value = $request->cookie('lang') ?? "ukr";
         $contact = DB::table('contact_table_' . $value)->first();
-        return view("admin.contact",['contact'=>$contact, "lang"=>$value]);
+        $tel = json_decode($contact->tel1, true);
+        $email = json_decode($contact->email1, true);
+//        dd(json_decode($tel, true));
+//        $arr = ['a'=>"+38 (067) 686 92 91",'b'=>"+38 (050) 332 66 44"];
+//        dd(json_encode($arr));
+        return view("admin.contact",['contact'=>$contact, "lang"=>$value, "tels"=>$tel, "emails"=>$email]);
     }
 
 
@@ -22,11 +27,12 @@ class ContactController extends Controller
     function editContacts(Request $request){
         $post = $request->post();
         $value = $request->cookie('lang') ?? "ukr";
+//        dd(json_decode($post["telData"], true));
         $product = $this->getModelObjectByLang($value);
 
-        $product->tel1 = $post["tel1"];
-        $product->tel2 = $post["tel2"];
-        $product->email1 = $post["email1"];
+        $product->tel1 = $post["telData"];
+//        $product->tel2 = $post["tel2"];
+        $product->email1 = $post["emailData"];
         $product->adrs = $post["adrs"];
         $product->link_tg = $post["link_tg"];
         $product->link_skype = $post["link_skype"];
