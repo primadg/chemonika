@@ -192,7 +192,7 @@
             </div>
         </div>
     </section>
-
+    <?use Illuminate\Support\Facades\DB; $adrs = DB::table('contact_table_ukr')->first()->adrs; ?>
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -224,11 +224,11 @@
                         </div>
                         <div class="footer__top_top-right footer__top_top-right_MT">
                             <div class="footer__top_bottom-place">
-                                Україна, м. Київ,
+                             {{$adrs}}
                             </div>
-                            <div class="footer__top_bottom-place">
-                                вул. Юрія Ильєнка 81а
-                            </div>
+{{--                            <div class="footer__top_bottom-place">--}}
+{{--                                вул. Юрія Ильєнка 81а--}}
+{{--                            </div>--}}
                         </div>
                     </div>
                     <div class="footer__top_mobile">
@@ -258,10 +258,7 @@
                             АДРЕСА
                         </div>
                         <div class="footer__bottom_mobile-sub-wrapper">
-                            <div class="footer__bottom_mobile-sub">Україна, м. Київ,</div>
-                            <div class="footer__bottom_mobile-sub">
-                                вул. Юрія Ильєнка 81а
-                            </div>
+                            <div class="footer__bottom_mobile-sub">{{$adrs}}</div>
                         </div>
                     </div>
 

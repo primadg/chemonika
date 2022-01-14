@@ -11,46 +11,60 @@
         <div class="row form__row">
             <div class="col-lg-6 form__social">
 
+
+                @if(json_decode($contact->tel1))
+                    @foreach(json_decode($contact->tel1) as $key =>$value)
                 <div class="form__row_wrapper form__row_wrapper-MT">
                     <div>
-                        <img src="img/icons/phone.svg" alt="phone">
+                        <img
+                            @if($key != 0)
+                            style="opacity: 0"
+                            @endif
+                            src="img/icons/phone.svg" alt="phone">
                     </div>
 
                     <div class="form__row_wrapper-title form__row_wrapper-title-PL">
-                        <a href="callto: {{$contact->tel1}}">{{$contact->tel1}}</a>
+                        <a href="callto: {{$value}}">{{$value}}</a>
                     </div>
                 </div>
+                    @endforeach
+                @endif
+{{--                <div class="form__row_wrapper form__row_wrapper-MT">--}}
+{{--                    <div>--}}
+{{--                        <img style="opacity: 0" src="img/icons/phone.svg" alt="phone">--}}
+{{--                    </div>--}}
+
+
+{{--                    <div class="form__row_wrapper-title form__row_wrapper-title-PL">--}}
+{{--                        <a href="{{$contact->tel2}}"> {{$contact->tel2}}</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+                @if(json_decode($contact->email1))
+                @foreach( json_decode($contact->email1) as $key => $value)
                 <div class="form__row_wrapper form__row_wrapper-MT">
                     <div>
-                        <img style="opacity: 0" src="img/icons/phone.svg" alt="phone">
+                        <img
+                            @if($key != 0)
+                            style="opacity: 0"
+                            @endif
+                            src="img/icons/mail.svg" alt="mail">
                     </div>
-
-
                     <div class="form__row_wrapper-title form__row_wrapper-title-PL">
-                        <a href="{{$contact->tel2}}"> {{$contact->tel2}}</a>
+                        <a href="mailto:{{$value}}">{{$value}}</a>
                     </div>
                 </div>
+                @endforeach
+                @endif
+{{--                <div class="form__row_wrapper form__row_wrapper-MT">--}}
+{{--                    <div>--}}
+{{--                        <img style="opacity: 0" src="img/icons/mail.svg" alt="mail">--}}
+{{--                    </div>--}}
+{{--                --}}
 
-                <div class="form__row_wrapper form__row_wrapper-MT">
-                    <div>
-                        <img src="img/icons/mail.svg" alt="mail">
-                    </div>
-
-
-                    <div class="form__row_wrapper-title form__row_wrapper-title-PL">
-                        <a href="mailto: akabanov@chemonika.com.ua">   {{$contact->email1}}</a>
-                    </div>
-                </div>
-                <div class="form__row_wrapper form__row_wrapper-MT">
-                    <div>
-                        <img style="opacity: 0" src="img/icons/mail.svg" alt="mail">
-                    </div>
-
-
-                    <div class="form__row_wrapper-title form__row_wrapper-title-PL">
-                        <a href="mailto: akabanov@chemonika.com.ua">{{$contact->email2}}</a>
-                    </div>
-                </div>
+{{--                    <div class="form__row_wrapper-title form__row_wrapper-title-PL">--}}
+{{--                        <a href="mailto: akabanov@chemonika.com.ua">{{$contact->email2}}</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
                 <div style="margin-top: 45px" class="form__row_wrapper">
                     <div>
                         <img src="img/icons/location.svg" alt="location">
