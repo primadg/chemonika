@@ -214,7 +214,7 @@
                 <div class="footer__info_place">
                     <div class="footer__info_social-title">АДРЕСА</div>
                     <div class="footer__info_place-descr">
-                        Украина, Киев, ул. Юрия Ильенко 81а
+                        Україна, м. Київ, вул. Юрія Іллєнка 81а
                     </div>
                 </div>
             </div>
