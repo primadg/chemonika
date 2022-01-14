@@ -242,6 +242,7 @@
             }else if(e.target.classList.contains('contactsAdmin__relative_action-delete')){
                 let input = e.target.closest('.contactsAdmin__relative').querySelector('input');
                 input.value = '';
+                dataCollection();
             }
         }
     });
