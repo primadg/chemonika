@@ -52,10 +52,10 @@
         <input type="hidden" value="ukr" name="lang" id="lang_data">
         <a href="{{env('APP_URL')}}/admin" class="card__wrapper">
             <img src="{{env('APP_URL')}}/img/icons/card/chevron.svg" alt="back">
-            <div class="card__back">back to Admin panel</div>
+            <div class="card__back">Повернутися до панели адміністратора</div>
         </a>
         <div class="card__language">
-            <div class="card__title">Языковые версии</div>
+            <div class="card__title">Мовні версії</div>
             <div class="card__tabs">
                 <div class="card__tabs_tab">Eng</div>
                 <div class="card__tabs_tab ">Руc</div>

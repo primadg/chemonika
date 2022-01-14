@@ -266,7 +266,7 @@
             </div>
             <div class="footer__separator"></div>
             <div class="footer__bottom">
-                2021 | All rights protected
+                2021 | Всі права захищені.
             </div>
         </div>
     </footer>
