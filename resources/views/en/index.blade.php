@@ -257,7 +257,7 @@
         </div>
     </section>
 
-    <?use Illuminate\Support\Facades\DB;?>
+    <?php use Illuminate\Support\Facades\DB;?>
     @include("en/contacts", ["contact"=>DB::table('contact_table_en')->first()])
     <?$adrs = DB::table('contact_table_en')->first()->adrs; ?>
 

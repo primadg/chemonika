@@ -86,7 +86,7 @@
         </div>
         {{ $products->links() }}
     </div>
-</section><?use Illuminate\Support\Facades\DB;?>
+</section><?php use Illuminate\Support\Facades\DB;?>
 @include("admin/footer", ["contact"=>DB::table('contact_table_ukr')->first()])
 
 <script src="{{env('APP_URL')}}/js/jquery-3.5.1.min.js"></script>

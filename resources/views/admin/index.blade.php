@@ -103,7 +103,7 @@
 
 
 
-<?use Illuminate\Support\Facades\DB;?>
+<?php use Illuminate\Support\Facades\DB;?>
 @include("admin/footer", ["contact"=>DB::table('contact_table_ukr')->first()])
 
 </body>

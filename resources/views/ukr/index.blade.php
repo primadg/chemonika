@@ -259,7 +259,7 @@
         </div>
     </section>
 
-    <?use Illuminate\Support\Facades\DB;?>
+    <?php use Illuminate\Support\Facades\DB;?>
 @include("ukr/contacts", ["contact"=>DB::table('contact_table_ukr')->first()])
 @include("ukr/footer", ["contact"=>DB::table('contact_table_ukr')->first()])
 </div>

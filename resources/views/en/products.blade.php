@@ -23,7 +23,7 @@
                     <a class="header__info_contact-link header__active_link link__products" href="{{env('APP_URL').'/products'}}">Product</a>
                 </div>
                 <div class="header__info_contact">
-                    <a class="header__info_contact-link link__contacts" href="#">Contacts</a>
+                    <a class="header__info_contact-link link__contacts" href="#form">Contacts</a>
                 </div>
                 <div class="header__info_lang">
                     <div class="header__info_lang-chosen">EN</div>
@@ -163,7 +163,7 @@
             {{ $products->links() }}
         </div>
     </section>
-    <?use Illuminate\Support\Facades\DB;?>
+    <?php use Illuminate\Support\Facades\DB;?>
     @include("en/contacts", ["contact"=>DB::table('contact_table_en')->first()])
     <?$adrs = DB::table('contact_table_en')->first()->adrs; ?>
     <footer class="footer">
