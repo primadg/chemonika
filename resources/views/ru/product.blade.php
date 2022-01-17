@@ -24,7 +24,7 @@
                        href="{{env('APP_URL').'/products'}}">Продукция</a>
                 </div>
                 <div class="header__info_contact">
-                    <a class="header__info_contact-link link__contacts" href="#">Контакты</a>
+                    <a class="header__info_contact-link link__contacts" href="{{env("APP_URL").'/#form'}}">Контакты</a>
                 </div>
                 <div class="header__info_lang">
                     <div class="header__info_lang-chosen">RU</div>

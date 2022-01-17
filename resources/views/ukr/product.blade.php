@@ -23,7 +23,7 @@
                     <a class="header__info_contact-link header__active_link link__products" href="{{env('APP_URL').'/products'}}">Продукція</a>
                 </div>
                 <div class="header__info_contact">
-                    <a class="header__info_contact-link link__contacts" href="#">Контакти</a>
+                    <a class="header__info_contact-link link__contacts" href="{{env("APP_URL").'/#form'}}">Контакти</a>
                 </div>
                 <div class="header__info_lang">
                     <div class="header__info_lang-chosen">UKR</div>
