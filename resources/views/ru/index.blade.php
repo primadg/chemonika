@@ -256,7 +256,7 @@
             </div>
         </div>
     </section>
-    <?use Illuminate\Support\Facades\DB;?>
+    <?php use Illuminate\Support\Facades\DB;?>
     @include("ru/contacts", ["contact"=>DB::table('contact_table_ru')->first()])
 
 

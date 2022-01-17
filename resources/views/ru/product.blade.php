@@ -199,7 +199,7 @@
             </div>
         </div>
     </section>
-    <?use Illuminate\Support\Facades\DB; $adrs = DB::table('contact_table_ru')->first()->adrs; ?>
+    <?php use Illuminate\Support\Facades\DB; $adrs = DB::table('contact_table_ru')->first()->adrs; ?>
     <footer class="footer">
         <div class="container">
             <div class="row">
