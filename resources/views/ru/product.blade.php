@@ -171,7 +171,7 @@
                                 Название
                             </div>
                             <div class="thirdPage__table_table-header_value">
-                                Название
+                                Количество
                             </div>
                         </div> @foreach($entries as $entry)
                             <div class="thirdPage__table_table-row">

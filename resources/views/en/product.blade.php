@@ -160,7 +160,7 @@
                                     Title
                                 </div>
                                 <div class="thirdPage__table_table-header_value">
-                                    number
+                                    Amount
                                 </div>
                             </div> @foreach($entries as $entry)
                                 <div class="thirdPage__table_table-row">
