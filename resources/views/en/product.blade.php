@@ -183,7 +183,7 @@
                     </div>
                 </div>
                 <a href="mailto: {{env("MAIL_TO_NAME")}}" class="wow animate__animated animate__headShake thirdPage__notFound_btn">
-                    Call us
+                    Write to us
                 </a>
             </div>
         </div>
