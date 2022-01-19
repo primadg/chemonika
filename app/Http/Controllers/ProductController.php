@@ -7,6 +7,7 @@ use App\Models\Product_en;
 use App\Models\Product_ru;
 use App\Models\Product_ukr;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Products;
@@ -67,6 +68,9 @@ class ProductController extends Controller
                 $item->id = $item->pos_id;
             }
         }
+
+
+        App::setLocale($value);
 
         $groups = DB::table("groups_f")->where("lang",$value)->get();
         $usages = DB::table("field_of_usages")->where("lang",$value)->get();

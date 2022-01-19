@@ -256,8 +256,9 @@
             </div>
         </div>
     </section>
-    <?use Illuminate\Support\Facades\DB;?>
+    <?php use Illuminate\Support\Facades\DB;?>
     @include("ru/contacts", ["contact"=>DB::table('contact_table_ru')->first()])
+
 
     <footer class="footer">
         <div class="container">
@@ -353,7 +354,7 @@
             </div>
             <div class="footer__separator"></div>
             <div class="footer__bottom">
-                2021 | All rights protected
+                2021 | Все права защищены.
             </div>
         </div>
     </footer>

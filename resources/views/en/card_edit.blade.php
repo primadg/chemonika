@@ -53,7 +53,7 @@
         <input type="hidden" value="en" name="lang" id="lang_data">
         <a href="{{env('APP_URL')}}/admin" class="card__wrapper">
             <img src="{{env('APP_URL')}}/img/icons/card/chevron.svg" alt="back">
-            <div class="card__back">Повернутися до панели адміністратора</div>
+            <div class="card__back">Повернутися до панелі адміністратора</div>
         </a>
         <div class="card__language">
             <div class="card__title">Оберіть мову</div>
@@ -212,7 +212,7 @@
                 <div class="footer__info_place">
                     <div class="footer__info_social-title">АДРЕСА</div>
                     <div class="footer__info_place-descr">
-                        Украина, Киев, ул. Юрия Ильенко 81а
+                        Україна, м. Київ, вул. Юрія Іллєнка 81а
                     </div>
                 </div>
             </div>

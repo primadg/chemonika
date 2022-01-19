@@ -23,7 +23,7 @@
                     <a class="header__info_contact-link header__active_link link__products" href="{{env('APP_URL').'/products'}}">Product</a>
                 </div>
                 <div class="header__info_contact">
-                    <a class="header__info_contact-link link__contacts" href="#">Contacts</a>
+                    <a class="header__info_contact-link link__contacts" href="{{env("APP_URL").'/#form'}}">Contacts</a>
                 </div>
                 <div class="header__info_lang">
                     <div class="header__info_lang-chosen">EN</div>
@@ -160,7 +160,7 @@
                                     Title
                                 </div>
                                 <div class="thirdPage__table_table-header_value">
-                                    number
+                                    Amount
                                 </div>
                             </div> @foreach($entries as $entry)
                                 <div class="thirdPage__table_table-row">
@@ -188,7 +188,7 @@
             </div>
         </div>
     </section>
-
+    <?php use Illuminate\Support\Facades\DB; $adrs = DB::table('contact_table_en')->first()->adrs; ?>
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -220,11 +220,9 @@
                         </div>
                         <div class="footer__top_top-right footer__top_top-right_MT">
                             <div class="footer__top_bottom-place">
-                                81a Yuri Ilyenko Str,
+                                {{$adrs}}
                             </div>
-                            <div class="footer__top_bottom-place">
-                                Kyiv, Ukraine
-                            </div>
+
                         </div>
                     </div>
                     <div class="footer__top_mobile">
@@ -254,10 +252,8 @@
                             ADDRESS
                         </div>
                         <div class="footer__bottom_mobile-sub-wrapper">
-                            <div class="footer__bottom_mobile-sub"> 81a Yuri Ilyenko Str,</div>
-                            <div class="footer__bottom_mobile-sub">
-                                Kyiv, Ukraine
-                            </div>
+                            <div class="footer__bottom_mobile-sub">{{$adrs}}</div>
+
                         </div>
                     </div>
 

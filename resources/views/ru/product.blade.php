@@ -24,7 +24,7 @@
                        href="{{env('APP_URL').'/products'}}">Продукция</a>
                 </div>
                 <div class="header__info_contact">
-                    <a class="header__info_contact-link link__contacts" href="#">Контакты</a>
+                    <a class="header__info_contact-link link__contacts" href="{{env("APP_URL").'/#form'}}">Контакты</a>
                 </div>
                 <div class="header__info_lang">
                     <div class="header__info_lang-chosen">RU</div>
@@ -171,7 +171,7 @@
                                 Название
                             </div>
                             <div class="thirdPage__table_table-header_value">
-                                Название
+                                Количество
                             </div>
                         </div> @foreach($entries as $entry)
                             <div class="thirdPage__table_table-row">
@@ -199,6 +199,7 @@
             </div>
         </div>
     </section>
+    <?php use Illuminate\Support\Facades\DB; $adrs = DB::table('contact_table_ru')->first()->adrs; ?>
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -239,11 +240,9 @@
                         </div>
                         <div class="footer__top_top-right footer__top_top-right_MT">
                             <div class="footer__top_bottom-place">
-                                Украина, г. Киев,
+                              {{$adrs}}
                             </div>
-                            <div class="footer__top_bottom-place">
-                                ул. Юрия Ильенко 81а
-                            </div>
+
                         </div>
                     </div>
                     <div class="footer__top_mobile">
@@ -282,10 +281,8 @@
                             АДРЕСС
                         </div>
                         <div class="footer__bottom_mobile-sub-wrapper">
-                            <div class="footer__bottom_mobile-sub">Украина, г. Киев,</div>
-                            <div class="footer__bottom_mobile-sub">
-                                ул. Юрия Ильенко 81а
-                            </div>
+                            <div class="footer__bottom_mobile-sub">{{$adrs}}</div>
+
                         </div>
                     </div>
 
@@ -293,7 +290,7 @@
             </div>
             <div class="footer__separator"></div>
             <div class="footer__bottom">
-                2021 | All rights protected
+                2021 | Все права защищены.
             </div>
         </div>
     </footer>

@@ -38,11 +38,11 @@
                     </div>
                     <div class="footer__top_top-right footer__top_top-right_MT">
                         <div class="footer__top_bottom-place">
-                            Україна, м. Київ,
+                            {{$contact->adrs}}
                         </div>
-                        <div class="footer__top_bottom-place">
-                            вул. Юрія Ильєнка 81а
-                        </div>
+{{--                        <div class="footer__top_bottom-place">--}}
+{{--                            вул. Юрія Ильєнка 81а--}}
+{{--                        </div>--}}
                     </div>
                 </div>
                 <div class="footer__top_mobile">
@@ -81,10 +81,12 @@
                         АДРЕСА
                     </div>
                     <div class="footer__bottom_mobile-sub-wrapper">
-                        <div class="footer__bottom_mobile-sub">Україна, м. Київ,</div>
-                        <div class="footer__bottom_mobile-sub">
-                            вул. Юрія Іллєнка 81а
-                        </div>
+                        <div class="footer__bottom_mobile-sub"> {{$contact->adrs}}</div>
+{{--                        <div class="footer__bottom_mobile-sub">--}}
+{{--                            вул. Юрія Іллєнка 81а--}}
+{{--                        </div>--}}
+
+
                     </div>
                 </div>
 
@@ -92,7 +94,7 @@
         </div>
         <div class="footer__separator"></div>
         <div class="footer__bottom">
-            2021 | All rights protected
+            2021 | Всі права захищені.
         </div>
     </div>
 </footer>

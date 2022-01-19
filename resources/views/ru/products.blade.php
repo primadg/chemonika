@@ -175,8 +175,10 @@
                 {{ $products->links() }}
         </div>
     </section>
-    <?use Illuminate\Support\Facades\DB;?>
+    <?php use Illuminate\Support\Facades\DB;?>
     @include("ru/contacts", ["contact"=>DB::table('contact_table_ru')->first()])
+
+    <?$adrs = DB::table('contact_table_ru')->first()->adrs; ?>
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -217,11 +219,9 @@
                         </div>
                         <div class="footer__top_top-right footer__top_top-right_MT">
                             <div class="footer__top_bottom-place">
-                                Украина, г. Киев,
+                                {{$adrs}}
                             </div>
-                            <div class="footer__top_bottom-place">
-                                ул. Юрия Ильенко 81а
-                            </div>
+
                         </div>
                     </div>
                     <div class="footer__top_mobile">
@@ -260,10 +260,7 @@
                             АДРЕС
                         </div>
                         <div class="footer__bottom_mobile-sub-wrapper">
-                            <div class="footer__bottom_mobile-sub">Украина, г. Киев,</div>
-                            <div class="footer__bottom_mobile-sub">
-                                ул. Юрия Ильенко 81а
-                            </div>
+                            <div class="footer__bottom_mobile-sub">{{$adrs}}</div>
                         </div>
                     </div>
 
@@ -271,7 +268,7 @@
             </div>
             <div class="footer__separator"></div>
             <div class="footer__bottom">
-                2021 | All rights protected
+                2021 | Все права защищены.
             </div>
         </div>
     </footer>

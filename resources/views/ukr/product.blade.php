@@ -23,7 +23,7 @@
                     <a class="header__info_contact-link header__active_link link__products" href="{{env('APP_URL').'/products'}}">Продукція</a>
                 </div>
                 <div class="header__info_contact">
-                    <a class="header__info_contact-link link__contacts" href="#">Контакти</a>
+                    <a class="header__info_contact-link link__contacts" href="{{env("APP_URL").'/#form'}}">Контакти</a>
                 </div>
                 <div class="header__info_lang">
                     <div class="header__info_lang-chosen">UKR</div>
@@ -163,7 +163,7 @@
                                 Назва
                             </div>
                             <div class="thirdPage__table_table-header_value">
-                                Назва
+                                Кількість
                             </div>
                         </div>
                         @foreach($entries as $entry)
@@ -192,7 +192,7 @@
             </div>
         </div>
     </section>
-
+    <?php use Illuminate\Support\Facades\DB; $adrs = DB::table('contact_table_ukr')->first()->adrs; ?>
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -224,11 +224,11 @@
                         </div>
                         <div class="footer__top_top-right footer__top_top-right_MT">
                             <div class="footer__top_bottom-place">
-                                Україна, м. Київ,
+                             {{$adrs}}
                             </div>
-                            <div class="footer__top_bottom-place">
-                                вул. Юрія Ильєнка 81а
-                            </div>
+{{--                            <div class="footer__top_bottom-place">--}}
+{{--                                вул. Юрія Ильєнка 81а--}}
+{{--                            </div>--}}
                         </div>
                     </div>
                     <div class="footer__top_mobile">
@@ -258,10 +258,7 @@
                             АДРЕСА
                         </div>
                         <div class="footer__bottom_mobile-sub-wrapper">
-                            <div class="footer__bottom_mobile-sub">Україна, м. Київ,</div>
-                            <div class="footer__bottom_mobile-sub">
-                                вул. Юрія Ильєнка 81а
-                            </div>
+                            <div class="footer__bottom_mobile-sub">{{$adrs}}</div>
                         </div>
                     </div>
 
@@ -269,7 +266,7 @@
             </div>
             <div class="footer__separator"></div>
             <div class="footer__bottom">
-                2021 | All rights protected
+                2021 | Всі права захищені.
             </div>
         </div>
     </footer>

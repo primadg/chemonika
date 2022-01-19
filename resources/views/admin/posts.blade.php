@@ -16,7 +16,7 @@
 <header class="header">
     <div class="container">
         <div class="wrapper">
-            <div class="header__logo">
+            <div onclick="location.href='{{env("APP_URL")}}/admin'" class="header__logo">
                 <img src="img/icons/posts/logo.svg" alt="logo">
                 <div class="header__plus">
                     ADMIN
@@ -86,38 +86,9 @@
         </div>
         {{ $products->links() }}
     </div>
-</section>
-<footer class="footer">
-    <div class="container">
-        <div class="footer__wrapper">
-            <div class="footer__logo">
-                <img src="img/icons/posts/logoFooter.svg" alt="logo">
-            </div>
-            <div class="footer__info">
-                <div class="footer__info_social">
-                    <div class="footer__info_social-title">Наші соціальні мережі</div>
-                    <div class="footer__info_social-btns">
-                        <a href="#"><img src="img/icons/posts/tg.svg" alt="tg"></a>
-                        <a href="#"><img class="footer__info_social-skype" src="img/icons/posts/skype.svg" alt="tg"></a>
-                        <a href="#"><img src="img/icons/posts/fb.svg" alt="tg"></a>
-                    </div>
-                </div>
-                <div class="footer__info_place">
-                    <div class="footer__info_social-title">АДРЕСА</div>
-                    <div class="footer__info_place-descr">
-                        Украина, Киев, ул. Юрия Ильенко 81а
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer__separator"></div>
-        <div class="footer__bottom">
-            <div class="footer__subtitle">2021</div>
-            <div class="footer__subtitle footer__subtitle-middle">|</div>
-            <div class="footer__subtitle">All rights protected</div>
-        </div>
-    </div>
-</footer>
+</section><?php use Illuminate\Support\Facades\DB;?>
+@include("admin/footer", ["contact"=>DB::table('contact_table_ukr')->first()])
+
 <script src="{{env('APP_URL')}}/js/jquery-3.5.1.min.js"></script>
 <script>
     let visibleProduct = document.querySelectorAll('.post__block_btns-togller');
