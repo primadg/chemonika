@@ -21,12 +21,6 @@
                                     src="img/icons/phone.svg" alt="phone">
                             </div>
 
-<<<<<<< HEAD
-                <div class="form__row_wrapper form__row_wrapper-MT form__row_wrapper-mailFirst">
-                    <div>
-                        <img src="{{env('APP_URL')}}/img/icons/mail.svg" alt="mail">
-                    </div>
-=======
                             <div class="form__row_wrapper-title form__row_wrapper-title-PL">
                                 <a href="callto: {{$value}}">{{$value}}</a>
                             </div>
@@ -37,7 +31,6 @@
                 {{--                    <div>--}}
                 {{--                        <img style="opacity: 0" src="img/icons/phone.svg" alt="phone">--}}
                 {{--                    </div>--}}
->>>>>>> origin/master
 
 
                 {{--                    <div class="form__row_wrapper-title form__row_wrapper-title-PL">--}}

@@ -27,20 +27,12 @@
                         <a href="callto: {{$value}}">{{$value}}</a>
                     </div>
                 </div>
-<<<<<<< HEAD
-
-                <div class="form__row_wrapper form__row_wrapper-MT form__row_wrapper-mailFirst">
-                    <div>
-                        <img src="img/icons/mail.svg" alt="mail">
-                    </div>
-=======
                     @endforeach
                 @endif
 {{--                <div class="form__row_wrapper form__row_wrapper-MT">--}}
 {{--                    <div>--}}
 {{--                        <img style="opacity: 0" src="img/icons/phone.svg" alt="phone">--}}
 {{--                    </div>--}}
->>>>>>> origin/master
 
 
 {{--                    <div class="form__row_wrapper-title form__row_wrapper-title-PL">--}}
