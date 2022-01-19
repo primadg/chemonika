@@ -296,7 +296,7 @@
 {{--            </div>--}}
 {{--        </div>--}}
 {{--    </section>--}}
-    <?$adrs = DB::table('contact_table_ukr')->first()->adrs; ?>
+    <?php $adrs = DB::table('contact_table_ukr')->first()->adrs; ?>
     <footer class="footer">
 
         <div class="container">
