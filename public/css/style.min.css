@@ -629,7 +629,7 @@
 }
 
 .form__row_wrapper-MT {
-    margin-top: 24px
+    margin-top: 6px
 }
 
 .form__row_wrapper-title {
@@ -651,6 +651,9 @@
 
 .form__row_wrapper-title-PL {
     padding-left: 11px
+}
+.form__row_wrapper-mailFirst{
+    margin-top: 24px;
 }
 
 .form__row_links {
@@ -939,7 +942,7 @@
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center
+    align-items: flex-start
 }
 
 .thirdPage__info_product-right_wrapper_kind {
@@ -954,7 +957,7 @@
     font-weight: 600;
     font-size: 20px;
     line-height: 30px;
-    color: #263640
+    color: #263640;
 }
 
 .thirdPage__descr {
@@ -1465,6 +1468,9 @@
 .thirdPage__use_descr{
     text-align: justify;
 }
+.thirdPage__info_product-right .thirdPage__info_product-right_wrapper:last-child{
+    margin-top: 10px;
+}
 @media screen and (min-width: 1400px) {
     .container {
         width: 1300px !important;
@@ -1788,6 +1794,13 @@
     .about .header__info_button {
         margin-top: 39px
     }
+
+    .form .row{
+        flex-direction: column-reverse;
+    }
+    .form__form{
+        margin-top: 50px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -1994,6 +2007,10 @@
     .promo {
         padding-top: 475px
     }
+    .thirdPage__info_product-right_wrapper_value{
+        text-align: right;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -2091,6 +2108,12 @@
     .promo {
         padding-top: 357px
     }
+
+    .thirdPage__info_product-right_wrapper_value, .thirdPage__info_product-right_wrapper_kind{
+        font-size: 16px;
+        line-height: 120%;
+    }
+    
 }
 
 @media screen and (max-width: 528px) {
@@ -2220,7 +2243,15 @@
         transform: translateX(-50%)
     }
 }
-
+@media screen and (max-width: 350px){
+    .thirdPage__info_product-right .thirdPage__info_product-right_wrapper{
+        flex-direction: column;
+    }
+    .thirdPage__info_product-right_wrapper_value{
+        text-align: left;
+        margin-top: 6px;
+    }
+}
 @media screen and (max-width: 343px) {
     .promo {
         padding-top: 286px

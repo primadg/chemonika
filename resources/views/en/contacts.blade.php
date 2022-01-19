@@ -30,7 +30,7 @@
                     </div>
                 </div>
 
-                <div class="form__row_wrapper form__row_wrapper-MT">
+                <div class="form__row_wrapper form__row_wrapper-MT form__row_wrapper-mailFirst">
                     <div>
                         <img src="{{env('APP_URL')}}/img/icons/mail.svg" alt="mail">
                     </div>
