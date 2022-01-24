@@ -163,9 +163,7 @@
             {{ $products->links() }}
         </div>
     </section>
-    <?php use Illuminate\Support\Facades\DB;?>
-    @include("en/contacts", ["contact"=>DB::table('contact_table_en')->first()])
-    <?$adrs = DB::table('contact_table_en')->first()->adrs; ?>
+    @include("ukr/contacts", ["contact"=>$contact])
     <footer class="footer">
         <div class="container">
             <div class="row">

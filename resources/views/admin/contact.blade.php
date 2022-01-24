@@ -198,8 +198,8 @@
         </form>
     </div>
 </section>
-<?php use Illuminate\Support\Facades\DB;?>
-@include("admin/footer", ["contact"=>DB::table('contact_table_ukr')->first()])
+
+@include("admin/footer", ["contact"=>$contact_ukr])
 <script>
 
 

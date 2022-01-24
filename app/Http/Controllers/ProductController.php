@@ -81,6 +81,8 @@ class ProductController extends Controller
             'group' => $chose_group,
              "usages"=>$usages,
             "groups" => $groups,
+            "adrs"=>DB::table('contact_table_'.$value)->first()->adrs,
+            "contact"=>DB::table('contact_table_'.$value)->first()
         ]);
     }
 
@@ -214,7 +216,8 @@ class ProductController extends Controller
 
         return view($value . '.product', [
             'product' => $product,
-            'entries' => $entries
+            'entries' => $entries,
+            'adrs'=> DB::table('contact_table_'.$value)->first()->adrs
         ]);
     }
 

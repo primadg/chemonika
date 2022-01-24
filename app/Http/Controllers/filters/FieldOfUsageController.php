@@ -18,7 +18,10 @@ class FieldOfUsageController extends Controller implements FiltersInterface
         foreach ($filters as $key => $filter) {
             $filters[$key]->count = count(DB::table('product_' . $lang . 's')->where("field_of_usage", "like", "%$filter->name%")->get());
         }
-        return view("admin.usage",["filters"=>$filters,"lang"=>$lang]);
+        return view("admin.usage",[
+            "filters"=>$filters,"lang"=>$lang,
+            "contact" => DB::table('contact_table_ukr')->first()
+        ]);
     }
     function addFilterAction(Request $request)
     {

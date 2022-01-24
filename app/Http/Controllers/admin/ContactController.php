@@ -19,7 +19,12 @@ class ContactController extends Controller
 //        dd(json_decode($tel, true));
 //        $arr = ['a'=>"+38 (067) 686 92 91",'b'=>"+38 (050) 332 66 44"];
 //        dd(json_encode($arr));
-        return view("admin.contact",['contact'=>$contact, "lang"=>$value, "tels"=>$tel, "emails"=>$email]);
+        return view("admin.contact",[
+            'contact'=>$contact,
+            "lang"=>$value,
+            "tels"=>$tel,
+            "emails"=>$email,
+            "contact_ukr"=>DB::table('contact_table_ukr')->first()]);
     }
 
 

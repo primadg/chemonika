@@ -29,7 +29,8 @@ class AdminController extends Controller
                 "posts" => $posts,
                 "groups" => $groups,
                 "usages" => $usages,
-                "partners"=>$partners
+                "partners"=>$partners,
+                "contact"=>DB::table('contact_table_ukr')->first()
             ]);
     }
 
@@ -38,7 +39,8 @@ class AdminController extends Controller
     {
 
         return view("admin.posts", [
-            'products' => DB::table('product_ukrs')->simplePaginate(10)
+            'products' => DB::table('product_ukrs')->simplePaginate(10),
+            "contact"=>DB::table('contact_table_ukr')->first()
         ]);
     }
 
@@ -108,7 +110,7 @@ class AdminController extends Controller
                 return redirect()->back()->with('error', 'Неверный формат загруженного файла');
             }
             $product->img = Storage::url($path);
-            // todo дописать
+
             if ($is_ukr) {
                 $product_en = Product_en::find($this->getSecondaryTableId('product_ens', $id));
                 $product_ru = Product_ru::find($this->getSecondaryTableId('product_rus', $id));

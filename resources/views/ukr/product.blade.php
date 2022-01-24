@@ -187,12 +187,11 @@
                     </div>
                 </div>
                 <a href="mailto: {{env("MAIL_TO_NAME")}}" class="wow animate__animated animate__headShake thirdPage__notFound_btn">
-                    Написати нам
+                    Напишіть нам
                 </a>
             </div>
         </div>
     </section>
-    <?php use Illuminate\Support\Facades\DB; $adrs = DB::table('contact_table_ukr')->first()->adrs; ?>
     <footer class="footer">
         <div class="container">
             <div class="row">

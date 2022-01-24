@@ -176,8 +176,8 @@
         </div>
     </section>
 
-    <?php use Illuminate\Support\Facades\DB;?>
-    @include("ukr/contacts", ["contact"=>DB::table('contact_table_ukr')->first()])
+
+    @include("ukr/contacts", ["contact"=>$contact])
 {{--    <section class="form">--}}
 {{--        <div class="container">--}}
 {{--            <div class="row">--}}
@@ -296,7 +296,7 @@
 {{--            </div>--}}
 {{--        </div>--}}
 {{--    </section>--}}
-    <?$adrs = DB::table('contact_table_ukr')->first()->adrs; ?>
+
     <footer class="footer">
 
         <div class="container">
