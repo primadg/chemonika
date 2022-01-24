@@ -188,7 +188,6 @@
             </div>
         </div>
     </section>
-    <?php use Illuminate\Support\Facades\DB; $adrs = DB::table('contact_table_en')->first()->adrs; ?>
     <footer class="footer">
         <div class="container">
             <div class="row">

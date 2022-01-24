@@ -13,10 +13,14 @@ class PartnerController extends Controller
 {
     function getPartnersAdminAction(Request $request)
     {
-        return view("admin.partners",["partners"=>$this->getPartnerArray()]);
+        return view("admin.partners", [
+            "partners" => $this->getPartnerArray(),
+            "contact" => DB::table('contact_table_ukr')->first()
+        ]);
     }
 
-    function storePartnerAction(Request $request){
+    function storePartnerAction(Request $request)
+    {
 
         $ex = $request->file('img')->extension();
         if (!($ex == 'jpg' || $ex == 'png')) {
@@ -26,9 +30,9 @@ class PartnerController extends Controller
         $partner = new Partner();
         $partner->url = Storage::url($path);;
         $partner->save();
-        $pos_arr = DB::table("position_p")->where("id",1)->first();
+        $pos_arr = DB::table("position_p")->where("id", 1)->first();
         $pos_arr = json_decode($pos_arr->array);
-        $pos_arr[] = "".$partner->id;
+        $pos_arr[] = "" . $partner->id;
         $position = Position::find(1);
         $position->array = json_encode($pos_arr);
         $position->save();
@@ -40,22 +44,24 @@ class PartnerController extends Controller
         $post = $request->post();
         $partner = Partner::find($post["id"]);
         $partner->delete();
-        return response("deleted",200);
+        return response("deleted", 200);
     }
 
-    function swapPartnerAction(Request $request){
+    function swapPartnerAction(Request $request)
+    {
         $post = $request->post();
         $position = Position::find(1);
         $position->array = $post["pos_array"];
         $position->save();
-        return response("swapped",200);
+        return response("swapped", 200);
     }
+
     private function getPartnerArray(): ?array
     {
-        $pos_arr = DB::table("position_p")->where("id",1)->first();
+        $pos_arr = DB::table("position_p")->where("id", 1)->first();
         $pos_arr = json_decode($pos_arr->array);
         $result = null;
-        foreach ($pos_arr as $value){
+        foreach ($pos_arr as $value) {
             $result[] = Partner::find($value);
         }
         return $result;

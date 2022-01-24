@@ -175,10 +175,7 @@
                 {{ $products->links() }}
         </div>
     </section>
-    <?php use Illuminate\Support\Facades\DB;?>
-    @include("ru/contacts", ["contact"=>DB::table('contact_table_ru')->first()])
-
-    <?$adrs = DB::table('contact_table_ru')->first()->adrs; ?>
+    @include("ukr/contacts", ["contact"=>$contact])
     <footer class="footer">
         <div class="container">
             <div class="row">

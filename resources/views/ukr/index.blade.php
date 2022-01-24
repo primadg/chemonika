@@ -259,9 +259,8 @@
         </div>
     </section>
 
-    <?php use Illuminate\Support\Facades\DB;?>
-@include("ukr/contacts", ["contact"=>DB::table('contact_table_ukr')->first()])
-@include("ukr/footer", ["contact"=>DB::table('contact_table_ukr')->first()])
+    @include("en/contacts", ["contact"=>$contact])
+    @include("ukr/footer", ["contact"=>$contact])
 </div>
 
 

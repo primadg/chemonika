@@ -33,7 +33,10 @@ class AppContoller extends Controller
                 ->where("draft","!=",1)
                 ->where("name","!=",null)
                 ->take(3)->get();
-        return view($value . '.index', ['products' => $products, "partners"=>$this->getPartnerArray()]);
+        return view($value . '.index', ['products' => $products, "partners"=>$this->getPartnerArray(),
+            "contact"=>DB::table('contact_table_'.$value)->first(),
+            "adrs"=> DB::table('contact_table_'.$value)->first()->adrs,
+            ]);
 
 
     }

@@ -127,8 +127,7 @@
         </div>
     </div>
 </section>
-<?php use Illuminate\Support\Facades\DB;?>
-@include("admin/footer", ["contact"=>DB::table('contact_table_ukr')->first()])
+@include("admin/footer", ["contact"=>$contact])
 <script src="{{env('APP_URL')}}/js/jquery-3.5.1.min.js"></script>
 <script>
     let edit = document.querySelectorAll('.groupsAdmin__table_row-editBtn');
